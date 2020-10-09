@@ -1,0 +1,10 @@
+# EditionScriptCollectionDTO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**letters** | [**list[CharacterShapeDTO]**](CharacterShapeDTO.md) |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

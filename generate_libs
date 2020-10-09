@@ -1,0 +1,24 @@
+docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
+	-i https://api.qumranica.org/swagger/v1/swagger.json \
+	-g go \
+	-o /libs/go
+
+docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
+        -i https://api.qumranica.org/swagger/v1/swagger.json \
+        -g javascript \
+        -o /libs/javascript
+
+docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
+        -i https://api.qumranica.org/swagger/v1/swagger.json \
+        -g typescript-axios \
+        -o /libs/typescript
+
+docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
+        -i https://api.qumranica.org/swagger/v1/swagger.json \
+        -g python \
+        -o /libs/python
+
+docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
+        -i https://api.qumranica.org/swagger/v1/swagger.json \
+        -g r \
+        -o /libs/r
