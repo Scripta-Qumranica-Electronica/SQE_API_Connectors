@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.text_fragment_dto import TextFragmentDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.text_fragment_dto import TextFragmentDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestTextFragmentDTO(unittest.TestCase):
     """TextFragmentDTO unit test stubs"""
@@ -33,30 +33,30 @@ class TestTextFragmentDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.text_fragment_dto.TextFragmentDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.text_fragment_dto.TextFragmentDTO()  # noqa: E501
         if include_optional :
             return TextFragmentDTO(
                 text_fragment_id = 56, 
                 text_fragment_name = '0', 
                 editor_id = 56, 
                 lines = [
-                    openapi_client.models.line_dto.LineDTO(
+                    qumranica_api_connector.models.line_dto.LineDTO(
                         line_id = 56, 
                         line_name = '0', 
                         editor_id = 56, 
                         signs = [
-                            openapi_client.models.sign_dto.SignDTO(
+                            qumranica_api_connector.models.sign_dto.SignDTO(
                                 sign_interpretations = [
-                                    openapi_client.models.sign_interpretation_dto.SignInterpretationDTO(
+                                    qumranica_api_connector.models.sign_interpretation_dto.SignInterpretationDTO(
                                         sign_interpretation_id = 56, 
                                         next_sign_interpretations = [
-                                            openapi_client.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
+                                            qumranica_api_connector.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
                                                 next_sign_interpretation_id = 56, 
                                                 creator_id = 56, 
                                                 editor_id = 56, )
                                             ], 
                                         attributes = [
-                                            openapi_client.models.interpretation_attribute_dto.InterpretationAttributeDTO(
+                                            qumranica_api_connector.models.interpretation_attribute_dto.InterpretationAttributeDTO(
                                                 interpretation_attribute_id = 56, 
                                                 attribute_string = '0', 
                                                 attribute_value_string = '0', 
@@ -68,7 +68,7 @@ class TestTextFragmentDTO(unittest.TestCase):
                                                 attribute_value_id = 56, )
                                             ], 
                                         rois = [
-                                            openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                                            qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                                                 creator_id = 56, 
                                                 editor_id = 56, 
                                                 interpretation_roi_id = 56, 
@@ -93,23 +93,23 @@ class TestTextFragmentDTO(unittest.TestCase):
                 text_fragment_name = '0',
                 editor_id = 56,
                 lines = [
-                    openapi_client.models.line_dto.LineDTO(
+                    qumranica_api_connector.models.line_dto.LineDTO(
                         line_id = 56, 
                         line_name = '0', 
                         editor_id = 56, 
                         signs = [
-                            openapi_client.models.sign_dto.SignDTO(
+                            qumranica_api_connector.models.sign_dto.SignDTO(
                                 sign_interpretations = [
-                                    openapi_client.models.sign_interpretation_dto.SignInterpretationDTO(
+                                    qumranica_api_connector.models.sign_interpretation_dto.SignInterpretationDTO(
                                         sign_interpretation_id = 56, 
                                         next_sign_interpretations = [
-                                            openapi_client.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
+                                            qumranica_api_connector.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
                                                 next_sign_interpretation_id = 56, 
                                                 creator_id = 56, 
                                                 editor_id = 56, )
                                             ], 
                                         attributes = [
-                                            openapi_client.models.interpretation_attribute_dto.InterpretationAttributeDTO(
+                                            qumranica_api_connector.models.interpretation_attribute_dto.InterpretationAttributeDTO(
                                                 interpretation_attribute_id = 56, 
                                                 attribute_string = '0', 
                                                 attribute_value_string = '0', 
@@ -121,7 +121,7 @@ class TestTextFragmentDTO(unittest.TestCase):
                                                 attribute_value_id = 56, )
                                             ], 
                                         rois = [
-                                            openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                                            qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                                                 creator_id = 56, 
                                                 editor_id = 56, 
                                                 interpretation_roi_id = 56, 

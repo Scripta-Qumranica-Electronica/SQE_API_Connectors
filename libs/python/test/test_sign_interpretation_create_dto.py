@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.sign_interpretation_create_dto import SignInterpretationCreateDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.sign_interpretation_create_dto import SignInterpretationCreateDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestSignInterpretationCreateDTO(unittest.TestCase):
     """SignInterpretationCreateDTO unit test stubs"""
@@ -33,7 +33,7 @@ class TestSignInterpretationCreateDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.sign_interpretation_create_dto.SignInterpretationCreateDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.sign_interpretation_create_dto.SignInterpretationCreateDTO()  # noqa: E501
         if include_optional :
             return SignInterpretationCreateDTO(
                 line_id = 56, 
@@ -44,14 +44,14 @@ class TestSignInterpretationCreateDTO(unittest.TestCase):
                     56
                     ], 
                 attributes = [
-                    openapi_client.models.interpretation_attribute_create_dto.InterpretationAttributeCreateDTO(
+                    qumranica_api_connector.models.interpretation_attribute_create_dto.InterpretationAttributeCreateDTO(
                         commentary = '0', 
                         sequence = 56, 
                         attribute_id = 56, 
                         attribute_value_id = 56, )
                     ], 
                 rois = [
-                    openapi_client.models.set_interpretation_roi_dto.SetInterpretationRoiDTO(
+                    qumranica_api_connector.models.set_interpretation_roi_dto.SetInterpretationRoiDTO(
                         artefact_id = 56, 
                         sign_interpretation_id = 56, 
                         shape = '0', 
@@ -68,14 +68,14 @@ class TestSignInterpretationCreateDTO(unittest.TestCase):
         else :
             return SignInterpretationCreateDTO(
                 attributes = [
-                    openapi_client.models.interpretation_attribute_create_dto.InterpretationAttributeCreateDTO(
+                    qumranica_api_connector.models.interpretation_attribute_create_dto.InterpretationAttributeCreateDTO(
                         commentary = '0', 
                         sequence = 56, 
                         attribute_id = 56, 
                         attribute_value_id = 56, )
                     ],
                 rois = [
-                    openapi_client.models.set_interpretation_roi_dto.SetInterpretationRoiDTO(
+                    qumranica_api_connector.models.set_interpretation_roi_dto.SetInterpretationRoiDTO(
                         artefact_id = 56, 
                         sign_interpretation_id = 56, 
                         shape = '0', 

@@ -1,4 +1,4 @@
-# openapi_client.RoiApi
+# qumranica_api_connector.RoiApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,12 +24,12 @@ Processes a series of create/update/delete ROI requests in the given edition of 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -45,11 +45,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
-batch_edit_roi_dto = openapi_client.BatchEditRoiDTO() # BatchEditRoiDTO | A JSON object with all the roi edits to be performed (optional)
+batch_edit_roi_dto = qumranica_api_connector.BatchEditRoiDTO() # BatchEditRoiDTO | A JSON object with all the roi edits to be performed (optional)
 
     try:
         # Processes a series of create/update/delete ROI requests in the given edition of a scroll
@@ -97,12 +97,12 @@ Creates new sign ROI's in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -118,11 +118,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
-set_interpretation_roi_dto_list = openapi_client.SetInterpretationRoiDTOList() # SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created (optional)
+set_interpretation_roi_dto_list = qumranica_api_connector.SetInterpretationRoiDTOList() # SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created (optional)
 
     try:
         # Creates new sign ROI's in the given edition of a scroll
@@ -170,12 +170,12 @@ Update existing sign ROI's in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -191,11 +191,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
-update_interpretation_roi_dto_list = openapi_client.UpdateInterpretationRoiDTOList() # UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details (optional)
+update_interpretation_roi_dto_list = qumranica_api_connector.UpdateInterpretationRoiDTOList() # UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details (optional)
 
     try:
         # Update existing sign ROI's in the given edition of a scroll
@@ -243,12 +243,12 @@ Creates new sign ROI in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -264,11 +264,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
-set_interpretation_roi_dto = openapi_client.SetInterpretationRoiDTO() # SetInterpretationRoiDTO | A JSON object with the new ROI to be created (optional)
+set_interpretation_roi_dto = qumranica_api_connector.SetInterpretationRoiDTO() # SetInterpretationRoiDTO | A JSON object with the new ROI to be created (optional)
 
     try:
         # Creates new sign ROI in the given edition of a scroll
@@ -316,12 +316,12 @@ Deletes a sign ROI from the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -337,9 +337,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
 roi_id = 56 # int | Id of the ROI to be deleted
 
@@ -388,12 +388,12 @@ Get the details for a ROI in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -409,9 +409,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
 roi_id = 56 # int | A JSON object with the new ROI to be created
 
@@ -461,12 +461,12 @@ Update an existing sign ROI in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -482,12 +482,12 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RoiApi(api_client)
+    api_instance = qumranica_api_connector.RoiApi(api_client)
     edition_id = 56 # int | Id of the edition
 roi_id = 56 # int | Id of the ROI to be updated
-set_interpretation_roi_dto = openapi_client.SetInterpretationRoiDTO() # SetInterpretationRoiDTO | A JSON object with the updated ROI details (optional)
+set_interpretation_roi_dto = qumranica_api_connector.SetInterpretationRoiDTO() # SetInterpretationRoiDTO | A JSON object with the updated ROI details (optional)
 
     try:
         # Update an existing sign ROI in the given edition of a scroll

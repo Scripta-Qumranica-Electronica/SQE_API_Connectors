@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.edition_dto import EditionDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.edition_dto import EditionDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestEditionDTO(unittest.TestCase):
     """EditionDTO unit test stubs"""
@@ -33,7 +33,7 @@ class TestEditionDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.edition_dto.EditionDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.edition_dto.EditionDTO()  # noqa: E501
         if include_optional :
             return EditionDTO(
                 id = 56, 
@@ -43,7 +43,7 @@ class TestEditionDTO(unittest.TestCase):
                 owner = null, 
                 thumbnail_url = '0', 
                 shares = [
-                    openapi_client.models.detailed_editor_rights_dto.DetailedEditorRightsDTO(
+                    qumranica_api_connector.models.detailed_editor_rights_dto.DetailedEditorRightsDTO(
                         email = 'a', 
                         edition_id = 56, 
                         may_lock = True, 
@@ -65,7 +65,7 @@ class TestEditionDTO(unittest.TestCase):
                 permission = null,
                 owner = null,
                 shares = [
-                    openapi_client.models.detailed_editor_rights_dto.DetailedEditorRightsDTO(
+                    qumranica_api_connector.models.detailed_editor_rights_dto.DetailedEditorRightsDTO(
                         email = 'a', 
                         edition_id = 56, 
                         may_lock = True, 

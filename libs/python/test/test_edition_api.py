@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.edition_api import EditionApi  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.api.edition_api import EditionApi  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 
 class TestEditionApi(unittest.TestCase):
     """EditionApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.edition_api.EditionApi()  # noqa: E501
+        self.api = qumranica_api_connector.api.edition_api.EditionApi()  # noqa: E501
 
     def tearDown(self):
         pass

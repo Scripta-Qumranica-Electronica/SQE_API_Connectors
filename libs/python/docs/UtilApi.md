@@ -1,4 +1,4 @@
-# openapi_client.UtilApi
+# qumranica_api_connector.UtilApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,12 +18,12 @@ Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -39,10 +39,10 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.UtilApi(api_client)
-    wkt_polygon_dto = openapi_client.WktPolygonDTO() # WktPolygonDTO | JSON object with the WKT polygon to validate (optional)
+    api_instance = qumranica_api_connector.UtilApi(api_client)
+    wkt_polygon_dto = qumranica_api_connector.WktPolygonDTO() # WktPolygonDTO | JSON object with the WKT polygon to validate (optional)
 
     try:
         # Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.

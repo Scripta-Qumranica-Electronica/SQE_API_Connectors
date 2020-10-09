@@ -16,7 +16,10 @@ docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli genera
 docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
         -i https://api.qumranica.org/swagger/v1/swagger.json \
         -g python \
-        -o /libs/python
+        -o /libs/python \
+	--additional-properties=projectName=qumranica,packageName=qumranica_api_connector,packageVersion=0.7.0
+
+sed -i 's/self._base_path = "http:\/\/localhost" if host is None else host/self._base_path = "https:\/\/api.qumranica.org" if host is None else host/g' libs/python/qumranica_api_connector/configuration.py
 
 docker run --rm -v "${PWD}/libs:/libs" openapitools/openapi-generator-cli generate \
         -i https://api.qumranica.org/swagger/v1/swagger.json \

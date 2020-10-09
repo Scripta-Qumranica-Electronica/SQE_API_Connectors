@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.batch_update_artefact_placement_dto import BatchUpdateArtefactPlacementDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.batch_update_artefact_placement_dto import BatchUpdateArtefactPlacementDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestBatchUpdateArtefactPlacementDTO(unittest.TestCase):
     """BatchUpdateArtefactPlacementDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestBatchUpdateArtefactPlacementDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.batch_update_artefact_placement_dto.BatchUpdateArtefactPlacementDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.batch_update_artefact_placement_dto.BatchUpdateArtefactPlacementDTO()  # noqa: E501
         if include_optional :
             return BatchUpdateArtefactPlacementDTO(
                 artefact_placements = [
-                    openapi_client.models.update_artefact_placement_dto.UpdateArtefactPlacementDTO(
+                    qumranica_api_connector.models.update_artefact_placement_dto.UpdateArtefactPlacementDTO(
                         artefact_id = 56, 
                         is_placed = True, 
                         placement = null, )
@@ -46,7 +46,7 @@ class TestBatchUpdateArtefactPlacementDTO(unittest.TestCase):
         else :
             return BatchUpdateArtefactPlacementDTO(
                 artefact_placements = [
-                    openapi_client.models.update_artefact_placement_dto.UpdateArtefactPlacementDTO(
+                    qumranica_api_connector.models.update_artefact_placement_dto.UpdateArtefactPlacementDTO(
                         artefact_id = 56, 
                         is_placed = True, 
                         placement = null, )

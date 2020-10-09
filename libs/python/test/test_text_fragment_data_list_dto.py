@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.text_fragment_data_list_dto import TextFragmentDataListDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.text_fragment_data_list_dto import TextFragmentDataListDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestTextFragmentDataListDTO(unittest.TestCase):
     """TextFragmentDataListDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestTextFragmentDataListDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.text_fragment_data_list_dto.TextFragmentDataListDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.text_fragment_data_list_dto.TextFragmentDataListDTO()  # noqa: E501
         if include_optional :
             return TextFragmentDataListDTO(
                 text_fragments = [
-                    openapi_client.models.text_fragment_data_dto.TextFragmentDataDTO(
+                    qumranica_api_connector.models.text_fragment_data_dto.TextFragmentDataDTO(
                         id = 56, 
                         name = '0', 
                         editor_id = 56, )
@@ -46,7 +46,7 @@ class TestTextFragmentDataListDTO(unittest.TestCase):
         else :
             return TextFragmentDataListDTO(
                 text_fragments = [
-                    openapi_client.models.text_fragment_data_dto.TextFragmentDataDTO(
+                    qumranica_api_connector.models.text_fragment_data_dto.TextFragmentDataDTO(
                         id = 56, 
                         name = '0', 
                         editor_id = 56, )

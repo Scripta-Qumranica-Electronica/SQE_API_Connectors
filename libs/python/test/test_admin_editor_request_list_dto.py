@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.admin_editor_request_list_dto import AdminEditorRequestListDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.admin_editor_request_list_dto import AdminEditorRequestListDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestAdminEditorRequestListDTO(unittest.TestCase):
     """AdminEditorRequestListDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestAdminEditorRequestListDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.admin_editor_request_list_dto.AdminEditorRequestListDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.admin_editor_request_list_dto.AdminEditorRequestListDTO()  # noqa: E501
         if include_optional :
             return AdminEditorRequestListDTO(
                 editor_requests = [
-                    openapi_client.models.admin_editor_request_dto.AdminEditorRequestDTO(
+                    qumranica_api_connector.models.admin_editor_request_dto.AdminEditorRequestDTO(
                         editor_name = '0', 
                         editor_email = '0', 
                         edition_id = 56, 
@@ -52,7 +52,7 @@ class TestAdminEditorRequestListDTO(unittest.TestCase):
         else :
             return AdminEditorRequestListDTO(
                 editor_requests = [
-                    openapi_client.models.admin_editor_request_dto.AdminEditorRequestDTO(
+                    qumranica_api_connector.models.admin_editor_request_dto.AdminEditorRequestDTO(
                         editor_name = '0', 
                         editor_email = '0', 
                         edition_id = 56, 

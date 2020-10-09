@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.edition_script_lines_dto import EditionScriptLinesDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.edition_script_lines_dto import EditionScriptLinesDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestEditionScriptLinesDTO(unittest.TestCase):
     """EditionScriptLinesDTO unit test stubs"""
@@ -33,33 +33,33 @@ class TestEditionScriptLinesDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.edition_script_lines_dto.EditionScriptLinesDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.edition_script_lines_dto.EditionScriptLinesDTO()  # noqa: E501
         if include_optional :
             return EditionScriptLinesDTO(
                 text_fragments = [
-                    openapi_client.models.script_text_fragment_dto.ScriptTextFragmentDTO(
+                    qumranica_api_connector.models.script_text_fragment_dto.ScriptTextFragmentDTO(
                         text_fragment_name = '0', 
                         text_fragment_id = 56, 
                         lines = [
-                            openapi_client.models.script_line_dto.ScriptLineDTO(
+                            qumranica_api_connector.models.script_line_dto.ScriptLineDTO(
                                 line_name = '0', 
                                 line_id = 56, 
                                 artefacts = [
-                                    openapi_client.models.script_artefact_characters_dto.ScriptArtefactCharactersDTO(
+                                    qumranica_api_connector.models.script_artefact_characters_dto.ScriptArtefactCharactersDTO(
                                         artefact_name = '0', 
                                         artefact_id = 56, 
                                         placement = null, 
                                         characters = [
-                                            openapi_client.models.sign_interpretation_dto.SignInterpretationDTO(
+                                            qumranica_api_connector.models.sign_interpretation_dto.SignInterpretationDTO(
                                                 sign_interpretation_id = 56, 
                                                 next_sign_interpretations = [
-                                                    openapi_client.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
+                                                    qumranica_api_connector.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
                                                         next_sign_interpretation_id = 56, 
                                                         creator_id = 56, 
                                                         editor_id = 56, )
                                                     ], 
                                                 attributes = [
-                                                    openapi_client.models.interpretation_attribute_dto.InterpretationAttributeDTO(
+                                                    qumranica_api_connector.models.interpretation_attribute_dto.InterpretationAttributeDTO(
                                                         interpretation_attribute_id = 56, 
                                                         attribute_string = '0', 
                                                         attribute_value_string = '0', 
@@ -71,7 +71,7 @@ class TestEditionScriptLinesDTO(unittest.TestCase):
                                                         attribute_value_id = 56, )
                                                     ], 
                                                 rois = [
-                                                    openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                                                    qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                                                         creator_id = 56, 
                                                         editor_id = 56, 
                                                         interpretation_roi_id = 56, 
@@ -94,29 +94,29 @@ class TestEditionScriptLinesDTO(unittest.TestCase):
         else :
             return EditionScriptLinesDTO(
                 text_fragments = [
-                    openapi_client.models.script_text_fragment_dto.ScriptTextFragmentDTO(
+                    qumranica_api_connector.models.script_text_fragment_dto.ScriptTextFragmentDTO(
                         text_fragment_name = '0', 
                         text_fragment_id = 56, 
                         lines = [
-                            openapi_client.models.script_line_dto.ScriptLineDTO(
+                            qumranica_api_connector.models.script_line_dto.ScriptLineDTO(
                                 line_name = '0', 
                                 line_id = 56, 
                                 artefacts = [
-                                    openapi_client.models.script_artefact_characters_dto.ScriptArtefactCharactersDTO(
+                                    qumranica_api_connector.models.script_artefact_characters_dto.ScriptArtefactCharactersDTO(
                                         artefact_name = '0', 
                                         artefact_id = 56, 
                                         placement = null, 
                                         characters = [
-                                            openapi_client.models.sign_interpretation_dto.SignInterpretationDTO(
+                                            qumranica_api_connector.models.sign_interpretation_dto.SignInterpretationDTO(
                                                 sign_interpretation_id = 56, 
                                                 next_sign_interpretations = [
-                                                    openapi_client.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
+                                                    qumranica_api_connector.models.next_sign_interpretation_dto.NextSignInterpretationDTO(
                                                         next_sign_interpretation_id = 56, 
                                                         creator_id = 56, 
                                                         editor_id = 56, )
                                                     ], 
                                                 attributes = [
-                                                    openapi_client.models.interpretation_attribute_dto.InterpretationAttributeDTO(
+                                                    qumranica_api_connector.models.interpretation_attribute_dto.InterpretationAttributeDTO(
                                                         interpretation_attribute_id = 56, 
                                                         attribute_string = '0', 
                                                         attribute_value_string = '0', 
@@ -128,7 +128,7 @@ class TestEditionScriptLinesDTO(unittest.TestCase):
                                                         attribute_value_id = 56, )
                                                     ], 
                                                 rois = [
-                                                    openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                                                    qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                                                         creator_id = 56, 
                                                         editor_id = 56, 
                                                         interpretation_roi_id = 56, 

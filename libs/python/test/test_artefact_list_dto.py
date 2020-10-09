@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.artefact_list_dto import ArtefactListDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.artefact_list_dto import ArtefactListDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestArtefactListDTO(unittest.TestCase):
     """ArtefactListDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestArtefactListDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.artefact_list_dto.ArtefactListDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.artefact_list_dto.ArtefactListDTO()  # noqa: E501
         if include_optional :
             return ArtefactListDTO(
                 artefacts = [
-                    openapi_client.models.artefact_dto.ArtefactDTO(
+                    qumranica_api_connector.models.artefact_dto.ArtefactDTO(
                         edition_id = 56, 
                         imaged_object_id = '0', 
                         image_id = 56, 
@@ -56,7 +56,7 @@ class TestArtefactListDTO(unittest.TestCase):
         else :
             return ArtefactListDTO(
                 artefacts = [
-                    openapi_client.models.artefact_dto.ArtefactDTO(
+                    qumranica_api_connector.models.artefact_dto.ArtefactDTO(
                         edition_id = 56, 
                         imaged_object_id = '0', 
                         image_id = 56, 

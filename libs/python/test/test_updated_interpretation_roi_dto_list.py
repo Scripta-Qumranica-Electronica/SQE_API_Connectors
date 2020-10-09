@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.updated_interpretation_roi_dto_list import UpdatedInterpretationRoiDTOList  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.updated_interpretation_roi_dto_list import UpdatedInterpretationRoiDTOList  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestUpdatedInterpretationRoiDTOList(unittest.TestCase):
     """UpdatedInterpretationRoiDTOList unit test stubs"""
@@ -33,11 +33,11 @@ class TestUpdatedInterpretationRoiDTOList(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.updated_interpretation_roi_dto_list.UpdatedInterpretationRoiDTOList()  # noqa: E501
+        # model = qumranica_api_connector.models.updated_interpretation_roi_dto_list.UpdatedInterpretationRoiDTOList()  # noqa: E501
         if include_optional :
             return UpdatedInterpretationRoiDTOList(
                 rois = [
-                    openapi_client.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
+                    qumranica_api_connector.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
                         old_interpretation_roi_id = 56, 
                         creator_id = 56, 
                         editor_id = 56, 
@@ -54,7 +54,7 @@ class TestUpdatedInterpretationRoiDTOList(unittest.TestCase):
         else :
             return UpdatedInterpretationRoiDTOList(
                 rois = [
-                    openapi_client.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
+                    qumranica_api_connector.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
                         old_interpretation_roi_id = 56, 
                         creator_id = 56, 
                         editor_id = 56, 

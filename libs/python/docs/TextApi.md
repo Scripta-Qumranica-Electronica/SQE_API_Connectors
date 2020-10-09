@@ -1,4 +1,4 @@
-# openapi_client.TextApi
+# qumranica_api_connector.TextApi
 
 All URIs are relative to *http://localhost*
 
@@ -24,12 +24,12 @@ Retrieves all signs and their data from the given line
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -45,9 +45,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
 line_id = 56 # int | Id of the line
 
@@ -97,12 +97,12 @@ Retrieves the ids of all Fragments of all fragments in the given edition of a sc
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -118,9 +118,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
 
     try:
@@ -168,12 +168,12 @@ Creates a new text fragment in the given edition of a scroll
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -189,11 +189,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
-create_text_fragment_dto = openapi_client.CreateTextFragmentDTO() # CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created (optional)
+create_text_fragment_dto = qumranica_api_connector.CreateTextFragmentDTO() # CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created (optional)
 
     try:
         # Creates a new text fragment in the given edition of a scroll
@@ -241,12 +241,12 @@ Retrieves the ids of all Artefacts in the given textFragmentName
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -262,9 +262,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
 text_fragment_id = 56 # int | Id of the text fragment
 
@@ -314,12 +314,12 @@ Retrieves all signs and their data from the given textFragmentName
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -335,9 +335,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
 text_fragment_id = 56 # int | Id of the text fragment
 
@@ -387,12 +387,12 @@ Retrieves the ids of all lines in the given textFragmentName
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -408,9 +408,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Id of the edition
 text_fragment_id = 56 # int | Id of the text fragment
 
@@ -460,12 +460,12 @@ Updates the specified text fragment with the submitted properties
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -481,12 +481,12 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.TextApi(api_client)
+    api_instance = qumranica_api_connector.TextApi(api_client)
     edition_id = 56 # int | Edition of the text fragment being updates
 text_fragment_id = 56 # int | Id of the text fragment being updates
-update_text_fragment_dto = openapi_client.UpdateTextFragmentDTO() # UpdateTextFragmentDTO | Details of the updated text fragment (optional)
+update_text_fragment_dto = qumranica_api_connector.UpdateTextFragmentDTO() # UpdateTextFragmentDTO | Details of the updated text fragment (optional)
 
     try:
         # Updates the specified text fragment with the submitted properties

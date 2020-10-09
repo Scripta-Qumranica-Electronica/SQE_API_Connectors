@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.attribute_list_dto import AttributeListDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.attribute_list_dto import AttributeListDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestAttributeListDTO(unittest.TestCase):
     """AttributeListDTO unit test stubs"""
@@ -33,15 +33,15 @@ class TestAttributeListDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.attribute_list_dto.AttributeListDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.attribute_list_dto.AttributeListDTO()  # noqa: E501
         if include_optional :
             return AttributeListDTO(
                 attributes = [
-                    openapi_client.models.attribute_dto.AttributeDTO(
+                    qumranica_api_connector.models.attribute_dto.AttributeDTO(
                         attribute_id = 56, 
                         attribute_name = '0', 
                         values = [
-                            openapi_client.models.attribute_value_dto.AttributeValueDTO(
+                            qumranica_api_connector.models.attribute_value_dto.AttributeValueDTO(
                                 creator_id = 56, 
                                 editor_id = 56, 
                                 id = 56, 
@@ -61,11 +61,11 @@ class TestAttributeListDTO(unittest.TestCase):
         else :
             return AttributeListDTO(
                 attributes = [
-                    openapi_client.models.attribute_dto.AttributeDTO(
+                    qumranica_api_connector.models.attribute_dto.AttributeDTO(
                         attribute_id = 56, 
                         attribute_name = '0', 
                         values = [
-                            openapi_client.models.attribute_value_dto.AttributeValueDTO(
+                            qumranica_api_connector.models.attribute_value_dto.AttributeValueDTO(
                                 creator_id = 56, 
                                 editor_id = 56, 
                                 id = 56, 

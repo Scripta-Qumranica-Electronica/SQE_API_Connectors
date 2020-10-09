@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.imaged_object_dto import ImagedObjectDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.imaged_object_dto import ImagedObjectDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestImagedObjectDTO(unittest.TestCase):
     """ImagedObjectDTO unit test stubs"""
@@ -33,14 +33,14 @@ class TestImagedObjectDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.imaged_object_dto.ImagedObjectDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.imaged_object_dto.ImagedObjectDTO()  # noqa: E501
         if include_optional :
             return ImagedObjectDTO(
                 id = '0', 
                 recto = null, 
                 verso = null, 
                 artefacts = [
-                    openapi_client.models.artefact_dto.ArtefactDTO(
+                    qumranica_api_connector.models.artefact_dto.ArtefactDTO(
                         edition_id = 56, 
                         imaged_object_id = '0', 
                         image_id = 56, 
@@ -62,7 +62,7 @@ class TestImagedObjectDTO(unittest.TestCase):
                 recto = null,
                 verso = null,
                 artefacts = [
-                    openapi_client.models.artefact_dto.ArtefactDTO(
+                    qumranica_api_connector.models.artefact_dto.ArtefactDTO(
                         edition_id = 56, 
                         imaged_object_id = '0', 
                         image_id = 56, 

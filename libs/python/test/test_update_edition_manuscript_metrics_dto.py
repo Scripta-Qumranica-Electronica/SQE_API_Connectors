@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.update_edition_manuscript_metrics_dto import UpdateEditionManuscriptMetricsDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.update_edition_manuscript_metrics_dto import UpdateEditionManuscriptMetricsDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestUpdateEditionManuscriptMetricsDTO(unittest.TestCase):
     """UpdateEditionManuscriptMetricsDTO unit test stubs"""
@@ -33,7 +33,7 @@ class TestUpdateEditionManuscriptMetricsDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.update_edition_manuscript_metrics_dto.UpdateEditionManuscriptMetricsDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.update_edition_manuscript_metrics_dto.UpdateEditionManuscriptMetricsDTO()  # noqa: E501
         if include_optional :
             return UpdateEditionManuscriptMetricsDTO(
                 width = 56, 

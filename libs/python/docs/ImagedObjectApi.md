@@ -1,4 +1,4 @@
-# openapi_client.ImagedObjectApi
+# qumranica_api_connector.ImagedObjectApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,12 +23,12 @@ Provides a listing of imaged objects related to the specified edition, can inclu
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -44,9 +44,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 optional = ['optional_example'] # list[str] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks (optional)
 
@@ -96,12 +96,12 @@ Provides information for the specified imaged object related to the specified ed
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -117,9 +117,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 imaged_object_id = 'imaged_object_id_example' # str | Unique Id of the desired object from the imaging Institution
 optional = ['optional_example'] # list[str] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks (optional)
@@ -171,12 +171,12 @@ Provides information for the specified imaged object.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -192,9 +192,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     imaged_object_id = 'imaged_object_id_example' # str | Unique Id of the desired object from the imaging Institution
 
     try:
@@ -242,12 +242,12 @@ Provides a list of all text fragments that should correspond to the imaged objec
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -263,9 +263,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     imaged_object_id = 'imaged_object_id_example' # str | Id of the imaged object
 
     try:
@@ -313,12 +313,12 @@ Provides a list of all institutional image providers.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -334,9 +334,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     
     try:
         # Provides a list of all institutional image providers.
@@ -380,12 +380,12 @@ Provides a list of all institutional image providers.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -401,9 +401,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ImagedObjectApi(api_client)
+    api_instance = qumranica_api_connector.ImagedObjectApi(api_client)
     institution_name = 'institution_name_example' # str | 
 
     try:

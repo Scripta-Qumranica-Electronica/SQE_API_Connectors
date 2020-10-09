@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.batch_updated_artefact_transform_dto import BatchUpdatedArtefactTransformDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.batch_updated_artefact_transform_dto import BatchUpdatedArtefactTransformDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestBatchUpdatedArtefactTransformDTO(unittest.TestCase):
     """BatchUpdatedArtefactTransformDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestBatchUpdatedArtefactTransformDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.batch_updated_artefact_transform_dto.BatchUpdatedArtefactTransformDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.batch_updated_artefact_transform_dto.BatchUpdatedArtefactTransformDTO()  # noqa: E501
         if include_optional :
             return BatchUpdatedArtefactTransformDTO(
                 artefact_placements = [
-                    openapi_client.models.updated_artefact_placement_dto.UpdatedArtefactPlacementDTO(
+                    qumranica_api_connector.models.updated_artefact_placement_dto.UpdatedArtefactPlacementDTO(
                         placement_editor_id = 56, 
                         artefact_id = 56, 
                         is_placed = True, 
@@ -47,7 +47,7 @@ class TestBatchUpdatedArtefactTransformDTO(unittest.TestCase):
         else :
             return BatchUpdatedArtefactTransformDTO(
                 artefact_placements = [
-                    openapi_client.models.updated_artefact_placement_dto.UpdatedArtefactPlacementDTO(
+                    qumranica_api_connector.models.updated_artefact_placement_dto.UpdatedArtefactPlacementDTO(
                         placement_editor_id = 56, 
                         artefact_id = 56, 
                         is_placed = True, 

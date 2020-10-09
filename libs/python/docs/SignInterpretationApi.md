@@ -1,4 +1,4 @@
-# openapi_client.SignInterpretationApi
+# qumranica_api_connector.SignInterpretationApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,12 +30,12 @@ Delete an attribute from an edition
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -51,9 +51,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | The ID of the edition being edited
 attribute_id = 56 # int | The ID of the attribute to delete
 
@@ -102,12 +102,12 @@ Change the details of an attribute in an edition
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -123,12 +123,12 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | The ID of the edition being edited
 attribute_id = 56 # int | The ID of the attribute to update
-update_attribute_dto = openapi_client.UpdateAttributeDTO() # UpdateAttributeDTO | The details of the updated attribute (optional)
+update_attribute_dto = qumranica_api_connector.UpdateAttributeDTO() # UpdateAttributeDTO | The details of the updated attribute (optional)
 
     try:
         # Change the details of an attribute in an edition
@@ -177,12 +177,12 @@ Retrieve a list of all possible attributes for an edition
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -198,9 +198,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | The ID of the edition being searched
 
     try:
@@ -248,12 +248,12 @@ Create a new attribute for an edition
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -269,11 +269,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | The ID of the edition being edited
-create_attribute_dto = openapi_client.CreateAttributeDTO() # CreateAttributeDTO | The details of the new attribute (optional)
+create_attribute_dto = qumranica_api_connector.CreateAttributeDTO() # CreateAttributeDTO | The details of the new attribute (optional)
 
     try:
         # Create a new attribute for an edition
@@ -321,12 +321,12 @@ Creates a new sign interpretation
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -342,11 +342,11 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
-sign_interpretation_create_dto = openapi_client.SignInterpretationCreateDTO() # SignInterpretationCreateDTO | New sign interpretation data to be added (optional)
+sign_interpretation_create_dto = qumranica_api_connector.SignInterpretationCreateDTO() # SignInterpretationCreateDTO | New sign interpretation data to be added (optional)
 
     try:
         # Creates a new sign interpretation
@@ -394,12 +394,12 @@ This deletes the specified attribute value from the specified sign interpretatio
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -415,9 +415,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | ID of the sign interpretation being altered
 attribute_value_id = 56 # int | Id of the attribute being removed
@@ -468,12 +468,12 @@ This changes the values of the specified sign interpretation attribute,  mainly 
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -489,13 +489,13 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | ID of the sign interpretation being altered
 attribute_value_id = 56 # int | Id of the attribute value to be altered
-interpretation_attribute_create_dto = openapi_client.InterpretationAttributeCreateDTO() # InterpretationAttributeCreateDTO | New details of the attribute (optional)
+interpretation_attribute_create_dto = qumranica_api_connector.InterpretationAttributeCreateDTO() # InterpretationAttributeCreateDTO | New details of the attribute (optional)
 
     try:
         # This changes the values of the specified sign interpretation attribute,  mainly used to change commentary.
@@ -545,12 +545,12 @@ This adds a new attribute to the specified sign interpretation.
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -566,12 +566,12 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | ID of the sign interpretation for adding a new attribute
-interpretation_attribute_create_dto = openapi_client.InterpretationAttributeCreateDTO() # InterpretationAttributeCreateDTO | Details of the attribute to be added (optional)
+interpretation_attribute_create_dto = qumranica_api_connector.InterpretationAttributeCreateDTO() # InterpretationAttributeCreateDTO | Details of the attribute to be added (optional)
 
     try:
         # This adds a new attribute to the specified sign interpretation.
@@ -620,12 +620,12 @@ Updates the commentary of a sign interpretation
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -641,12 +641,12 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | ID of the sign interpretation whose commentary is being changed
-commentary_create_dto = openapi_client.CommentaryCreateDTO() # CommentaryCreateDTO | The new commentary for the sign interpretation (optional)
+commentary_create_dto = qumranica_api_connector.CommentaryCreateDTO() # CommentaryCreateDTO | The new commentary for the sign interpretation (optional)
 
     try:
         # Updates the commentary of a sign interpretation
@@ -695,12 +695,12 @@ Deletes the sign interpretation in the route. The endpoint automatically manages
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -716,9 +716,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | ID of the sign interpretation being deleted
 
@@ -767,12 +767,12 @@ Retrieve the details of a sign interpretation in an edition
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -788,9 +788,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | The ID of the edition being searched
 sign_interpretation_id = 56 # int | The desired sign interpretation id
 
@@ -840,12 +840,12 @@ Links two sign interpretations in the edition's sign stream
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -861,9 +861,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | The sign interpretation to be linked to the nextSignInterpretationId
 next_sign_interpretation_id = 56 # int | The sign interpretation to become the new next sign interpretation
@@ -915,12 +915,12 @@ Links two sign interpretations in the edition's sign stream
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = qumranica_api_connector.Configuration(
     host = "http://localhost"
 )
 
@@ -936,9 +936,9 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Bearer'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with qumranica_api_connector.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SignInterpretationApi(api_client)
+    api_instance = qumranica_api_connector.SignInterpretationApi(api_client)
     edition_id = 56 # int | ID of the edition being changed
 sign_interpretation_id = 56 # int | The sign interpretation to be unlinked from the nextSignInterpretationId
 next_sign_interpretation_id = 56 # int | The sign interpretation to removed as next sign interpretation

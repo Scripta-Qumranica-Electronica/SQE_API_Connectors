@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.create_attribute_dto import CreateAttributeDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.create_attribute_dto import CreateAttributeDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestCreateAttributeDTO(unittest.TestCase):
     """CreateAttributeDTO unit test stubs"""
@@ -33,12 +33,12 @@ class TestCreateAttributeDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.create_attribute_dto.CreateAttributeDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.create_attribute_dto.CreateAttributeDTO()  # noqa: E501
         if include_optional :
             return CreateAttributeDTO(
                 attribute_name = '0', 
                 values = [
-                    openapi_client.models.create_attribute_value_dto.CreateAttributeValueDTO(
+                    qumranica_api_connector.models.create_attribute_value_dto.CreateAttributeValueDTO(
                         value = '0', 
                         description = '0', 
                         css_directives = '0', )
@@ -53,7 +53,7 @@ class TestCreateAttributeDTO(unittest.TestCase):
             return CreateAttributeDTO(
                 attribute_name = '0',
                 values = [
-                    openapi_client.models.create_attribute_value_dto.CreateAttributeValueDTO(
+                    qumranica_api_connector.models.create_attribute_value_dto.CreateAttributeValueDTO(
                         value = '0', 
                         description = '0', 
                         css_directives = '0', )

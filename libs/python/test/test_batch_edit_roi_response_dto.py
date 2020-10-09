@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.batch_edit_roi_response_dto import BatchEditRoiResponseDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.batch_edit_roi_response_dto import BatchEditRoiResponseDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestBatchEditRoiResponseDTO(unittest.TestCase):
     """BatchEditRoiResponseDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestBatchEditRoiResponseDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.batch_edit_roi_response_dto.BatchEditRoiResponseDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.batch_edit_roi_response_dto.BatchEditRoiResponseDTO()  # noqa: E501
         if include_optional :
             return BatchEditRoiResponseDTO(
                 create_rois = [
-                    openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                    qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                         creator_id = 56, 
                         editor_id = 56, 
                         interpretation_roi_id = 56, 
@@ -50,7 +50,7 @@ class TestBatchEditRoiResponseDTO(unittest.TestCase):
                         values_set = True, )
                     ], 
                 update_rois = [
-                    openapi_client.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
+                    qumranica_api_connector.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
                         old_interpretation_roi_id = 56, 
                         creator_id = 56, 
                         editor_id = 56, 
@@ -70,7 +70,7 @@ class TestBatchEditRoiResponseDTO(unittest.TestCase):
         else :
             return BatchEditRoiResponseDTO(
                 create_rois = [
-                    openapi_client.models.interpretation_roi_dto.InterpretationRoiDTO(
+                    qumranica_api_connector.models.interpretation_roi_dto.InterpretationRoiDTO(
                         creator_id = 56, 
                         editor_id = 56, 
                         interpretation_roi_id = 56, 
@@ -83,7 +83,7 @@ class TestBatchEditRoiResponseDTO(unittest.TestCase):
                         values_set = True, )
                     ],
                 update_rois = [
-                    openapi_client.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
+                    qumranica_api_connector.models.updated_interpretation_roi_dto.UpdatedInterpretationRoiDTO(
                         old_interpretation_roi_id = 56, 
                         creator_id = 56, 
                         editor_id = 56, 

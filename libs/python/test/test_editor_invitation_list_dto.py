@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import openapi_client
-from openapi_client.models.editor_invitation_list_dto import EditorInvitationListDTO  # noqa: E501
-from openapi_client.rest import ApiException
+import qumranica_api_connector
+from qumranica_api_connector.models.editor_invitation_list_dto import EditorInvitationListDTO  # noqa: E501
+from qumranica_api_connector.rest import ApiException
 
 class TestEditorInvitationListDTO(unittest.TestCase):
     """EditorInvitationListDTO unit test stubs"""
@@ -33,11 +33,11 @@ class TestEditorInvitationListDTO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = openapi_client.models.editor_invitation_list_dto.EditorInvitationListDTO()  # noqa: E501
+        # model = qumranica_api_connector.models.editor_invitation_list_dto.EditorInvitationListDTO()  # noqa: E501
         if include_optional :
             return EditorInvitationListDTO(
                 editor_invitations = [
-                    openapi_client.models.editor_invitation_dto.EditorInvitationDTO(
+                    qumranica_api_connector.models.editor_invitation_dto.EditorInvitationDTO(
                         token = '0', 
                         requesting_admin_name = '0', 
                         requesting_admin_email = '0', 
@@ -53,7 +53,7 @@ class TestEditorInvitationListDTO(unittest.TestCase):
         else :
             return EditorInvitationListDTO(
                 editor_invitations = [
-                    openapi_client.models.editor_invitation_dto.EditorInvitationDTO(
+                    qumranica_api_connector.models.editor_invitation_dto.EditorInvitationDTO(
                         token = '0', 
                         requesting_admin_name = '0', 
                         requesting_admin_email = '0', 
