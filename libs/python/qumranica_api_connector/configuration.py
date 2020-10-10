@@ -74,7 +74,7 @@ conf = qumranica_api_connector.Configuration(
 
     _default = None
 
-    def __init__(self, host="http://localhost",
+    def __init__(self, host="https://api.qumranica.org",
                  api_key=None, api_key_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
