@@ -1,4 +1,4 @@
-# SqeApi.LineDataListDTO
+# QumranicaApiConnector.LineDataListDTO
 
 ## Properties
 

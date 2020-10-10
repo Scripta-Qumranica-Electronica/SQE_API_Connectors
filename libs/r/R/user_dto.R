@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title UserDTO
-#'
 #' @description UserDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field userId  integer 
 #'
 #' @field email  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ UserDTO <- R6::R6Class(
   public = list(
     `userId` = NULL,
     `email` = NULL,
-    initialize = function(
-        `userId`, `email`, ...
-    ) {
+    initialize = function(`userId`, `email`, ...){
       local.optional.var <- list(...)
       if (!missing(`userId`)) {
         stopifnot(is.numeric(`userId`), length(`userId`) == 1)
@@ -59,7 +55,6 @@ UserDTO <- R6::R6Class(
       if (!is.null(UserDTOObject$`email`)) {
         self$`email` <- UserDTOObject$`email`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ UserDTO <- R6::R6Class(
     }
   )
 )
-

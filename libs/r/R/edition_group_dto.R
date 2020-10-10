@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title EditionGroupDTO
-#'
 #' @description EditionGroupDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field primary  \link{EditionDTO} 
 #'
 #' @field others  list( \link{EditionDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ EditionGroupDTO <- R6::R6Class(
   public = list(
     `primary` = NULL,
     `others` = NULL,
-    initialize = function(
-        `primary`, `others`, ...
-    ) {
+    initialize = function(`primary`, `others`, ...){
       local.optional.var <- list(...)
       if (!missing(`primary`)) {
         stopifnot(R6::is.R6(`primary`))
@@ -60,9 +56,8 @@ EditionGroupDTO <- R6::R6Class(
         self$`primary` <- primaryObject
       }
       if (!is.null(EditionGroupDTOObject$`others`)) {
-        self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("openapi"))
+        self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -87,9 +82,8 @@ EditionGroupDTO <- R6::R6Class(
     fromJSONString = function(EditionGroupDTOJson) {
       EditionGroupDTOObject <- jsonlite::fromJSON(EditionGroupDTOJson)
       self$`primary` <- EditionDTO$new()$fromJSON(jsonlite::toJSON(EditionGroupDTOObject$primary, auto_unbox = TRUE, digits = NA))
-      self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("openapi"))
+      self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

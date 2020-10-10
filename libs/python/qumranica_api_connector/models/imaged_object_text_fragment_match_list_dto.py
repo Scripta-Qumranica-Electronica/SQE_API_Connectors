@@ -67,7 +67,7 @@ class ImagedObjectTextFragmentMatchListDTO(object):
 
 
         :param matches: The matches of this ImagedObjectTextFragmentMatchListDTO.  # noqa: E501
-        :type matches: list[ImagedObjectTextFragmentMatchDTO]
+        :type: list[ImagedObjectTextFragmentMatchDTO]
         """
 
         self._matches = matches

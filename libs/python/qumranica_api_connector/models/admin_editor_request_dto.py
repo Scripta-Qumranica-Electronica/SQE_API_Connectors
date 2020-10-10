@@ -99,7 +99,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param editor_name: The editor_name of this AdminEditorRequestDTO.  # noqa: E501
-        :type editor_name: str
+        :type: str
         """
 
         self._editor_name = editor_name
@@ -120,7 +120,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param editor_email: The editor_email of this AdminEditorRequestDTO.  # noqa: E501
-        :type editor_email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and editor_email is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_email`, must not be `None`")  # noqa: E501
@@ -143,7 +143,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param edition_id: The edition_id of this AdminEditorRequestDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -166,7 +166,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param edition_name: The edition_name of this AdminEditorRequestDTO.  # noqa: E501
-        :type edition_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_name is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_name`, must not be `None`")  # noqa: E501
@@ -189,7 +189,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param date: The date of this AdminEditorRequestDTO.  # noqa: E501
-        :type date: datetime
+        :type: datetime
         """
         if self.local_vars_configuration.client_side_validation and date is None:  # noqa: E501
             raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
@@ -212,7 +212,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param may_lock: The may_lock of this AdminEditorRequestDTO.  # noqa: E501
-        :type may_lock: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_lock is None:  # noqa: E501
             raise ValueError("Invalid value for `may_lock`, must not be `None`")  # noqa: E501
@@ -235,7 +235,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param may_read: The may_read of this AdminEditorRequestDTO.  # noqa: E501
-        :type may_read: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_read is None:  # noqa: E501
             raise ValueError("Invalid value for `may_read`, must not be `None`")  # noqa: E501
@@ -258,7 +258,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param may_write: The may_write of this AdminEditorRequestDTO.  # noqa: E501
-        :type may_write: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_write is None:  # noqa: E501
             raise ValueError("Invalid value for `may_write`, must not be `None`")  # noqa: E501
@@ -281,7 +281,7 @@ class AdminEditorRequestDTO(object):
 
 
         :param is_admin: The is_admin of this AdminEditorRequestDTO.  # noqa: E501
-        :type is_admin: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_admin is None:  # noqa: E501
             raise ValueError("Invalid value for `is_admin`, must not be `None`")  # noqa: E501

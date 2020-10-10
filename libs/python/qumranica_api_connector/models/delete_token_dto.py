@@ -71,7 +71,7 @@ class DeleteTokenDTO(object):
 
 
         :param edition_id: The edition_id of this DeleteTokenDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class DeleteTokenDTO(object):
 
 
         :param token: The token of this DeleteTokenDTO.  # noqa: E501
-        :type token: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and token is None:  # noqa: E501
             raise ValueError("Invalid value for `token`, must not be `None`")  # noqa: E501

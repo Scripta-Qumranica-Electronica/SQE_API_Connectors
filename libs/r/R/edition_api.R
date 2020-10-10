@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Edition operations
-#' @description openapi.Edition
+#' @description qumranica_api_connector.Edition
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -228,7 +228,7 @@
 #' \dontrun{
 #' ####################  V1EditionsAdminShareRequestsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #'
 #' #Get a list of requests issued by the current user for other users  to become editors of a shared edition
 #' api.instance <- EditionApi$new()
@@ -241,7 +241,7 @@
 #'
 #' ####################  V1EditionsConfirmEditorshipTokenPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.token <- 'token_example' # character | JWT for verifying the request confirmation
 #'
 #' #Confirm addition of an editor to the specified edition
@@ -255,7 +255,7 @@
 #'
 #' ####################  V1EditionsEditionIdAddEditorRequestPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.invite.editor.dto <- InviteEditorDTO$new() # InviteEditorDTO | JSON object with the attributes of the new editor
 #'
@@ -270,7 +270,7 @@
 #'
 #' ####################  V1EditionsEditionIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.optional <- ['optional_example'] # array[character] | Optional parameters: 'deleteForAllEditors'
 #' var.token <- 'token_example' # character | token required when using optional 'deleteForAllEditors'
@@ -286,7 +286,7 @@
 #'
 #' ####################  V1EditionsEditionIdEditorsEditorEmailIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.editor.email.id <- 'editor.email.id_example' # character | Email address of the editor whose permissions are being changed
 #' var.update.editor.rights.dto <- UpdateEditorRightsDTO$new() # UpdateEditorRightsDTO | JSON object with the attributes of the new editor
@@ -302,7 +302,7 @@
 #'
 #' ####################  V1EditionsEditionIdGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #'
 #' #Provides details about the specified edition and all accessible alternate editions
@@ -316,7 +316,7 @@
 #'
 #' ####################  V1EditionsEditionIdPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.edition.copy.dto <- EditionCopyDTO$new() # EditionCopyDTO | JSON object with the attributes to be changed in the copied edition
 #'
@@ -331,7 +331,7 @@
 #'
 #' ####################  V1EditionsEditionIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.edition.update.request.dto <- EditionUpdateRequestDTO$new() # EditionUpdateRequestDTO | JSON object with the attributes to be updated
 #'
@@ -346,7 +346,7 @@
 #'
 #' ####################  V1EditionsEditionIdScriptCollectionGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #'
 #' #Provides spatial data for all letters in the edition
@@ -360,7 +360,7 @@
 #'
 #' ####################  V1EditionsEditionIdScriptLinesGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #'
 #' #Provides spatial data for all letters in the edition organized and oriented  by lines.
@@ -374,7 +374,7 @@
 #'
 #' ####################  V1EditionsEditorInvitationsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #'
 #' #Get a list of invitations issued to the current user to become an editor of a shared edition
 #' api.instance <- EditionApi$new()
@@ -387,7 +387,7 @@
 #'
 #' ####################  V1EditionsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #'
 #' #Provides a listing of all editions accessible to the current user
 #' api.instance <- EditionApi$new()
@@ -400,7 +400,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom base64enc base64encode
+#' @importFrom caTools base64encode
 #' @export
 EditionApi <- R6::R6Class(
   'EditionApi',
@@ -448,7 +448,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AdminEditorRequestListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "AdminEditorRequestListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -504,7 +504,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DetailedEditorRightsDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "DetailedEditorRightsDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -620,7 +620,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DeleteTokenDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "DeleteTokenDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -690,7 +690,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DetailedEditorRightsDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "DetailedEditorRightsDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -746,7 +746,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionGroupDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionGroupDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -808,7 +808,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -870,7 +870,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -926,7 +926,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionScriptCollectionDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionScriptCollectionDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -982,7 +982,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionScriptLinesDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionScriptLinesDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1030,7 +1030,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditorInvitationListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditorInvitationListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1078,7 +1078,7 @@ EditionApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "EditionListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "EditionListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

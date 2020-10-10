@@ -1,4 +1,4 @@
-# SqeApi.UserApi
+# QumranicaApiConnector.UserApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,25 +26,24 @@ Uses the secret token from /users/forgot-password to validate a reset of the use
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'resetForgottenUserPasswordRequestDTO': new SqeApi.ResetForgottenUserPasswordRequestDTO() // ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password
+  'resetForgottenUserPasswordRequestDTO': new QumranicaApiConnector.ResetForgottenUserPasswordRequestDTO() // ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password
 };
-apiInstance.v1UsersChangeForgottenPasswordPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersChangeForgottenPasswordPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -77,25 +76,24 @@ Changes the password for the currently logged in user
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'resetLoggedInUserPasswordRequestDTO': new SqeApi.ResetLoggedInUserPasswordRequestDTO() // ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password
+  'resetLoggedInUserPasswordRequestDTO': new QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO() // ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password
 };
-apiInstance.v1UsersChangePasswordPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersChangePasswordPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -128,25 +126,24 @@ Allows a user who has not yet activated their account to change their email addr
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'unactivatedEmailUpdateRequestDTO': new SqeApi.UnactivatedEmailUpdateRequestDTO() // UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address
+  'unactivatedEmailUpdateRequestDTO': new QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO() // UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address
 };
-apiInstance.v1UsersChangeUnactivatedEmailPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersChangeUnactivatedEmailPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -179,25 +176,24 @@ Confirms registration of new user account.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'accountActivationRequestDTO': new SqeApi.AccountActivationRequestDTO() // AccountActivationRequestDTO | JSON object with token from user registration email
+  'accountActivationRequestDTO': new QumranicaApiConnector.AccountActivationRequestDTO() // AccountActivationRequestDTO | JSON object with token from user registration email
 };
-apiInstance.v1UsersConfirmRegistrationPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersConfirmRegistrationPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -230,25 +226,24 @@ Sends a secret token to the user&#39;s email to allow password reset.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'resetUserPasswordRequestDTO': new SqeApi.ResetUserPasswordRequestDTO() // ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password
+  'resetUserPasswordRequestDTO': new QumranicaApiConnector.ResetUserPasswordRequestDTO() // ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password
 };
-apiInstance.v1UsersForgotPasswordPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersForgotPasswordPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -281,22 +276,21 @@ Provides the user details for a user with valid JWT in the Authorize header
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
-apiInstance.v1UsersGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new QumranicaApiConnector.UserApi();
+apiInstance.v1UsersGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -326,25 +320,24 @@ Provides a JWT bearer token for valid email and password
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'loginRequestDTO': new SqeApi.LoginRequestDTO() // LoginRequestDTO | JSON object with an email and password parameter
+  'loginRequestDTO': new QumranicaApiConnector.LoginRequestDTO() // LoginRequestDTO | JSON object with an email and password parameter
 };
-apiInstance.v1UsersLoginPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1UsersLoginPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -377,25 +370,24 @@ Creates a new user with the submitted data.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'newUserRequestDTO': new SqeApi.NewUserRequestDTO() // NewUserRequestDTO | A JSON object with all data necessary to create a new user account
+  'newUserRequestDTO': new QumranicaApiConnector.NewUserRequestDTO() // NewUserRequestDTO | A JSON object with all data necessary to create a new user account
 };
-apiInstance.v1UsersPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1UsersPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -428,25 +420,24 @@ Updates a user&#39;s registration details.  Note that the if the email address h
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'userUpdateRequestDTO': new SqeApi.UserUpdateRequestDTO() // UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
+  'userUpdateRequestDTO': new QumranicaApiConnector.UserUpdateRequestDTO() // UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
 };
-apiInstance.v1UsersPut(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1UsersPut(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -479,25 +470,24 @@ Sends a new activation email for the user&#39;s account. This will not work if t
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UserApi();
+let apiInstance = new QumranicaApiConnector.UserApi();
 let opts = {
-  'resendUserAccountActivationRequestDTO': new SqeApi.ResendUserAccountActivationRequestDTO() // ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address
+  'resendUserAccountActivationRequestDTO': new QumranicaApiConnector.ResendUserAccountActivationRequestDTO() // ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address
 };
-apiInstance.v1UsersResendActivationEmailPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1UsersResendActivationEmailPost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

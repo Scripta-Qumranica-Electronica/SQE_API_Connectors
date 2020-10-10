@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.TextEditionDTO();
+    instance = new QumranicaApiConnector.TextEditionDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('TextEditionDTO', function() {
     it('should create an instance of TextEditionDTO', function() {
       // uncomment below and update the code to test TextEditionDTO
-      //var instane = new SqeApi.TextEditionDTO();
-      //expect(instance).to.be.a(SqeApi.TextEditionDTO);
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.TextEditionDTO);
     });
 
     it('should have the property manuscriptId (base name: "manuscriptId")', function() {
       // uncomment below and update the code to test the property manuscriptId
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionName (base name: "editionName")', function() {
       // uncomment below and update the code to test the property editionName
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property licence (base name: "licence")', function() {
       // uncomment below and update the code to test the property licence
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editors (base name: "editors")', function() {
       // uncomment below and update the code to test the property editors
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property textFragments (base name: "textFragments")', function() {
       // uncomment below and update the code to test the property textFragments
-      //var instane = new SqeApi.TextEditionDTO();
+      //var instane = new QumranicaApiConnector.TextEditionDTO();
       //expect(instance).to.be();
     });
 

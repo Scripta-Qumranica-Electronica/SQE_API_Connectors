@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title WktPolygonDTO
-#'
 #' @description WktPolygonDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field wktPolygon  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ WktPolygonDTO <- R6::R6Class(
   'WktPolygonDTO',
   public = list(
     `wktPolygon` = NULL,
-    initialize = function(
-        `wktPolygon`, ...
-    ) {
+    initialize = function(`wktPolygon`, ...){
       local.optional.var <- list(...)
       if (!missing(`wktPolygon`)) {
         stopifnot(is.character(`wktPolygon`), length(`wktPolygon`) == 1)
@@ -45,7 +41,6 @@ WktPolygonDTO <- R6::R6Class(
       if (!is.null(WktPolygonDTOObject$`wktPolygon`)) {
         self$`wktPolygon` <- WktPolygonDTOObject$`wktPolygon`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -67,4 +62,3 @@ WktPolygonDTO <- R6::R6Class(
     }
   )
 )
-

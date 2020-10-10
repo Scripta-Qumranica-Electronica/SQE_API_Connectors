@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title AccountActivationRequestDTO
-#'
 #' @description AccountActivationRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field token  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ AccountActivationRequestDTO <- R6::R6Class(
   'AccountActivationRequestDTO',
   public = list(
     `token` = NULL,
-    initialize = function(
-        `token`, ...
-    ) {
+    initialize = function(`token`, ...){
       local.optional.var <- list(...)
       if (!missing(`token`)) {
         stopifnot(is.character(`token`), length(`token`) == 1)
@@ -45,7 +41,6 @@ AccountActivationRequestDTO <- R6::R6Class(
       if (!is.null(AccountActivationRequestDTOObject$`token`)) {
         self$`token` <- AccountActivationRequestDTOObject$`token`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -67,4 +62,3 @@ AccountActivationRequestDTO <- R6::R6Class(
     }
   )
 )
-

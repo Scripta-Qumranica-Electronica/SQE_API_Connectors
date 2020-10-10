@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title AdminEditorRequestListDTO
-#'
 #' @description AdminEditorRequestListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editorRequests  list( \link{AdminEditorRequestDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ AdminEditorRequestListDTO <- R6::R6Class(
   'AdminEditorRequestListDTO',
   public = list(
     `editorRequests` = NULL,
-    initialize = function(
-        `editorRequests`, ...
-    ) {
+    initialize = function(`editorRequests`, ...){
       local.optional.var <- list(...)
       if (!missing(`editorRequests`)) {
         stopifnot(is.vector(`editorRequests`), length(`editorRequests`) != 0)
@@ -44,9 +40,8 @@ AdminEditorRequestListDTO <- R6::R6Class(
     fromJSON = function(AdminEditorRequestListDTOJson) {
       AdminEditorRequestListDTOObject <- jsonlite::fromJSON(AdminEditorRequestListDTOJson)
       if (!is.null(AdminEditorRequestListDTOObject$`editorRequests`)) {
-        self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("openapi"))
+        self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ AdminEditorRequestListDTO <- R6::R6Class(
     },
     fromJSONString = function(AdminEditorRequestListDTOJson) {
       AdminEditorRequestListDTOObject <- jsonlite::fromJSON(AdminEditorRequestListDTOJson)
-      self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("openapi"))
+      self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

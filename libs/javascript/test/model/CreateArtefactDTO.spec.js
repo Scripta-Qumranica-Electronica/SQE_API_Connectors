@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CreateArtefactDTO();
+    instance = new QumranicaApiConnector.CreateArtefactDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('CreateArtefactDTO', function() {
     it('should create an instance of CreateArtefactDTO', function() {
       // uncomment below and update the code to test CreateArtefactDTO
-      //var instane = new SqeApi.CreateArtefactDTO();
-      //expect(instance).to.be.a(SqeApi.CreateArtefactDTO);
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CreateArtefactDTO);
     });
 
     it('should have the property masterImageId (base name: "masterImageId")', function() {
       // uncomment below and update the code to test the property masterImageId
-      //var instane = new SqeApi.CreateArtefactDTO();
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mask (base name: "mask")', function() {
       // uncomment below and update the code to test the property mask
-      //var instane = new SqeApi.CreateArtefactDTO();
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property placement (base name: "placement")', function() {
       // uncomment below and update the code to test the property placement
-      //var instane = new SqeApi.CreateArtefactDTO();
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.CreateArtefactDTO();
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property statusMessage (base name: "statusMessage")', function() {
       // uncomment below and update the code to test the property statusMessage
-      //var instane = new SqeApi.CreateArtefactDTO();
+      //var instane = new QumranicaApiConnector.CreateArtefactDTO();
       //expect(instance).to.be();
     });
 

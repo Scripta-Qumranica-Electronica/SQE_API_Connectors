@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.NewUserRequestDTO();
+    instance = new QumranicaApiConnector.NewUserRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('NewUserRequestDTO', function() {
     it('should create an instance of NewUserRequestDTO', function() {
       // uncomment below and update the code to test NewUserRequestDTO
-      //var instane = new SqeApi.NewUserRequestDTO();
-      //expect(instance).to.be.a(SqeApi.NewUserRequestDTO);
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.NewUserRequestDTO);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.NewUserRequestDTO();
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
-      //var instane = new SqeApi.NewUserRequestDTO();
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property organization (base name: "organization")', function() {
       // uncomment below and update the code to test the property organization
-      //var instane = new SqeApi.NewUserRequestDTO();
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property forename (base name: "forename")', function() {
       // uncomment below and update the code to test the property forename
-      //var instane = new SqeApi.NewUserRequestDTO();
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property surname (base name: "surname")', function() {
       // uncomment below and update the code to test the property surname
-      //var instane = new SqeApi.NewUserRequestDTO();
+      //var instane = new QumranicaApiConnector.NewUserRequestDTO();
       //expect(instance).to.be();
     });
 

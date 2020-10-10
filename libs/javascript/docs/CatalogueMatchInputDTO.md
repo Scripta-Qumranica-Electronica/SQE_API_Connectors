@@ -1,4 +1,4 @@
-# SqeApi.CatalogueMatchInputDTO
+# QumranicaApiConnector.CatalogueMatchInputDTO
 
 ## Properties
 

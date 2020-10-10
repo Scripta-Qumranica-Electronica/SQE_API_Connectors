@@ -41,28 +41,22 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_lines_line_id_get(edition_id, line_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param line_id: Id of the line (required)
-        :type line_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int line_id: Id of the line (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: LineTextDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: LineTextDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_lines_line_id_get_with_http_info(edition_id, line_id, **kwargs)  # noqa: E501
@@ -72,35 +66,24 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_lines_line_id_get_with_http_info(edition_id, line_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param line_id: Id of the line (required)
-        :type line_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int line_id: Id of the line (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(LineTextDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(LineTextDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -114,8 +97,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -158,10 +140,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "LineTextDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/lines/{lineId}', 'GET',
@@ -171,40 +149,34 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='LineTextDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_get(self, edition_id, **kwargs):  # noqa: E501
         """Retrieves the ids of all Fragments of all fragments in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: TextFragmentDataListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: TextFragmentDataListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -214,33 +186,23 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(TextFragmentDataListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(TextFragmentDataListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -253,8 +215,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -291,10 +252,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "TextFragmentDataListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments', 'GET',
@@ -304,42 +261,35 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='TextFragmentDataListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates a new text fragment in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param create_text_fragment_dto: A JSON object with the details of the new text fragment to be created
-        :type create_text_fragment_dto: CreateTextFragmentDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param CreateTextFragmentDTO create_text_fragment_dto: A JSON object with the details of the new text fragment to be created
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: TextFragmentDataDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: TextFragmentDataDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -349,35 +299,24 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param create_text_fragment_dto: A JSON object with the details of the new text fragment to be created
-        :type create_text_fragment_dto: CreateTextFragmentDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param CreateTextFragmentDTO create_text_fragment_dto: A JSON object with the details of the new text fragment to be created
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(TextFragmentDataDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(TextFragmentDataDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -391,8 +330,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -435,10 +373,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "TextFragmentDataDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments', 'POST',
@@ -448,42 +382,35 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='TextFragmentDataDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_text_fragment_id_artefacts_get(self, edition_id, text_fragment_id, **kwargs):  # noqa: E501
         """Retrieves the ids of all Artefacts in the given textFragmentName  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_artefacts_get(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactDataListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactDataListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_text_fragment_id_artefacts_get_with_http_info(edition_id, text_fragment_id, **kwargs)  # noqa: E501
@@ -493,35 +420,24 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_artefacts_get_with_http_info(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactDataListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactDataListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -535,8 +451,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -579,10 +494,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactDataListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments/{textFragmentId}/artefacts', 'GET',
@@ -592,42 +503,35 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactDataListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_text_fragment_id_get(self, edition_id, text_fragment_id, **kwargs):  # noqa: E501
         """Retrieves all signs and their data from the given textFragmentName  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_get(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: TextEditionDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: TextEditionDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_text_fragment_id_get_with_http_info(edition_id, text_fragment_id, **kwargs)  # noqa: E501
@@ -637,35 +541,24 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_get_with_http_info(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(TextEditionDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(TextEditionDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -679,8 +572,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -723,10 +615,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "TextEditionDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments/{textFragmentId}', 'GET',
@@ -736,42 +624,35 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='TextEditionDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_text_fragment_id_lines_get(self, edition_id, text_fragment_id, **kwargs):  # noqa: E501
         """Retrieves the ids of all lines in the given textFragmentName  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_lines_get(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: LineDataListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: LineDataListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_text_fragment_id_lines_get_with_http_info(edition_id, text_fragment_id, **kwargs)  # noqa: E501
@@ -781,35 +662,24 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_lines_get_with_http_info(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int text_fragment_id: Id of the text fragment (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(LineDataListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(LineDataListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -823,8 +693,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -867,10 +736,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "LineDataListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments/{textFragmentId}/lines', 'GET',
@@ -880,44 +745,36 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='LineDataListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_text_fragments_text_fragment_id_put(self, edition_id, text_fragment_id, **kwargs):  # noqa: E501
         """Updates the specified text fragment with the submitted properties  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_put(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Edition of the text fragment being updates (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment being updates (required)
-        :type text_fragment_id: int
-        :param update_text_fragment_dto: Details of the updated text fragment
-        :type update_text_fragment_dto: UpdateTextFragmentDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Edition of the text fragment being updates (required)
+        :param int text_fragment_id: Id of the text fragment being updates (required)
+        :param UpdateTextFragmentDTO update_text_fragment_dto: Details of the updated text fragment
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: TextFragmentDataDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: TextFragmentDataDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_text_fragments_text_fragment_id_put_with_http_info(edition_id, text_fragment_id, **kwargs)  # noqa: E501
@@ -927,37 +784,25 @@ class TextApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_text_fragments_text_fragment_id_put_with_http_info(edition_id, text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Edition of the text fragment being updates (required)
-        :type edition_id: int
-        :param text_fragment_id: Id of the text fragment being updates (required)
-        :type text_fragment_id: int
-        :param update_text_fragment_dto: Details of the updated text fragment
-        :type update_text_fragment_dto: UpdateTextFragmentDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Edition of the text fragment being updates (required)
+        :param int text_fragment_id: Id of the text fragment being updates (required)
+        :param UpdateTextFragmentDTO update_text_fragment_dto: Details of the updated text fragment
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(TextFragmentDataDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(TextFragmentDataDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -972,8 +817,7 @@ class TextApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1022,10 +866,6 @@ class TextApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "TextFragmentDataDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/text-fragments/{textFragmentId}', 'PUT',
@@ -1035,11 +875,10 @@ class TextApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='TextFragmentDataDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

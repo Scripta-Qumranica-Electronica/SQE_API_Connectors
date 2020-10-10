@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ImageInstitutionDTO
-#'
 #' @description ImageInstitutionDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field name  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ImageInstitutionDTO <- R6::R6Class(
   'ImageInstitutionDTO',
   public = list(
     `name` = NULL,
-    initialize = function(
-        `name`, ...
-    ) {
+    initialize = function(`name`, ...){
       local.optional.var <- list(...)
       if (!missing(`name`)) {
         stopifnot(is.character(`name`), length(`name`) == 1)
@@ -45,7 +41,6 @@ ImageInstitutionDTO <- R6::R6Class(
       if (!is.null(ImageInstitutionDTOObject$`name`)) {
         self$`name` <- ImageInstitutionDTOObject$`name`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -67,4 +62,3 @@ ImageInstitutionDTO <- R6::R6Class(
     }
   )
 )
-

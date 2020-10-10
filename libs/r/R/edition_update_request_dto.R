@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title EditionUpdateRequestDTO
-#'
 #' @description EditionUpdateRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field metrics  \link{UpdateEditionManuscriptMetricsDTO} [optional]
 #'
 #' @field name  character [optional]
@@ -20,6 +17,7 @@
 #' @field copyrightHolder  character [optional]
 #'
 #' @field collaborators  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ EditionUpdateRequestDTO <- R6::R6Class(
     `name` = NULL,
     `copyrightHolder` = NULL,
     `collaborators` = NULL,
-    initialize = function(
-        `metrics`=NULL, `name`=NULL, `copyrightHolder`=NULL, `collaborators`=NULL, ...
-    ) {
+    initialize = function(`metrics`=NULL, `name`=NULL, `copyrightHolder`=NULL, `collaborators`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`metrics`)) {
         stopifnot(R6::is.R6(`metrics`))
@@ -89,7 +85,6 @@ EditionUpdateRequestDTO <- R6::R6Class(
       if (!is.null(EditionUpdateRequestDTOObject$`collaborators`)) {
         self$`collaborators` <- EditionUpdateRequestDTOObject$`collaborators`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -135,4 +130,3 @@ EditionUpdateRequestDTO <- R6::R6Class(
     }
   )
 )
-

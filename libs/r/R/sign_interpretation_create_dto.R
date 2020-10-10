@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title SignInterpretationCreateDTO
-#'
 #' @description SignInterpretationCreateDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field lineId  integer [optional]
 #'
 #' @field previousSignInterpretationIds  list( integer ) [optional]
@@ -31,6 +28,7 @@
 #'
 #' @field isVariant  character 
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -46,9 +44,7 @@ SignInterpretationCreateDTO <- R6::R6Class(
     `breakPreviousAndNextSignInterpretations` = NULL,
     `character` = NULL,
     `isVariant` = NULL,
-    initialize = function(
-        `attributes`, `rois`, `isVariant`, `lineId`=NULL, `previousSignInterpretationIds`=NULL, `nextSignInterpretationIds`=NULL, `commentary`=NULL, `breakPreviousAndNextSignInterpretations`=NULL, `character`=NULL, ...
-    ) {
+    initialize = function(`attributes`, `rois`, `isVariant`, `lineId`=NULL, `previousSignInterpretationIds`=NULL, `nextSignInterpretationIds`=NULL, `commentary`=NULL, `breakPreviousAndNextSignInterpretations`=NULL, `character`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`attributes`)) {
         stopifnot(is.vector(`attributes`), length(`attributes`) != 0)
@@ -136,16 +132,16 @@ SignInterpretationCreateDTO <- R6::R6Class(
         self$`lineId` <- SignInterpretationCreateDTOObject$`lineId`
       }
       if (!is.null(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`)) {
-        self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("openapi"))
+        self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`)) {
-        self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("openapi"))
+        self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("openapi"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("openapi"))
+        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`commentary`)) {
         commentaryObject <- CommentaryCreateDTO$new()
@@ -161,7 +157,6 @@ SignInterpretationCreateDTO <- R6::R6Class(
       if (!is.null(SignInterpretationCreateDTOObject$`isVariant`)) {
         self$`isVariant` <- SignInterpretationCreateDTOObject$`isVariant`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -235,10 +230,10 @@ SignInterpretationCreateDTO <- R6::R6Class(
     fromJSONString = function(SignInterpretationCreateDTOJson) {
       SignInterpretationCreateDTOObject <- jsonlite::fromJSON(SignInterpretationCreateDTOJson)
       self$`lineId` <- SignInterpretationCreateDTOObject$`lineId`
-      self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("openapi"))
-      self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("openapi"))
-      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("openapi"))
-      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("openapi"))
+      self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
+      self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranica_api_connector"))
+      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       self$`commentary` <- CommentaryCreateDTO$new()$fromJSON(jsonlite::toJSON(SignInterpretationCreateDTOObject$commentary, auto_unbox = TRUE, digits = NA))
       self$`breakPreviousAndNextSignInterpretations` <- SignInterpretationCreateDTOObject$`breakPreviousAndNextSignInterpretations`
       self$`character` <- SignInterpretationCreateDTOObject$`character`
@@ -247,4 +242,3 @@ SignInterpretationCreateDTO <- R6::R6Class(
     }
   )
 )
-

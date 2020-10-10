@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditorInvitationDTO();
+    instance = new QumranicaApiConnector.EditorInvitationDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('EditorInvitationDTO', function() {
     it('should create an instance of EditorInvitationDTO', function() {
       // uncomment below and update the code to test EditorInvitationDTO
-      //var instane = new SqeApi.EditorInvitationDTO();
-      //expect(instance).to.be.a(SqeApi.EditorInvitationDTO);
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditorInvitationDTO);
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property requestingAdminName (base name: "requestingAdminName")', function() {
       // uncomment below and update the code to test the property requestingAdminName
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property requestingAdminEmail (base name: "requestingAdminEmail")', function() {
       // uncomment below and update the code to test the property requestingAdminEmail
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionId (base name: "editionId")', function() {
       // uncomment below and update the code to test the property editionId
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionName (base name: "editionName")', function() {
       // uncomment below and update the code to test the property editionName
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayLock (base name: "mayLock")', function() {
       // uncomment below and update the code to test the property mayLock
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayRead (base name: "mayRead")', function() {
       // uncomment below and update the code to test the property mayRead
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayWrite (base name: "mayWrite")', function() {
       // uncomment below and update the code to test the property mayWrite
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isAdmin (base name: "isAdmin")', function() {
       // uncomment below and update the code to test the property isAdmin
-      //var instane = new SqeApi.EditorInvitationDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationDTO();
       //expect(instance).to.be();
     });
 

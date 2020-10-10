@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title CatalogueMatchListDTO
-#'
 #' @description CatalogueMatchListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field matches  list( \link{CatalogueMatchDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ CatalogueMatchListDTO <- R6::R6Class(
   'CatalogueMatchListDTO',
   public = list(
     `matches` = NULL,
-    initialize = function(
-        `matches`, ...
-    ) {
+    initialize = function(`matches`, ...){
       local.optional.var <- list(...)
       if (!missing(`matches`)) {
         stopifnot(is.vector(`matches`), length(`matches`) != 0)
@@ -44,9 +40,8 @@ CatalogueMatchListDTO <- R6::R6Class(
     fromJSON = function(CatalogueMatchListDTOJson) {
       CatalogueMatchListDTOObject <- jsonlite::fromJSON(CatalogueMatchListDTOJson)
       if (!is.null(CatalogueMatchListDTOObject$`matches`)) {
-        self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("openapi"))
+        self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ CatalogueMatchListDTO <- R6::R6Class(
     },
     fromJSONString = function(CatalogueMatchListDTOJson) {
       CatalogueMatchListDTOObject <- jsonlite::fromJSON(CatalogueMatchListDTOJson)
-      self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("openapi"))
+      self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

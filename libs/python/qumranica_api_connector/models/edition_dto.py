@@ -111,7 +111,7 @@ class EditionDTO(object):
 
 
         :param id: The id of this EditionDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -134,7 +134,7 @@ class EditionDTO(object):
 
 
         :param name: The name of this EditionDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -157,7 +157,7 @@ class EditionDTO(object):
 
 
         :param edition_data_editor_id: The edition_data_editor_id of this EditionDTO.  # noqa: E501
-        :type edition_data_editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_data_editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_data_editor_id`, must not be `None`")  # noqa: E501
@@ -180,7 +180,7 @@ class EditionDTO(object):
 
 
         :param permission: The permission of this EditionDTO.  # noqa: E501
-        :type permission: PermissionDTO
+        :type: PermissionDTO
         """
         if self.local_vars_configuration.client_side_validation and permission is None:  # noqa: E501
             raise ValueError("Invalid value for `permission`, must not be `None`")  # noqa: E501
@@ -203,7 +203,7 @@ class EditionDTO(object):
 
 
         :param owner: The owner of this EditionDTO.  # noqa: E501
-        :type owner: UserDTO
+        :type: UserDTO
         """
         if self.local_vars_configuration.client_side_validation and owner is None:  # noqa: E501
             raise ValueError("Invalid value for `owner`, must not be `None`")  # noqa: E501
@@ -226,7 +226,7 @@ class EditionDTO(object):
 
 
         :param thumbnail_url: The thumbnail_url of this EditionDTO.  # noqa: E501
-        :type thumbnail_url: str
+        :type: str
         """
 
         self._thumbnail_url = thumbnail_url
@@ -247,7 +247,7 @@ class EditionDTO(object):
 
 
         :param shares: The shares of this EditionDTO.  # noqa: E501
-        :type shares: list[DetailedEditorRightsDTO]
+        :type: list[DetailedEditorRightsDTO]
         """
         if self.local_vars_configuration.client_side_validation and shares is None:  # noqa: E501
             raise ValueError("Invalid value for `shares`, must not be `None`")  # noqa: E501
@@ -270,7 +270,7 @@ class EditionDTO(object):
 
 
         :param metrics: The metrics of this EditionDTO.  # noqa: E501
-        :type metrics: EditionManuscriptMetricsDTO
+        :type: EditionManuscriptMetricsDTO
         """
         if self.local_vars_configuration.client_side_validation and metrics is None:  # noqa: E501
             raise ValueError("Invalid value for `metrics`, must not be `None`")  # noqa: E501
@@ -293,7 +293,7 @@ class EditionDTO(object):
 
 
         :param locked: The locked of this EditionDTO.  # noqa: E501
-        :type locked: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and locked is None:  # noqa: E501
             raise ValueError("Invalid value for `locked`, must not be `None`")  # noqa: E501
@@ -316,7 +316,7 @@ class EditionDTO(object):
 
 
         :param is_public: The is_public of this EditionDTO.  # noqa: E501
-        :type is_public: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_public is None:  # noqa: E501
             raise ValueError("Invalid value for `is_public`, must not be `None`")  # noqa: E501
@@ -339,7 +339,7 @@ class EditionDTO(object):
 
 
         :param last_edit: The last_edit of this EditionDTO.  # noqa: E501
-        :type last_edit: datetime
+        :type: datetime
         """
 
         self._last_edit = last_edit
@@ -360,7 +360,7 @@ class EditionDTO(object):
 
 
         :param copyright: The copyright of this EditionDTO.  # noqa: E501
-        :type copyright: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and copyright is None:  # noqa: E501
             raise ValueError("Invalid value for `copyright`, must not be `None`")  # noqa: E501

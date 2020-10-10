@@ -1,4 +1,4 @@
-# SqeApi.AccountActivationRequestDTO
+# QumranicaApiConnector.AccountActivationRequestDTO
 
 ## Properties
 

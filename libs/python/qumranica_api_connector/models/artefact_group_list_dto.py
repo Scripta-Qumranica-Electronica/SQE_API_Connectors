@@ -67,7 +67,7 @@ class ArtefactGroupListDTO(object):
 
 
         :param artefact_groups: The artefact_groups of this ArtefactGroupListDTO.  # noqa: E501
-        :type artefact_groups: list[ArtefactGroupDTO]
+        :type: list[ArtefactGroupDTO]
         """
         if self.local_vars_configuration.client_side_validation and artefact_groups is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_groups`, must not be `None`")  # noqa: E501

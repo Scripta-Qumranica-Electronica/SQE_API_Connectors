@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdateArtefactDTO();
+    instance = new QumranicaApiConnector.UpdateArtefactDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('UpdateArtefactDTO', function() {
     it('should create an instance of UpdateArtefactDTO', function() {
       // uncomment below and update the code to test UpdateArtefactDTO
-      //var instane = new SqeApi.UpdateArtefactDTO();
-      //expect(instance).to.be.a(SqeApi.UpdateArtefactDTO);
+      //var instane = new QumranicaApiConnector.UpdateArtefactDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdateArtefactDTO);
     });
 
     it('should have the property mask (base name: "mask")', function() {
       // uncomment below and update the code to test the property mask
-      //var instane = new SqeApi.UpdateArtefactDTO();
+      //var instane = new QumranicaApiConnector.UpdateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property placement (base name: "placement")', function() {
       // uncomment below and update the code to test the property placement
-      //var instane = new SqeApi.UpdateArtefactDTO();
+      //var instane = new QumranicaApiConnector.UpdateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.UpdateArtefactDTO();
+      //var instane = new QumranicaApiConnector.UpdateArtefactDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property statusMessage (base name: "statusMessage")', function() {
       // uncomment below and update the code to test the property statusMessage
-      //var instane = new SqeApi.UpdateArtefactDTO();
+      //var instane = new QumranicaApiConnector.UpdateArtefactDTO();
       //expect(instance).to.be();
     });
 

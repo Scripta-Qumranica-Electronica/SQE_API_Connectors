@@ -1,4 +1,4 @@
-# openapi::EditionScriptCollectionDTO
+# qumranica_api_connector::EditionScriptCollectionDTO
 
 ## Properties
 Name | Type | Description | Notes

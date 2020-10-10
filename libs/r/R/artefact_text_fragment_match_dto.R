@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title ArtefactTextFragmentMatchDTO
-#'
 #' @description ArtefactTextFragmentMatchDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field suggested  character 
 #'
 #' @field id  integer 
@@ -20,6 +17,7 @@
 #' @field name  character 
 #'
 #' @field editorId  integer 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ ArtefactTextFragmentMatchDTO <- R6::R6Class(
     `id` = NULL,
     `name` = NULL,
     `editorId` = NULL,
-    initialize = function(
-        `suggested`, `id`, `name`, `editorId`, ...
-    ) {
+    initialize = function(`suggested`, `id`, `name`, `editorId`, ...){
       local.optional.var <- list(...)
       if (!missing(`suggested`)) {
         self$`suggested` <- `suggested`
@@ -86,7 +82,6 @@ ArtefactTextFragmentMatchDTO <- R6::R6Class(
       if (!is.null(ArtefactTextFragmentMatchDTOObject$`editorId`)) {
         self$`editorId` <- ArtefactTextFragmentMatchDTOObject$`editorId`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -132,4 +127,3 @@ ArtefactTextFragmentMatchDTO <- R6::R6Class(
     }
   )
 )
-

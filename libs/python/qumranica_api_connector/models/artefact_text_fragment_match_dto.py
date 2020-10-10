@@ -79,7 +79,7 @@ class ArtefactTextFragmentMatchDTO(object):
 
 
         :param suggested: The suggested of this ArtefactTextFragmentMatchDTO.  # noqa: E501
-        :type suggested: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and suggested is None:  # noqa: E501
             raise ValueError("Invalid value for `suggested`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class ArtefactTextFragmentMatchDTO(object):
 
 
         :param id: The id of this ArtefactTextFragmentMatchDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class ArtefactTextFragmentMatchDTO(object):
 
 
         :param name: The name of this ArtefactTextFragmentMatchDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -148,7 +148,7 @@ class ArtefactTextFragmentMatchDTO(object):
 
 
         :param editor_id: The editor_id of this ArtefactTextFragmentMatchDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501

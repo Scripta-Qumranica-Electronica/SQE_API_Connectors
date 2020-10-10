@@ -67,7 +67,7 @@ class ImageInstitutionListDTO(object):
 
 
         :param institutions: The institutions of this ImageInstitutionListDTO.  # noqa: E501
-        :type institutions: list[ImageInstitutionDTO]
+        :type: list[ImageInstitutionDTO]
         """
         if self.local_vars_configuration.client_side_validation and institutions is None:  # noqa: E501
             raise ValueError("Invalid value for `institutions`, must not be `None`")  # noqa: E501

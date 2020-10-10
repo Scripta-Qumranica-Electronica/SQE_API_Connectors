@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.SetInterpretationRoiDTOList();
+    instance = new QumranicaApiConnector.SetInterpretationRoiDTOList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('SetInterpretationRoiDTOList', function() {
     it('should create an instance of SetInterpretationRoiDTOList', function() {
       // uncomment below and update the code to test SetInterpretationRoiDTOList
-      //var instane = new SqeApi.SetInterpretationRoiDTOList();
-      //expect(instance).to.be.a(SqeApi.SetInterpretationRoiDTOList);
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTOList();
+      //expect(instance).to.be.a(QumranicaApiConnector.SetInterpretationRoiDTOList);
     });
 
     it('should have the property rois (base name: "rois")', function() {
       // uncomment below and update the code to test the property rois
-      //var instane = new SqeApi.SetInterpretationRoiDTOList();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTOList();
       //expect(instance).to.be();
     });
 

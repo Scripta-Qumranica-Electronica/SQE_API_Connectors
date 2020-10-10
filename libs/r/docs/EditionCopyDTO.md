@@ -1,4 +1,4 @@
-# openapi::EditionCopyDTO
+# qumranica_api_connector::EditionCopyDTO
 
 ## Properties
 Name | Type | Description | Notes

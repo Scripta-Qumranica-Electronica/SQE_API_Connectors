@@ -79,7 +79,7 @@ class UpdateAttributeValueDTO(object):
 
 
         :param id: The id of this UpdateAttributeValueDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class UpdateAttributeValueDTO(object):
 
 
         :param value: The value of this UpdateAttributeValueDTO.  # noqa: E501
-        :type value: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and value is None:  # noqa: E501
             raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class UpdateAttributeValueDTO(object):
 
 
         :param description: The description of this UpdateAttributeValueDTO.  # noqa: E501
-        :type description: str
+        :type: str
         """
 
         self._description = description
@@ -146,7 +146,7 @@ class UpdateAttributeValueDTO(object):
 
 
         :param css_directives: The css_directives of this UpdateAttributeValueDTO.  # noqa: E501
-        :type css_directives: str
+        :type: str
         """
 
         self._css_directives = css_directives

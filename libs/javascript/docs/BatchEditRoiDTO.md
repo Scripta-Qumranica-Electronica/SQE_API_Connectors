@@ -1,4 +1,4 @@
-# SqeApi.BatchEditRoiDTO
+# QumranicaApiConnector.BatchEditRoiDTO
 
 ## Properties
 

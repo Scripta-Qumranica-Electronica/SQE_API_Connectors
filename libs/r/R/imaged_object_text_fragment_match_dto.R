@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title ImagedObjectTextFragmentMatchDTO
-#'
 #' @description ImagedObjectTextFragmentMatchDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editionId  integer 
 #'
 #' @field manuscriptName  character 
@@ -22,6 +19,7 @@
 #' @field textFragmentName  character 
 #'
 #' @field side  \link{SideDesignation} 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -34,9 +32,7 @@ ImagedObjectTextFragmentMatchDTO <- R6::R6Class(
     `textFragmentId` = NULL,
     `textFragmentName` = NULL,
     `side` = NULL,
-    initialize = function(
-        `editionId`, `manuscriptName`, `textFragmentId`, `textFragmentName`, `side`, ...
-    ) {
+    initialize = function(`editionId`, `manuscriptName`, `textFragmentId`, `textFragmentName`, `side`, ...){
       local.optional.var <- list(...)
       if (!missing(`editionId`)) {
         stopifnot(is.numeric(`editionId`), length(`editionId`) == 1)
@@ -103,7 +99,6 @@ ImagedObjectTextFragmentMatchDTO <- R6::R6Class(
         sideObject$fromJSON(jsonlite::toJSON(ImagedObjectTextFragmentMatchDTOObject$side, auto_unbox = TRUE, digits = NA))
         self$`side` <- sideObject
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -157,4 +152,3 @@ ImagedObjectTextFragmentMatchDTO <- R6::R6Class(
     }
   )
 )
-

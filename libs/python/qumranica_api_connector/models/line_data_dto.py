@@ -71,7 +71,7 @@ class LineDataDTO(object):
 
 
         :param line_id: The line_id of this LineDataDTO.  # noqa: E501
-        :type line_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and line_id is None:  # noqa: E501
             raise ValueError("Invalid value for `line_id`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class LineDataDTO(object):
 
 
         :param line_name: The line_name of this LineDataDTO.  # noqa: E501
-        :type line_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and line_name is None:  # noqa: E501
             raise ValueError("Invalid value for `line_name`, must not be `None`")  # noqa: E501

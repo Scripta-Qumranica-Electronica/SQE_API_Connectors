@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title ScriptTextFragmentDTO
-#'
 #' @description ScriptTextFragmentDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field textFragmentName  character 
 #'
 #' @field textFragmentId  integer 
 #'
 #' @field lines  list( \link{ScriptLineDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ ScriptTextFragmentDTO <- R6::R6Class(
     `textFragmentName` = NULL,
     `textFragmentId` = NULL,
     `lines` = NULL,
-    initialize = function(
-        `textFragmentName`, `textFragmentId`, `lines`, ...
-    ) {
+    initialize = function(`textFragmentName`, `textFragmentId`, `lines`, ...){
       local.optional.var <- list(...)
       if (!missing(`textFragmentName`)) {
         stopifnot(is.character(`textFragmentName`), length(`textFragmentName`) == 1)
@@ -72,9 +68,8 @@ ScriptTextFragmentDTO <- R6::R6Class(
         self$`textFragmentId` <- ScriptTextFragmentDTOObject$`textFragmentId`
       }
       if (!is.null(ScriptTextFragmentDTOObject$`lines`)) {
-        self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("openapi"))
+        self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -107,9 +102,8 @@ ScriptTextFragmentDTO <- R6::R6Class(
       ScriptTextFragmentDTOObject <- jsonlite::fromJSON(ScriptTextFragmentDTOJson)
       self$`textFragmentName` <- ScriptTextFragmentDTOObject$`textFragmentName`
       self$`textFragmentId` <- ScriptTextFragmentDTOObject$`textFragmentId`
-      self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("openapi"))
+      self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

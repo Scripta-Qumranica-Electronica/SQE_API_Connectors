@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdateAttributeDTO();
+    instance = new QumranicaApiConnector.UpdateAttributeDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('UpdateAttributeDTO', function() {
     it('should create an instance of UpdateAttributeDTO', function() {
       // uncomment below and update the code to test UpdateAttributeDTO
-      //var instane = new SqeApi.UpdateAttributeDTO();
-      //expect(instance).to.be.a(SqeApi.UpdateAttributeDTO);
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdateAttributeDTO);
     });
 
     it('should have the property createValues (base name: "createValues")', function() {
       // uncomment below and update the code to test the property createValues
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property updateValues (base name: "updateValues")', function() {
       // uncomment below and update the code to test the property updateValues
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property deleteValues (base name: "deleteValues")', function() {
       // uncomment below and update the code to test the property deleteValues
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editable (base name: "editable")', function() {
       // uncomment below and update the code to test the property editable
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property removable (base name: "removable")', function() {
       // uncomment below and update the code to test the property removable
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property repeatable (base name: "repeatable")', function() {
       // uncomment below and update the code to test the property repeatable
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property batchEditable (base name: "batchEditable")', function() {
       // uncomment below and update the code to test the property batchEditable
-      //var instane = new SqeApi.UpdateAttributeDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeDTO();
       //expect(instance).to.be();
     });
 

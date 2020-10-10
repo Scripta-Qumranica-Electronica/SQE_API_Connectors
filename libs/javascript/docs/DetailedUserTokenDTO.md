@@ -1,4 +1,4 @@
-# SqeApi.DetailedUserTokenDTO
+# QumranicaApiConnector.DetailedUserTokenDTO
 
 ## Properties
 

@@ -71,7 +71,7 @@ class DeleteDTO(object):
 
 
         :param entity: The entity of this DeleteDTO.  # noqa: E501
-        :type entity: EditionEntities
+        :type: EditionEntities
         """
         if self.local_vars_configuration.client_side_validation and entity is None:  # noqa: E501
             raise ValueError("Invalid value for `entity`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class DeleteDTO(object):
 
 
         :param ids: The ids of this DeleteDTO.  # noqa: E501
-        :type ids: list[int]
+        :type: list[int]
         """
         if self.local_vars_configuration.client_side_validation and ids is None:  # noqa: E501
             raise ValueError("Invalid value for `ids`, must not be `None`")  # noqa: E501

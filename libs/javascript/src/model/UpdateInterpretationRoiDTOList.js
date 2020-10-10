@@ -17,7 +17,7 @@ import UpdateInterpretationRoiDTO from './UpdateInterpretationRoiDTO';
 /**
  * The UpdateInterpretationRoiDTOList model module.
  * @module model/UpdateInterpretationRoiDTOList
- * @version v1
+ * @version 0.7.0
  */
 class UpdateInterpretationRoiDTOList {
     /**

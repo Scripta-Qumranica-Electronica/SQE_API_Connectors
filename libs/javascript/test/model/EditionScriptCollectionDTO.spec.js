@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditionScriptCollectionDTO();
+    instance = new QumranicaApiConnector.EditionScriptCollectionDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('EditionScriptCollectionDTO', function() {
     it('should create an instance of EditionScriptCollectionDTO', function() {
       // uncomment below and update the code to test EditionScriptCollectionDTO
-      //var instane = new SqeApi.EditionScriptCollectionDTO();
-      //expect(instance).to.be.a(SqeApi.EditionScriptCollectionDTO);
+      //var instane = new QumranicaApiConnector.EditionScriptCollectionDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionScriptCollectionDTO);
     });
 
     it('should have the property letters (base name: "letters")', function() {
       // uncomment below and update the code to test the property letters
-      //var instane = new SqeApi.EditionScriptCollectionDTO();
+      //var instane = new QumranicaApiConnector.EditionScriptCollectionDTO();
       //expect(instance).to.be();
     });
 

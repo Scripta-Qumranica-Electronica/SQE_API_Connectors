@@ -67,7 +67,7 @@ class EditionListDTO(object):
 
 
         :param editions: The editions of this EditionListDTO.  # noqa: E501
-        :type editions: list[list[EditionDTO]]
+        :type: list[list[EditionDTO]]
         """
         if self.local_vars_configuration.client_side_validation and editions is None:  # noqa: E501
             raise ValueError("Invalid value for `editions`, must not be `None`")  # noqa: E501

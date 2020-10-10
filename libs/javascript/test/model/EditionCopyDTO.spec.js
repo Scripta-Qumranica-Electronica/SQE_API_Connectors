@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditionCopyDTO();
+    instance = new QumranicaApiConnector.EditionCopyDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('EditionCopyDTO', function() {
     it('should create an instance of EditionCopyDTO', function() {
       // uncomment below and update the code to test EditionCopyDTO
-      //var instane = new SqeApi.EditionCopyDTO();
-      //expect(instance).to.be.a(SqeApi.EditionCopyDTO);
+      //var instane = new QumranicaApiConnector.EditionCopyDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionCopyDTO);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.EditionCopyDTO();
+      //var instane = new QumranicaApiConnector.EditionCopyDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property copyrightHolder (base name: "copyrightHolder")', function() {
       // uncomment below and update the code to test the property copyrightHolder
-      //var instane = new SqeApi.EditionCopyDTO();
+      //var instane = new QumranicaApiConnector.EditionCopyDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property collaborators (base name: "collaborators")', function() {
       // uncomment below and update the code to test the property collaborators
-      //var instane = new SqeApi.EditionCopyDTO();
+      //var instane = new QumranicaApiConnector.EditionCopyDTO();
       //expect(instance).to.be();
     });
 

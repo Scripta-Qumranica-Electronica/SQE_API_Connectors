@@ -1,4 +1,4 @@
-# SqeApi.ArtefactTextFragmentMatchListDTO
+# QumranicaApiConnector.ArtefactTextFragmentMatchListDTO
 
 ## Properties
 

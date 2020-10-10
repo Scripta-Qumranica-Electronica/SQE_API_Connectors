@@ -75,7 +75,7 @@ class BatchEditRoiDTO(object):
 
 
         :param create_rois: The create_rois of this BatchEditRoiDTO.  # noqa: E501
-        :type create_rois: list[SetInterpretationRoiDTO]
+        :type: list[SetInterpretationRoiDTO]
         """
 
         self._create_rois = create_rois
@@ -96,7 +96,7 @@ class BatchEditRoiDTO(object):
 
 
         :param update_rois: The update_rois of this BatchEditRoiDTO.  # noqa: E501
-        :type update_rois: list[UpdateInterpretationRoiDTO]
+        :type: list[UpdateInterpretationRoiDTO]
         """
 
         self._update_rois = update_rois
@@ -117,7 +117,7 @@ class BatchEditRoiDTO(object):
 
 
         :param delete_rois: The delete_rois of this BatchEditRoiDTO.  # noqa: E501
-        :type delete_rois: list[int]
+        :type: list[int]
         """
 
         self._delete_rois = delete_rois

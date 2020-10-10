@@ -1,0 +1,15 @@
+{
+  "name": "qumranica_api_connector",
+  "version": "0.7.0",
+  "description": "OpenAPI client for qumranica_api_connector",
+  "author": "OpenAPI-Generator",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^2.4"
+  }
+}

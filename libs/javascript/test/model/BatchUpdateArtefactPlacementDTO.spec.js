@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.BatchUpdateArtefactPlacementDTO();
+    instance = new QumranicaApiConnector.BatchUpdateArtefactPlacementDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('BatchUpdateArtefactPlacementDTO', function() {
     it('should create an instance of BatchUpdateArtefactPlacementDTO', function() {
       // uncomment below and update the code to test BatchUpdateArtefactPlacementDTO
-      //var instane = new SqeApi.BatchUpdateArtefactPlacementDTO();
-      //expect(instance).to.be.a(SqeApi.BatchUpdateArtefactPlacementDTO);
+      //var instane = new QumranicaApiConnector.BatchUpdateArtefactPlacementDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.BatchUpdateArtefactPlacementDTO);
     });
 
     it('should have the property artefactPlacements (base name: "artefactPlacements")', function() {
       // uncomment below and update the code to test the property artefactPlacements
-      //var instane = new SqeApi.BatchUpdateArtefactPlacementDTO();
+      //var instane = new QumranicaApiConnector.BatchUpdateArtefactPlacementDTO();
       //expect(instance).to.be();
     });
 

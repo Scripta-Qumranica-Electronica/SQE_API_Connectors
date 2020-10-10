@@ -19,7 +19,7 @@ import SideDesignation from './SideDesignation';
 /**
  * The ImageDTO model module.
  * @module model/ImageDTO
- * @version v1
+ * @version 0.7.0
  */
 class ImageDTO {
     /**

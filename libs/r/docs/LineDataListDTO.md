@@ -1,4 +1,4 @@
-# openapi::LineDataListDTO
+# qumranica_api_connector::LineDataListDTO
 
 ## Properties
 Name | Type | Description | Notes

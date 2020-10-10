@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.TextFragmentDataDTO();
+    instance = new QumranicaApiConnector.TextFragmentDataDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('TextFragmentDataDTO', function() {
     it('should create an instance of TextFragmentDataDTO', function() {
       // uncomment below and update the code to test TextFragmentDataDTO
-      //var instane = new SqeApi.TextFragmentDataDTO();
-      //expect(instance).to.be.a(SqeApi.TextFragmentDataDTO);
+      //var instane = new QumranicaApiConnector.TextFragmentDataDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.TextFragmentDataDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.TextFragmentDataDTO();
+      //var instane = new QumranicaApiConnector.TextFragmentDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.TextFragmentDataDTO();
+      //var instane = new QumranicaApiConnector.TextFragmentDataDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.TextFragmentDataDTO();
+      //var instane = new QumranicaApiConnector.TextFragmentDataDTO();
       //expect(instance).to.be();
     });
 

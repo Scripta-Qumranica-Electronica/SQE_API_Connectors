@@ -75,7 +75,7 @@ class ImageStackDTO(object):
 
 
         :param id: The id of this ImageStackDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
 
         self._id = id
@@ -96,7 +96,7 @@ class ImageStackDTO(object):
 
 
         :param images: The images of this ImageStackDTO.  # noqa: E501
-        :type images: list[ImageDTO]
+        :type: list[ImageDTO]
         """
         if self.local_vars_configuration.client_side_validation and images is None:  # noqa: E501
             raise ValueError("Invalid value for `images`, must not be `None`")  # noqa: E501
@@ -119,7 +119,7 @@ class ImageStackDTO(object):
 
 
         :param master_index: The master_index of this ImageStackDTO.  # noqa: E501
-        :type master_index: int
+        :type: int
         """
 
         self._master_index = master_index

@@ -75,7 +75,7 @@ class ScriptTextFragmentDTO(object):
 
 
         :param text_fragment_name: The text_fragment_name of this ScriptTextFragmentDTO.  # noqa: E501
-        :type text_fragment_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_name is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_name`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class ScriptTextFragmentDTO(object):
 
 
         :param text_fragment_id: The text_fragment_id of this ScriptTextFragmentDTO.  # noqa: E501
-        :type text_fragment_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_id is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_id`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class ScriptTextFragmentDTO(object):
 
 
         :param lines: The lines of this ScriptTextFragmentDTO.  # noqa: E501
-        :type lines: list[ScriptLineDTO]
+        :type: list[ScriptLineDTO]
         """
         if self.local_vars_configuration.client_side_validation and lines is None:  # noqa: E501
             raise ValueError("Invalid value for `lines`, must not be `None`")  # noqa: E501

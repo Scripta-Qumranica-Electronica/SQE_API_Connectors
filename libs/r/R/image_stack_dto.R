@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title ImageStackDTO
-#'
 #' @description ImageStackDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field id  integer [optional]
 #'
 #' @field images  list( \link{ImageDTO} ) 
 #'
 #' @field masterIndex  integer [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ ImageStackDTO <- R6::R6Class(
     `id` = NULL,
     `images` = NULL,
     `masterIndex` = NULL,
-    initialize = function(
-        `images`, `id`=NULL, `masterIndex`=NULL, ...
-    ) {
+    initialize = function(`images`, `id`=NULL, `masterIndex`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`images`)) {
         stopifnot(is.vector(`images`), length(`images`) != 0)
@@ -69,12 +65,11 @@ ImageStackDTO <- R6::R6Class(
         self$`id` <- ImageStackDTOObject$`id`
       }
       if (!is.null(ImageStackDTOObject$`images`)) {
-        self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("openapi"))
+        self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(ImageStackDTOObject$`masterIndex`)) {
         self$`masterIndex` <- ImageStackDTOObject$`masterIndex`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -106,10 +101,9 @@ ImageStackDTO <- R6::R6Class(
     fromJSONString = function(ImageStackDTOJson) {
       ImageStackDTOObject <- jsonlite::fromJSON(ImageStackDTOJson)
       self$`id` <- ImageStackDTOObject$`id`
-      self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("openapi"))
+      self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranica_api_connector"))
       self$`masterIndex` <- ImageStackDTOObject$`masterIndex`
       self
     }
   )
 )
-

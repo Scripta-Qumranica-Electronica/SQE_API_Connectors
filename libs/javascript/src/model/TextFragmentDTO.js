@@ -17,7 +17,7 @@ import LineDTO from './LineDTO';
 /**
  * The TextFragmentDTO model module.
  * @module model/TextFragmentDTO
- * @version v1
+ * @version 0.7.0
  */
 class TextFragmentDTO {
     /**

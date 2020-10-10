@@ -1,4 +1,4 @@
-# SqeApi.Lighting
+# QumranicaApiConnector.Lighting
 
 ## Enum
 

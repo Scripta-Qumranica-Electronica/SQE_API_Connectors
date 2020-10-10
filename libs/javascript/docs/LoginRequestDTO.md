@@ -1,4 +1,4 @@
-# SqeApi.LoginRequestDTO
+# QumranicaApiConnector.LoginRequestDTO
 
 ## Properties
 

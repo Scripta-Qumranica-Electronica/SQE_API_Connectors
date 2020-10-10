@@ -1,4 +1,4 @@
-# SqeApi.ArtefactApi
+# QumranicaApiConnector.ArtefactApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,24 +29,23 @@ Deletes the specified artefact group.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactGroupId = 56; // Number | Unique Id of the artefact group to be deleted
-apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete(editionId, artefactGroupId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete(editionId, artefactGroupId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -80,24 +79,23 @@ Gets the details of a specific artefact group in the edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactGroupId = 56; // Number | Id of the desired artefact group
-apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdGet(editionId, artefactGroupId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdGet(editionId, artefactGroupId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -131,27 +129,26 @@ Updates the details of an artefact group.  The artefact group will now only cont
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactGroupId = 56; // Number | Id of the artefact group to be updated
 let opts = {
-  'updateArtefactGroupDTO': new SqeApi.UpdateArtefactGroupDTO() // UpdateArtefactGroupDTO | Parameters that the artefact group should be changed to
+  'updateArtefactGroupDTO': new QumranicaApiConnector.UpdateArtefactGroupDTO() // UpdateArtefactGroupDTO | Parameters that the artefact group should be changed to
 };
-apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdPut(editionId, artefactGroupId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactGroupsArtefactGroupIdPut(editionId, artefactGroupId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -186,23 +183,22 @@ Gets a listing of all artefact groups in the edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
-apiInstance.v1EditionsEditionIdArtefactGroupsGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactGroupsGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -235,26 +231,25 @@ Creates a new artefact group with the submitted data.  The new artefact must hav
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'createArtefactGroupDTO': new SqeApi.CreateArtefactGroupDTO() // CreateArtefactGroupDTO | Parameters of the new artefact group
+  'createArtefactGroupDTO': new QumranicaApiConnector.CreateArtefactGroupDTO() // CreateArtefactGroupDTO | Parameters of the new artefact group
 };
-apiInstance.v1EditionsEditionIdArtefactGroupsPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactGroupsPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -288,24 +283,23 @@ Deletes the specified artefact
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactId = 56; // Number | Unique Id of the desired artefact
-apiInstance.v1EditionsEditionIdArtefactsArtefactIdDelete(editionId, artefactId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdArtefactsArtefactIdDelete(editionId, artefactId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -339,27 +333,26 @@ Provides a listing of all artefacts that are part of the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactId = 56; // Number | Unique Id of the desired artefact
 let opts = {
   'optional': ["null"] // [String] | Add \"masks\" to include artefact polygons and \"images\" to include image data
 };
-apiInstance.v1EditionsEditionIdArtefactsArtefactIdGet(editionId, artefactId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsArtefactIdGet(editionId, artefactId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -394,27 +387,26 @@ Updates the specified artefact.  There are many possible attributes that can be 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactId = 56; // Number | Unique Id of the desired artefact
 let opts = {
-  'updateArtefactDTO': new SqeApi.UpdateArtefactDTO() // UpdateArtefactDTO | An UpdateArtefactDTO with the desired alterations to the artefact
+  'updateArtefactDTO': new QumranicaApiConnector.UpdateArtefactDTO() // UpdateArtefactDTO | An UpdateArtefactDTO with the desired alterations to the artefact
 };
-apiInstance.v1EditionsEditionIdArtefactsArtefactIdPut(editionId, artefactId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsArtefactIdPut(editionId, artefactId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -449,24 +441,23 @@ Provides a listing of all rois belonging to an artefact in the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactId = 56; // Number | Unique Id of the desired artefact
-apiInstance.v1EditionsEditionIdArtefactsArtefactIdRoisGet(editionId, artefactId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsArtefactIdRoisGet(editionId, artefactId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -500,27 +491,26 @@ Provides a listing of text fragments that have text in the specified artefact.  
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let artefactId = 56; // Number | Unique Id of the desired artefact
 let opts = {
   'optional': ["null"] // [String] | Add \"suggested\" to include possible matches suggested by the system
 };
-apiInstance.v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet(editionId, artefactId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet(editionId, artefactId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -555,26 +545,25 @@ Updates the positional data for a batch of artefacts
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'batchUpdateArtefactPlacementDTO': new SqeApi.BatchUpdateArtefactPlacementDTO() // BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates
+  'batchUpdateArtefactPlacementDTO': new QumranicaApiConnector.BatchUpdateArtefactPlacementDTO() // BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates
 };
-apiInstance.v1EditionsEditionIdArtefactsBatchTransformationPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsBatchTransformationPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -608,26 +597,25 @@ Provides a listing of all artefacts that are part of the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
   'optional': ["null"] // [String] | Add \"masks\" to include artefact polygons and \"images\" to include image data
 };
-apiInstance.v1EditionsEditionIdArtefactsGet(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsGet(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -661,26 +649,25 @@ Creates a new artefact with the provided data.  If no mask is provided, a placeh
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ArtefactApi();
+let apiInstance = new QumranicaApiConnector.ArtefactApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'createArtefactDTO': new SqeApi.CreateArtefactDTO() // CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact
+  'createArtefactDTO': new QumranicaApiConnector.CreateArtefactDTO() // CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact
 };
-apiInstance.v1EditionsEditionIdArtefactsPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdArtefactsPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

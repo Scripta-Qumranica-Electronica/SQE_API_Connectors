@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title CreateAttributeDTO
-#'
 #' @description CreateAttributeDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field attributeName  character 
 #'
 #' @field values  list( \link{CreateAttributeValueDTO} ) 
@@ -27,6 +24,7 @@
 #'
 #' @field batchEditable  character [optional]
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -40,9 +38,7 @@ CreateAttributeDTO <- R6::R6Class(
     `removable` = NULL,
     `repeatable` = NULL,
     `batchEditable` = NULL,
-    initialize = function(
-        `attributeName`, `values`, `description`=NULL, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...
-    ) {
+    initialize = function(`attributeName`, `values`, `description`=NULL, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`attributeName`)) {
         stopifnot(is.character(`attributeName`), length(`attributeName`) == 1)
@@ -109,7 +105,7 @@ CreateAttributeDTO <- R6::R6Class(
         self$`attributeName` <- CreateAttributeDTOObject$`attributeName`
       }
       if (!is.null(CreateAttributeDTOObject$`values`)) {
-        self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("openapi"))
+        self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(CreateAttributeDTOObject$`description`)) {
         self$`description` <- CreateAttributeDTOObject$`description`
@@ -126,7 +122,6 @@ CreateAttributeDTO <- R6::R6Class(
       if (!is.null(CreateAttributeDTOObject$`batchEditable`)) {
         self$`batchEditable` <- CreateAttributeDTOObject$`batchEditable`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -186,7 +181,7 @@ CreateAttributeDTO <- R6::R6Class(
     fromJSONString = function(CreateAttributeDTOJson) {
       CreateAttributeDTOObject <- jsonlite::fromJSON(CreateAttributeDTOJson)
       self$`attributeName` <- CreateAttributeDTOObject$`attributeName`
-      self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("openapi"))
+      self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       self$`description` <- CreateAttributeDTOObject$`description`
       self$`editable` <- CreateAttributeDTOObject$`editable`
       self$`removable` <- CreateAttributeDTOObject$`removable`
@@ -196,4 +191,3 @@ CreateAttributeDTO <- R6::R6Class(
     }
   )
 )
-

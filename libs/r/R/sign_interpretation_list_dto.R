@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title SignInterpretationListDTO
-#'
 #' @description SignInterpretationListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field signInterpretations  list( \link{SignInterpretationDTO} ) [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ SignInterpretationListDTO <- R6::R6Class(
   'SignInterpretationListDTO',
   public = list(
     `signInterpretations` = NULL,
-    initialize = function(
-        `signInterpretations`=NULL, ...
-    ) {
+    initialize = function(`signInterpretations`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`signInterpretations`)) {
         stopifnot(is.vector(`signInterpretations`), length(`signInterpretations`) != 0)
@@ -44,9 +40,8 @@ SignInterpretationListDTO <- R6::R6Class(
     fromJSON = function(SignInterpretationListDTOJson) {
       SignInterpretationListDTOObject <- jsonlite::fromJSON(SignInterpretationListDTOJson)
       if (!is.null(SignInterpretationListDTOObject$`signInterpretations`)) {
-        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationListDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationListDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ SignInterpretationListDTO <- R6::R6Class(
     },
     fromJSONString = function(SignInterpretationListDTOJson) {
       SignInterpretationListDTOObject <- jsonlite::fromJSON(SignInterpretationListDTOJson)
-      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationListDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationListDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

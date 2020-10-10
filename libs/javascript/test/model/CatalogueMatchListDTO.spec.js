@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CatalogueMatchListDTO();
+    instance = new QumranicaApiConnector.CatalogueMatchListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('CatalogueMatchListDTO', function() {
     it('should create an instance of CatalogueMatchListDTO', function() {
       // uncomment below and update the code to test CatalogueMatchListDTO
-      //var instane = new SqeApi.CatalogueMatchListDTO();
-      //expect(instance).to.be.a(SqeApi.CatalogueMatchListDTO);
+      //var instane = new QumranicaApiConnector.CatalogueMatchListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CatalogueMatchListDTO);
     });
 
     it('should have the property matches (base name: "matches")', function() {
       // uncomment below and update the code to test the property matches
-      //var instane = new SqeApi.CatalogueMatchListDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchListDTO();
       //expect(instance).to.be();
     });
 

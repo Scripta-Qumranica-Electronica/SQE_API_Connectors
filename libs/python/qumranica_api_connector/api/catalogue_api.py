@@ -41,26 +41,21 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_delete(iaa_edition_catalog_to_text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
-        :type iaa_edition_catalog_to_text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_delete_with_http_info(iaa_edition_catalog_to_text_fragment_id, **kwargs)  # noqa: E501
@@ -70,33 +65,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_delete_with_http_info(iaa_edition_catalog_to_text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
-        :type iaa_edition_catalog_to_text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -109,8 +94,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -143,8 +127,6 @@ class CatalogueApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/catalogue/confirm-match/{iaaEditionCatalogToTextFragmentId}', 'DELETE',
@@ -154,40 +136,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_post(self, iaa_edition_catalog_to_text_fragment_id, **kwargs):  # noqa: E501
         """Confirm the correctness of an existing imaged object and text fragment match  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_post(iaa_edition_catalog_to_text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
-        :type iaa_edition_catalog_to_text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_post_with_http_info(iaa_edition_catalog_to_text_fragment_id, **kwargs)  # noqa: E501
@@ -197,33 +173,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_confirm_match_iaa_edition_catalog_to_text_fragment_id_post_with_http_info(iaa_edition_catalog_to_text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
-        :type iaa_edition_catalog_to_text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int iaa_edition_catalog_to_text_fragment_id: The unique id of the match to confirm (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -236,8 +202,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -270,8 +235,6 @@ class CatalogueApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/catalogue/confirm-match/{iaaEditionCatalogToTextFragmentId}', 'POST',
@@ -281,40 +244,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_editions_edition_id_imaged_object_text_fragment_matches_get(self, edition_id, **kwargs):  # noqa: E501
         """Get a listing of all corresponding imaged objects and transcribed text fragment in a specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_editions_edition_id_imaged_object_text_fragment_matches_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the edition to search for imaged objects to text fragment matches (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the edition to search for imaged objects to text fragment matches (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: CatalogueMatchListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: CatalogueMatchListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_editions_edition_id_imaged_object_text_fragment_matches_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -324,33 +281,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_editions_edition_id_imaged_object_text_fragment_matches_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the edition to search for imaged objects to text fragment matches (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the edition to search for imaged objects to text fragment matches (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -363,8 +310,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -401,10 +347,6 @@ class CatalogueApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "CatalogueMatchListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/catalogue/editions/{editionId}/imaged-object-text-fragment-matches', 'GET',
@@ -414,40 +356,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='CatalogueMatchListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_imaged_objects_imaged_object_id_text_fragments_get(self, imaged_object_id, **kwargs):  # noqa: E501
         """Get a listing of all text fragments matches that correspond to an imaged object  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_imaged_objects_imaged_object_id_text_fragments_get(imaged_object_id, async_req=True)
         >>> result = thread.get()
 
-        :param imaged_object_id: Id of imaged object to search for transcription matches (required)
-        :type imaged_object_id: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str imaged_object_id: Id of imaged object to search for transcription matches (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: CatalogueMatchListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: CatalogueMatchListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_imaged_objects_imaged_object_id_text_fragments_get_with_http_info(imaged_object_id, **kwargs)  # noqa: E501
@@ -457,33 +393,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_imaged_objects_imaged_object_id_text_fragments_get_with_http_info(imaged_object_id, async_req=True)
         >>> result = thread.get()
 
-        :param imaged_object_id: Id of imaged object to search for transcription matches (required)
-        :type imaged_object_id: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str imaged_object_id: Id of imaged object to search for transcription matches (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -496,8 +422,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -534,10 +459,6 @@ class CatalogueApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "CatalogueMatchListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/catalogue/imaged-objects/{imagedObjectId}/text-fragments', 'GET',
@@ -547,40 +468,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='CatalogueMatchListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_manuscripts_manuscript_id_imaged_object_text_fragment_matches_get(self, manuscript_id, **kwargs):  # noqa: E501
         """Get a listing of all corresponding imaged objects and transcribed text fragment in a specified manuscript  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_manuscripts_manuscript_id_imaged_object_text_fragment_matches_get(manuscript_id, async_req=True)
         >>> result = thread.get()
 
-        :param manuscript_id: Unique Id of the manuscript to search for imaged objects to text fragment matches (required)
-        :type manuscript_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int manuscript_id: Unique Id of the manuscript to search for imaged objects to text fragment matches (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: CatalogueMatchListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: CatalogueMatchListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_manuscripts_manuscript_id_imaged_object_text_fragment_matches_get_with_http_info(manuscript_id, **kwargs)  # noqa: E501
@@ -590,33 +505,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_manuscripts_manuscript_id_imaged_object_text_fragment_matches_get_with_http_info(manuscript_id, async_req=True)
         >>> result = thread.get()
 
-        :param manuscript_id: Unique Id of the manuscript to search for imaged objects to text fragment matches (required)
-        :type manuscript_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int manuscript_id: Unique Id of the manuscript to search for imaged objects to text fragment matches (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -629,8 +534,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -667,10 +571,6 @@ class CatalogueApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "CatalogueMatchListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/catalogue/manuscripts/{manuscriptId}/imaged-object-text-fragment-matches', 'GET',
@@ -680,40 +580,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='CatalogueMatchListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_post(self, **kwargs):  # noqa: E501
         """Create a new matched pair for an imaged object and a text fragment along with the edition princeps information  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_post(async_req=True)
         >>> result = thread.get()
 
-        :param catalogue_match_input_dto: The details of the new match
-        :type catalogue_match_input_dto: CatalogueMatchInputDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param CatalogueMatchInputDTO catalogue_match_input_dto: The details of the new match
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_post_with_http_info(**kwargs)  # noqa: E501
@@ -723,33 +617,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_post_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param catalogue_match_input_dto: The details of the new match
-        :type catalogue_match_input_dto: CatalogueMatchInputDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param CatalogueMatchInputDTO catalogue_match_input_dto: The details of the new match
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -762,8 +646,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -796,8 +679,6 @@ class CatalogueApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/catalogue', 'POST',
@@ -807,40 +688,34 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_catalogue_text_fragments_text_fragment_id_imaged_objects_get(self, text_fragment_id, **kwargs):  # noqa: E501
         """Get a listing of all imaged objects that matches that correspond to a transcribed text fragment  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_text_fragments_text_fragment_id_imaged_objects_get(text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param text_fragment_id: Unique Id of the text fragment to search for imaged object matches (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int text_fragment_id: Unique Id of the text fragment to search for imaged object matches (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: CatalogueMatchListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: CatalogueMatchListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_catalogue_text_fragments_text_fragment_id_imaged_objects_get_with_http_info(text_fragment_id, **kwargs)  # noqa: E501
@@ -850,33 +725,23 @@ class CatalogueApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_catalogue_text_fragments_text_fragment_id_imaged_objects_get_with_http_info(text_fragment_id, async_req=True)
         >>> result = thread.get()
 
-        :param text_fragment_id: Unique Id of the text fragment to search for imaged object matches (required)
-        :type text_fragment_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int text_fragment_id: Unique Id of the text fragment to search for imaged object matches (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(CatalogueMatchListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -889,8 +754,7 @@ class CatalogueApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -927,10 +791,6 @@ class CatalogueApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "CatalogueMatchListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/catalogue/text-fragments/{textFragmentId}/imaged-objects', 'GET',
@@ -940,11 +800,10 @@ class CatalogueApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='CatalogueMatchListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

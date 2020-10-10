@@ -29,7 +29,7 @@ import UserUpdateRequestDTO from '../model/UserUpdateRequestDTO';
 /**
 * User service.
 * @module api/UserApi
-* @version v1
+* @version 0.7.0
 */
 export default class UserApi {
 
@@ -45,21 +45,14 @@ export default class UserApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1UsersChangeForgottenPasswordPost operation.
-     * @callback module:api/UserApi~v1UsersChangeForgottenPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Uses the secret token from /users/forgot-password to validate a reset of the user's password
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetForgottenUserPasswordRequestDTO} opts.resetForgottenUserPasswordRequestDTO A JSON object with the secret token and the new password
-     * @param {module:api/UserApi~v1UsersChangeForgottenPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersChangeForgottenPasswordPost(opts, callback) {
+    v1UsersChangeForgottenPasswordPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['resetForgottenUserPasswordRequestDTO'];
 
@@ -79,25 +72,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/change-forgotten-password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersChangePasswordPost operation.
-     * @callback module:api/UserApi~v1UsersChangePasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Uses the secret token from /users/forgot-password to validate a reset of the user's password
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResetForgottenUserPasswordRequestDTO} opts.resetForgottenUserPasswordRequestDTO A JSON object with the secret token and the new password
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1UsersChangeForgottenPasswordPost(opts) {
+      return this.v1UsersChangeForgottenPasswordPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Changes the password for the currently logged in user
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetLoggedInUserPasswordRequestDTO} opts.resetLoggedInUserPasswordRequestDTO A JSON object with the old password and the new password
-     * @param {module:api/UserApi~v1UsersChangePasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersChangePasswordPost(opts, callback) {
+    v1UsersChangePasswordPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['resetLoggedInUserPasswordRequestDTO'];
 
@@ -117,25 +116,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/change-password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersChangeUnactivatedEmailPost operation.
-     * @callback module:api/UserApi~v1UsersChangeUnactivatedEmailPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Changes the password for the currently logged in user
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResetLoggedInUserPasswordRequestDTO} opts.resetLoggedInUserPasswordRequestDTO A JSON object with the old password and the new password
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1UsersChangePasswordPost(opts) {
+      return this.v1UsersChangePasswordPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Allows a user who has not yet activated their account to change their email address. This will not work if the user  account associated with the email address has already been activated
      * @param {Object} opts Optional parameters
      * @param {module:model/UnactivatedEmailUpdateRequestDTO} opts.unactivatedEmailUpdateRequestDTO JSON object with the current email address and the new desired email address
-     * @param {module:api/UserApi~v1UsersChangeUnactivatedEmailPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersChangeUnactivatedEmailPost(opts, callback) {
+    v1UsersChangeUnactivatedEmailPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['unactivatedEmailUpdateRequestDTO'];
 
@@ -155,25 +160,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/change-unactivated-email', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersConfirmRegistrationPost operation.
-     * @callback module:api/UserApi~v1UsersConfirmRegistrationPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Allows a user who has not yet activated their account to change their email address. This will not work if the user  account associated with the email address has already been activated
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UnactivatedEmailUpdateRequestDTO} opts.unactivatedEmailUpdateRequestDTO JSON object with the current email address and the new desired email address
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1UsersChangeUnactivatedEmailPost(opts) {
+      return this.v1UsersChangeUnactivatedEmailPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Confirms registration of new user account.
      * @param {Object} opts Optional parameters
      * @param {module:model/AccountActivationRequestDTO} opts.accountActivationRequestDTO JSON object with token from user registration email
-     * @param {module:api/UserApi~v1UsersConfirmRegistrationPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersConfirmRegistrationPost(opts, callback) {
+    v1UsersConfirmRegistrationPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['accountActivationRequestDTO'];
 
@@ -193,25 +204,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/confirm-registration', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersForgotPasswordPost operation.
-     * @callback module:api/UserApi~v1UsersForgotPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Confirms registration of new user account.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/AccountActivationRequestDTO} opts.accountActivationRequestDTO JSON object with token from user registration email
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1UsersConfirmRegistrationPost(opts) {
+      return this.v1UsersConfirmRegistrationPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Sends a secret token to the user's email to allow password reset.
      * @param {Object} opts Optional parameters
      * @param {module:model/ResetUserPasswordRequestDTO} opts.resetUserPasswordRequestDTO JSON object with the email address for the user who wants to reset a lost password
-     * @param {module:api/UserApi~v1UsersForgotPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersForgotPasswordPost(opts, callback) {
+    v1UsersForgotPasswordPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['resetUserPasswordRequestDTO'];
 
@@ -231,24 +248,29 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/forgot-password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersGet operation.
-     * @callback module:api/UserApi~v1UsersGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Sends a secret token to the user's email to allow password reset.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResetUserPasswordRequestDTO} opts.resetUserPasswordRequestDTO JSON object with the email address for the user who wants to reset a lost password
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1UsersForgotPasswordPost(opts) {
+      return this.v1UsersForgotPasswordPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides the user details for a user with valid JWT in the Authorize header
-     * @param {module:api/UserApi~v1UsersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserDTO} and HTTP response
      */
-    v1UsersGet(callback) {
+    v1UsersGetWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -267,26 +289,29 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersLoginPost operation.
-     * @callback module:api/UserApi~v1UsersLoginPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DetailedUserTokenDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides the user details for a user with valid JWT in the Authorize header
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserDTO}
      */
+    v1UsersGet() {
+      return this.v1UsersGetWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a JWT bearer token for valid email and password
      * @param {Object} opts Optional parameters
      * @param {module:model/LoginRequestDTO} opts.loginRequestDTO JSON object with an email and password parameter
-     * @param {module:api/UserApi~v1UsersLoginPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DetailedUserTokenDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DetailedUserTokenDTO} and HTTP response
      */
-    v1UsersLoginPost(opts, callback) {
+    v1UsersLoginPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['loginRequestDTO'];
 
@@ -306,26 +331,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/login', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersPost operation.
-     * @callback module:api/UserApi~v1UsersPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a JWT bearer token for valid email and password
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LoginRequestDTO} opts.loginRequestDTO JSON object with an email and password parameter
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DetailedUserTokenDTO}
      */
+    v1UsersLoginPost(opts) {
+      return this.v1UsersLoginPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a new user with the submitted data.
      * @param {Object} opts Optional parameters
      * @param {module:model/NewUserRequestDTO} opts.newUserRequestDTO A JSON object with all data necessary to create a new user account
-     * @param {module:api/UserApi~v1UsersPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserDTO} and HTTP response
      */
-    v1UsersPost(opts, callback) {
+    v1UsersPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['newUserRequestDTO'];
 
@@ -345,26 +375,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersPut operation.
-     * @callback module:api/UserApi~v1UsersPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DetailedUserDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Creates a new user with the submitted data.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/NewUserRequestDTO} opts.newUserRequestDTO A JSON object with all data necessary to create a new user account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserDTO}
      */
+    v1UsersPost(opts) {
+      return this.v1UsersPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates a user's registration details.  Note that the if the email address has changed, the account will be set to  inactive until the account is activated with the secret token.
      * @param {Object} opts Optional parameters
      * @param {module:model/UserUpdateRequestDTO} opts.userUpdateRequestDTO A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
-     * @param {module:api/UserApi~v1UsersPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DetailedUserDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DetailedUserDTO} and HTTP response
      */
-    v1UsersPut(opts, callback) {
+    v1UsersPutWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['userUpdateRequestDTO'];
 
@@ -384,25 +419,31 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1UsersResendActivationEmailPost operation.
-     * @callback module:api/UserApi~v1UsersResendActivationEmailPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Updates a user's registration details.  Note that the if the email address has changed, the account will be set to  inactive until the account is activated with the secret token.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UserUpdateRequestDTO} opts.userUpdateRequestDTO A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DetailedUserDTO}
      */
+    v1UsersPut(opts) {
+      return this.v1UsersPutWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Sends a new activation email for the user's account. This will not work if the user account associated with the  email address has already been activated.
      * @param {Object} opts Optional parameters
      * @param {module:model/ResendUserAccountActivationRequestDTO} opts.resendUserAccountActivationRequestDTO JSON object with the current email address and the new desired email address
-     * @param {module:api/UserApi~v1UsersResendActivationEmailPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1UsersResendActivationEmailPost(opts, callback) {
+    v1UsersResendActivationEmailPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['resendUserAccountActivationRequestDTO'];
 
@@ -422,8 +463,21 @@ export default class UserApi {
       return this.apiClient.callApi(
         '/v1/users/resend-activation-email', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Sends a new activation email for the user's account. This will not work if the user account associated with the  email address has already been activated.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/ResendUserAccountActivationRequestDTO} opts.resendUserAccountActivationRequestDTO JSON object with the current email address and the new desired email address
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    v1UsersResendActivationEmailPost(opts) {
+      return this.v1UsersResendActivationEmailPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

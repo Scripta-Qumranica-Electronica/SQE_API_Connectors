@@ -2,3 +2,6 @@
 # Please update as you see appropriate
 
 context("Test Direction")
+
+model.instance <- Direction$new()
+

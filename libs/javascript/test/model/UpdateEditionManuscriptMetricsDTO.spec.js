@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdateEditionManuscriptMetricsDTO();
+    instance = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('UpdateEditionManuscriptMetricsDTO', function() {
     it('should create an instance of UpdateEditionManuscriptMetricsDTO', function() {
       // uncomment below and update the code to test UpdateEditionManuscriptMetricsDTO
-      //var instane = new SqeApi.UpdateEditionManuscriptMetricsDTO();
-      //expect(instance).to.be.a(SqeApi.UpdateEditionManuscriptMetricsDTO);
+      //var instane = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO);
     });
 
     it('should have the property width (base name: "width")', function() {
       // uncomment below and update the code to test the property width
-      //var instane = new SqeApi.UpdateEditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property height (base name: "height")', function() {
       // uncomment below and update the code to test the property height
-      //var instane = new SqeApi.UpdateEditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property xOrigin (base name: "xOrigin")', function() {
       // uncomment below and update the code to test the property xOrigin
-      //var instane = new SqeApi.UpdateEditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property yOrigin (base name: "yOrigin")', function() {
       // uncomment below and update the code to test the property yOrigin
-      //var instane = new SqeApi.UpdateEditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 

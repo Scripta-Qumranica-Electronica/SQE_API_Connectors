@@ -1,4 +1,4 @@
-# SqeApi.WktPolygonDTO
+# QumranicaApiConnector.WktPolygonDTO
 
 ## Properties
 

@@ -17,7 +17,7 @@ import TranslateDTO from './TranslateDTO';
 /**
  * The PlacementDTO model module.
  * @module model/PlacementDTO
- * @version v1
+ * @version 0.7.0
  */
 class PlacementDTO {
     /**

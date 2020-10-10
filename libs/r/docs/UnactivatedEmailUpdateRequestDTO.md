@@ -1,4 +1,4 @@
-# openapi::UnactivatedEmailUpdateRequestDTO
+# qumranica_api_connector::UnactivatedEmailUpdateRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

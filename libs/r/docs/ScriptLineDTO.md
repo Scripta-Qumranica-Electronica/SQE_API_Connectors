@@ -1,4 +1,4 @@
-# openapi::ScriptLineDTO
+# qumranica_api_connector::ScriptLineDTO
 
 ## Properties
 Name | Type | Description | Notes

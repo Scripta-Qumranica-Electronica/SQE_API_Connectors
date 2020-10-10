@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.PlacementDTO();
+    instance = new QumranicaApiConnector.PlacementDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('PlacementDTO', function() {
     it('should create an instance of PlacementDTO', function() {
       // uncomment below and update the code to test PlacementDTO
-      //var instane = new SqeApi.PlacementDTO();
-      //expect(instance).to.be.a(SqeApi.PlacementDTO);
+      //var instane = new QumranicaApiConnector.PlacementDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.PlacementDTO);
     });
 
     it('should have the property scale (base name: "scale")', function() {
       // uncomment below and update the code to test the property scale
-      //var instane = new SqeApi.PlacementDTO();
+      //var instane = new QumranicaApiConnector.PlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property rotate (base name: "rotate")', function() {
       // uncomment below and update the code to test the property rotate
-      //var instane = new SqeApi.PlacementDTO();
+      //var instane = new QumranicaApiConnector.PlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property zIndex (base name: "zIndex")', function() {
       // uncomment below and update the code to test the property zIndex
-      //var instane = new SqeApi.PlacementDTO();
+      //var instane = new QumranicaApiConnector.PlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property translate (base name: "translate")', function() {
       // uncomment below and update the code to test the property translate
-      //var instane = new SqeApi.PlacementDTO();
+      //var instane = new QumranicaApiConnector.PlacementDTO();
       //expect(instance).to.be();
     });
 

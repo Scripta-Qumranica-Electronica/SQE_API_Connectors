@@ -2658,12 +2658,6 @@ components:
       type: object
     CreateArtefactDTO:
       additionalProperties: false
-      example:
-        masterImageId: 0
-        name: name
-        placement: ""
-        statusMessage: statusMessage
-        mask: mask
       properties:
         masterImageId:
           format: int32
@@ -2799,11 +2793,6 @@ components:
       type: object
     UpdateArtefactDTO:
       additionalProperties: false
-      example:
-        name: name
-        placement: ""
-        statusMessage: statusMessage
-        mask: mask
       properties:
         mask:
           nullable: true
@@ -2951,10 +2940,6 @@ components:
       type: object
     UpdateArtefactPlacementDTO:
       additionalProperties: false
-      example:
-        artefactId: 0
-        placement: ""
-        isPlaced: true
       properties:
         artefactId:
           format: int32
@@ -2971,14 +2956,6 @@ components:
       type: object
     BatchUpdateArtefactPlacementDTO:
       additionalProperties: false
-      example:
-        artefactPlacements:
-        - artefactId: 0
-          placement: ""
-          isPlaced: true
-        - artefactId: 0
-          placement: ""
-          isPlaced: true
       properties:
         artefactPlacements:
           items:
@@ -3082,11 +3059,6 @@ components:
       type: object
     CreateArtefactGroupDTO:
       additionalProperties: false
-      example:
-        name: name
-        artefacts:
-        - 0
-        - 0
       properties:
         name:
           maxLength: 255
@@ -3103,11 +3075,6 @@ components:
       type: object
     UpdateArtefactGroupDTO:
       additionalProperties: false
-      example:
-        name: name
-        artefacts:
-        - 0
-        - 0
       properties:
         name:
           maxLength: 255
@@ -3362,19 +3329,6 @@ components:
       type: object
     CatalogueMatchInputDTO:
       additionalProperties: false
-      example:
-        manuscriptId: 0
-        editionVolume: editionVolume
-        textFragmentId: 6
-        catalogSide: ""
-        editionName: editionName
-        editionSide: ""
-        editionId: 1
-        imagedObjectId: imagedObjectId
-        editionLocation1: editionLocation1
-        comment: comment
-        editionLocation2: editionLocation2
-        confirmed: true
       properties:
         catalogSide:
           allOf:
@@ -3420,12 +3374,6 @@ components:
       type: object
     InviteEditorDTO:
       additionalProperties: false
-      example:
-        mayRead: true
-        mayLock: true
-        isAdmin: true
-        mayWrite: true
-        email: email
       properties:
         email:
           pattern: ^.*@.*\..*$
@@ -3634,11 +3582,6 @@ components:
       type: object
     UpdateEditorRightsDTO:
       additionalProperties: false
-      example:
-        mayRead: true
-        mayLock: true
-        isAdmin: true
-        mayWrite: true
       properties:
         mayLock:
           type: boolean
@@ -3656,10 +3599,6 @@ components:
       type: object
     EditionCopyDTO:
       additionalProperties: false
-      example:
-        copyrightHolder: copyrightHolder
-        name: name
-        collaborators: collaborators
       properties:
         name:
           maxLength: 255
@@ -3908,11 +3847,6 @@ components:
       type: object
     EditionUpdateRequestDTO:
       additionalProperties: false
-      example:
-        copyrightHolder: copyrightHolder
-        name: name
-        collaborators: collaborators
-        metrics: ""
       properties:
         metrics:
           allOf:
@@ -6380,14 +6314,6 @@ components:
       type: object
     SetInterpretationRoiDTO:
       additionalProperties: false
-      example:
-        stanceRotation: 1
-        shape: shape
-        signInterpretationId: 6
-        artefactId: 0
-        exceptional: true
-        valuesSet: true
-        translate: ""
       properties:
         artefactId:
           format: int32
@@ -6474,22 +6400,6 @@ components:
       type: object
     SetInterpretationRoiDTOList:
       additionalProperties: false
-      example:
-        rois:
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
       properties:
         rois:
           items:
@@ -6500,15 +6410,6 @@ components:
       type: object
     UpdateInterpretationRoiDTO:
       additionalProperties: false
-      example:
-        stanceRotation: 5
-        shape: shape
-        signInterpretationId: 1
-        artefactId: 6
-        exceptional: true
-        valuesSet: true
-        interpretationRoiId: 0
-        translate: ""
       properties:
         interpretationRoiId:
           format: int32
@@ -6542,24 +6443,6 @@ components:
       type: object
     UpdateInterpretationRoiDTOList:
       additionalProperties: false
-      example:
-        rois:
-        - stanceRotation: 5
-          shape: shape
-          signInterpretationId: 1
-          artefactId: 6
-          exceptional: true
-          valuesSet: true
-          interpretationRoiId: 0
-          translate: ""
-        - stanceRotation: 5
-          shape: shape
-          signInterpretationId: 1
-          artefactId: 6
-          exceptional: true
-          valuesSet: true
-          interpretationRoiId: 0
-          translate: ""
       properties:
         rois:
           items:
@@ -6604,42 +6487,6 @@ components:
       type: object
     BatchEditRoiDTO:
       additionalProperties: false
-      example:
-        createRois:
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
-        updateRois:
-        - stanceRotation: 5
-          shape: shape
-          signInterpretationId: 1
-          artefactId: 6
-          exceptional: true
-          valuesSet: true
-          interpretationRoiId: 0
-          translate: ""
-        - stanceRotation: 5
-          shape: shape
-          signInterpretationId: 1
-          artefactId: 6
-          exceptional: true
-          valuesSet: true
-          interpretationRoiId: 0
-          translate: ""
-        deleteRois:
-        - 0
-        - 0
       properties:
         createRois:
           items:
@@ -6877,10 +6724,6 @@ components:
       type: object
     CreateAttributeValueDTO:
       additionalProperties: false
-      example:
-        cssDirectives: cssDirectives
-        description: description
-        value: value
       properties:
         value:
           type: string
@@ -6895,20 +6738,6 @@ components:
       type: object
     CreateAttributeDTO:
       additionalProperties: false
-      example:
-        batchEditable: true
-        editable: true
-        removable: true
-        repeatable: true
-        values:
-        - cssDirectives: cssDirectives
-          description: description
-          value: value
-        - cssDirectives: cssDirectives
-          description: description
-          value: value
-        description: description
-        attributeName: attributeName
       properties:
         attributeName:
           type: string
@@ -6933,11 +6762,6 @@ components:
       type: object
     UpdateAttributeValueDTO:
       additionalProperties: false
-      example:
-        cssDirectives: cssDirectives
-        description: description
-        id: 0
-        value: value
       properties:
         id:
           format: int32
@@ -6956,30 +6780,6 @@ components:
       type: object
     UpdateAttributeDTO:
       additionalProperties: false
-      example:
-        createValues:
-        - cssDirectives: cssDirectives
-          description: description
-          value: value
-        - cssDirectives: cssDirectives
-          description: description
-          value: value
-        batchEditable: true
-        editable: true
-        removable: true
-        repeatable: true
-        updateValues:
-        - cssDirectives: cssDirectives
-          description: description
-          id: 0
-          value: value
-        - cssDirectives: cssDirectives
-          description: description
-          id: 0
-          value: value
-        deleteValues:
-        - 6
-        - 6
       properties:
         createValues:
           items:
@@ -7009,11 +6809,6 @@ components:
       type: object
     InterpretationAttributeCreateDTO:
       additionalProperties: false
-      example:
-        attributeId: 5
-        sequence: 5
-        attributeValueId: 2
-        commentary: commentary
       properties:
         commentary:
           nullable: true
@@ -7034,8 +6829,6 @@ components:
       type: object
     CommentaryCreateDTO:
       additionalProperties: false
-      example:
-        commentary: commentary
       properties:
         commentary:
           nullable: true
@@ -7043,42 +6836,6 @@ components:
       type: object
     SignInterpretationCreateDTO:
       additionalProperties: false
-      example:
-        rois:
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
-        - stanceRotation: 1
-          shape: shape
-          signInterpretationId: 6
-          artefactId: 0
-          exceptional: true
-          valuesSet: true
-          translate: ""
-        character: character
-        breakPreviousAndNextSignInterpretations: true
-        isVariant: true
-        lineId: 0
-        attributes:
-        - attributeId: 5
-          sequence: 5
-          attributeValueId: 2
-          commentary: commentary
-        - attributeId: 5
-          sequence: 5
-          attributeValueId: 2
-          commentary: commentary
-        nextSignInterpretationIds:
-        - 1
-        - 1
-        previousSignInterpretationIds:
-        - 6
-        - 6
-        commentary: ""
       properties:
         lineId:
           format: int32
@@ -7234,10 +6991,6 @@ components:
       type: object
     CreateTextFragmentDTO:
       additionalProperties: false
-      example:
-        previousTextFragmentId: 0
-        name: name
-        nextTextFragmentId: 6
       properties:
         name:
           maxLength: 255
@@ -7294,10 +7047,6 @@ components:
       type: object
     UpdateTextFragmentDTO:
       additionalProperties: false
-      example:
-        previousTextFragmentId: 0
-        name: name
-        nextTextFragmentId: 6
       properties:
         name:
           nullable: true
@@ -9325,9 +9074,6 @@ components:
       type: object
     LoginRequestDTO:
       additionalProperties: false
-      example:
-        password: password
-        email: email
       properties:
         email:
           pattern: ^.*@.*\..*$
@@ -9377,9 +9123,6 @@ components:
       type: object
     UnactivatedEmailUpdateRequestDTO:
       additionalProperties: false
-      example:
-        newEmail: newEmail
-        email: email
       properties:
         newEmail:
           pattern: ^.*@.*\..*$
@@ -9393,9 +9136,6 @@ components:
       type: object
     ResetForgottenUserPasswordRequestDTO:
       additionalProperties: false
-      example:
-        password: password
-        token: token
       properties:
         password:
           maxLength: 1024
@@ -9409,9 +9149,6 @@ components:
       type: object
     ResetLoggedInUserPasswordRequestDTO:
       additionalProperties: false
-      example:
-        oldPassword: oldPassword
-        newPassword: newPassword
       properties:
         oldPassword:
           type: string
@@ -9425,12 +9162,6 @@ components:
       type: object
     UserUpdateRequestDTO:
       additionalProperties: false
-      example:
-        forename: forename
-        password: password
-        surname: surname
-        organization: organization
-        email: email
       properties:
         password:
           type: string
@@ -9482,12 +9213,6 @@ components:
       type: object
     NewUserRequestDTO:
       additionalProperties: false
-      example:
-        forename: forename
-        password: password
-        surname: surname
-        organization: organization
-        email: email
       properties:
         email:
           pattern: ^.*@.*\..*$
@@ -9511,8 +9236,6 @@ components:
       type: object
     AccountActivationRequestDTO:
       additionalProperties: false
-      example:
-        token: token
       properties:
         token:
           type: string
@@ -9521,8 +9244,6 @@ components:
       type: object
     ResetUserPasswordRequestDTO:
       additionalProperties: false
-      example:
-        email: email
       properties:
         email:
           pattern: ^.*@.*\..*$
@@ -9532,8 +9253,6 @@ components:
       type: object
     ResendUserAccountActivationRequestDTO:
       additionalProperties: false
-      example:
-        email: email
       properties:
         email:
           pattern: ^.*@.*\..*$

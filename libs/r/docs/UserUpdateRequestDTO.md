@@ -1,4 +1,4 @@
-# openapi::UserUpdateRequestDTO
+# qumranica_api_connector::UserUpdateRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -71,7 +71,7 @@ class UpdateArtefactGroupDTO(object):
 
 
         :param name: The name of this UpdateArtefactGroupDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) > 255):
@@ -95,7 +95,7 @@ class UpdateArtefactGroupDTO(object):
 
 
         :param artefacts: The artefacts of this UpdateArtefactGroupDTO.  # noqa: E501
-        :type artefacts: list[int]
+        :type: list[int]
         """
         if self.local_vars_configuration.client_side_validation and artefacts is None:  # noqa: E501
             raise ValueError("Invalid value for `artefacts`, must not be `None`")  # noqa: E501

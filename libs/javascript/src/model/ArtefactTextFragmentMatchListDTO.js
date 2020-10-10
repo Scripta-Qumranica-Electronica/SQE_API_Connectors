@@ -17,7 +17,7 @@ import ArtefactTextFragmentMatchDTO from './ArtefactTextFragmentMatchDTO';
 /**
  * The ArtefactTextFragmentMatchListDTO model module.
  * @module model/ArtefactTextFragmentMatchListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ArtefactTextFragmentMatchListDTO {
     /**

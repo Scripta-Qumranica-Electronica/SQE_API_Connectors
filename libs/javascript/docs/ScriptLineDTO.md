@@ -1,4 +1,4 @@
-# SqeApi.ScriptLineDTO
+# QumranicaApiConnector.ScriptLineDTO
 
 ## Properties
 

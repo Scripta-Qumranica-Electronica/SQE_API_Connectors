@@ -9,7 +9,7 @@ test_that("V1UtilsRepairWktPolygonPost", {
   # tests for V1UtilsRepairWktPolygonPost
   # base path: http://localhost
   # Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.
-  # @param wkt.polygon.dto WktPolygonDTO JSON object with the WKT polygon to validate (optional)
+  # @param WktPolygonDTO  wkt.polygon.dto  JSON object with the WKT polygon to validate  (optional)
   # @return [WktPolygonDTO]
 
   # uncomment below to test the operation

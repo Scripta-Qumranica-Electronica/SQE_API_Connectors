@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAttributeValueDTO model module.
  * @module model/UpdateAttributeValueDTO
- * @version v1
+ * @version 0.7.0
  */
 class UpdateAttributeValueDTO {
     /**

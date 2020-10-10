@@ -1,4 +1,4 @@
-# SqeApi.ScriptTextFragmentDTO
+# QumranicaApiConnector.ScriptTextFragmentDTO
 
 ## Properties
 

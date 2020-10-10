@@ -19,47 +19,26 @@ Method | HTTP request | Description
 
 ## V1UsersChangeForgottenPasswordPost
 
-> V1UsersChangeForgottenPasswordPost(ctx).ResetForgottenUserPasswordRequestDTO(resetForgottenUserPasswordRequestDTO).Execute()
+> V1UsersChangeForgottenPasswordPost(ctx, optional)
 
 Uses the secret token from /users/forgot-password to validate a reset of the user's password
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    resetForgottenUserPasswordRequestDTO := openapiclient.ResetForgottenUserPasswordRequestDTO{Password: "Password_example", Token: "Token_example"} // ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersChangeForgottenPasswordPost(context.Background()).ResetForgottenUserPasswordRequestDTO(resetForgottenUserPasswordRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersChangeForgottenPasswordPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersChangeForgottenPasswordPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetForgottenUserPasswordRequestDTO** | [**ResetForgottenUserPasswordRequestDTO**](ResetForgottenUserPasswordRequestDTO.md) | A JSON object with the secret token and the new password | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersChangeForgottenPasswordPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersChangeForgottenPasswordPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resetForgottenUserPasswordRequestDto** | [**optional.Interface of ResetForgottenUserPasswordRequestDto**](ResetForgottenUserPasswordRequestDto.md)| A JSON object with the secret token and the new password | 
 
 ### Return type
 
@@ -81,47 +60,26 @@ Name | Type | Description  | Notes
 
 ## V1UsersChangePasswordPost
 
-> V1UsersChangePasswordPost(ctx).ResetLoggedInUserPasswordRequestDTO(resetLoggedInUserPasswordRequestDTO).Execute()
+> V1UsersChangePasswordPost(ctx, optional)
 
 Changes the password for the currently logged in user
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    resetLoggedInUserPasswordRequestDTO := openapiclient.ResetLoggedInUserPasswordRequestDTO{OldPassword: "OldPassword_example", NewPassword: "NewPassword_example"} // ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersChangePasswordPost(context.Background()).ResetLoggedInUserPasswordRequestDTO(resetLoggedInUserPasswordRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersChangePasswordPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersChangePasswordPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetLoggedInUserPasswordRequestDTO** | [**ResetLoggedInUserPasswordRequestDTO**](ResetLoggedInUserPasswordRequestDTO.md) | A JSON object with the old password and the new password | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersChangePasswordPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersChangePasswordPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resetLoggedInUserPasswordRequestDto** | [**optional.Interface of ResetLoggedInUserPasswordRequestDto**](ResetLoggedInUserPasswordRequestDto.md)| A JSON object with the old password and the new password | 
 
 ### Return type
 
@@ -143,47 +101,26 @@ Name | Type | Description  | Notes
 
 ## V1UsersChangeUnactivatedEmailPost
 
-> V1UsersChangeUnactivatedEmailPost(ctx).UnactivatedEmailUpdateRequestDTO(unactivatedEmailUpdateRequestDTO).Execute()
+> V1UsersChangeUnactivatedEmailPost(ctx, optional)
 
 Allows a user who has not yet activated their account to change their email address. This will not work if the user  account associated with the email address has already been activated
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    unactivatedEmailUpdateRequestDTO := openapiclient.UnactivatedEmailUpdateRequestDTO{NewEmail: "NewEmail_example", Email: "Email_example"} // UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersChangeUnactivatedEmailPost(context.Background()).UnactivatedEmailUpdateRequestDTO(unactivatedEmailUpdateRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersChangeUnactivatedEmailPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersChangeUnactivatedEmailPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **unactivatedEmailUpdateRequestDTO** | [**UnactivatedEmailUpdateRequestDTO**](UnactivatedEmailUpdateRequestDTO.md) | JSON object with the current email address and the new desired email address | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersChangeUnactivatedEmailPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersChangeUnactivatedEmailPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unactivatedEmailUpdateRequestDto** | [**optional.Interface of UnactivatedEmailUpdateRequestDto**](UnactivatedEmailUpdateRequestDto.md)| JSON object with the current email address and the new desired email address | 
 
 ### Return type
 
@@ -205,47 +142,26 @@ Name | Type | Description  | Notes
 
 ## V1UsersConfirmRegistrationPost
 
-> V1UsersConfirmRegistrationPost(ctx).AccountActivationRequestDTO(accountActivationRequestDTO).Execute()
+> V1UsersConfirmRegistrationPost(ctx, optional)
 
 Confirms registration of new user account.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    accountActivationRequestDTO := openapiclient.AccountActivationRequestDTO{Token: "Token_example"} // AccountActivationRequestDTO | JSON object with token from user registration email (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersConfirmRegistrationPost(context.Background()).AccountActivationRequestDTO(accountActivationRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersConfirmRegistrationPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersConfirmRegistrationPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountActivationRequestDTO** | [**AccountActivationRequestDTO**](AccountActivationRequestDTO.md) | JSON object with token from user registration email | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersConfirmRegistrationPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersConfirmRegistrationPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountActivationRequestDto** | [**optional.Interface of AccountActivationRequestDto**](AccountActivationRequestDto.md)| JSON object with token from user registration email | 
 
 ### Return type
 
@@ -267,47 +183,26 @@ Name | Type | Description  | Notes
 
 ## V1UsersForgotPasswordPost
 
-> V1UsersForgotPasswordPost(ctx).ResetUserPasswordRequestDTO(resetUserPasswordRequestDTO).Execute()
+> V1UsersForgotPasswordPost(ctx, optional)
 
 Sends a secret token to the user's email to allow password reset.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    resetUserPasswordRequestDTO := openapiclient.ResetUserPasswordRequestDTO{Email: "Email_example"} // ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersForgotPasswordPost(context.Background()).ResetUserPasswordRequestDTO(resetUserPasswordRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersForgotPasswordPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersForgotPasswordPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetUserPasswordRequestDTO** | [**ResetUserPasswordRequestDTO**](ResetUserPasswordRequestDTO.md) | JSON object with the email address for the user who wants to reset a lost password | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersForgotPasswordPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersForgotPasswordPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resetUserPasswordRequestDto** | [**optional.Interface of ResetUserPasswordRequestDto**](ResetUserPasswordRequestDto.md)| JSON object with the email address for the user who wants to reset a lost password | 
 
 ### Return type
 
@@ -329,48 +224,17 @@ Name | Type | Description  | Notes
 
 ## V1UsersGet
 
-> UserDTO V1UsersGet(ctx).Execute()
+> UserDto V1UsersGet(ctx, )
 
 Provides the user details for a user with valid JWT in the Authorize header
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1UsersGet`: UserDTO
-    fmt.Fprintf(os.Stdout, "Response from `UserApi.V1UsersGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 This endpoint does not need any parameter.
 
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersGetRequest struct via the builder pattern
-
-
 ### Return type
 
-[**UserDTO**](UserDTO.md)
+[**UserDto**](UserDTO.md)
 
 ### Authorization
 
@@ -388,53 +252,30 @@ Other parameters are passed through a pointer to a apiV1UsersGetRequest struct v
 
 ## V1UsersLoginPost
 
-> DetailedUserTokenDTO V1UsersLoginPost(ctx).LoginRequestDTO(loginRequestDTO).Execute()
+> DetailedUserTokenDto V1UsersLoginPost(ctx, optional)
 
 Provides a JWT bearer token for valid email and password
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    loginRequestDTO := openapiclient.LoginRequestDTO{Email: "Email_example", Password: "Password_example"} // LoginRequestDTO | JSON object with an email and password parameter (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersLoginPost(context.Background()).LoginRequestDTO(loginRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersLoginPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1UsersLoginPost`: DetailedUserTokenDTO
-    fmt.Fprintf(os.Stdout, "Response from `UserApi.V1UsersLoginPost`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersLoginPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **loginRequestDTO** | [**LoginRequestDTO**](LoginRequestDTO.md) | JSON object with an email and password parameter | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersLoginPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersLoginPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **loginRequestDto** | [**optional.Interface of LoginRequestDto**](LoginRequestDto.md)| JSON object with an email and password parameter | 
 
 ### Return type
 
-[**DetailedUserTokenDTO**](DetailedUserTokenDTO.md)
+[**DetailedUserTokenDto**](DetailedUserTokenDTO.md)
 
 ### Authorization
 
@@ -452,53 +293,30 @@ Name | Type | Description  | Notes
 
 ## V1UsersPost
 
-> UserDTO V1UsersPost(ctx).NewUserRequestDTO(newUserRequestDTO).Execute()
+> UserDto V1UsersPost(ctx, optional)
 
 Creates a new user with the submitted data.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    newUserRequestDTO := openapiclient.NewUserRequestDTO{Email: "Email_example", Password: "Password_example", Organization: "Organization_example", Forename: "Forename_example", Surname: "Surname_example"} // NewUserRequestDTO | A JSON object with all data necessary to create a new user account (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersPost(context.Background()).NewUserRequestDTO(newUserRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1UsersPost`: UserDTO
-    fmt.Fprintf(os.Stdout, "Response from `UserApi.V1UsersPost`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **newUserRequestDTO** | [**NewUserRequestDTO**](NewUserRequestDTO.md) | A JSON object with all data necessary to create a new user account | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newUserRequestDto** | [**optional.Interface of NewUserRequestDto**](NewUserRequestDto.md)| A JSON object with all data necessary to create a new user account | 
 
 ### Return type
 
-[**UserDTO**](UserDTO.md)
+[**UserDto**](UserDTO.md)
 
 ### Authorization
 
@@ -516,53 +334,30 @@ Name | Type | Description  | Notes
 
 ## V1UsersPut
 
-> DetailedUserDTO V1UsersPut(ctx).UserUpdateRequestDTO(userUpdateRequestDTO).Execute()
+> DetailedUserDto V1UsersPut(ctx, optional)
 
 Updates a user's registration details.  Note that the if the email address has changed, the account will be set to  inactive until the account is activated with the secret token.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    userUpdateRequestDTO := openapiclient.UserUpdateRequestDTO{Password: "Password_example", Email: "Email_example", Organization: "Organization_example", Forename: "Forename_example", Surname: "Surname_example"} // UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersPut(context.Background()).UserUpdateRequestDTO(userUpdateRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersPut``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1UsersPut`: DetailedUserDTO
-    fmt.Fprintf(os.Stdout, "Response from `UserApi.V1UsersPut`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersPutRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userUpdateRequestDTO** | [**UserUpdateRequestDTO**](UserUpdateRequestDTO.md) | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersPutOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersPutOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUpdateRequestDto** | [**optional.Interface of UserUpdateRequestDto**](UserUpdateRequestDto.md)| A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data | 
 
 ### Return type
 
-[**DetailedUserDTO**](DetailedUserDTO.md)
+[**DetailedUserDto**](DetailedUserDTO.md)
 
 ### Authorization
 
@@ -580,47 +375,26 @@ Name | Type | Description  | Notes
 
 ## V1UsersResendActivationEmailPost
 
-> V1UsersResendActivationEmailPost(ctx).ResendUserAccountActivationRequestDTO(resendUserAccountActivationRequestDTO).Execute()
+> V1UsersResendActivationEmailPost(ctx, optional)
 
 Sends a new activation email for the user's account. This will not work if the user account associated with the  email address has already been activated.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    resendUserAccountActivationRequestDTO := openapiclient.ResendUserAccountActivationRequestDTO{Email: "Email_example"} // ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UserApi.V1UsersResendActivationEmailPost(context.Background()).ResendUserAccountActivationRequestDTO(resendUserAccountActivationRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UserApi.V1UsersResendActivationEmailPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UsersResendActivationEmailPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resendUserAccountActivationRequestDTO** | [**ResendUserAccountActivationRequestDTO**](ResendUserAccountActivationRequestDTO.md) | JSON object with the current email address and the new desired email address | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UsersResendActivationEmailPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UsersResendActivationEmailPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resendUserAccountActivationRequestDto** | [**optional.Interface of ResendUserAccountActivationRequestDto**](ResendUserAccountActivationRequestDto.md)| JSON object with the current email address and the new desired email address | 
 
 ### Return type
 

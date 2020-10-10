@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title CommentaryDTO
-#'
 #' @description CommentaryDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field creatorId  integer 
 #'
 #' @field editorId  integer 
 #'
 #' @field commentary  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ CommentaryDTO <- R6::R6Class(
     `creatorId` = NULL,
     `editorId` = NULL,
     `commentary` = NULL,
-    initialize = function(
-        `creatorId`, `editorId`, `commentary`=NULL, ...
-    ) {
+    initialize = function(`creatorId`, `editorId`, `commentary`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`creatorId`)) {
         stopifnot(is.numeric(`creatorId`), length(`creatorId`) == 1)
@@ -73,7 +69,6 @@ CommentaryDTO <- R6::R6Class(
       if (!is.null(CommentaryDTOObject$`commentary`)) {
         self$`commentary` <- CommentaryDTOObject$`commentary`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -111,4 +106,3 @@ CommentaryDTO <- R6::R6Class(
     }
   )
 )
-

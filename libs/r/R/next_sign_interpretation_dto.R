@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title NextSignInterpretationDTO
-#'
 #' @description NextSignInterpretationDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field nextSignInterpretationId  integer 
 #'
 #' @field creatorId  integer 
 #'
 #' @field editorId  integer 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ NextSignInterpretationDTO <- R6::R6Class(
     `nextSignInterpretationId` = NULL,
     `creatorId` = NULL,
     `editorId` = NULL,
-    initialize = function(
-        `nextSignInterpretationId`, `creatorId`, `editorId`, ...
-    ) {
+    initialize = function(`nextSignInterpretationId`, `creatorId`, `editorId`, ...){
       local.optional.var <- list(...)
       if (!missing(`nextSignInterpretationId`)) {
         stopifnot(is.numeric(`nextSignInterpretationId`), length(`nextSignInterpretationId`) == 1)
@@ -73,7 +69,6 @@ NextSignInterpretationDTO <- R6::R6Class(
       if (!is.null(NextSignInterpretationDTOObject$`editorId`)) {
         self$`editorId` <- NextSignInterpretationDTOObject$`editorId`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -111,4 +106,3 @@ NextSignInterpretationDTO <- R6::R6Class(
     }
   )
 )
-

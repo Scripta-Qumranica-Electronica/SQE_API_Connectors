@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InstitutionalImageDTO model module.
  * @module model/InstitutionalImageDTO
- * @version v1
+ * @version 0.7.0
  */
 class InstitutionalImageDTO {
     /**

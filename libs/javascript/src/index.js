@@ -140,9 +140,9 @@ import UtilApi from './api/UtilApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var SqeApi = require('index'); // See note below*.
-* var xxxSvc = new SqeApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new SqeApi.Yyy(); // Construct a model instance.
+* var QumranicaApiConnector = require('index'); // See note below*.
+* var xxxSvc = new QumranicaApiConnector.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new QumranicaApiConnector.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -154,8 +154,8 @@ import UtilApi from './api/UtilApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new SqeApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new SqeApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new QumranicaApiConnector.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new QumranicaApiConnector.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -163,7 +163,7 @@ import UtilApi from './api/UtilApi';
 * </pre>
 * </p>
 * @module index
-* @version v1
+* @version 0.7.0
 */
 export {
     /**

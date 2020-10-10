@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The NextSignInterpretationDTO model module.
  * @module model/NextSignInterpretationDTO
- * @version v1
+ * @version 0.7.0
  */
 class NextSignInterpretationDTO {
     /**

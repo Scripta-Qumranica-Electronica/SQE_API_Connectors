@@ -17,7 +17,7 @@ import EditionDTO from './EditionDTO';
 /**
  * The EditionGroupDTO model module.
  * @module model/EditionGroupDTO
- * @version v1
+ * @version 0.7.0
  */
 class EditionGroupDTO {
     /**

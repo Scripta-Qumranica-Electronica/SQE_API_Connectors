@@ -67,7 +67,7 @@ class CatalogueMatchListDTO(object):
 
 
         :param matches: The matches of this CatalogueMatchListDTO.  # noqa: E501
-        :type matches: list[CatalogueMatchDTO]
+        :type: list[CatalogueMatchDTO]
         """
         if self.local_vars_configuration.client_side_validation and matches is None:  # noqa: E501
             raise ValueError("Invalid value for `matches`, must not be `None`")  # noqa: E501

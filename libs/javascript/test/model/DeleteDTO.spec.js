@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.DeleteDTO();
+    instance = new QumranicaApiConnector.DeleteDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DeleteDTO', function() {
     it('should create an instance of DeleteDTO', function() {
       // uncomment below and update the code to test DeleteDTO
-      //var instane = new SqeApi.DeleteDTO();
-      //expect(instance).to.be.a(SqeApi.DeleteDTO);
+      //var instane = new QumranicaApiConnector.DeleteDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.DeleteDTO);
     });
 
     it('should have the property entity (base name: "entity")', function() {
       // uncomment below and update the code to test the property entity
-      //var instane = new SqeApi.DeleteDTO();
+      //var instane = new QumranicaApiConnector.DeleteDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property ids (base name: "ids")', function() {
       // uncomment below and update the code to test the property ids
-      //var instane = new SqeApi.DeleteDTO();
+      //var instane = new QumranicaApiConnector.DeleteDTO();
       //expect(instance).to.be();
     });
 

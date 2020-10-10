@@ -1,4 +1,4 @@
-# SqeApi.BatchUpdatedArtefactTransformDTO
+# QumranicaApiConnector.BatchUpdatedArtefactTransformDTO
 
 ## Properties
 

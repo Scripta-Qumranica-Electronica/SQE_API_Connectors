@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title CatalogueMatchDTO
-#'
 #' @description CatalogueMatchDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field imageCatalogId  integer 
 #'
 #' @field institution  character 
@@ -73,6 +70,7 @@
 #'
 #' @field confirmed  character [optional]
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -109,9 +107,7 @@ CatalogueMatchDTO <- R6::R6Class(
     `textFragmentId` = NULL,
     `editionId` = NULL,
     `confirmed` = NULL,
-    initialize = function(
-        `imageCatalogId`, `institution`, `catalogueNumber1`, `url`, `filename`, `suffix`, `thumbnail`, `license`, `iaaEditionCatalogueId`, `manuscriptName`, `name`, `matchAuthor`, `matchId`, `dateOfMatch`, `imagedObjectId`, `manuscriptId`, `editionName`, `editionVolume`, `editionLocation1`, `editionLocation2`, `editionSide`, `textFragmentId`, `editionId`, `catalogueNumber2`=NULL, `proxy`=NULL, `matchConfirmationAuthor`=NULL, `dateOfConfirmation`=NULL, `catalogSide`=NULL, `comment`=NULL, `confirmed`=NULL, ...
-    ) {
+    initialize = function(`imageCatalogId`, `institution`, `catalogueNumber1`, `url`, `filename`, `suffix`, `thumbnail`, `license`, `iaaEditionCatalogueId`, `manuscriptName`, `name`, `matchAuthor`, `matchId`, `dateOfMatch`, `imagedObjectId`, `manuscriptId`, `editionName`, `editionVolume`, `editionLocation1`, `editionLocation2`, `editionSide`, `textFragmentId`, `editionId`, `catalogueNumber2`=NULL, `proxy`=NULL, `matchConfirmationAuthor`=NULL, `dateOfConfirmation`=NULL, `catalogSide`=NULL, `comment`=NULL, `confirmed`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`imageCatalogId`)) {
         stopifnot(is.numeric(`imageCatalogId`), length(`imageCatalogId`) == 1)
@@ -454,7 +450,6 @@ CatalogueMatchDTO <- R6::R6Class(
       if (!is.null(CatalogueMatchDTOObject$`confirmed`)) {
         self$`confirmed` <- CatalogueMatchDTOObject$`confirmed`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -708,4 +703,3 @@ CatalogueMatchDTO <- R6::R6Class(
     }
   )
 )
-

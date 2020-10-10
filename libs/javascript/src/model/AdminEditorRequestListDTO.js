@@ -17,7 +17,7 @@ import AdminEditorRequestDTO from './AdminEditorRequestDTO';
 /**
  * The AdminEditorRequestListDTO model module.
  * @module model/AdminEditorRequestListDTO
- * @version v1
+ * @version 0.7.0
  */
 class AdminEditorRequestListDTO {
     /**

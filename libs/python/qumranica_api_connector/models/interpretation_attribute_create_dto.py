@@ -79,7 +79,7 @@ class InterpretationAttributeCreateDTO(object):
 
 
         :param commentary: The commentary of this InterpretationAttributeCreateDTO.  # noqa: E501
-        :type commentary: str
+        :type: str
         """
 
         self._commentary = commentary
@@ -100,7 +100,7 @@ class InterpretationAttributeCreateDTO(object):
 
 
         :param sequence: The sequence of this InterpretationAttributeCreateDTO.  # noqa: E501
-        :type sequence: int
+        :type: int
         """
 
         self._sequence = sequence
@@ -121,7 +121,7 @@ class InterpretationAttributeCreateDTO(object):
 
 
         :param attribute_id: The attribute_id of this InterpretationAttributeCreateDTO.  # noqa: E501
-        :type attribute_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and attribute_id is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_id`, must not be `None`")  # noqa: E501
@@ -144,7 +144,7 @@ class InterpretationAttributeCreateDTO(object):
 
 
         :param attribute_value_id: The attribute_value_id of this InterpretationAttributeCreateDTO.  # noqa: E501
-        :type attribute_value_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and attribute_value_id is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_value_id`, must not be `None`")  # noqa: E501

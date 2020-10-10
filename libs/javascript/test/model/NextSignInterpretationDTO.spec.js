@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.NextSignInterpretationDTO();
+    instance = new QumranicaApiConnector.NextSignInterpretationDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('NextSignInterpretationDTO', function() {
     it('should create an instance of NextSignInterpretationDTO', function() {
       // uncomment below and update the code to test NextSignInterpretationDTO
-      //var instane = new SqeApi.NextSignInterpretationDTO();
-      //expect(instance).to.be.a(SqeApi.NextSignInterpretationDTO);
+      //var instane = new QumranicaApiConnector.NextSignInterpretationDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.NextSignInterpretationDTO);
     });
 
     it('should have the property nextSignInterpretationId (base name: "nextSignInterpretationId")', function() {
       // uncomment below and update the code to test the property nextSignInterpretationId
-      //var instane = new SqeApi.NextSignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.NextSignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property creatorId (base name: "creatorId")', function() {
       // uncomment below and update the code to test the property creatorId
-      //var instane = new SqeApi.NextSignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.NextSignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.NextSignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.NextSignInterpretationDTO();
       //expect(instance).to.be();
     });
 

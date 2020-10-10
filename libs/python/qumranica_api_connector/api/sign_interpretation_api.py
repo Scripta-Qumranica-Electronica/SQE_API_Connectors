@@ -41,28 +41,22 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_delete(edition_id, attribute_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param attribute_id: The ID of the attribute to delete (required)
-        :type attribute_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param int attribute_id: The ID of the attribute to delete (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_delete_with_http_info(edition_id, attribute_id, **kwargs)  # noqa: E501
@@ -72,35 +66,24 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_delete_with_http_info(edition_id, attribute_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param attribute_id: The ID of the attribute to delete (required)
-        :type attribute_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param int attribute_id: The ID of the attribute to delete (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -114,8 +97,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -154,8 +136,6 @@ class SignInterpretationApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations-attributes/{attributeId}', 'DELETE',
@@ -165,44 +145,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_attributes_attribute_id_put(self, edition_id, attribute_id, **kwargs):  # noqa: E501
         """Change the details of an attribute in an edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_put(edition_id, attribute_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param attribute_id: The ID of the attribute to update (required)
-        :type attribute_id: int
-        :param update_attribute_dto: The details of the updated attribute
-        :type update_attribute_dto: UpdateAttributeDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param int attribute_id: The ID of the attribute to update (required)
+        :param UpdateAttributeDTO update_attribute_dto: The details of the updated attribute
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: AttributeDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: AttributeDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_put_with_http_info(edition_id, attribute_id, **kwargs)  # noqa: E501
@@ -212,37 +184,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_attribute_id_put_with_http_info(edition_id, attribute_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param attribute_id: The ID of the attribute to update (required)
-        :type attribute_id: int
-        :param update_attribute_dto: The details of the updated attribute
-        :type update_attribute_dto: UpdateAttributeDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param int attribute_id: The ID of the attribute to update (required)
+        :param UpdateAttributeDTO update_attribute_dto: The details of the updated attribute
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(AttributeDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(AttributeDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -257,8 +217,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -307,10 +266,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "AttributeDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations-attributes/{attributeId}', 'PUT',
@@ -320,40 +275,34 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='AttributeDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_attributes_get(self, edition_id, **kwargs):  # noqa: E501
         """Retrieve a list of all possible attributes for an edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being searched (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being searched (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: AttributeListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: AttributeListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_attributes_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -363,33 +312,23 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being searched (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being searched (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(AttributeListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(AttributeListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -402,8 +341,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -440,10 +378,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "AttributeListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations-attributes', 'GET',
@@ -453,42 +387,35 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='AttributeListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_attributes_post(self, edition_id, **kwargs):  # noqa: E501
         """Create a new attribute for an edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param create_attribute_dto: The details of the new attribute
-        :type create_attribute_dto: CreateAttributeDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param CreateAttributeDTO create_attribute_dto: The details of the new attribute
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: AttributeDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: AttributeDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_attributes_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -498,35 +425,24 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_attributes_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being edited (required)
-        :type edition_id: int
-        :param create_attribute_dto: The details of the new attribute
-        :type create_attribute_dto: CreateAttributeDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being edited (required)
+        :param CreateAttributeDTO create_attribute_dto: The details of the new attribute
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(AttributeDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(AttributeDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -540,8 +456,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -584,10 +499,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "AttributeDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations-attributes', 'POST',
@@ -597,42 +508,35 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='AttributeDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates a new sign interpretation  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_create_dto: New sign interpretation data to be added
-        :type sign_interpretation_create_dto: SignInterpretationCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param SignInterpretationCreateDTO sign_interpretation_create_dto: New sign interpretation data to be added
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -642,35 +546,24 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_create_dto: New sign interpretation data to be added
-        :type sign_interpretation_create_dto: SignInterpretationCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param SignInterpretationCreateDTO sign_interpretation_create_dto: New sign interpretation data to be added
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -684,8 +577,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -728,10 +620,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations', 'POST',
@@ -741,44 +629,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_delete(self, edition_id, sign_interpretation_id, attribute_value_id, **kwargs):  # noqa: E501
         """This deletes the specified attribute value from the specified sign interpretation.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_delete(edition_id, sign_interpretation_id, attribute_value_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being altered (required)
-        :type sign_interpretation_id: int
-        :param attribute_value_id: Id of the attribute being removed (required)
-        :type attribute_value_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being altered (required)
+        :param int attribute_value_id: Id of the attribute being removed (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_delete_with_http_info(edition_id, sign_interpretation_id, attribute_value_id, **kwargs)  # noqa: E501
@@ -788,37 +668,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_delete_with_http_info(edition_id, sign_interpretation_id, attribute_value_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being altered (required)
-        :type sign_interpretation_id: int
-        :param attribute_value_id: Id of the attribute being removed (required)
-        :type attribute_value_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being altered (required)
+        :param int attribute_value_id: Id of the attribute being removed (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -833,8 +701,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -879,8 +746,6 @@ class SignInterpretationApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes/{attributeValueId}', 'DELETE',
@@ -890,46 +755,37 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_put(self, edition_id, sign_interpretation_id, attribute_value_id, **kwargs):  # noqa: E501
         """This changes the values of the specified sign interpretation attribute,  mainly used to change commentary.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_put(edition_id, sign_interpretation_id, attribute_value_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being altered (required)
-        :type sign_interpretation_id: int
-        :param attribute_value_id: Id of the attribute value to be altered (required)
-        :type attribute_value_id: int
-        :param interpretation_attribute_create_dto: New details of the attribute
-        :type interpretation_attribute_create_dto: InterpretationAttributeCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being altered (required)
+        :param int attribute_value_id: Id of the attribute value to be altered (required)
+        :param InterpretationAttributeCreateDTO interpretation_attribute_create_dto: New details of the attribute
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_put_with_http_info(edition_id, sign_interpretation_id, attribute_value_id, **kwargs)  # noqa: E501
@@ -939,39 +795,26 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_attribute_value_id_put_with_http_info(edition_id, sign_interpretation_id, attribute_value_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being altered (required)
-        :type sign_interpretation_id: int
-        :param attribute_value_id: Id of the attribute value to be altered (required)
-        :type attribute_value_id: int
-        :param interpretation_attribute_create_dto: New details of the attribute
-        :type interpretation_attribute_create_dto: InterpretationAttributeCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being altered (required)
+        :param int attribute_value_id: Id of the attribute value to be altered (required)
+        :param InterpretationAttributeCreateDTO interpretation_attribute_create_dto: New details of the attribute
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -987,8 +830,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1043,10 +885,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes/{attributeValueId}', 'PUT',
@@ -1056,44 +894,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_post(self, edition_id, sign_interpretation_id, **kwargs):  # noqa: E501
         """This adds a new attribute to the specified sign interpretation.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_post(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation for adding a new attribute (required)
-        :type sign_interpretation_id: int
-        :param interpretation_attribute_create_dto: Details of the attribute to be added
-        :type interpretation_attribute_create_dto: InterpretationAttributeCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation for adding a new attribute (required)
+        :param InterpretationAttributeCreateDTO interpretation_attribute_create_dto: Details of the attribute to be added
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_post_with_http_info(edition_id, sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1103,37 +933,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_attributes_post_with_http_info(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation for adding a new attribute (required)
-        :type sign_interpretation_id: int
-        :param interpretation_attribute_create_dto: Details of the attribute to be added
-        :type interpretation_attribute_create_dto: InterpretationAttributeCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation for adding a new attribute (required)
+        :param InterpretationAttributeCreateDTO interpretation_attribute_create_dto: Details of the attribute to be added
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1148,8 +966,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1198,10 +1015,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes', 'POST',
@@ -1211,44 +1024,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_commentary_put(self, edition_id, sign_interpretation_id, **kwargs):  # noqa: E501
         """Updates the commentary of a sign interpretation  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_commentary_put(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation whose commentary is being changed (required)
-        :type sign_interpretation_id: int
-        :param commentary_create_dto: The new commentary for the sign interpretation
-        :type commentary_create_dto: CommentaryCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation whose commentary is being changed (required)
+        :param CommentaryCreateDTO commentary_create_dto: The new commentary for the sign interpretation
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_commentary_put_with_http_info(edition_id, sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1258,37 +1063,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_commentary_put_with_http_info(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation whose commentary is being changed (required)
-        :type sign_interpretation_id: int
-        :param commentary_create_dto: The new commentary for the sign interpretation
-        :type commentary_create_dto: CommentaryCreateDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation whose commentary is being changed (required)
+        :param CommentaryCreateDTO commentary_create_dto: The new commentary for the sign interpretation
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1303,8 +1096,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1353,10 +1145,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/commentary', 'PUT',
@@ -1366,42 +1154,35 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_delete(self, edition_id, sign_interpretation_id, **kwargs):  # noqa: E501
         """Deletes the sign interpretation in the route. The endpoint automatically manages the sign stream  by connecting all the deleted sign's next and previous nodes.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_delete(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being deleted (required)
-        :type sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being deleted (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_delete_with_http_info(edition_id, sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1411,35 +1192,24 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_delete_with_http_info(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: ID of the sign interpretation being deleted (required)
-        :type sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: ID of the sign interpretation being deleted (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -1453,8 +1223,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1493,8 +1262,6 @@ class SignInterpretationApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}', 'DELETE',
@@ -1504,42 +1271,35 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_get(self, edition_id, sign_interpretation_id, **kwargs):  # noqa: E501
         """Retrieve the details of a sign interpretation in an edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_get(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being searched (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The desired sign interpretation id (required)
-        :type sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being searched (required)
+        :param int sign_interpretation_id: The desired sign interpretation id (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_get_with_http_info(edition_id, sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1549,35 +1309,24 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_get_with_http_info(edition_id, sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: The ID of the edition being searched (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The desired sign interpretation id (required)
-        :type sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: The ID of the edition being searched (required)
+        :param int sign_interpretation_id: The desired sign interpretation id (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1591,8 +1340,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1635,10 +1383,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}', 'GET',
@@ -1648,44 +1392,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_link_to_next_sign_interpretation_id_post(self, edition_id, sign_interpretation_id, next_sign_interpretation_id, **kwargs):  # noqa: E501
         """Links two sign interpretations in the edition's sign stream  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_link_to_next_sign_interpretation_id_post(edition_id, sign_interpretation_id, next_sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The sign interpretation to be linked to the nextSignInterpretationId (required)
-        :type sign_interpretation_id: int
-        :param next_sign_interpretation_id: The sign interpretation to become the new next sign interpretation (required)
-        :type next_sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: The sign interpretation to be linked to the nextSignInterpretationId (required)
+        :param int next_sign_interpretation_id: The sign interpretation to become the new next sign interpretation (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_link_to_next_sign_interpretation_id_post_with_http_info(edition_id, sign_interpretation_id, next_sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1695,37 +1431,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_link_to_next_sign_interpretation_id_post_with_http_info(edition_id, sign_interpretation_id, next_sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The sign interpretation to be linked to the nextSignInterpretationId (required)
-        :type sign_interpretation_id: int
-        :param next_sign_interpretation_id: The sign interpretation to become the new next sign interpretation (required)
-        :type next_sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: The sign interpretation to be linked to the nextSignInterpretationId (required)
+        :param int next_sign_interpretation_id: The sign interpretation to become the new next sign interpretation (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1740,8 +1464,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1790,10 +1513,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/link-to/{nextSignInterpretationId}', 'POST',
@@ -1803,44 +1522,36 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_sign_interpretations_sign_interpretation_id_unlink_from_next_sign_interpretation_id_post(self, edition_id, sign_interpretation_id, next_sign_interpretation_id, **kwargs):  # noqa: E501
         """Links two sign interpretations in the edition's sign stream  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_unlink_from_next_sign_interpretation_id_post(edition_id, sign_interpretation_id, next_sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The sign interpretation to be unlinked from the nextSignInterpretationId (required)
-        :type sign_interpretation_id: int
-        :param next_sign_interpretation_id: The sign interpretation to removed as next sign interpretation (required)
-        :type next_sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: The sign interpretation to be unlinked from the nextSignInterpretationId (required)
+        :param int next_sign_interpretation_id: The sign interpretation to removed as next sign interpretation (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: SignInterpretationDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: SignInterpretationDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_unlink_from_next_sign_interpretation_id_post_with_http_info(edition_id, sign_interpretation_id, next_sign_interpretation_id, **kwargs)  # noqa: E501
@@ -1850,37 +1561,25 @@ class SignInterpretationApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_sign_interpretations_sign_interpretation_id_unlink_from_next_sign_interpretation_id_post_with_http_info(edition_id, sign_interpretation_id, next_sign_interpretation_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: ID of the edition being changed (required)
-        :type edition_id: int
-        :param sign_interpretation_id: The sign interpretation to be unlinked from the nextSignInterpretationId (required)
-        :type sign_interpretation_id: int
-        :param next_sign_interpretation_id: The sign interpretation to removed as next sign interpretation (required)
-        :type next_sign_interpretation_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: ID of the edition being changed (required)
+        :param int sign_interpretation_id: The sign interpretation to be unlinked from the nextSignInterpretationId (required)
+        :param int next_sign_interpretation_id: The sign interpretation to removed as next sign interpretation (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(SignInterpretationDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1895,8 +1594,7 @@ class SignInterpretationApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1945,10 +1643,6 @@ class SignInterpretationApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "SignInterpretationDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/unlink-from/{nextSignInterpretationId}', 'POST',
@@ -1958,11 +1652,10 @@ class SignInterpretationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='SignInterpretationDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

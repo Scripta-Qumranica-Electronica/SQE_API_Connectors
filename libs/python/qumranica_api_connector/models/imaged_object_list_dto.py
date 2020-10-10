@@ -67,7 +67,7 @@ class ImagedObjectListDTO(object):
 
 
         :param imaged_objects: The imaged_objects of this ImagedObjectListDTO.  # noqa: E501
-        :type imaged_objects: list[ImagedObjectDTO]
+        :type: list[ImagedObjectDTO]
         """
         if self.local_vars_configuration.client_side_validation and imaged_objects is None:  # noqa: E501
             raise ValueError("Invalid value for `imaged_objects`, must not be `None`")  # noqa: E501

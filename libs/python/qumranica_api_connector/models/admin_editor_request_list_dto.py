@@ -67,7 +67,7 @@ class AdminEditorRequestListDTO(object):
 
 
         :param editor_requests: The editor_requests of this AdminEditorRequestListDTO.  # noqa: E501
-        :type editor_requests: list[AdminEditorRequestDTO]
+        :type: list[AdminEditorRequestDTO]
         """
         if self.local_vars_configuration.client_side_validation and editor_requests is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_requests`, must not be `None`")  # noqa: E501

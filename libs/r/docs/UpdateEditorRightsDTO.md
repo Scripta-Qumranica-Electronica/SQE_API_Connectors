@@ -1,4 +1,4 @@
-# openapi::UpdateEditorRightsDTO
+# qumranica_api_connector::UpdateEditorRightsDTO
 
 ## Properties
 Name | Type | Description | Notes

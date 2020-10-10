@@ -1,4 +1,4 @@
-# openapi::CommentaryDTO
+# qumranica_api_connector::CommentaryDTO
 
 ## Properties
 Name | Type | Description | Notes

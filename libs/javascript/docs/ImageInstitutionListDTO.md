@@ -1,4 +1,4 @@
-# SqeApi.ImageInstitutionListDTO
+# QumranicaApiConnector.ImageInstitutionListDTO
 
 ## Properties
 

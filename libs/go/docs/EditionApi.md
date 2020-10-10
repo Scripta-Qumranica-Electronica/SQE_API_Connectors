@@ -21,48 +21,17 @@ Method | HTTP request | Description
 
 ## V1EditionsAdminShareRequestsGet
 
-> AdminEditorRequestListDTO V1EditionsAdminShareRequestsGet(ctx).Execute()
+> AdminEditorRequestListDto V1EditionsAdminShareRequestsGet(ctx, )
 
 Get a list of requests issued by the current user for other users  to become editors of a shared edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsAdminShareRequestsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsAdminShareRequestsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsAdminShareRequestsGet`: AdminEditorRequestListDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsAdminShareRequestsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 This endpoint does not need any parameter.
 
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsAdminShareRequestsGetRequest struct via the builder pattern
-
-
 ### Return type
 
-[**AdminEditorRequestListDTO**](AdminEditorRequestListDTO.md)
+[**AdminEditorRequestListDto**](AdminEditorRequestListDTO.md)
 
 ### Authorization
 
@@ -80,57 +49,21 @@ Other parameters are passed through a pointer to a apiV1EditionsAdminShareReques
 
 ## V1EditionsConfirmEditorshipTokenPost
 
-> DetailedEditorRightsDTO V1EditionsConfirmEditorshipTokenPost(ctx, token).Execute()
+> DetailedEditorRightsDto V1EditionsConfirmEditorshipTokenPost(ctx, token)
 
 Confirm addition of an editor to the specified edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    token := "token_example" // string | JWT for verifying the request confirmation
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsConfirmEditorshipTokenPost(context.Background(), token).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsConfirmEditorshipTokenPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsConfirmEditorshipTokenPost`: DetailedEditorRightsDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsConfirmEditorshipTokenPost`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**token** | **string** | JWT for verifying the request confirmation | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsConfirmEditorshipTokenPostRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+**token** | **string**| JWT for verifying the request confirmation | 
 
 ### Return type
 
-[**DetailedEditorRightsDTO**](DetailedEditorRightsDTO.md)
+[**DetailedEditorRightsDto**](DetailedEditorRightsDTO.md)
 
 ### Authorization
 
@@ -148,53 +81,28 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdAddEditorRequestPost
 
-> V1EditionsEditionIdAddEditorRequestPost(ctx, editionId).InviteEditorDTO(inviteEditorDTO).Execute()
+> V1EditionsEditionIdAddEditorRequestPost(ctx, editionId, optional)
 
 Adds an editor to the specified edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-    inviteEditorDTO := openapiclient.InviteEditorDTO{Email: "Email_example", MayLock: false, MayRead: false, MayWrite: false, IsAdmin: false} // InviteEditorDTO | JSON object with the attributes of the new editor (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdAddEditorRequestPost(context.Background(), editionId).InviteEditorDTO(inviteEditorDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdAddEditorRequestPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
+**editionId** | **int32**| Unique Id of the desired edition | 
+ **optional** | ***V1EditionsEditionIdAddEditorRequestPostOpts** | optional parameters | nil if no parameters
 
-### Other Parameters
+### Optional Parameters
 
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdAddEditorRequestPostRequest struct via the builder pattern
+Optional parameters are passed through a pointer to a V1EditionsEditionIdAddEditorRequestPostOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **inviteEditorDTO** | [**InviteEditorDTO**](InviteEditorDTO.md) | JSON object with the attributes of the new editor | 
+ **inviteEditorDto** | [**optional.Interface of InviteEditorDto**](InviteEditorDto.md)| JSON object with the attributes of the new editor | 
 
 ### Return type
 
@@ -216,61 +124,33 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdDelete
 
-> DeleteTokenDTO V1EditionsEditionIdDelete(ctx, editionId).Optional(optional).Token(token).Execute()
+> DeleteTokenDto V1EditionsEditionIdDelete(ctx, editionId, optional)
 
 Provides details about the specified edition and all accessible alternate editions
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-    optional := []string{"Inner_example"} // []string | Optional parameters: 'deleteForAllEditors' (optional)
-    token := "token_example" // string | token required when using optional 'deleteForAllEditors' (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdDelete(context.Background(), editionId).Optional(optional).Token(token).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdDelete``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdDelete`: DeleteTokenDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdDelete`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
+**editionId** | **int32**| Unique Id of the desired edition | 
+ **optional** | ***V1EditionsEditionIdDeleteOpts** | optional parameters | nil if no parameters
 
-### Other Parameters
+### Optional Parameters
 
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdDeleteRequest struct via the builder pattern
+Optional parameters are passed through a pointer to a V1EditionsEditionIdDeleteOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **optional** | [**[]string**](string.md) | Optional parameters: &#39;deleteForAllEditors&#39; | 
- **token** | **string** | token required when using optional &#39;deleteForAllEditors&#39; | 
+ **optional** | [**optional.Interface of []string**](string.md)| Optional parameters: &#39;deleteForAllEditors&#39; | 
+ **token** | **optional.String**| token required when using optional &#39;deleteForAllEditors&#39; | 
 
 ### Return type
 
-[**DeleteTokenDTO**](DeleteTokenDTO.md)
+[**DeleteTokenDto**](DeleteTokenDTO.md)
 
 ### Authorization
 
@@ -288,62 +168,34 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdEditorsEditorEmailIdPut
 
-> DetailedEditorRightsDTO V1EditionsEditionIdEditorsEditorEmailIdPut(ctx, editionId, editorEmailId).UpdateEditorRightsDTO(updateEditorRightsDTO).Execute()
+> DetailedEditorRightsDto V1EditionsEditionIdEditorsEditorEmailIdPut(ctx, editionId, editorEmailId, optional)
 
 Changes the rights for an editor of the specified edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-    editorEmailId := "editorEmailId_example" // string | Email address of the editor whose permissions are being changed
-    updateEditorRightsDTO := openapiclient.UpdateEditorRightsDTO{MayLock: false, MayRead: false, MayWrite: false, IsAdmin: false} // UpdateEditorRightsDTO | JSON object with the attributes of the new editor (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdEditorsEditorEmailIdPut(context.Background(), editionId, editorEmailId).UpdateEditorRightsDTO(updateEditorRightsDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdEditorsEditorEmailIdPut``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdEditorsEditorEmailIdPut`: DetailedEditorRightsDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdEditorsEditorEmailIdPut`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
-**editorEmailId** | **string** | Email address of the editor whose permissions are being changed | 
+**editionId** | **int32**| Unique Id of the desired edition | 
+**editorEmailId** | **string**| Email address of the editor whose permissions are being changed | 
+ **optional** | ***V1EditionsEditionIdEditorsEditorEmailIdPutOpts** | optional parameters | nil if no parameters
 
-### Other Parameters
+### Optional Parameters
 
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdEditorsEditorEmailIdPutRequest struct via the builder pattern
+Optional parameters are passed through a pointer to a V1EditionsEditionIdEditorsEditorEmailIdPutOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateEditorRightsDTO** | [**UpdateEditorRightsDTO**](UpdateEditorRightsDTO.md) | JSON object with the attributes of the new editor | 
+ **updateEditorRightsDto** | [**optional.Interface of UpdateEditorRightsDto**](UpdateEditorRightsDto.md)| JSON object with the attributes of the new editor | 
 
 ### Return type
 
-[**DetailedEditorRightsDTO**](DetailedEditorRightsDTO.md)
+[**DetailedEditorRightsDto**](DetailedEditorRightsDTO.md)
 
 ### Authorization
 
@@ -361,57 +213,21 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdGet
 
-> EditionGroupDTO V1EditionsEditionIdGet(ctx, editionId).Execute()
+> EditionGroupDto V1EditionsEditionIdGet(ctx, editionId)
 
 Provides details about the specified edition and all accessible alternate editions
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdGet(context.Background(), editionId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdGet`: EditionGroupDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+**editionId** | **int32**| Unique Id of the desired edition | 
 
 ### Return type
 
-[**EditionGroupDTO**](EditionGroupDTO.md)
+[**EditionGroupDto**](EditionGroupDTO.md)
 
 ### Authorization
 
@@ -429,59 +245,32 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdPost
 
-> EditionDTO V1EditionsEditionIdPost(ctx, editionId).EditionCopyDTO(editionCopyDTO).Execute()
+> EditionDto V1EditionsEditionIdPost(ctx, editionId, optional)
 
 Creates a copy of the specified edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-    editionCopyDTO := openapiclient.EditionCopyDTO{Name: "Name_example", CopyrightHolder: "CopyrightHolder_example", Collaborators: "Collaborators_example"} // EditionCopyDTO | JSON object with the attributes to be changed in the copied edition (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdPost(context.Background(), editionId).EditionCopyDTO(editionCopyDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdPost`: EditionDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdPost`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
+**editionId** | **int32**| Unique Id of the desired edition | 
+ **optional** | ***V1EditionsEditionIdPostOpts** | optional parameters | nil if no parameters
 
-### Other Parameters
+### Optional Parameters
 
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdPostRequest struct via the builder pattern
+Optional parameters are passed through a pointer to a V1EditionsEditionIdPostOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **editionCopyDTO** | [**EditionCopyDTO**](EditionCopyDTO.md) | JSON object with the attributes to be changed in the copied edition | 
+ **editionCopyDto** | [**optional.Interface of EditionCopyDto**](EditionCopyDto.md)| JSON object with the attributes to be changed in the copied edition | 
 
 ### Return type
 
-[**EditionDTO**](EditionDTO.md)
+[**EditionDto**](EditionDTO.md)
 
 ### Authorization
 
@@ -499,59 +288,32 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdPut
 
-> EditionDTO V1EditionsEditionIdPut(ctx, editionId).EditionUpdateRequestDTO(editionUpdateRequestDTO).Execute()
+> EditionDto V1EditionsEditionIdPut(ctx, editionId, optional)
 
 Updates data for the specified edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-    editionUpdateRequestDTO := openapiclient.EditionUpdateRequestDTO{Metrics: openapiclient.UpdateEditionManuscriptMetricsDTO{Width: 123, Height: 123, XOrigin: 123, YOrigin: 123}, Name: "Name_example", CopyrightHolder: "CopyrightHolder_example", Collaborators: "Collaborators_example"} // EditionUpdateRequestDTO | JSON object with the attributes to be updated (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdPut(context.Background(), editionId).EditionUpdateRequestDTO(editionUpdateRequestDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdPut``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdPut`: EditionDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdPut`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
+**editionId** | **int32**| Unique Id of the desired edition | 
+ **optional** | ***V1EditionsEditionIdPutOpts** | optional parameters | nil if no parameters
 
-### Other Parameters
+### Optional Parameters
 
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdPutRequest struct via the builder pattern
+Optional parameters are passed through a pointer to a V1EditionsEditionIdPutOpts struct
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **editionUpdateRequestDTO** | [**EditionUpdateRequestDTO**](EditionUpdateRequestDTO.md) | JSON object with the attributes to be updated | 
+ **editionUpdateRequestDto** | [**optional.Interface of EditionUpdateRequestDto**](EditionUpdateRequestDto.md)| JSON object with the attributes to be updated | 
 
 ### Return type
 
-[**EditionDTO**](EditionDTO.md)
+[**EditionDto**](EditionDTO.md)
 
 ### Authorization
 
@@ -569,57 +331,21 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdScriptCollectionGet
 
-> EditionScriptCollectionDTO V1EditionsEditionIdScriptCollectionGet(ctx, editionId).Execute()
+> EditionScriptCollectionDto V1EditionsEditionIdScriptCollectionGet(ctx, editionId)
 
 Provides spatial data for all letters in the edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdScriptCollectionGet(context.Background(), editionId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdScriptCollectionGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdScriptCollectionGet`: EditionScriptCollectionDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdScriptCollectionGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdScriptCollectionGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+**editionId** | **int32**| Unique Id of the desired edition | 
 
 ### Return type
 
-[**EditionScriptCollectionDTO**](EditionScriptCollectionDTO.md)
+[**EditionScriptCollectionDto**](EditionScriptCollectionDTO.md)
 
 ### Authorization
 
@@ -637,57 +363,21 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditionIdScriptLinesGet
 
-> EditionScriptLinesDTO V1EditionsEditionIdScriptLinesGet(ctx, editionId).Execute()
+> EditionScriptLinesDto V1EditionsEditionIdScriptLinesGet(ctx, editionId)
 
 Provides spatial data for all letters in the edition organized and oriented  by lines.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    editionId := 987 // int32 | Unique Id of the desired edition
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditionIdScriptLinesGet(context.Background(), editionId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditionIdScriptLinesGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditionIdScriptLinesGet`: EditionScriptLinesDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditionIdScriptLinesGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**editionId** | **int32** | Unique Id of the desired edition | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsEditionIdScriptLinesGetRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
+**editionId** | **int32**| Unique Id of the desired edition | 
 
 ### Return type
 
-[**EditionScriptLinesDTO**](EditionScriptLinesDTO.md)
+[**EditionScriptLinesDto**](EditionScriptLinesDTO.md)
 
 ### Authorization
 
@@ -705,48 +395,17 @@ Name | Type | Description  | Notes
 
 ## V1EditionsEditorInvitationsGet
 
-> EditorInvitationListDTO V1EditionsEditorInvitationsGet(ctx).Execute()
+> EditorInvitationListDto V1EditionsEditorInvitationsGet(ctx, )
 
 Get a list of invitations issued to the current user to become an editor of a shared edition
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsEditorInvitationsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsEditorInvitationsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsEditorInvitationsGet`: EditorInvitationListDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsEditorInvitationsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 This endpoint does not need any parameter.
 
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsEditorInvitationsGetRequest struct via the builder pattern
-
-
 ### Return type
 
-[**EditorInvitationListDTO**](EditorInvitationListDTO.md)
+[**EditorInvitationListDto**](EditorInvitationListDTO.md)
 
 ### Authorization
 
@@ -764,48 +423,17 @@ Other parameters are passed through a pointer to a apiV1EditionsEditorInvitation
 
 ## V1EditionsGet
 
-> EditionListDTO V1EditionsGet(ctx).Execute()
+> EditionListDto V1EditionsGet(ctx, )
 
 Provides a listing of all editions accessible to the current user
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.EditionApi.V1EditionsGet(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `EditionApi.V1EditionsGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1EditionsGet`: EditionListDTO
-    fmt.Fprintf(os.Stdout, "Response from `EditionApi.V1EditionsGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
+### Required Parameters
 
 This endpoint does not need any parameter.
 
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1EditionsGetRequest struct via the builder pattern
-
-
 ### Return type
 
-[**EditionListDTO**](EditionListDTO.md)
+[**EditionListDto**](EditionListDTO.md)
 
 ### Authorization
 

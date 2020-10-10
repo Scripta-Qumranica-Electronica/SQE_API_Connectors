@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImageInstitutionDTO();
+    instance = new QumranicaApiConnector.ImageInstitutionDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ImageInstitutionDTO', function() {
     it('should create an instance of ImageInstitutionDTO', function() {
       // uncomment below and update the code to test ImageInstitutionDTO
-      //var instane = new SqeApi.ImageInstitutionDTO();
-      //expect(instance).to.be.a(SqeApi.ImageInstitutionDTO);
+      //var instane = new QumranicaApiConnector.ImageInstitutionDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImageInstitutionDTO);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.ImageInstitutionDTO();
+      //var instane = new QumranicaApiConnector.ImageInstitutionDTO();
       //expect(instance).to.be();
     });
 

@@ -1,0 +1,7 @@
+{
+  "name": "qumranica",
+  "version": "0.7.0",
+  "scripts": {
+    "python": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g python -o libs/python --additional-properties=projectName=qumranica,packageName=qumranica_api_connector,packageVersion=0.7.0",
+  }
+}

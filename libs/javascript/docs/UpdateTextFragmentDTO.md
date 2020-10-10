@@ -1,4 +1,4 @@
-# SqeApi.UpdateTextFragmentDTO
+# QumranicaApiConnector.UpdateTextFragmentDTO
 
 ## Properties
 

@@ -107,7 +107,7 @@ class AttributeDTO(object):
 
 
         :param attribute_id: The attribute_id of this AttributeDTO.  # noqa: E501
-        :type attribute_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and attribute_id is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_id`, must not be `None`")  # noqa: E501
@@ -130,7 +130,7 @@ class AttributeDTO(object):
 
 
         :param attribute_name: The attribute_name of this AttributeDTO.  # noqa: E501
-        :type attribute_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and attribute_name is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_name`, must not be `None`")  # noqa: E501
@@ -153,7 +153,7 @@ class AttributeDTO(object):
 
 
         :param values: The values of this AttributeDTO.  # noqa: E501
-        :type values: list[AttributeValueDTO]
+        :type: list[AttributeValueDTO]
         """
         if self.local_vars_configuration.client_side_validation and values is None:  # noqa: E501
             raise ValueError("Invalid value for `values`, must not be `None`")  # noqa: E501
@@ -176,7 +176,7 @@ class AttributeDTO(object):
 
 
         :param creator_id: The creator_id of this AttributeDTO.  # noqa: E501
-        :type creator_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and creator_id is None:  # noqa: E501
             raise ValueError("Invalid value for `creator_id`, must not be `None`")  # noqa: E501
@@ -199,7 +199,7 @@ class AttributeDTO(object):
 
 
         :param editor_id: The editor_id of this AttributeDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -222,7 +222,7 @@ class AttributeDTO(object):
 
 
         :param description: The description of this AttributeDTO.  # noqa: E501
-        :type description: str
+        :type: str
         """
 
         self._description = description
@@ -243,7 +243,7 @@ class AttributeDTO(object):
 
 
         :param editable: The editable of this AttributeDTO.  # noqa: E501
-        :type editable: bool
+        :type: bool
         """
 
         self._editable = editable
@@ -264,7 +264,7 @@ class AttributeDTO(object):
 
 
         :param removable: The removable of this AttributeDTO.  # noqa: E501
-        :type removable: bool
+        :type: bool
         """
 
         self._removable = removable
@@ -285,7 +285,7 @@ class AttributeDTO(object):
 
 
         :param repeatable: The repeatable of this AttributeDTO.  # noqa: E501
-        :type repeatable: bool
+        :type: bool
         """
 
         self._repeatable = repeatable
@@ -306,7 +306,7 @@ class AttributeDTO(object):
 
 
         :param batch_editable: The batch_editable of this AttributeDTO.  # noqa: E501
-        :type batch_editable: bool
+        :type: bool
         """
 
         self._batch_editable = batch_editable

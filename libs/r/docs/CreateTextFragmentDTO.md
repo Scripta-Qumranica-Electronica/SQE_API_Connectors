@@ -1,4 +1,4 @@
-# openapi::CreateTextFragmentDTO
+# qumranica_api_connector::CreateTextFragmentDTO
 
 ## Properties
 Name | Type | Description | Notes

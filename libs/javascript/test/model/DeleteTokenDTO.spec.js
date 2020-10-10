@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.DeleteTokenDTO();
+    instance = new QumranicaApiConnector.DeleteTokenDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('DeleteTokenDTO', function() {
     it('should create an instance of DeleteTokenDTO', function() {
       // uncomment below and update the code to test DeleteTokenDTO
-      //var instane = new SqeApi.DeleteTokenDTO();
-      //expect(instance).to.be.a(SqeApi.DeleteTokenDTO);
+      //var instane = new QumranicaApiConnector.DeleteTokenDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.DeleteTokenDTO);
     });
 
     it('should have the property editionId (base name: "editionId")', function() {
       // uncomment below and update the code to test the property editionId
-      //var instane = new SqeApi.DeleteTokenDTO();
+      //var instane = new QumranicaApiConnector.DeleteTokenDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property token (base name: "token")', function() {
       // uncomment below and update the code to test the property token
-      //var instane = new SqeApi.DeleteTokenDTO();
+      //var instane = new QumranicaApiConnector.DeleteTokenDTO();
       //expect(instance).to.be();
     });
 

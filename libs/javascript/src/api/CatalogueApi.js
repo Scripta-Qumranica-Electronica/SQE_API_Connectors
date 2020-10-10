@@ -19,7 +19,7 @@ import CatalogueMatchListDTO from '../model/CatalogueMatchListDTO';
 /**
 * Catalogue service.
 * @module api/CatalogueApi
-* @version v1
+* @version 0.7.0
 */
 export default class CatalogueApi {
 
@@ -35,20 +35,13 @@ export default class CatalogueApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete operation.
-     * @callback module:api/CatalogueApi~v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Remove an existing imaged object and text fragment match, which is not correct
      * @param {Number} iaaEditionCatalogToTextFragmentId The unique id of the match to confirm
-     * @param {module:api/CatalogueApi~v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete(iaaEditionCatalogToTextFragmentId, callback) {
+    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDeleteWithHttpInfo(iaaEditionCatalogToTextFragmentId) {
       let postBody = null;
       // verify the required parameter 'iaaEditionCatalogToTextFragmentId' is set
       if (iaaEditionCatalogToTextFragmentId === undefined || iaaEditionCatalogToTextFragmentId === null) {
@@ -72,24 +65,29 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/confirm-match/{iaaEditionCatalogToTextFragmentId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost operation.
-     * @callback module:api/CatalogueApi~v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Remove an existing imaged object and text fragment match, which is not correct
+     * @param {Number} iaaEditionCatalogToTextFragmentId The unique id of the match to confirm
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete(iaaEditionCatalogToTextFragmentId) {
+      return this.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDeleteWithHttpInfo(iaaEditionCatalogToTextFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Confirm the correctness of an existing imaged object and text fragment match
      * @param {Number} iaaEditionCatalogToTextFragmentId The unique id of the match to confirm
-     * @param {module:api/CatalogueApi~v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost(iaaEditionCatalogToTextFragmentId, callback) {
+    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPostWithHttpInfo(iaaEditionCatalogToTextFragmentId) {
       let postBody = null;
       // verify the required parameter 'iaaEditionCatalogToTextFragmentId' is set
       if (iaaEditionCatalogToTextFragmentId === undefined || iaaEditionCatalogToTextFragmentId === null) {
@@ -113,25 +111,29 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/confirm-match/{iaaEditionCatalogToTextFragmentId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet operation.
-     * @callback module:api/CatalogueApi~v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CatalogueMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Confirm the correctness of an existing imaged object and text fragment match
+     * @param {Number} iaaEditionCatalogToTextFragmentId The unique id of the match to confirm
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost(iaaEditionCatalogToTextFragmentId) {
+      return this.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPostWithHttpInfo(iaaEditionCatalogToTextFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a listing of all corresponding imaged objects and transcribed text fragment in a specified edition
      * @param {Number} editionId Unique Id of the edition to search for imaged objects to text fragment matches
-     * @param {module:api/CatalogueApi~v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CatalogueMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CatalogueMatchListDTO} and HTTP response
      */
-    v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet(editionId, callback) {
+    v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGetWithHttpInfo(editionId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -155,25 +157,29 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/editions/{editionId}/imaged-object-text-fragment-matches', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet operation.
-     * @callback module:api/CatalogueApi~v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CatalogueMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a listing of all corresponding imaged objects and transcribed text fragment in a specified edition
+     * @param {Number} editionId Unique Id of the edition to search for imaged objects to text fragment matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CatalogueMatchListDTO}
      */
+    v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet(editionId) {
+      return this.v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGetWithHttpInfo(editionId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a listing of all text fragments matches that correspond to an imaged object
      * @param {String} imagedObjectId Id of imaged object to search for transcription matches
-     * @param {module:api/CatalogueApi~v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CatalogueMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CatalogueMatchListDTO} and HTTP response
      */
-    v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId, callback) {
+    v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGetWithHttpInfo(imagedObjectId) {
       let postBody = null;
       // verify the required parameter 'imagedObjectId' is set
       if (imagedObjectId === undefined || imagedObjectId === null) {
@@ -197,25 +203,29 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/imaged-objects/{imagedObjectId}/text-fragments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet operation.
-     * @callback module:api/CatalogueApi~v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CatalogueMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a listing of all text fragments matches that correspond to an imaged object
+     * @param {String} imagedObjectId Id of imaged object to search for transcription matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CatalogueMatchListDTO}
      */
+    v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId) {
+      return this.v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGetWithHttpInfo(imagedObjectId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a listing of all corresponding imaged objects and transcribed text fragment in a specified manuscript
      * @param {Number} manuscriptId Unique Id of the manuscript to search for imaged objects to text fragment matches
-     * @param {module:api/CatalogueApi~v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CatalogueMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CatalogueMatchListDTO} and HTTP response
      */
-    v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet(manuscriptId, callback) {
+    v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGetWithHttpInfo(manuscriptId) {
       let postBody = null;
       // verify the required parameter 'manuscriptId' is set
       if (manuscriptId === undefined || manuscriptId === null) {
@@ -239,25 +249,30 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/manuscripts/{manuscriptId}/imaged-object-text-fragment-matches', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CataloguePost operation.
-     * @callback module:api/CatalogueApi~v1CataloguePostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get a listing of all corresponding imaged objects and transcribed text fragment in a specified manuscript
+     * @param {Number} manuscriptId Unique Id of the manuscript to search for imaged objects to text fragment matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CatalogueMatchListDTO}
      */
+    v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet(manuscriptId) {
+      return this.v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGetWithHttpInfo(manuscriptId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a new matched pair for an imaged object and a text fragment along with the edition princeps information
      * @param {Object} opts Optional parameters
      * @param {module:model/CatalogueMatchInputDTO} opts.catalogueMatchInputDTO The details of the new match
-     * @param {module:api/CatalogueApi~v1CataloguePostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1CataloguePost(opts, callback) {
+    v1CataloguePostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['catalogueMatchInputDTO'];
 
@@ -277,25 +292,30 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet operation.
-     * @callback module:api/CatalogueApi~v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CatalogueMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a new matched pair for an imaged object and a text fragment along with the edition princeps information
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CatalogueMatchInputDTO} opts.catalogueMatchInputDTO The details of the new match
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1CataloguePost(opts) {
+      return this.v1CataloguePostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a listing of all imaged objects that matches that correspond to a transcribed text fragment
      * @param {Number} textFragmentId Unique Id of the text fragment to search for imaged object matches
-     * @param {module:api/CatalogueApi~v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CatalogueMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CatalogueMatchListDTO} and HTTP response
      */
-    v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet(textFragmentId, callback) {
+    v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGetWithHttpInfo(textFragmentId) {
       let postBody = null;
       // verify the required parameter 'textFragmentId' is set
       if (textFragmentId === undefined || textFragmentId === null) {
@@ -319,8 +339,20 @@ export default class CatalogueApi {
       return this.apiClient.callApi(
         '/v1/catalogue/text-fragments/{textFragmentId}/imaged-objects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Get a listing of all imaged objects that matches that correspond to a transcribed text fragment
+     * @param {Number} textFragmentId Unique Id of the text fragment to search for imaged object matches
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CatalogueMatchListDTO}
+     */
+    v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet(textFragmentId) {
+      return this.v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGetWithHttpInfo(textFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

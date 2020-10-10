@@ -1,4 +1,4 @@
-# SqeApi.ResetUserPasswordRequestDTO
+# QumranicaApiConnector.ResetUserPasswordRequestDTO
 
 ## Properties
 

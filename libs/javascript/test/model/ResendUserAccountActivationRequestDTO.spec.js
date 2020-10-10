@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ResendUserAccountActivationRequestDTO();
+    instance = new QumranicaApiConnector.ResendUserAccountActivationRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ResendUserAccountActivationRequestDTO', function() {
     it('should create an instance of ResendUserAccountActivationRequestDTO', function() {
       // uncomment below and update the code to test ResendUserAccountActivationRequestDTO
-      //var instane = new SqeApi.ResendUserAccountActivationRequestDTO();
-      //expect(instance).to.be.a(SqeApi.ResendUserAccountActivationRequestDTO);
+      //var instane = new QumranicaApiConnector.ResendUserAccountActivationRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ResendUserAccountActivationRequestDTO);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.ResendUserAccountActivationRequestDTO();
+      //var instane = new QumranicaApiConnector.ResendUserAccountActivationRequestDTO();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ScriptArtefactCharactersDTO();
+    instance = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ScriptArtefactCharactersDTO', function() {
     it('should create an instance of ScriptArtefactCharactersDTO', function() {
       // uncomment below and update the code to test ScriptArtefactCharactersDTO
-      //var instane = new SqeApi.ScriptArtefactCharactersDTO();
-      //expect(instance).to.be.a(SqeApi.ScriptArtefactCharactersDTO);
+      //var instane = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ScriptArtefactCharactersDTO);
     });
 
     it('should have the property artefactName (base name: "artefactName")', function() {
       // uncomment below and update the code to test the property artefactName
-      //var instane = new SqeApi.ScriptArtefactCharactersDTO();
+      //var instane = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property artefactId (base name: "artefactId")', function() {
       // uncomment below and update the code to test the property artefactId
-      //var instane = new SqeApi.ScriptArtefactCharactersDTO();
+      //var instane = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property placement (base name: "placement")', function() {
       // uncomment below and update the code to test the property placement
-      //var instane = new SqeApi.ScriptArtefactCharactersDTO();
+      //var instane = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property characters (base name: "characters")', function() {
       // uncomment below and update the code to test the property characters
-      //var instane = new SqeApi.ScriptArtefactCharactersDTO();
+      //var instane = new QumranicaApiConnector.ScriptArtefactCharactersDTO();
       //expect(instance).to.be();
     });
 

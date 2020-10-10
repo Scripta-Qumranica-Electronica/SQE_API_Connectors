@@ -1,4 +1,4 @@
-# SqeApi.TranslateDTO
+# QumranicaApiConnector.TranslateDTO
 
 ## Properties
 

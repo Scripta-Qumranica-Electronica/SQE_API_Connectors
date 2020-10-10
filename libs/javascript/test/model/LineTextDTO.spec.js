@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.LineTextDTO();
+    instance = new QumranicaApiConnector.LineTextDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('LineTextDTO', function() {
     it('should create an instance of LineTextDTO', function() {
       // uncomment below and update the code to test LineTextDTO
-      //var instane = new SqeApi.LineTextDTO();
-      //expect(instance).to.be.a(SqeApi.LineTextDTO);
+      //var instane = new QumranicaApiConnector.LineTextDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.LineTextDTO);
     });
 
     it('should have the property licence (base name: "licence")', function() {
       // uncomment below and update the code to test the property licence
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editors (base name: "editors")', function() {
       // uncomment below and update the code to test the property editors
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lineId (base name: "lineId")', function() {
       // uncomment below and update the code to test the property lineId
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lineName (base name: "lineName")', function() {
       // uncomment below and update the code to test the property lineName
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property signs (base name: "signs")', function() {
       // uncomment below and update the code to test the property signs
-      //var instane = new SqeApi.LineTextDTO();
+      //var instane = new QumranicaApiConnector.LineTextDTO();
       //expect(instance).to.be();
     });
 

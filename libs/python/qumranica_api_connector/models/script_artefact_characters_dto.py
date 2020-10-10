@@ -79,7 +79,7 @@ class ScriptArtefactCharactersDTO(object):
 
 
         :param artefact_name: The artefact_name of this ScriptArtefactCharactersDTO.  # noqa: E501
-        :type artefact_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and artefact_name is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_name`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class ScriptArtefactCharactersDTO(object):
 
 
         :param artefact_id: The artefact_id of this ScriptArtefactCharactersDTO.  # noqa: E501
-        :type artefact_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and artefact_id is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_id`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class ScriptArtefactCharactersDTO(object):
 
 
         :param placement: The placement of this ScriptArtefactCharactersDTO.  # noqa: E501
-        :type placement: PlacementDTO
+        :type: PlacementDTO
         """
         if self.local_vars_configuration.client_side_validation and placement is None:  # noqa: E501
             raise ValueError("Invalid value for `placement`, must not be `None`")  # noqa: E501
@@ -148,7 +148,7 @@ class ScriptArtefactCharactersDTO(object):
 
 
         :param characters: The characters of this ScriptArtefactCharactersDTO.  # noqa: E501
-        :type characters: list[SignInterpretationDTO]
+        :type: list[SignInterpretationDTO]
         """
         if self.local_vars_configuration.client_side_validation and characters is None:  # noqa: E501
             raise ValueError("Invalid value for `characters`, must not be `None`")  # noqa: E501

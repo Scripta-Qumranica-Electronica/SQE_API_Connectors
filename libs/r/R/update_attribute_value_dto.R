@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title UpdateAttributeValueDTO
-#'
 #' @description UpdateAttributeValueDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field id  integer 
 #'
 #' @field value  character 
@@ -20,6 +17,7 @@
 #' @field description  character [optional]
 #'
 #' @field cssDirectives  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ UpdateAttributeValueDTO <- R6::R6Class(
     `value` = NULL,
     `description` = NULL,
     `cssDirectives` = NULL,
-    initialize = function(
-        `id`, `value`, `description`=NULL, `cssDirectives`=NULL, ...
-    ) {
+    initialize = function(`id`, `value`, `description`=NULL, `cssDirectives`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`id`)) {
         stopifnot(is.numeric(`id`), length(`id`) == 1)
@@ -87,7 +83,6 @@ UpdateAttributeValueDTO <- R6::R6Class(
       if (!is.null(UpdateAttributeValueDTOObject$`cssDirectives`)) {
         self$`cssDirectives` <- UpdateAttributeValueDTOObject$`cssDirectives`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -133,4 +128,3 @@ UpdateAttributeValueDTO <- R6::R6Class(
     }
   )
 )
-

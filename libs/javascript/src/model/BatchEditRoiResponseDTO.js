@@ -18,7 +18,7 @@ import UpdatedInterpretationRoiDTO from './UpdatedInterpretationRoiDTO';
 /**
  * The BatchEditRoiResponseDTO model module.
  * @module model/BatchEditRoiResponseDTO
- * @version v1
+ * @version 0.7.0
  */
 class BatchEditRoiResponseDTO {
     /**

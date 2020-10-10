@@ -115,7 +115,7 @@ class ArtefactDTO(object):
 
 
         :param edition_id: The edition_id of this ArtefactDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -138,7 +138,7 @@ class ArtefactDTO(object):
 
 
         :param imaged_object_id: The imaged_object_id of this ArtefactDTO.  # noqa: E501
-        :type imaged_object_id: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and imaged_object_id is None:  # noqa: E501
             raise ValueError("Invalid value for `imaged_object_id`, must not be `None`")  # noqa: E501
@@ -161,7 +161,7 @@ class ArtefactDTO(object):
 
 
         :param image_id: The image_id of this ArtefactDTO.  # noqa: E501
-        :type image_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and image_id is None:  # noqa: E501
             raise ValueError("Invalid value for `image_id`, must not be `None`")  # noqa: E501
@@ -184,7 +184,7 @@ class ArtefactDTO(object):
 
 
         :param artefact_data_editor_id: The artefact_data_editor_id of this ArtefactDTO.  # noqa: E501
-        :type artefact_data_editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and artefact_data_editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_data_editor_id`, must not be `None`")  # noqa: E501
@@ -207,7 +207,7 @@ class ArtefactDTO(object):
 
 
         :param mask: The mask of this ArtefactDTO.  # noqa: E501
-        :type mask: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and mask is None:  # noqa: E501
             raise ValueError("Invalid value for `mask`, must not be `None`")  # noqa: E501
@@ -230,7 +230,7 @@ class ArtefactDTO(object):
 
 
         :param artefact_mask_editor_id: The artefact_mask_editor_id of this ArtefactDTO.  # noqa: E501
-        :type artefact_mask_editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and artefact_mask_editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_mask_editor_id`, must not be `None`")  # noqa: E501
@@ -253,7 +253,7 @@ class ArtefactDTO(object):
 
 
         :param is_placed: The is_placed of this ArtefactDTO.  # noqa: E501
-        :type is_placed: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_placed is None:  # noqa: E501
             raise ValueError("Invalid value for `is_placed`, must not be `None`")  # noqa: E501
@@ -276,7 +276,7 @@ class ArtefactDTO(object):
 
 
         :param placement: The placement of this ArtefactDTO.  # noqa: E501
-        :type placement: PlacementDTO
+        :type: PlacementDTO
         """
         if self.local_vars_configuration.client_side_validation and placement is None:  # noqa: E501
             raise ValueError("Invalid value for `placement`, must not be `None`")  # noqa: E501
@@ -299,7 +299,7 @@ class ArtefactDTO(object):
 
 
         :param artefact_placement_editor_id: The artefact_placement_editor_id of this ArtefactDTO.  # noqa: E501
-        :type artefact_placement_editor_id: int
+        :type: int
         """
 
         self._artefact_placement_editor_id = artefact_placement_editor_id
@@ -320,7 +320,7 @@ class ArtefactDTO(object):
 
 
         :param side: The side of this ArtefactDTO.  # noqa: E501
-        :type side: SideDesignation
+        :type: SideDesignation
         """
         if self.local_vars_configuration.client_side_validation and side is None:  # noqa: E501
             raise ValueError("Invalid value for `side`, must not be `None`")  # noqa: E501
@@ -343,7 +343,7 @@ class ArtefactDTO(object):
 
 
         :param status_message: The status_message of this ArtefactDTO.  # noqa: E501
-        :type status_message: str
+        :type: str
         """
 
         self._status_message = status_message
@@ -364,7 +364,7 @@ class ArtefactDTO(object):
 
 
         :param id: The id of this ArtefactDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -387,7 +387,7 @@ class ArtefactDTO(object):
 
 
         :param name: The name of this ArtefactDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501

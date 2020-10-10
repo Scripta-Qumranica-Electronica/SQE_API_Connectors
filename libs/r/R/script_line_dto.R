@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title ScriptLineDTO
-#'
 #' @description ScriptLineDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field lineName  character 
 #'
 #' @field lineId  integer 
 #'
 #' @field artefacts  list( \link{ScriptArtefactCharactersDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ ScriptLineDTO <- R6::R6Class(
     `lineName` = NULL,
     `lineId` = NULL,
     `artefacts` = NULL,
-    initialize = function(
-        `lineName`, `lineId`, `artefacts`, ...
-    ) {
+    initialize = function(`lineName`, `lineId`, `artefacts`, ...){
       local.optional.var <- list(...)
       if (!missing(`lineName`)) {
         stopifnot(is.character(`lineName`), length(`lineName`) == 1)
@@ -72,9 +68,8 @@ ScriptLineDTO <- R6::R6Class(
         self$`lineId` <- ScriptLineDTOObject$`lineId`
       }
       if (!is.null(ScriptLineDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("openapi"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -107,9 +102,8 @@ ScriptLineDTO <- R6::R6Class(
       ScriptLineDTOObject <- jsonlite::fromJSON(ScriptLineDTOJson)
       self$`lineName` <- ScriptLineDTOObject$`lineName`
       self$`lineId` <- ScriptLineDTOObject$`lineId`
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("openapi"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

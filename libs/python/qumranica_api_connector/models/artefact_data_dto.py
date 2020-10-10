@@ -71,7 +71,7 @@ class ArtefactDataDTO(object):
 
 
         :param id: The id of this ArtefactDataDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class ArtefactDataDTO(object):
 
 
         :param name: The name of this ArtefactDataDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501

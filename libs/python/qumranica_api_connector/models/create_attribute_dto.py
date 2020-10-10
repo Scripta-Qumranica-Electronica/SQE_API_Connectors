@@ -95,7 +95,7 @@ class CreateAttributeDTO(object):
 
 
         :param attribute_name: The attribute_name of this CreateAttributeDTO.  # noqa: E501
-        :type attribute_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and attribute_name is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_name`, must not be `None`")  # noqa: E501
@@ -118,7 +118,7 @@ class CreateAttributeDTO(object):
 
 
         :param values: The values of this CreateAttributeDTO.  # noqa: E501
-        :type values: list[CreateAttributeValueDTO]
+        :type: list[CreateAttributeValueDTO]
         """
         if self.local_vars_configuration.client_side_validation and values is None:  # noqa: E501
             raise ValueError("Invalid value for `values`, must not be `None`")  # noqa: E501
@@ -141,7 +141,7 @@ class CreateAttributeDTO(object):
 
 
         :param description: The description of this CreateAttributeDTO.  # noqa: E501
-        :type description: str
+        :type: str
         """
 
         self._description = description
@@ -162,7 +162,7 @@ class CreateAttributeDTO(object):
 
 
         :param editable: The editable of this CreateAttributeDTO.  # noqa: E501
-        :type editable: bool
+        :type: bool
         """
 
         self._editable = editable
@@ -183,7 +183,7 @@ class CreateAttributeDTO(object):
 
 
         :param removable: The removable of this CreateAttributeDTO.  # noqa: E501
-        :type removable: bool
+        :type: bool
         """
 
         self._removable = removable
@@ -204,7 +204,7 @@ class CreateAttributeDTO(object):
 
 
         :param repeatable: The repeatable of this CreateAttributeDTO.  # noqa: E501
-        :type repeatable: bool
+        :type: bool
         """
 
         self._repeatable = repeatable
@@ -225,7 +225,7 @@ class CreateAttributeDTO(object):
 
 
         :param batch_editable: The batch_editable of this CreateAttributeDTO.  # noqa: E501
-        :type batch_editable: bool
+        :type: bool
         """
 
         self._batch_editable = batch_editable

@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ImagedObjectTextFragmentMatchListDTO
-#'
 #' @description ImagedObjectTextFragmentMatchListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field matches  list( \link{ImagedObjectTextFragmentMatchDTO} ) [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ImagedObjectTextFragmentMatchListDTO <- R6::R6Class(
   'ImagedObjectTextFragmentMatchListDTO',
   public = list(
     `matches` = NULL,
-    initialize = function(
-        `matches`=NULL, ...
-    ) {
+    initialize = function(`matches`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`matches`)) {
         stopifnot(is.vector(`matches`), length(`matches`) != 0)
@@ -44,9 +40,8 @@ ImagedObjectTextFragmentMatchListDTO <- R6::R6Class(
     fromJSON = function(ImagedObjectTextFragmentMatchListDTOJson) {
       ImagedObjectTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ImagedObjectTextFragmentMatchListDTOJson)
       if (!is.null(ImagedObjectTextFragmentMatchListDTOObject$`matches`)) {
-        self$`matches` <- ApiClient$new()$deserializeObj(ImagedObjectTextFragmentMatchListDTOObject$`matches`, "array[ImagedObjectTextFragmentMatchDTO]", loadNamespace("openapi"))
+        self$`matches` <- ApiClient$new()$deserializeObj(ImagedObjectTextFragmentMatchListDTOObject$`matches`, "array[ImagedObjectTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ ImagedObjectTextFragmentMatchListDTO <- R6::R6Class(
     },
     fromJSONString = function(ImagedObjectTextFragmentMatchListDTOJson) {
       ImagedObjectTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ImagedObjectTextFragmentMatchListDTOJson)
-      self$`matches` <- ApiClient$new()$deserializeObj(ImagedObjectTextFragmentMatchListDTOObject$`matches`, "array[ImagedObjectTextFragmentMatchDTO]", loadNamespace("openapi"))
+      self$`matches` <- ApiClient$new()$deserializeObj(ImagedObjectTextFragmentMatchListDTOObject$`matches`, "array[ImagedObjectTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

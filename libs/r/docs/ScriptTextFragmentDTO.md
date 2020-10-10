@@ -1,4 +1,4 @@
-# openapi::ScriptTextFragmentDTO
+# qumranica_api_connector::ScriptTextFragmentDTO
 
 ## Properties
 Name | Type | Description | Notes

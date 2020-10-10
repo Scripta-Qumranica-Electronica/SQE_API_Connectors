@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EditorInvitationDTO model module.
  * @module model/EditorInvitationDTO
- * @version v1
+ * @version 0.7.0
  */
 class EditorInvitationDTO {
     /**

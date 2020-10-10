@@ -26,7 +26,7 @@ Deletes the specified artefact group.
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.group.id <- 56 # integer | Unique Id of the artefact group to be deleted
@@ -71,7 +71,7 @@ Gets the details of a specific artefact group in the edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.group.id <- 56 # integer | Id of the desired artefact group
@@ -116,7 +116,7 @@ Updates the details of an artefact group.  The artefact group will now only cont
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.group.id <- 56 # integer | Id of the artefact group to be updated
@@ -163,7 +163,7 @@ Gets a listing of all artefact groups in the edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 
@@ -206,7 +206,7 @@ Creates a new artefact group with the submitted data.  The new artefact must hav
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.create.artefact.group.dto <- CreateArtefactGroupDTO$new("name_example", list(123)) # CreateArtefactGroupDTO | Parameters of the new artefact group
@@ -251,7 +251,7 @@ Deletes the specified artefact
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.id <- 56 # integer | Unique Id of the desired artefact
@@ -295,7 +295,7 @@ Provides a listing of all artefacts that are part of the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.id <- 56 # integer | Unique Id of the desired artefact
@@ -342,7 +342,7 @@ Updates the specified artefact.  There are many possible attributes that can be 
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.id <- 56 # integer | Unique Id of the desired artefact
@@ -389,7 +389,7 @@ Provides a listing of all rois belonging to an artefact in the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.id <- 56 # integer | Unique Id of the desired artefact
@@ -434,7 +434,7 @@ Provides a listing of text fragments that have text in the specified artefact.  
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.artefact.id <- 56 # integer | Unique Id of the desired artefact
@@ -481,7 +481,7 @@ Updates the positional data for a batch of artefacts
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.batch.update.artefact.placement.dto <- BatchUpdateArtefactPlacementDTO$new(list(UpdateArtefactPlacementDTO$new(123, "isPlaced_example", PlacementDTO$new(123, 123, 123, TranslateDTO$new(123, 123))))) # BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates
@@ -526,7 +526,7 @@ Provides a listing of all artefacts that are part of the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.optional <- list("inner_example") # array[character] | Add \"masks\" to include artefact polygons and \"images\" to include image data
@@ -571,7 +571,7 @@ Creates a new artefact with the provided data.  If no mask is provided, a placeh
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.create.artefact.dto <- CreateArtefactDTO$new(123, "mask_example", PlacementDTO$new(123, 123, 123, TranslateDTO$new(123, 123)), "name_example", "statusMessage_example") # CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact

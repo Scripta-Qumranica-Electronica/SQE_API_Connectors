@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title SignInterpretation operations
-#' @description openapi.SignInterpretation
+#' @description qumranica_api_connector.SignInterpretation
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -259,7 +259,7 @@
 #' \dontrun{
 #' ####################  V1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | The ID of the edition being edited
 #' var.attribute.id <- 56 # integer | The ID of the attribute to delete
 #'
@@ -274,7 +274,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | The ID of the edition being edited
 #' var.attribute.id <- 56 # integer | The ID of the attribute to update
 #' var.update.attribute.dto <- UpdateAttributeDTO$new() # UpdateAttributeDTO | The details of the updated attribute
@@ -290,7 +290,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsAttributesGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | The ID of the edition being searched
 #'
 #' #Retrieve a list of all possible attributes for an edition
@@ -304,7 +304,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsAttributesPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | The ID of the edition being edited
 #' var.create.attribute.dto <- CreateAttributeDTO$new() # CreateAttributeDTO | The details of the new attribute
 #'
@@ -319,7 +319,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.create.dto <- SignInterpretationCreateDTO$new() # SignInterpretationCreateDTO | New sign interpretation data to be added
 #'
@@ -334,7 +334,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being altered
 #' var.attribute.value.id <- 56 # integer | Id of the attribute being removed
@@ -350,7 +350,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being altered
 #' var.attribute.value.id <- 56 # integer | Id of the attribute value to be altered
@@ -367,7 +367,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation for adding a new attribute
 #' var.interpretation.attribute.create.dto <- InterpretationAttributeCreateDTO$new() # InterpretationAttributeCreateDTO | Details of the attribute to be added
@@ -383,7 +383,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation whose commentary is being changed
 #' var.commentary.create.dto <- CommentaryCreateDTO$new() # CommentaryCreateDTO | The new commentary for the sign interpretation
@@ -399,7 +399,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being deleted
 #'
@@ -414,7 +414,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | The ID of the edition being searched
 #' var.sign.interpretation.id <- 56 # integer | The desired sign interpretation id
 #'
@@ -429,7 +429,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | The sign interpretation to be linked to the nextSignInterpretationId
 #' var.next.sign.interpretation.id <- 56 # integer | The sign interpretation to become the new next sign interpretation
@@ -445,7 +445,7 @@
 #'
 #' ####################  V1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | ID of the edition being changed
 #' var.sign.interpretation.id <- 56 # integer | The sign interpretation to be unlinked from the nextSignInterpretationId
 #' var.next.sign.interpretation.id <- 56 # integer | The sign interpretation to removed as next sign interpretation
@@ -461,7 +461,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom base64enc base64encode
+#' @importFrom caTools base64encode
 #' @export
 SignInterpretationApi <- R6::R6Class(
   'SignInterpretationApi',
@@ -589,7 +589,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AttributeDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "AttributeDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -645,7 +645,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AttributeListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "AttributeListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -707,7 +707,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "AttributeDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "AttributeDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -769,7 +769,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -913,7 +913,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -983,7 +983,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1053,7 +1053,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1175,7 +1175,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1247,7 +1247,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1319,7 +1319,7 @@ SignInterpretationApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "SignInterpretationDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

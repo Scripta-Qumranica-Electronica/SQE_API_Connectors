@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ArtefactTextFragmentMatchDTO();
+    instance = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ArtefactTextFragmentMatchDTO', function() {
     it('should create an instance of ArtefactTextFragmentMatchDTO', function() {
       // uncomment below and update the code to test ArtefactTextFragmentMatchDTO
-      //var instane = new SqeApi.ArtefactTextFragmentMatchDTO();
-      //expect(instance).to.be.a(SqeApi.ArtefactTextFragmentMatchDTO);
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ArtefactTextFragmentMatchDTO);
     });
 
     it('should have the property suggested (base name: "suggested")', function() {
       // uncomment below and update the code to test the property suggested
-      //var instane = new SqeApi.ArtefactTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.ArtefactTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.ArtefactTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.ArtefactTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.LineDTO();
+    instance = new QumranicaApiConnector.LineDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('LineDTO', function() {
     it('should create an instance of LineDTO', function() {
       // uncomment below and update the code to test LineDTO
-      //var instane = new SqeApi.LineDTO();
-      //expect(instance).to.be.a(SqeApi.LineDTO);
+      //var instane = new QumranicaApiConnector.LineDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.LineDTO);
     });
 
     it('should have the property lineId (base name: "lineId")', function() {
       // uncomment below and update the code to test the property lineId
-      //var instane = new SqeApi.LineDTO();
+      //var instane = new QumranicaApiConnector.LineDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lineName (base name: "lineName")', function() {
       // uncomment below and update the code to test the property lineName
-      //var instane = new SqeApi.LineDTO();
+      //var instane = new QumranicaApiConnector.LineDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.LineDTO();
+      //var instane = new QumranicaApiConnector.LineDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property signs (base name: "signs")', function() {
       // uncomment below and update the code to test the property signs
-      //var instane = new SqeApi.LineDTO();
+      //var instane = new QumranicaApiConnector.LineDTO();
       //expect(instance).to.be();
     });
 

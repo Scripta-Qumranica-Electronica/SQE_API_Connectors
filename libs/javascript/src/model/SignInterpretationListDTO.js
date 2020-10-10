@@ -17,7 +17,7 @@ import SignInterpretationDTO from './SignInterpretationDTO';
 /**
  * The SignInterpretationListDTO model module.
  * @module model/SignInterpretationListDTO
- * @version v1
+ * @version 0.7.0
  */
 class SignInterpretationListDTO {
     /**

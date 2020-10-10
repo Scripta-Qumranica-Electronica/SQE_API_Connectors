@@ -87,7 +87,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param ppi: The ppi of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type ppi: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and ppi is None:  # noqa: E501
             raise ValueError("Invalid value for `ppi`, must not be `None`")  # noqa: E501
@@ -110,7 +110,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param editor_id: The editor_id of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -133,7 +133,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param width: The width of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type width: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and width is None:  # noqa: E501
             raise ValueError("Invalid value for `width`, must not be `None`")  # noqa: E501
@@ -156,7 +156,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param height: The height of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type height: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and height is None:  # noqa: E501
             raise ValueError("Invalid value for `height`, must not be `None`")  # noqa: E501
@@ -179,7 +179,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param x_origin: The x_origin of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type x_origin: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and x_origin is None:  # noqa: E501
             raise ValueError("Invalid value for `x_origin`, must not be `None`")  # noqa: E501
@@ -202,7 +202,7 @@ class EditionManuscriptMetricsDTO(object):
 
 
         :param y_origin: The y_origin of this EditionManuscriptMetricsDTO.  # noqa: E501
-        :type y_origin: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and y_origin is None:  # noqa: E501
             raise ValueError("Invalid value for `y_origin`, must not be `None`")  # noqa: E501

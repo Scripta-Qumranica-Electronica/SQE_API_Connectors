@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title UpdateEditionManuscriptMetricsDTO
-#'
 #' @description UpdateEditionManuscriptMetricsDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field width  integer 
 #'
 #' @field height  integer 
@@ -20,6 +17,7 @@
 #' @field xOrigin  integer 
 #'
 #' @field yOrigin  integer 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ UpdateEditionManuscriptMetricsDTO <- R6::R6Class(
     `height` = NULL,
     `xOrigin` = NULL,
     `yOrigin` = NULL,
-    initialize = function(
-        `width`, `height`, `xOrigin`, `yOrigin`, ...
-    ) {
+    initialize = function(`width`, `height`, `xOrigin`, `yOrigin`, ...){
       local.optional.var <- list(...)
       if (!missing(`width`)) {
         stopifnot(is.numeric(`width`), length(`width`) == 1)
@@ -87,7 +83,6 @@ UpdateEditionManuscriptMetricsDTO <- R6::R6Class(
       if (!is.null(UpdateEditionManuscriptMetricsDTOObject$`yOrigin`)) {
         self$`yOrigin` <- UpdateEditionManuscriptMetricsDTOObject$`yOrigin`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -133,4 +128,3 @@ UpdateEditionManuscriptMetricsDTO <- R6::R6Class(
     }
   )
 )
-

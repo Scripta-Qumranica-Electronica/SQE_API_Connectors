@@ -9,8 +9,8 @@ test_that("V1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete", {
   # tests for V1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete
   # base path: http://localhost
   # Deletes the specified artefact group.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.group.id integer Unique Id of the artefact group to be deleted
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.group.id  Unique Id of the artefact group to be deleted 
   # @return [DeleteDTO]
 
   # uncomment below to test the operation
@@ -21,8 +21,8 @@ test_that("V1EditionsEditionIdArtefactGroupsArtefactGroupIdGet", {
   # tests for V1EditionsEditionIdArtefactGroupsArtefactGroupIdGet
   # base path: http://localhost
   # Gets the details of a specific artefact group in the edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.group.id integer Id of the desired artefact group
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.group.id  Id of the desired artefact group 
   # @return [ArtefactGroupDTO]
 
   # uncomment below to test the operation
@@ -33,9 +33,9 @@ test_that("V1EditionsEditionIdArtefactGroupsArtefactGroupIdPut", {
   # tests for V1EditionsEditionIdArtefactGroupsArtefactGroupIdPut
   # base path: http://localhost
   # Updates the details of an artefact group.  The artefact group will now only contain the artefacts listed in the JSON payload.  If the name is null, no change will be made, otherwise the name will also be updated.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.group.id integer Id of the artefact group to be updated
-  # @param update.artefact.group.dto UpdateArtefactGroupDTO Parameters that the artefact group should be changed to (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.group.id  Id of the artefact group to be updated 
+  # @param UpdateArtefactGroupDTO  update.artefact.group.dto  Parameters that the artefact group should be changed to  (optional)
   # @return [ArtefactGroupDTO]
 
   # uncomment below to test the operation
@@ -46,7 +46,7 @@ test_that("V1EditionsEditionIdArtefactGroupsGet", {
   # tests for V1EditionsEditionIdArtefactGroupsGet
   # base path: http://localhost
   # Gets a listing of all artefact groups in the edition
-  # @param edition.id integer Unique Id of the desired edition
+  # @param integer  edition.id  Unique Id of the desired edition 
   # @return [ArtefactGroupListDTO]
 
   # uncomment below to test the operation
@@ -57,8 +57,8 @@ test_that("V1EditionsEditionIdArtefactGroupsPost", {
   # tests for V1EditionsEditionIdArtefactGroupsPost
   # base path: http://localhost
   # Creates a new artefact group with the submitted data.  The new artefact must have a list of artefacts that belong to the group.  It is not necessary to give the group a name.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param create.artefact.group.dto CreateArtefactGroupDTO Parameters of the new artefact group (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param CreateArtefactGroupDTO  create.artefact.group.dto  Parameters of the new artefact group  (optional)
   # @return [ArtefactGroupDTO]
 
   # uncomment below to test the operation
@@ -69,8 +69,8 @@ test_that("V1EditionsEditionIdArtefactsArtefactIdDelete", {
   # tests for V1EditionsEditionIdArtefactsArtefactIdDelete
   # base path: http://localhost
   # Deletes the specified artefact
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.id integer Unique Id of the desired artefact
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.id  Unique Id of the desired artefact 
   # @return [Void]
 
   # uncomment below to test the operation
@@ -81,9 +81,9 @@ test_that("V1EditionsEditionIdArtefactsArtefactIdGet", {
   # tests for V1EditionsEditionIdArtefactsArtefactIdGet
   # base path: http://localhost
   # Provides a listing of all artefacts that are part of the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.id integer Unique Id of the desired artefact
-  # @param optional array[character] Add \"masks\" to include artefact polygons and \"images\" to include image data (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.id  Unique Id of the desired artefact 
+  # @param array[character]  optional  Add \"masks\" to include artefact polygons and \"images\" to include image data  (optional)
   # @return [ArtefactDTO]
 
   # uncomment below to test the operation
@@ -94,9 +94,9 @@ test_that("V1EditionsEditionIdArtefactsArtefactIdPut", {
   # tests for V1EditionsEditionIdArtefactsArtefactIdPut
   # base path: http://localhost
   # Updates the specified artefact.  There are many possible attributes that can be changed for  an artefact.  The caller should only input only those that  should be changed. Attributes with a null value will be ignored.  For instance, setting the mask to null or \&quot;\&quot; will result in  no changes to the current mask, and no value for the mask will  be returned (or broadcast). Likewise, the transformation, name,  or status message may be set to null and no change will be made  to those entities (though any unchanged values will be returned  along with the changed values and also broadcast to co-editors).
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.id integer Unique Id of the desired artefact
-  # @param update.artefact.dto UpdateArtefactDTO An UpdateArtefactDTO with the desired alterations to the artefact (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.id  Unique Id of the desired artefact 
+  # @param UpdateArtefactDTO  update.artefact.dto  An UpdateArtefactDTO with the desired alterations to the artefact  (optional)
   # @return [ArtefactDTO]
 
   # uncomment below to test the operation
@@ -107,8 +107,8 @@ test_that("V1EditionsEditionIdArtefactsArtefactIdRoisGet", {
   # tests for V1EditionsEditionIdArtefactsArtefactIdRoisGet
   # base path: http://localhost
   # Provides a listing of all rois belonging to an artefact in the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.id integer Unique Id of the desired artefact
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.id  Unique Id of the desired artefact 
   # @return [InterpretationRoiDTOList]
 
   # uncomment below to test the operation
@@ -119,9 +119,9 @@ test_that("V1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet", {
   # tests for V1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet
   # base path: http://localhost
   # Provides a listing of text fragments that have text in the specified artefact.  With the optional query parameter \&quot;suggested\&quot;, this endpoint will also return  any text fragment that the system suggests might have text in the artefact.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param artefact.id integer Unique Id of the desired artefact
-  # @param optional array[character] Add \"suggested\" to include possible matches suggested by the system (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param integer  artefact.id  Unique Id of the desired artefact 
+  # @param array[character]  optional  Add \"suggested\" to include possible matches suggested by the system  (optional)
   # @return [ArtefactTextFragmentMatchListDTO]
 
   # uncomment below to test the operation
@@ -132,8 +132,8 @@ test_that("V1EditionsEditionIdArtefactsBatchTransformationPost", {
   # tests for V1EditionsEditionIdArtefactsBatchTransformationPost
   # base path: http://localhost
   # Updates the positional data for a batch of artefacts
-  # @param edition.id integer Unique Id of the desired edition
-  # @param batch.update.artefact.placement.dto BatchUpdateArtefactPlacementDTO A BatchUpdateArtefactTransformDTO with a list of the desired updates (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param BatchUpdateArtefactPlacementDTO  batch.update.artefact.placement.dto  A BatchUpdateArtefactTransformDTO with a list of the desired updates  (optional)
   # @return [BatchUpdatedArtefactTransformDTO]
 
   # uncomment below to test the operation
@@ -144,8 +144,8 @@ test_that("V1EditionsEditionIdArtefactsGet", {
   # tests for V1EditionsEditionIdArtefactsGet
   # base path: http://localhost
   # Provides a listing of all artefacts that are part of the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param optional array[character] Add \"masks\" to include artefact polygons and \"images\" to include image data (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param array[character]  optional  Add \"masks\" to include artefact polygons and \"images\" to include image data  (optional)
   # @return [ArtefactListDTO]
 
   # uncomment below to test the operation
@@ -156,8 +156,8 @@ test_that("V1EditionsEditionIdArtefactsPost", {
   # tests for V1EditionsEditionIdArtefactsPost
   # base path: http://localhost
   # Creates a new artefact with the provided data.  If no mask is provided, a placeholder mask will be created with the values:  \&quot;POLYGON((0 0,1 1,1 0,0 0))\&quot; (the system requires a valid WKT polygon mask for  every artefact). It is not recommended to leave the mask, name, or work status  blank or null. It will often be advantageous to leave the transformation null  when first creating a new artefact.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param create.artefact.dto CreateArtefactDTO A CreateArtefactDTO with the data for the new artefact (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param CreateArtefactDTO  create.artefact.dto  A CreateArtefactDTO with the data for the new artefact  (optional)
   # @return [ArtefactDTO]
 
   # uncomment below to test the operation

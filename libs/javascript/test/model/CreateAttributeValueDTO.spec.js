@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CreateAttributeValueDTO();
+    instance = new QumranicaApiConnector.CreateAttributeValueDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('CreateAttributeValueDTO', function() {
     it('should create an instance of CreateAttributeValueDTO', function() {
       // uncomment below and update the code to test CreateAttributeValueDTO
-      //var instane = new SqeApi.CreateAttributeValueDTO();
-      //expect(instance).to.be.a(SqeApi.CreateAttributeValueDTO);
+      //var instane = new QumranicaApiConnector.CreateAttributeValueDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CreateAttributeValueDTO);
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SqeApi.CreateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.CreateAttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SqeApi.CreateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.CreateAttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property cssDirectives (base name: "cssDirectives")', function() {
       // uncomment below and update the code to test the property cssDirectives
-      //var instane = new SqeApi.CreateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.CreateAttributeValueDTO();
       //expect(instance).to.be();
     });
 

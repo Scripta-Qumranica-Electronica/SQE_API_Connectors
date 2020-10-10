@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CreateTextFragmentDTO();
+    instance = new QumranicaApiConnector.CreateTextFragmentDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('CreateTextFragmentDTO', function() {
     it('should create an instance of CreateTextFragmentDTO', function() {
       // uncomment below and update the code to test CreateTextFragmentDTO
-      //var instane = new SqeApi.CreateTextFragmentDTO();
-      //expect(instance).to.be.a(SqeApi.CreateTextFragmentDTO);
+      //var instane = new QumranicaApiConnector.CreateTextFragmentDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CreateTextFragmentDTO);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.CreateTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.CreateTextFragmentDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property previousTextFragmentId (base name: "previousTextFragmentId")', function() {
       // uncomment below and update the code to test the property previousTextFragmentId
-      //var instane = new SqeApi.CreateTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.CreateTextFragmentDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property nextTextFragmentId (base name: "nextTextFragmentId")', function() {
       // uncomment below and update the code to test the property nextTextFragmentId
-      //var instane = new SqeApi.CreateTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.CreateTextFragmentDTO();
       //expect(instance).to.be();
     });
 

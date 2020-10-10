@@ -18,7 +18,7 @@ import TextFragmentDTO from './TextFragmentDTO';
 /**
  * The TextEditionDTO model module.
  * @module model/TextEditionDTO
- * @version v1
+ * @version 0.7.0
  */
 class TextEditionDTO {
     /**

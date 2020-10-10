@@ -18,7 +18,7 @@ import WktPolygonDTO from '../model/WktPolygonDTO';
 /**
 * Util service.
 * @module api/UtilApi
-* @version v1
+* @version 0.7.0
 */
 export default class UtilApi {
 
@@ -34,22 +34,14 @@ export default class UtilApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1UtilsRepairWktPolygonPost operation.
-     * @callback module:api/UtilApi~v1UtilsRepairWktPolygonPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/WktPolygonDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.
      * @param {Object} opts Optional parameters
      * @param {module:model/WktPolygonDTO} opts.wktPolygonDTO JSON object with the WKT polygon to validate
-     * @param {module:api/UtilApi~v1UtilsRepairWktPolygonPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/WktPolygonDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/WktPolygonDTO} and HTTP response
      */
-    v1UtilsRepairWktPolygonPost(opts, callback) {
+    v1UtilsRepairWktPolygonPostWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = opts['wktPolygonDTO'];
 
@@ -69,8 +61,21 @@ export default class UtilApi {
       return this.apiClient.callApi(
         '/v1/utils/repair-wkt-polygon', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/WktPolygonDTO} opts.wktPolygonDTO JSON object with the WKT polygon to validate
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/WktPolygonDTO}
+     */
+    v1UtilsRepairWktPolygonPost(opts) {
+      return this.v1UtilsRepairWktPolygonPostWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

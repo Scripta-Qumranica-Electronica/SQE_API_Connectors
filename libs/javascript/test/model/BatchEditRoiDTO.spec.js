@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.BatchEditRoiDTO();
+    instance = new QumranicaApiConnector.BatchEditRoiDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('BatchEditRoiDTO', function() {
     it('should create an instance of BatchEditRoiDTO', function() {
       // uncomment below and update the code to test BatchEditRoiDTO
-      //var instane = new SqeApi.BatchEditRoiDTO();
-      //expect(instance).to.be.a(SqeApi.BatchEditRoiDTO);
+      //var instane = new QumranicaApiConnector.BatchEditRoiDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.BatchEditRoiDTO);
     });
 
     it('should have the property createRois (base name: "createRois")', function() {
       // uncomment below and update the code to test the property createRois
-      //var instane = new SqeApi.BatchEditRoiDTO();
+      //var instane = new QumranicaApiConnector.BatchEditRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property updateRois (base name: "updateRois")', function() {
       // uncomment below and update the code to test the property updateRois
-      //var instane = new SqeApi.BatchEditRoiDTO();
+      //var instane = new QumranicaApiConnector.BatchEditRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property deleteRois (base name: "deleteRois")', function() {
       // uncomment below and update the code to test the property deleteRois
-      //var instane = new SqeApi.BatchEditRoiDTO();
+      //var instane = new QumranicaApiConnector.BatchEditRoiDTO();
       //expect(instance).to.be();
     });
 

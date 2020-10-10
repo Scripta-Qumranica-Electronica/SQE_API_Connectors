@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ScriptLineDTO();
+    instance = new QumranicaApiConnector.ScriptLineDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ScriptLineDTO', function() {
     it('should create an instance of ScriptLineDTO', function() {
       // uncomment below and update the code to test ScriptLineDTO
-      //var instane = new SqeApi.ScriptLineDTO();
-      //expect(instance).to.be.a(SqeApi.ScriptLineDTO);
+      //var instane = new QumranicaApiConnector.ScriptLineDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ScriptLineDTO);
     });
 
     it('should have the property lineName (base name: "lineName")', function() {
       // uncomment below and update the code to test the property lineName
-      //var instane = new SqeApi.ScriptLineDTO();
+      //var instane = new QumranicaApiConnector.ScriptLineDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lineId (base name: "lineId")', function() {
       // uncomment below and update the code to test the property lineId
-      //var instane = new SqeApi.ScriptLineDTO();
+      //var instane = new QumranicaApiConnector.ScriptLineDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property artefacts (base name: "artefacts")', function() {
       // uncomment below and update the code to test the property artefacts
-      //var instane = new SqeApi.ScriptLineDTO();
+      //var instane = new QumranicaApiConnector.ScriptLineDTO();
       //expect(instance).to.be();
     });
 

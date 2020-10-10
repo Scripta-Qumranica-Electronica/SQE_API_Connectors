@@ -26,7 +26,7 @@ import UpdateAttributeDTO from '../model/UpdateAttributeDTO';
 /**
 * SignInterpretation service.
 * @module api/SignInterpretationApi
-* @version v1
+* @version 0.7.0
 */
 export default class SignInterpretationApi {
 
@@ -42,21 +42,14 @@ export default class SignInterpretationApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete an attribute from an edition
      * @param {Number} editionId The ID of the edition being edited
      * @param {Number} attributeId The ID of the attribute to delete
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete(editionId, attributeId, callback) {
+    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDeleteWithHttpInfo(editionId, attributeId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -85,17 +78,23 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations-attributes/{attributeId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttributeDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete an attribute from an edition
+     * @param {Number} editionId The ID of the edition being edited
+     * @param {Number} attributeId The ID of the attribute to delete
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete(editionId, attributeId) {
+      return this.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDeleteWithHttpInfo(editionId, attributeId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Change the details of an attribute in an edition
@@ -103,10 +102,9 @@ export default class SignInterpretationApi {
      * @param {Number} attributeId The ID of the attribute to update
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateAttributeDTO} opts.updateAttributeDTO The details of the updated attribute
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttributeDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttributeDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut(editionId, attributeId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPutWithHttpInfo(editionId, attributeId, opts) {
       opts = opts || {};
       let postBody = opts['updateAttributeDTO'];
       // verify the required parameter 'editionId' is set
@@ -136,25 +134,32 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations-attributes/{attributeId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsAttributesGet operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttributeListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Change the details of an attribute in an edition
+     * @param {Number} editionId The ID of the edition being edited
+     * @param {Number} attributeId The ID of the attribute to update
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateAttributeDTO} opts.updateAttributeDTO The details of the updated attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttributeDTO}
      */
+    v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut(editionId, attributeId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPutWithHttpInfo(editionId, attributeId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieve a list of all possible attributes for an edition
      * @param {Number} editionId The ID of the edition being searched
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttributeListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttributeListDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsAttributesGet(editionId, callback) {
+    v1EditionsEditionIdSignInterpretationsAttributesGetWithHttpInfo(editionId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -178,27 +183,31 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations-attributes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsAttributesPost operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AttributeDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieve a list of all possible attributes for an edition
+     * @param {Number} editionId The ID of the edition being searched
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttributeListDTO}
      */
+    v1EditionsEditionIdSignInterpretationsAttributesGet(editionId) {
+      return this.v1EditionsEditionIdSignInterpretationsAttributesGetWithHttpInfo(editionId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a new attribute for an edition
      * @param {Number} editionId The ID of the edition being edited
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateAttributeDTO} opts.createAttributeDTO The details of the new attribute
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsAttributesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AttributeDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AttributeDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsAttributesPost(editionId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsAttributesPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['createAttributeDTO'];
       // verify the required parameter 'editionId' is set
@@ -223,27 +232,33 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations-attributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsPost operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a new attribute for an edition
+     * @param {Number} editionId The ID of the edition being edited
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateAttributeDTO} opts.createAttributeDTO The details of the new attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AttributeDTO}
      */
+    v1EditionsEditionIdSignInterpretationsAttributesPost(editionId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsAttributesPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a new sign interpretation
      * @param {Number} editionId ID of the edition being changed
      * @param {Object} opts Optional parameters
      * @param {module:model/SignInterpretationCreateDTO} opts.signInterpretationCreateDTO New sign interpretation data to be added
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationListDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsPost(editionId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['signInterpretationCreateDTO'];
       // verify the required parameter 'editionId' is set
@@ -268,26 +283,33 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Creates a new sign interpretation
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SignInterpretationCreateDTO} opts.signInterpretationCreateDTO New sign interpretation data to be added
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationListDTO}
      */
+    v1EditionsEditionIdSignInterpretationsPost(editionId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * This deletes the specified attribute value from the specified sign interpretation.
      * @param {Number} editionId ID of the edition being changed
      * @param {Number} signInterpretationId ID of the sign interpretation being altered
      * @param {Number} attributeValueId Id of the attribute being removed
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete(editionId, signInterpretationId, attributeValueId, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDeleteWithHttpInfo(editionId, signInterpretationId, attributeValueId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -321,17 +343,24 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes/{attributeValueId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * This deletes the specified attribute value from the specified sign interpretation.
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId ID of the sign interpretation being altered
+     * @param {Number} attributeValueId Id of the attribute being removed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete(editionId, signInterpretationId, attributeValueId) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDeleteWithHttpInfo(editionId, signInterpretationId, attributeValueId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * This changes the values of the specified sign interpretation attribute,  mainly used to change commentary.
@@ -340,10 +369,9 @@ export default class SignInterpretationApi {
      * @param {Number} attributeValueId Id of the attribute value to be altered
      * @param {Object} opts Optional parameters
      * @param {module:model/InterpretationAttributeCreateDTO} opts.interpretationAttributeCreateDTO New details of the attribute
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut(editionId, signInterpretationId, attributeValueId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPutWithHttpInfo(editionId, signInterpretationId, attributeValueId, opts) {
       opts = opts || {};
       let postBody = opts['interpretationAttributeCreateDTO'];
       // verify the required parameter 'editionId' is set
@@ -378,17 +406,26 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes/{attributeValueId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * This changes the values of the specified sign interpretation attribute,  mainly used to change commentary.
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId ID of the sign interpretation being altered
+     * @param {Number} attributeValueId Id of the attribute value to be altered
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InterpretationAttributeCreateDTO} opts.interpretationAttributeCreateDTO New details of the attribute
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut(editionId, signInterpretationId, attributeValueId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPutWithHttpInfo(editionId, signInterpretationId, attributeValueId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * This adds a new attribute to the specified sign interpretation.
@@ -396,10 +433,9 @@ export default class SignInterpretationApi {
      * @param {Number} signInterpretationId ID of the sign interpretation for adding a new attribute
      * @param {Object} opts Optional parameters
      * @param {module:model/InterpretationAttributeCreateDTO} opts.interpretationAttributeCreateDTO Details of the attribute to be added
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost(editionId, signInterpretationId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPostWithHttpInfo(editionId, signInterpretationId, opts) {
       opts = opts || {};
       let postBody = opts['interpretationAttributeCreateDTO'];
       // verify the required parameter 'editionId' is set
@@ -429,17 +465,25 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/attributes', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * This adds a new attribute to the specified sign interpretation.
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId ID of the sign interpretation for adding a new attribute
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InterpretationAttributeCreateDTO} opts.interpretationAttributeCreateDTO Details of the attribute to be added
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost(editionId, signInterpretationId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPostWithHttpInfo(editionId, signInterpretationId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates the commentary of a sign interpretation
@@ -447,10 +491,9 @@ export default class SignInterpretationApi {
      * @param {Number} signInterpretationId ID of the sign interpretation whose commentary is being changed
      * @param {Object} opts Optional parameters
      * @param {module:model/CommentaryCreateDTO} opts.commentaryCreateDTO The new commentary for the sign interpretation
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut(editionId, signInterpretationId, opts, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPutWithHttpInfo(editionId, signInterpretationId, opts) {
       opts = opts || {};
       let postBody = opts['commentaryCreateDTO'];
       // verify the required parameter 'editionId' is set
@@ -480,25 +523,33 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/commentary', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Updates the commentary of a sign interpretation
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId ID of the sign interpretation whose commentary is being changed
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CommentaryCreateDTO} opts.commentaryCreateDTO The new commentary for the sign interpretation
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut(editionId, signInterpretationId, opts) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPutWithHttpInfo(editionId, signInterpretationId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Deletes the sign interpretation in the route. The endpoint automatically manages the sign stream  by connecting all the deleted sign's next and previous nodes.
      * @param {Number} editionId ID of the edition being changed
      * @param {Number} signInterpretationId ID of the sign interpretation being deleted
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete(editionId, signInterpretationId, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdDeleteWithHttpInfo(editionId, signInterpretationId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -527,26 +578,31 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdGet operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Deletes the sign interpretation in the route. The endpoint automatically manages the sign stream  by connecting all the deleted sign's next and previous nodes.
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId ID of the sign interpretation being deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete(editionId, signInterpretationId) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdDeleteWithHttpInfo(editionId, signInterpretationId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieve the details of a sign interpretation in an edition
      * @param {Number} editionId The ID of the edition being searched
      * @param {Number} signInterpretationId The desired sign interpretation id
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdGet(editionId, signInterpretationId, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdGetWithHttpInfo(editionId, signInterpretationId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -575,27 +631,32 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieve the details of a sign interpretation in an edition
+     * @param {Number} editionId The ID of the edition being searched
+     * @param {Number} signInterpretationId The desired sign interpretation id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdGet(editionId, signInterpretationId) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdGetWithHttpInfo(editionId, signInterpretationId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Links two sign interpretations in the edition's sign stream
      * @param {Number} editionId ID of the edition being changed
      * @param {Number} signInterpretationId The sign interpretation to be linked to the nextSignInterpretationId
      * @param {Number} nextSignInterpretationId The sign interpretation to become the new next sign interpretation
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPostWithHttpInfo(editionId, signInterpretationId, nextSignInterpretationId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -629,27 +690,33 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/link-to/{nextSignInterpretationId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost operation.
-     * @callback module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SignInterpretationDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Links two sign interpretations in the edition's sign stream
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId The sign interpretation to be linked to the nextSignInterpretationId
+     * @param {Number} nextSignInterpretationId The sign interpretation to become the new next sign interpretation
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
      */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPostWithHttpInfo(editionId, signInterpretationId, nextSignInterpretationId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Links two sign interpretations in the edition's sign stream
      * @param {Number} editionId ID of the edition being changed
      * @param {Number} signInterpretationId The sign interpretation to be unlinked from the nextSignInterpretationId
      * @param {Number} nextSignInterpretationId The sign interpretation to removed as next sign interpretation
-     * @param {module:api/SignInterpretationApi~v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SignInterpretationDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SignInterpretationDTO} and HTTP response
      */
-    v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId, callback) {
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPostWithHttpInfo(editionId, signInterpretationId, nextSignInterpretationId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -683,8 +750,22 @@ export default class SignInterpretationApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/sign-interpretations/{signInterpretationId}/unlink-from/{nextSignInterpretationId}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Links two sign interpretations in the edition's sign stream
+     * @param {Number} editionId ID of the edition being changed
+     * @param {Number} signInterpretationId The sign interpretation to be unlinked from the nextSignInterpretationId
+     * @param {Number} nextSignInterpretationId The sign interpretation to removed as next sign interpretation
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SignInterpretationDTO}
+     */
+    v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId) {
+      return this.v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPostWithHttpInfo(editionId, signInterpretationId, nextSignInterpretationId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

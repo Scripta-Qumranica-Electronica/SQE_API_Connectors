@@ -19,7 +19,7 @@ test_that("V1EditionsConfirmEditorshipTokenPost", {
   # tests for V1EditionsConfirmEditorshipTokenPost
   # base path: http://localhost
   # Confirm addition of an editor to the specified edition
-  # @param token character JWT for verifying the request confirmation
+  # @param character  token  JWT for verifying the request confirmation 
   # @return [DetailedEditorRightsDTO]
 
   # uncomment below to test the operation
@@ -30,8 +30,8 @@ test_that("V1EditionsEditionIdAddEditorRequestPost", {
   # tests for V1EditionsEditionIdAddEditorRequestPost
   # base path: http://localhost
   # Adds an editor to the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param invite.editor.dto InviteEditorDTO JSON object with the attributes of the new editor (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param InviteEditorDTO  invite.editor.dto  JSON object with the attributes of the new editor  (optional)
   # @return [Void]
 
   # uncomment below to test the operation
@@ -42,9 +42,9 @@ test_that("V1EditionsEditionIdDelete", {
   # tests for V1EditionsEditionIdDelete
   # base path: http://localhost
   # Provides details about the specified edition and all accessible alternate editions
-  # @param edition.id integer Unique Id of the desired edition
-  # @param optional array[character] Optional parameters: 'deleteForAllEditors' (optional)
-  # @param token character token required when using optional 'deleteForAllEditors' (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param array[character]  optional  Optional parameters: 'deleteForAllEditors'  (optional)
+  # @param character  token  token required when using optional 'deleteForAllEditors'  (optional)
   # @return [DeleteTokenDTO]
 
   # uncomment below to test the operation
@@ -55,9 +55,9 @@ test_that("V1EditionsEditionIdEditorsEditorEmailIdPut", {
   # tests for V1EditionsEditionIdEditorsEditorEmailIdPut
   # base path: http://localhost
   # Changes the rights for an editor of the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param editor.email.id character Email address of the editor whose permissions are being changed
-  # @param update.editor.rights.dto UpdateEditorRightsDTO JSON object with the attributes of the new editor (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param character  editor.email.id  Email address of the editor whose permissions are being changed 
+  # @param UpdateEditorRightsDTO  update.editor.rights.dto  JSON object with the attributes of the new editor  (optional)
   # @return [DetailedEditorRightsDTO]
 
   # uncomment below to test the operation
@@ -68,7 +68,7 @@ test_that("V1EditionsEditionIdGet", {
   # tests for V1EditionsEditionIdGet
   # base path: http://localhost
   # Provides details about the specified edition and all accessible alternate editions
-  # @param edition.id integer Unique Id of the desired edition
+  # @param integer  edition.id  Unique Id of the desired edition 
   # @return [EditionGroupDTO]
 
   # uncomment below to test the operation
@@ -79,8 +79,8 @@ test_that("V1EditionsEditionIdPost", {
   # tests for V1EditionsEditionIdPost
   # base path: http://localhost
   # Creates a copy of the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param edition.copy.dto EditionCopyDTO JSON object with the attributes to be changed in the copied edition (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param EditionCopyDTO  edition.copy.dto  JSON object with the attributes to be changed in the copied edition  (optional)
   # @return [EditionDTO]
 
   # uncomment below to test the operation
@@ -91,8 +91,8 @@ test_that("V1EditionsEditionIdPut", {
   # tests for V1EditionsEditionIdPut
   # base path: http://localhost
   # Updates data for the specified edition
-  # @param edition.id integer Unique Id of the desired edition
-  # @param edition.update.request.dto EditionUpdateRequestDTO JSON object with the attributes to be updated (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param EditionUpdateRequestDTO  edition.update.request.dto  JSON object with the attributes to be updated  (optional)
   # @return [EditionDTO]
 
   # uncomment below to test the operation
@@ -103,7 +103,7 @@ test_that("V1EditionsEditionIdScriptCollectionGet", {
   # tests for V1EditionsEditionIdScriptCollectionGet
   # base path: http://localhost
   # Provides spatial data for all letters in the edition
-  # @param edition.id integer Unique Id of the desired edition
+  # @param integer  edition.id  Unique Id of the desired edition 
   # @return [EditionScriptCollectionDTO]
 
   # uncomment below to test the operation
@@ -114,7 +114,7 @@ test_that("V1EditionsEditionIdScriptLinesGet", {
   # tests for V1EditionsEditionIdScriptLinesGet
   # base path: http://localhost
   # Provides spatial data for all letters in the edition organized and oriented  by lines.
-  # @param edition.id integer Unique Id of the desired edition
+  # @param integer  edition.id  Unique Id of the desired edition 
   # @return [EditionScriptLinesDTO]
 
   # uncomment below to test the operation

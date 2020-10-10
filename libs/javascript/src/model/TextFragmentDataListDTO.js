@@ -17,7 +17,7 @@ import TextFragmentDataDTO from './TextFragmentDataDTO';
 /**
  * The TextFragmentDataListDTO model module.
  * @module model/TextFragmentDataListDTO
- * @version v1
+ * @version 0.7.0
  */
 class TextFragmentDataListDTO {
     /**

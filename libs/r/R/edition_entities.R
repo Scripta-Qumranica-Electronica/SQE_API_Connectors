@@ -8,58 +8,35 @@
 
 #' @docType class
 #' @title EditionEntities
-#'
 #' @description EditionEntities Class
-#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 EditionEntities <- R6::R6Class(
-    "EditionEntities",
-    public = list(
-        initialize = function(...) {
-            local.optional.var <- list(...)
-            val <- unlist(local.optional.var)
-            enumvec <- .parse_EditionEntities()
+  'EditionEntities',
+  public = list(
+    initialize = function(, ...){
+      local.optional.var <- list(...)
+    },
+    toJSON = function() {
+      EditionEntitiesObject <- list()
 
-            stopifnot(length(val) == 1L)
-
-            if (!val %in% enumvec)
-                stop("Use one of the valid values: ",
-                    paste0(enumvec, collapse = ", "))
-            private$value <- val
-        },
-        toJSON = function() {
-            jsonlite::toJSON(private$value, auto_unbox = TRUE)
-        },
-        fromJSON = function(EditionEntitiesJson) {
-            private$value <- jsonlite::fromJSON(EditionEntitiesJson,
-                simplifyVector = FALSE)
-            self
-        },
-        toJSONString = function() {
-            as.character(jsonlite::toJSON(private$value,
-                auto_unbox = TRUE))
-        },
-        fromJSONString = function(EditionEntitiesJson) {
-            private$value <- jsonlite::fromJSON(EditionEntitiesJson,
-                simplifyVector = FALSE)
-            self
-        }
-    ),
-    private = list(
-        value = NULL
-    )
+      EditionEntitiesObject
+    },
+    fromJSON = function(EditionEntitiesJson) {
+      EditionEntitiesObject <- jsonlite::fromJSON(EditionEntitiesJson)
+    },
+    toJSONString = function() {
+      jsoncontent <- c(
+      )
+      jsoncontent <- paste(jsoncontent, collapse = ",")
+      paste('{', jsoncontent, '}', sep = "")
+    },
+    fromJSONString = function(EditionEntitiesJson) {
+      EditionEntitiesObject <- jsonlite::fromJSON(EditionEntitiesJson)
+      self
+    }
+  )
 )
-
-# add to utils.R
-.parse_EditionEntities <- function(vals) {
-    res <- gsub("^\\[|\\]$", "",
-        "[edition, artefact, artefactGroup, attribute, textFragment, line, signInterpretation, roi]"
-    )
-    unlist(strsplit(res, ", "))
-}
-
-

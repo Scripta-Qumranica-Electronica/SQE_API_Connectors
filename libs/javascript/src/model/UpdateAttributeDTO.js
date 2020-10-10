@@ -18,7 +18,7 @@ import UpdateAttributeValueDTO from './UpdateAttributeValueDTO';
 /**
  * The UpdateAttributeDTO model module.
  * @module model/UpdateAttributeDTO
- * @version v1
+ * @version 0.7.0
  */
 class UpdateAttributeDTO {
     /**

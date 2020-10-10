@@ -20,7 +20,7 @@ Retrieves all signs and their data from the given line
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.line.id <- 56 # integer | Id of the line
@@ -65,7 +65,7 @@ Retrieves the ids of all Fragments of all fragments in the given edition of a sc
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 
@@ -108,7 +108,7 @@ Creates a new text fragment in the given edition of a scroll
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.create.text.fragment.dto <- CreateTextFragmentDTO$new("name_example", 123, 123) # CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created
@@ -153,7 +153,7 @@ Retrieves the ids of all Artefacts in the given textFragmentName
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.text.fragment.id <- 56 # integer | Id of the text fragment
@@ -198,7 +198,7 @@ Retrieves all signs and their data from the given textFragmentName
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.text.fragment.id <- 56 # integer | Id of the text fragment
@@ -243,7 +243,7 @@ Retrieves the ids of all lines in the given textFragmentName
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.text.fragment.id <- 56 # integer | Id of the text fragment
@@ -288,7 +288,7 @@ Updates the specified text fragment with the submitted properties
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Edition of the text fragment being updates
 var.text.fragment.id <- 56 # integer | Id of the text fragment being updates

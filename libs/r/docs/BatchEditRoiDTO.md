@@ -1,4 +1,4 @@
-# openapi::BatchEditRoiDTO
+# qumranica_api_connector::BatchEditRoiDTO
 
 ## Properties
 Name | Type | Description | Notes

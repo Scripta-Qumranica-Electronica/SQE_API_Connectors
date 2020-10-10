@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImageDTO();
+    instance = new QumranicaApiConnector.ImageDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,91 +50,91 @@
   describe('ImageDTO', function() {
     it('should create an instance of ImageDTO', function() {
       // uncomment below and update the code to test ImageDTO
-      //var instane = new SqeApi.ImageDTO();
-      //expect(instance).to.be.a(SqeApi.ImageDTO);
+      //var instane = new QumranicaApiConnector.ImageDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImageDTO);
     });
 
     it('should have the property imageToImageMapEditorId (base name: "imageToImageMapEditorId")', function() {
       // uncomment below and update the code to test the property imageToImageMapEditorId
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property regionInMasterImage (base name: "regionInMasterImage")', function() {
       // uncomment below and update the code to test the property regionInMasterImage
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property regionInImage (base name: "regionInImage")', function() {
       // uncomment below and update the code to test the property regionInImage
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property transformToMaster (base name: "transformToMaster")', function() {
       // uncomment below and update the code to test the property transformToMaster
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lightingType (base name: "lightingType")', function() {
       // uncomment below and update the code to test the property lightingType
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lightingDirection (base name: "lightingDirection")', function() {
       // uncomment below and update the code to test the property lightingDirection
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property waveLength (base name: "waveLength")', function() {
       // uncomment below and update the code to test the property waveLength
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property ppi (base name: "ppi")', function() {
       // uncomment below and update the code to test the property ppi
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property master (base name: "master")', function() {
       // uncomment below and update the code to test the property master
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property catalogNumber (base name: "catalogNumber")', function() {
       // uncomment below and update the code to test the property catalogNumber
-      //var instane = new SqeApi.ImageDTO();
+      //var instane = new QumranicaApiConnector.ImageDTO();
       //expect(instance).to.be();
     });
 

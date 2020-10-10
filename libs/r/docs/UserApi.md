@@ -23,7 +23,7 @@ Uses the secret token from /users/forgot-password to validate a reset of the use
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.reset.forgotten.user.password.request.dto <- ResetForgottenUserPasswordRequestDTO$new("password_example", "token_example") # ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password
 
@@ -65,7 +65,7 @@ Changes the password for the currently logged in user
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.reset.logged.in.user.password.request.dto <- ResetLoggedInUserPasswordRequestDTO$new("oldPassword_example", "newPassword_example") # ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password
 
@@ -107,7 +107,7 @@ Allows a user who has not yet activated their account to change their email addr
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.unactivated.email.update.request.dto <- UnactivatedEmailUpdateRequestDTO$new("newEmail_example", "email_example") # UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address
 
@@ -149,7 +149,7 @@ Confirms registration of new user account.
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.account.activation.request.dto <- AccountActivationRequestDTO$new("token_example") # AccountActivationRequestDTO | JSON object with token from user registration email
 
@@ -191,7 +191,7 @@ Sends a secret token to the user's email to allow password reset.
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.reset.user.password.request.dto <- ResetUserPasswordRequestDTO$new("email_example") # ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password
 
@@ -233,7 +233,7 @@ Provides the user details for a user with valid JWT in the Authorize header
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 
 #Provides the user details for a user with valid JWT in the Authorize header
@@ -272,7 +272,7 @@ Provides a JWT bearer token for valid email and password
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.login.request.dto <- LoginRequestDTO$new("email_example", "password_example") # LoginRequestDTO | JSON object with an email and password parameter
 
@@ -315,7 +315,7 @@ Creates a new user with the submitted data.
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.new.user.request.dto <- NewUserRequestDTO$new("email_example", "password_example", "organization_example", "forename_example", "surname_example") # NewUserRequestDTO | A JSON object with all data necessary to create a new user account
 
@@ -358,7 +358,7 @@ Updates a user's registration details.  Note that the if the email address has c
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.user.update.request.dto <- UserUpdateRequestDTO$new("password_example", "email_example", "organization_example", "forename_example", "surname_example") # UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
 
@@ -401,7 +401,7 @@ Sends a new activation email for the user's account. This will not work if the u
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.resend.user.account.activation.request.dto <- ResendUserAccountActivationRequestDTO$new("email_example") # ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address
 

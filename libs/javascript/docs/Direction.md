@@ -1,4 +1,4 @@
-# SqeApi.Direction
+# QumranicaApiConnector.Direction
 
 ## Enum
 

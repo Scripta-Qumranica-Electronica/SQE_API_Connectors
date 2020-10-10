@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditionManuscriptMetricsDTO();
+    instance = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('EditionManuscriptMetricsDTO', function() {
     it('should create an instance of EditionManuscriptMetricsDTO', function() {
       // uncomment below and update the code to test EditionManuscriptMetricsDTO
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
-      //expect(instance).to.be.a(SqeApi.EditionManuscriptMetricsDTO);
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionManuscriptMetricsDTO);
     });
 
     it('should have the property ppi (base name: "ppi")', function() {
       // uncomment below and update the code to test the property ppi
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property width (base name: "width")', function() {
       // uncomment below and update the code to test the property width
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property height (base name: "height")', function() {
       // uncomment below and update the code to test the property height
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property xOrigin (base name: "xOrigin")', function() {
       // uncomment below and update the code to test the property xOrigin
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property yOrigin (base name: "yOrigin")', function() {
       // uncomment below and update the code to test the property yOrigin
-      //var instane = new SqeApi.EditionManuscriptMetricsDTO();
+      //var instane = new QumranicaApiConnector.EditionManuscriptMetricsDTO();
       //expect(instance).to.be();
     });
 

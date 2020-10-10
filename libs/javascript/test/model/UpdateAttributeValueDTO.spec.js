@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdateAttributeValueDTO();
+    instance = new QumranicaApiConnector.UpdateAttributeValueDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('UpdateAttributeValueDTO', function() {
     it('should create an instance of UpdateAttributeValueDTO', function() {
       // uncomment below and update the code to test UpdateAttributeValueDTO
-      //var instane = new SqeApi.UpdateAttributeValueDTO();
-      //expect(instance).to.be.a(SqeApi.UpdateAttributeValueDTO);
+      //var instane = new QumranicaApiConnector.UpdateAttributeValueDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdateAttributeValueDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.UpdateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SqeApi.UpdateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SqeApi.UpdateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property cssDirectives (base name: "cssDirectives")', function() {
       // uncomment below and update the code to test the property cssDirectives
-      //var instane = new SqeApi.UpdateAttributeValueDTO();
+      //var instane = new QumranicaApiConnector.UpdateAttributeValueDTO();
       //expect(instance).to.be();
     });
 

@@ -99,7 +99,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param interpretation_attribute_id: The interpretation_attribute_id of this InterpretationAttributeDTO.  # noqa: E501
-        :type interpretation_attribute_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and interpretation_attribute_id is None:  # noqa: E501
             raise ValueError("Invalid value for `interpretation_attribute_id`, must not be `None`")  # noqa: E501
@@ -122,7 +122,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param attribute_string: The attribute_string of this InterpretationAttributeDTO.  # noqa: E501
-        :type attribute_string: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and attribute_string is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_string`, must not be `None`")  # noqa: E501
@@ -145,7 +145,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param attribute_value_string: The attribute_value_string of this InterpretationAttributeDTO.  # noqa: E501
-        :type attribute_value_string: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and attribute_value_string is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_value_string`, must not be `None`")  # noqa: E501
@@ -168,7 +168,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param creator_id: The creator_id of this InterpretationAttributeDTO.  # noqa: E501
-        :type creator_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and creator_id is None:  # noqa: E501
             raise ValueError("Invalid value for `creator_id`, must not be `None`")  # noqa: E501
@@ -191,7 +191,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param editor_id: The editor_id of this InterpretationAttributeDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -214,7 +214,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param commentary: The commentary of this InterpretationAttributeDTO.  # noqa: E501
-        :type commentary: CommentaryDTO
+        :type: CommentaryDTO
         """
 
         self._commentary = commentary
@@ -235,7 +235,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param sequence: The sequence of this InterpretationAttributeDTO.  # noqa: E501
-        :type sequence: int
+        :type: int
         """
 
         self._sequence = sequence
@@ -256,7 +256,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param attribute_id: The attribute_id of this InterpretationAttributeDTO.  # noqa: E501
-        :type attribute_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and attribute_id is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_id`, must not be `None`")  # noqa: E501
@@ -279,7 +279,7 @@ class InterpretationAttributeDTO(object):
 
 
         :param attribute_value_id: The attribute_value_id of this InterpretationAttributeDTO.  # noqa: E501
-        :type attribute_value_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and attribute_value_id is None:  # noqa: E501
             raise ValueError("Invalid value for `attribute_value_id`, must not be `None`")  # noqa: E501

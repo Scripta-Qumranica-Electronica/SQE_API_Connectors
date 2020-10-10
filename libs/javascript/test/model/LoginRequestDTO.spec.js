@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.LoginRequestDTO();
+    instance = new QumranicaApiConnector.LoginRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('LoginRequestDTO', function() {
     it('should create an instance of LoginRequestDTO', function() {
       // uncomment below and update the code to test LoginRequestDTO
-      //var instane = new SqeApi.LoginRequestDTO();
-      //expect(instance).to.be.a(SqeApi.LoginRequestDTO);
+      //var instane = new QumranicaApiConnector.LoginRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.LoginRequestDTO);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.LoginRequestDTO();
+      //var instane = new QumranicaApiConnector.LoginRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property password (base name: "password")', function() {
       // uncomment below and update the code to test the property password
-      //var instane = new SqeApi.LoginRequestDTO();
+      //var instane = new QumranicaApiConnector.LoginRequestDTO();
       //expect(instance).to.be();
     });
 

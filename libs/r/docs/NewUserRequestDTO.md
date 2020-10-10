@@ -1,4 +1,4 @@
-# openapi::NewUserRequestDTO
+# qumranica_api_connector::NewUserRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

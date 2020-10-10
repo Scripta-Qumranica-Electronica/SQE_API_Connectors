@@ -1,4 +1,4 @@
-# SqeApi.TextFragmentDataDTO
+# QumranicaApiConnector.TextFragmentDataDTO
 
 ## Properties
 

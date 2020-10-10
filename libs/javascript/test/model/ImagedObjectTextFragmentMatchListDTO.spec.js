@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImagedObjectTextFragmentMatchListDTO();
+    instance = new QumranicaApiConnector.ImagedObjectTextFragmentMatchListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ImagedObjectTextFragmentMatchListDTO', function() {
     it('should create an instance of ImagedObjectTextFragmentMatchListDTO', function() {
       // uncomment below and update the code to test ImagedObjectTextFragmentMatchListDTO
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchListDTO();
-      //expect(instance).to.be.a(SqeApi.ImagedObjectTextFragmentMatchListDTO);
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImagedObjectTextFragmentMatchListDTO);
     });
 
     it('should have the property matches (base name: "matches")', function() {
       // uncomment below and update the code to test the property matches
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchListDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchListDTO();
       //expect(instance).to.be();
     });
 

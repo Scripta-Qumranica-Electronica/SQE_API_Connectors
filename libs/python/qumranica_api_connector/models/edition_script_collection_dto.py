@@ -67,7 +67,7 @@ class EditionScriptCollectionDTO(object):
 
 
         :param letters: The letters of this EditionScriptCollectionDTO.  # noqa: E501
-        :type letters: list[CharacterShapeDTO]
+        :type: list[CharacterShapeDTO]
         """
         if self.local_vars_configuration.client_side_validation and letters is None:  # noqa: E501
             raise ValueError("Invalid value for `letters`, must not be `None`")  # noqa: E501

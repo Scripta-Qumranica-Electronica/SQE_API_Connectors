@@ -101,7 +101,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param line_id: The line_id of this SignInterpretationCreateDTO.  # noqa: E501
-        :type line_id: int
+        :type: int
         """
 
         self._line_id = line_id
@@ -122,7 +122,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param previous_sign_interpretation_ids: The previous_sign_interpretation_ids of this SignInterpretationCreateDTO.  # noqa: E501
-        :type previous_sign_interpretation_ids: list[int]
+        :type: list[int]
         """
 
         self._previous_sign_interpretation_ids = previous_sign_interpretation_ids
@@ -143,7 +143,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param next_sign_interpretation_ids: The next_sign_interpretation_ids of this SignInterpretationCreateDTO.  # noqa: E501
-        :type next_sign_interpretation_ids: list[int]
+        :type: list[int]
         """
 
         self._next_sign_interpretation_ids = next_sign_interpretation_ids
@@ -164,7 +164,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param attributes: The attributes of this SignInterpretationCreateDTO.  # noqa: E501
-        :type attributes: list[InterpretationAttributeCreateDTO]
+        :type: list[InterpretationAttributeCreateDTO]
         """
         if self.local_vars_configuration.client_side_validation and attributes is None:  # noqa: E501
             raise ValueError("Invalid value for `attributes`, must not be `None`")  # noqa: E501
@@ -187,7 +187,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param rois: The rois of this SignInterpretationCreateDTO.  # noqa: E501
-        :type rois: list[SetInterpretationRoiDTO]
+        :type: list[SetInterpretationRoiDTO]
         """
         if self.local_vars_configuration.client_side_validation and rois is None:  # noqa: E501
             raise ValueError("Invalid value for `rois`, must not be `None`")  # noqa: E501
@@ -210,7 +210,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param commentary: The commentary of this SignInterpretationCreateDTO.  # noqa: E501
-        :type commentary: CommentaryCreateDTO
+        :type: CommentaryCreateDTO
         """
 
         self._commentary = commentary
@@ -231,7 +231,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param break_previous_and_next_sign_interpretations: The break_previous_and_next_sign_interpretations of this SignInterpretationCreateDTO.  # noqa: E501
-        :type break_previous_and_next_sign_interpretations: bool
+        :type: bool
         """
 
         self._break_previous_and_next_sign_interpretations = break_previous_and_next_sign_interpretations
@@ -252,7 +252,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param character: The character of this SignInterpretationCreateDTO.  # noqa: E501
-        :type character: str
+        :type: str
         """
 
         self._character = character
@@ -273,7 +273,7 @@ class SignInterpretationCreateDTO(object):
 
 
         :param is_variant: The is_variant of this SignInterpretationCreateDTO.  # noqa: E501
-        :type is_variant: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_variant is None:  # noqa: E501
             raise ValueError("Invalid value for `is_variant`, must not be `None`")  # noqa: E501

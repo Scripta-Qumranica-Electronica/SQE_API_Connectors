@@ -91,7 +91,7 @@ class SignInterpretationDTO(object):
 
 
         :param sign_interpretation_id: The sign_interpretation_id of this SignInterpretationDTO.  # noqa: E501
-        :type sign_interpretation_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and sign_interpretation_id is None:  # noqa: E501
             raise ValueError("Invalid value for `sign_interpretation_id`, must not be `None`")  # noqa: E501
@@ -114,7 +114,7 @@ class SignInterpretationDTO(object):
 
 
         :param next_sign_interpretations: The next_sign_interpretations of this SignInterpretationDTO.  # noqa: E501
-        :type next_sign_interpretations: list[NextSignInterpretationDTO]
+        :type: list[NextSignInterpretationDTO]
         """
         if self.local_vars_configuration.client_side_validation and next_sign_interpretations is None:  # noqa: E501
             raise ValueError("Invalid value for `next_sign_interpretations`, must not be `None`")  # noqa: E501
@@ -137,7 +137,7 @@ class SignInterpretationDTO(object):
 
 
         :param attributes: The attributes of this SignInterpretationDTO.  # noqa: E501
-        :type attributes: list[InterpretationAttributeDTO]
+        :type: list[InterpretationAttributeDTO]
         """
         if self.local_vars_configuration.client_side_validation and attributes is None:  # noqa: E501
             raise ValueError("Invalid value for `attributes`, must not be `None`")  # noqa: E501
@@ -160,7 +160,7 @@ class SignInterpretationDTO(object):
 
 
         :param rois: The rois of this SignInterpretationDTO.  # noqa: E501
-        :type rois: list[InterpretationRoiDTO]
+        :type: list[InterpretationRoiDTO]
         """
         if self.local_vars_configuration.client_side_validation and rois is None:  # noqa: E501
             raise ValueError("Invalid value for `rois`, must not be `None`")  # noqa: E501
@@ -183,7 +183,7 @@ class SignInterpretationDTO(object):
 
 
         :param commentary: The commentary of this SignInterpretationDTO.  # noqa: E501
-        :type commentary: CommentaryDTO
+        :type: CommentaryDTO
         """
 
         self._commentary = commentary
@@ -204,7 +204,7 @@ class SignInterpretationDTO(object):
 
 
         :param character: The character of this SignInterpretationDTO.  # noqa: E501
-        :type character: str
+        :type: str
         """
 
         self._character = character
@@ -225,7 +225,7 @@ class SignInterpretationDTO(object):
 
 
         :param is_variant: The is_variant of this SignInterpretationDTO.  # noqa: E501
-        :type is_variant: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_variant is None:  # noqa: E501
             raise ValueError("Invalid value for `is_variant`, must not be `None`")  # noqa: E501

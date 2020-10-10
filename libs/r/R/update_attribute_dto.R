@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title UpdateAttributeDTO
-#'
 #' @description UpdateAttributeDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field createValues  list( \link{CreateAttributeValueDTO} ) 
 #'
 #' @field updateValues  list( \link{UpdateAttributeValueDTO} ) 
@@ -27,6 +24,7 @@
 #'
 #' @field batchEditable  character [optional]
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -40,9 +38,7 @@ UpdateAttributeDTO <- R6::R6Class(
     `removable` = NULL,
     `repeatable` = NULL,
     `batchEditable` = NULL,
-    initialize = function(
-        `createValues`, `updateValues`, `deleteValues`, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...
-    ) {
+    initialize = function(`createValues`, `updateValues`, `deleteValues`, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`createValues`)) {
         stopifnot(is.vector(`createValues`), length(`createValues`) != 0)
@@ -108,13 +104,13 @@ UpdateAttributeDTO <- R6::R6Class(
     fromJSON = function(UpdateAttributeDTOJson) {
       UpdateAttributeDTOObject <- jsonlite::fromJSON(UpdateAttributeDTOJson)
       if (!is.null(UpdateAttributeDTOObject$`createValues`)) {
-        self$`createValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`createValues`, "array[CreateAttributeValueDTO]", loadNamespace("openapi"))
+        self$`createValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`createValues`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(UpdateAttributeDTOObject$`updateValues`)) {
-        self$`updateValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`updateValues`, "array[UpdateAttributeValueDTO]", loadNamespace("openapi"))
+        self$`updateValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`updateValues`, "array[UpdateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(UpdateAttributeDTOObject$`deleteValues`)) {
-        self$`deleteValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`deleteValues`, "array[integer]", loadNamespace("openapi"))
+        self$`deleteValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`deleteValues`, "array[integer]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(UpdateAttributeDTOObject$`editable`)) {
         self$`editable` <- UpdateAttributeDTOObject$`editable`
@@ -128,7 +124,6 @@ UpdateAttributeDTO <- R6::R6Class(
       if (!is.null(UpdateAttributeDTOObject$`batchEditable`)) {
         self$`batchEditable` <- UpdateAttributeDTOObject$`batchEditable`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -187,9 +182,9 @@ UpdateAttributeDTO <- R6::R6Class(
     },
     fromJSONString = function(UpdateAttributeDTOJson) {
       UpdateAttributeDTOObject <- jsonlite::fromJSON(UpdateAttributeDTOJson)
-      self$`createValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`createValues`, "array[CreateAttributeValueDTO]", loadNamespace("openapi"))
-      self$`updateValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`updateValues`, "array[UpdateAttributeValueDTO]", loadNamespace("openapi"))
-      self$`deleteValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`deleteValues`, "array[integer]", loadNamespace("openapi"))
+      self$`createValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`createValues`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+      self$`updateValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`updateValues`, "array[UpdateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+      self$`deleteValues` <- ApiClient$new()$deserializeObj(UpdateAttributeDTOObject$`deleteValues`, "array[integer]", loadNamespace("qumranica_api_connector"))
       self$`editable` <- UpdateAttributeDTOObject$`editable`
       self$`removable` <- UpdateAttributeDTOObject$`removable`
       self$`repeatable` <- UpdateAttributeDTOObject$`repeatable`
@@ -198,4 +193,3 @@ UpdateAttributeDTO <- R6::R6Class(
     }
   )
 )
-

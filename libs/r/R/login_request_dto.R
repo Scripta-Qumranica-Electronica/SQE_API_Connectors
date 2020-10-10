@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title LoginRequestDTO
-#'
 #' @description LoginRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field email  character 
 #'
 #' @field password  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ LoginRequestDTO <- R6::R6Class(
   public = list(
     `email` = NULL,
     `password` = NULL,
-    initialize = function(
-        `email`, `password`, ...
-    ) {
+    initialize = function(`email`, `password`, ...){
       local.optional.var <- list(...)
       if (!missing(`email`)) {
         stopifnot(is.character(`email`), length(`email`) == 1)
@@ -59,7 +55,6 @@ LoginRequestDTO <- R6::R6Class(
       if (!is.null(LoginRequestDTOObject$`password`)) {
         self$`password` <- LoginRequestDTOObject$`password`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ LoginRequestDTO <- R6::R6Class(
     }
   )
 )
-

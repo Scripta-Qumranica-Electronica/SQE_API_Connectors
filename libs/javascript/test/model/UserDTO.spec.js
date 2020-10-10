@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UserDTO();
+    instance = new QumranicaApiConnector.UserDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('UserDTO', function() {
     it('should create an instance of UserDTO', function() {
       // uncomment below and update the code to test UserDTO
-      //var instane = new SqeApi.UserDTO();
-      //expect(instance).to.be.a(SqeApi.UserDTO);
+      //var instane = new QumranicaApiConnector.UserDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UserDTO);
     });
 
     it('should have the property userId (base name: "userId")', function() {
       // uncomment below and update the code to test the property userId
-      //var instane = new SqeApi.UserDTO();
+      //var instane = new QumranicaApiConnector.UserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.UserDTO();
+      //var instane = new QumranicaApiConnector.UserDTO();
       //expect(instance).to.be();
     });
 

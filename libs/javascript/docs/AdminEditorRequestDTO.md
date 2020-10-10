@@ -1,4 +1,4 @@
-# SqeApi.AdminEditorRequestDTO
+# QumranicaApiConnector.AdminEditorRequestDTO
 
 ## Properties
 

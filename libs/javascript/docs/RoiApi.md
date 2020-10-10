@@ -1,4 +1,4 @@
-# SqeApi.RoiApi
+# QumranicaApiConnector.RoiApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,26 +23,25 @@ Processes a series of create/update/delete ROI requests in the given edition of 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let opts = {
-  'batchEditRoiDTO': new SqeApi.BatchEditRoiDTO() // BatchEditRoiDTO | A JSON object with all the roi edits to be performed
+  'batchEditRoiDTO': new QumranicaApiConnector.BatchEditRoiDTO() // BatchEditRoiDTO | A JSON object with all the roi edits to be performed
 };
-apiInstance.v1EditionsEditionIdRoisBatchEditPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisBatchEditPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -76,26 +75,25 @@ Creates new sign ROI&#39;s in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let opts = {
-  'setInterpretationRoiDTOList': new SqeApi.SetInterpretationRoiDTOList() // SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created
+  'setInterpretationRoiDTOList': new QumranicaApiConnector.SetInterpretationRoiDTOList() // SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created
 };
-apiInstance.v1EditionsEditionIdRoisBatchPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisBatchPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -129,26 +127,25 @@ Update existing sign ROI&#39;s in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let opts = {
-  'updateInterpretationRoiDTOList': new SqeApi.UpdateInterpretationRoiDTOList() // UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details
+  'updateInterpretationRoiDTOList': new QumranicaApiConnector.UpdateInterpretationRoiDTOList() // UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details
 };
-apiInstance.v1EditionsEditionIdRoisBatchPut(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisBatchPut(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -182,26 +179,25 @@ Creates new sign ROI in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let opts = {
-  'setInterpretationRoiDTO': new SqeApi.SetInterpretationRoiDTO() // SetInterpretationRoiDTO | A JSON object with the new ROI to be created
+  'setInterpretationRoiDTO': new QumranicaApiConnector.SetInterpretationRoiDTO() // SetInterpretationRoiDTO | A JSON object with the new ROI to be created
 };
-apiInstance.v1EditionsEditionIdRoisPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -235,24 +231,23 @@ Deletes a sign ROI from the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let roiId = 56; // Number | Id of the ROI to be deleted
-apiInstance.v1EditionsEditionIdRoisRoiIdDelete(editionId, roiId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdRoisRoiIdDelete(editionId, roiId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -286,24 +281,23 @@ Get the details for a ROI in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let roiId = 56; // Number | A JSON object with the new ROI to be created
-apiInstance.v1EditionsEditionIdRoisRoiIdGet(editionId, roiId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisRoiIdGet(editionId, roiId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -337,27 +331,26 @@ Update an existing sign ROI in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.RoiApi();
+let apiInstance = new QumranicaApiConnector.RoiApi();
 let editionId = 56; // Number | Id of the edition
 let roiId = 56; // Number | Id of the ROI to be updated
 let opts = {
-  'setInterpretationRoiDTO': new SqeApi.SetInterpretationRoiDTO() // SetInterpretationRoiDTO | A JSON object with the updated ROI details
+  'setInterpretationRoiDTO': new QumranicaApiConnector.SetInterpretationRoiDTO() // SetInterpretationRoiDTO | A JSON object with the updated ROI details
 };
-apiInstance.v1EditionsEditionIdRoisRoiIdPut(editionId, roiId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdRoisRoiIdPut(editionId, roiId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

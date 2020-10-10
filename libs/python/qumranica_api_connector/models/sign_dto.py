@@ -67,7 +67,7 @@ class SignDTO(object):
 
 
         :param sign_interpretations: The sign_interpretations of this SignDTO.  # noqa: E501
-        :type sign_interpretations: list[SignInterpretationDTO]
+        :type: list[SignInterpretationDTO]
         """
         if self.local_vars_configuration.client_side_validation and sign_interpretations is None:  # noqa: E501
             raise ValueError("Invalid value for `sign_interpretations`, must not be `None`")  # noqa: E501

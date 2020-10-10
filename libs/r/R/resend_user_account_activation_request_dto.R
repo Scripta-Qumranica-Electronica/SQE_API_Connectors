@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ResendUserAccountActivationRequestDTO
-#'
 #' @description ResendUserAccountActivationRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field email  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ResendUserAccountActivationRequestDTO <- R6::R6Class(
   'ResendUserAccountActivationRequestDTO',
   public = list(
     `email` = NULL,
-    initialize = function(
-        `email`, ...
-    ) {
+    initialize = function(`email`, ...){
       local.optional.var <- list(...)
       if (!missing(`email`)) {
         stopifnot(is.character(`email`), length(`email`) == 1)
@@ -45,7 +41,6 @@ ResendUserAccountActivationRequestDTO <- R6::R6Class(
       if (!is.null(ResendUserAccountActivationRequestDTOObject$`email`)) {
         self$`email` <- ResendUserAccountActivationRequestDTOObject$`email`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -67,4 +62,3 @@ ResendUserAccountActivationRequestDTO <- R6::R6Class(
     }
   )
 )
-

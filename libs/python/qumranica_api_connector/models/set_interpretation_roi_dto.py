@@ -92,7 +92,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param artefact_id: The artefact_id of this SetInterpretationRoiDTO.  # noqa: E501
-        :type artefact_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and artefact_id is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_id`, must not be `None`")  # noqa: E501
@@ -115,7 +115,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param sign_interpretation_id: The sign_interpretation_id of this SetInterpretationRoiDTO.  # noqa: E501
-        :type sign_interpretation_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and sign_interpretation_id is None:  # noqa: E501
             raise ValueError("Invalid value for `sign_interpretation_id`, must not be `None`")  # noqa: E501
@@ -138,7 +138,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param shape: The shape of this SetInterpretationRoiDTO.  # noqa: E501
-        :type shape: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and shape is None:  # noqa: E501
             raise ValueError("Invalid value for `shape`, must not be `None`")  # noqa: E501
@@ -161,7 +161,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param translate: The translate of this SetInterpretationRoiDTO.  # noqa: E501
-        :type translate: TranslateDTO
+        :type: TranslateDTO
         """
         if self.local_vars_configuration.client_side_validation and translate is None:  # noqa: E501
             raise ValueError("Invalid value for `translate`, must not be `None`")  # noqa: E501
@@ -184,7 +184,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param stance_rotation: The stance_rotation of this SetInterpretationRoiDTO.  # noqa: E501
-        :type stance_rotation: int
+        :type: int
         """
 
         self._stance_rotation = stance_rotation
@@ -205,7 +205,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param exceptional: The exceptional of this SetInterpretationRoiDTO.  # noqa: E501
-        :type exceptional: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and exceptional is None:  # noqa: E501
             raise ValueError("Invalid value for `exceptional`, must not be `None`")  # noqa: E501
@@ -228,7 +228,7 @@ class SetInterpretationRoiDTO(object):
 
 
         :param values_set: The values_set of this SetInterpretationRoiDTO.  # noqa: E501
-        :type values_set: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and values_set is None:  # noqa: E501
             raise ValueError("Invalid value for `values_set`, must not be `None`")  # noqa: E501

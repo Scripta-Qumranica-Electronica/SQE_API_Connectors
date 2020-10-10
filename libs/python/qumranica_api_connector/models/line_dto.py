@@ -79,7 +79,7 @@ class LineDTO(object):
 
 
         :param line_id: The line_id of this LineDTO.  # noqa: E501
-        :type line_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and line_id is None:  # noqa: E501
             raise ValueError("Invalid value for `line_id`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class LineDTO(object):
 
 
         :param line_name: The line_name of this LineDTO.  # noqa: E501
-        :type line_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and line_name is None:  # noqa: E501
             raise ValueError("Invalid value for `line_name`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class LineDTO(object):
 
 
         :param editor_id: The editor_id of this LineDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -148,7 +148,7 @@ class LineDTO(object):
 
 
         :param signs: The signs of this LineDTO.  # noqa: E501
-        :type signs: list[SignDTO]
+        :type: list[SignDTO]
         """
         if self.local_vars_configuration.client_side_validation and signs is None:  # noqa: E501
             raise ValueError("Invalid value for `signs`, must not be `None`")  # noqa: E501

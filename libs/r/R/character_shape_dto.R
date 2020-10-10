@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title CharacterShapeDTO
-#'
 #' @description CharacterShapeDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field id  integer 
 #'
 #' @field character  character 
@@ -24,6 +21,7 @@
 #' @field rotation  numeric [optional]
 #'
 #' @field attributes  list( character ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,9 +35,7 @@ CharacterShapeDTO <- R6::R6Class(
     `imageURL` = NULL,
     `rotation` = NULL,
     `attributes` = NULL,
-    initialize = function(
-        `id`, `character`, `polygon`, `imageURL`, `attributes`, `rotation`=NULL, ...
-    ) {
+    initialize = function(`id`, `character`, `polygon`, `imageURL`, `attributes`, `rotation`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`id`)) {
         stopifnot(is.numeric(`id`), length(`id`) == 1)
@@ -114,9 +110,8 @@ CharacterShapeDTO <- R6::R6Class(
         self$`rotation` <- CharacterShapeDTOObject$`rotation`
       }
       if (!is.null(CharacterShapeDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("openapi"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -173,9 +168,8 @@ CharacterShapeDTO <- R6::R6Class(
       self$`polygon` <- CharacterShapeDTOObject$`polygon`
       self$`imageURL` <- CharacterShapeDTOObject$`imageURL`
       self$`rotation` <- CharacterShapeDTOObject$`rotation`
-      self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("openapi"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

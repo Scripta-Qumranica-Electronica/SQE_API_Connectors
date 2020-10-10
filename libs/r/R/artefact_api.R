@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Artefact operations
-#' @description openapi.Artefact
+#' @description qumranica_api_connector.Artefact
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -257,7 +257,7 @@
 #' \dontrun{
 #' ####################  V1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.group.id <- 56 # integer | Unique Id of the artefact group to be deleted
 #'
@@ -272,7 +272,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactGroupsArtefactGroupIdGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.group.id <- 56 # integer | Id of the desired artefact group
 #'
@@ -287,7 +287,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactGroupsArtefactGroupIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.group.id <- 56 # integer | Id of the artefact group to be updated
 #' var.update.artefact.group.dto <- UpdateArtefactGroupDTO$new() # UpdateArtefactGroupDTO | Parameters that the artefact group should be changed to
@@ -303,7 +303,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactGroupsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #'
 #' #Gets a listing of all artefact groups in the edition
@@ -317,7 +317,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactGroupsPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.create.artefact.group.dto <- CreateArtefactGroupDTO$new() # CreateArtefactGroupDTO | Parameters of the new artefact group
 #'
@@ -332,7 +332,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsArtefactIdDelete  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.id <- 56 # integer | Unique Id of the desired artefact
 #'
@@ -347,7 +347,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsArtefactIdGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.id <- 56 # integer | Unique Id of the desired artefact
 #' var.optional <- ['optional_example'] # array[character] | Add \"masks\" to include artefact polygons and \"images\" to include image data
@@ -363,7 +363,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsArtefactIdPut  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.id <- 56 # integer | Unique Id of the desired artefact
 #' var.update.artefact.dto <- UpdateArtefactDTO$new() # UpdateArtefactDTO | An UpdateArtefactDTO with the desired alterations to the artefact
@@ -379,7 +379,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsArtefactIdRoisGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.id <- 56 # integer | Unique Id of the desired artefact
 #'
@@ -394,7 +394,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.artefact.id <- 56 # integer | Unique Id of the desired artefact
 #' var.optional <- ['optional_example'] # array[character] | Add \"suggested\" to include possible matches suggested by the system
@@ -410,7 +410,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsBatchTransformationPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.batch.update.artefact.placement.dto <- BatchUpdateArtefactPlacementDTO$new() # BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates
 #'
@@ -425,7 +425,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsGet  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.optional <- ['optional_example'] # array[character] | Add \"masks\" to include artefact polygons and \"images\" to include image data
 #'
@@ -440,7 +440,7 @@
 #'
 #' ####################  V1EditionsEditionIdArtefactsPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.create.artefact.dto <- CreateArtefactDTO$new() # CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact
 #'
@@ -455,7 +455,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom base64enc base64encode
+#' @importFrom caTools base64encode
 #' @export
 ArtefactApi <- R6::R6Class(
   'ArtefactApi',
@@ -519,7 +519,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DeleteDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "DeleteDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -583,7 +583,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -653,7 +653,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -709,7 +709,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactGroupListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactGroupListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -771,7 +771,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactGroupDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -895,7 +895,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -965,7 +965,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1029,7 +1029,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InterpretationRoiDTOList", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "InterpretationRoiDTOList", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1095,7 +1095,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactTextFragmentMatchListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactTextFragmentMatchListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1157,7 +1157,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "BatchUpdatedArtefactTransformDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "BatchUpdatedArtefactTransformDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1215,7 +1215,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactListDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactListDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -1277,7 +1277,7 @@ ArtefactApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "ArtefactDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

@@ -17,7 +17,7 @@ import EditionEntities from './EditionEntities';
 /**
  * The DeleteDTO model module.
  * @module model/DeleteDTO
- * @version v1
+ * @version 0.7.0
  */
 class DeleteDTO {
     /**

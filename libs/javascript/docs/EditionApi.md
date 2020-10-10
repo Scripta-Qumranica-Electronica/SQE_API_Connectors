@@ -1,4 +1,4 @@
-# SqeApi.EditionApi
+# QumranicaApiConnector.EditionApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,22 +28,21 @@ Get a list of requests issued by the current user for other users  to become edi
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
-apiInstance.v1EditionsAdminShareRequestsGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new QumranicaApiConnector.EditionApi();
+apiInstance.v1EditionsAdminShareRequestsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -73,23 +72,22 @@ Confirm addition of an editor to the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let token = "token_example"; // String | JWT for verifying the request confirmation
-apiInstance.v1EditionsConfirmEditorshipTokenPost(token, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsConfirmEditorshipTokenPost(token).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -122,26 +120,25 @@ Adds an editor to the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'inviteEditorDTO': new SqeApi.InviteEditorDTO() // InviteEditorDTO | JSON object with the attributes of the new editor
+  'inviteEditorDTO': new QumranicaApiConnector.InviteEditorDTO() // InviteEditorDTO | JSON object with the attributes of the new editor
 };
-apiInstance.v1EditionsEditionIdAddEditorRequestPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdAddEditorRequestPost(editionId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -175,27 +172,26 @@ Provides details about the specified edition and all accessible alternate editio
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
   'optional': ["null"], // [String] | Optional parameters: 'deleteForAllEditors'
   'token': "token_example" // String | token required when using optional 'deleteForAllEditors'
 };
-apiInstance.v1EditionsEditionIdDelete(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdDelete(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -230,27 +226,26 @@ Changes the rights for an editor of the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let editorEmailId = "editorEmailId_example"; // String | Email address of the editor whose permissions are being changed
 let opts = {
-  'updateEditorRightsDTO': new SqeApi.UpdateEditorRightsDTO() // UpdateEditorRightsDTO | JSON object with the attributes of the new editor
+  'updateEditorRightsDTO': new QumranicaApiConnector.UpdateEditorRightsDTO() // UpdateEditorRightsDTO | JSON object with the attributes of the new editor
 };
-apiInstance.v1EditionsEditionIdEditorsEditorEmailIdPut(editionId, editorEmailId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdEditorsEditorEmailIdPut(editionId, editorEmailId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -285,23 +280,22 @@ Provides details about the specified edition and all accessible alternate editio
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
-apiInstance.v1EditionsEditionIdGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -334,26 +328,25 @@ Creates a copy of the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'editionCopyDTO': new SqeApi.EditionCopyDTO() // EditionCopyDTO | JSON object with the attributes to be changed in the copied edition
+  'editionCopyDTO': new QumranicaApiConnector.EditionCopyDTO() // EditionCopyDTO | JSON object with the attributes to be changed in the copied edition
 };
-apiInstance.v1EditionsEditionIdPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -387,26 +380,25 @@ Updates data for the specified edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
-  'editionUpdateRequestDTO': new SqeApi.EditionUpdateRequestDTO() // EditionUpdateRequestDTO | JSON object with the attributes to be updated
+  'editionUpdateRequestDTO': new QumranicaApiConnector.EditionUpdateRequestDTO() // EditionUpdateRequestDTO | JSON object with the attributes to be updated
 };
-apiInstance.v1EditionsEditionIdPut(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdPut(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -440,23 +432,22 @@ Provides spatial data for all letters in the edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
-apiInstance.v1EditionsEditionIdScriptCollectionGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdScriptCollectionGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -489,23 +480,22 @@ Provides spatial data for all letters in the edition organized and oriented  by 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
+let apiInstance = new QumranicaApiConnector.EditionApi();
 let editionId = 56; // Number | Unique Id of the desired edition
-apiInstance.v1EditionsEditionIdScriptLinesGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdScriptLinesGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -538,22 +528,21 @@ Get a list of invitations issued to the current user to become an editor of a sh
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
-apiInstance.v1EditionsEditorInvitationsGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new QumranicaApiConnector.EditionApi();
+apiInstance.v1EditionsEditorInvitationsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -583,22 +572,21 @@ Provides a listing of all editions accessible to the current user
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.EditionApi();
-apiInstance.v1EditionsGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new QumranicaApiConnector.EditionApi();
+apiInstance.v1EditionsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

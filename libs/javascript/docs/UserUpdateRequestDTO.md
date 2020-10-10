@@ -1,4 +1,4 @@
-# SqeApi.UserUpdateRequestDTO
+# QumranicaApiConnector.UserUpdateRequestDTO
 
 ## Properties
 

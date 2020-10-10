@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.SetInterpretationRoiDTO();
+    instance = new QumranicaApiConnector.SetInterpretationRoiDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('SetInterpretationRoiDTO', function() {
     it('should create an instance of SetInterpretationRoiDTO', function() {
       // uncomment below and update the code to test SetInterpretationRoiDTO
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
-      //expect(instance).to.be.a(SqeApi.SetInterpretationRoiDTO);
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.SetInterpretationRoiDTO);
     });
 
     it('should have the property artefactId (base name: "artefactId")', function() {
       // uncomment below and update the code to test the property artefactId
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property signInterpretationId (base name: "signInterpretationId")', function() {
       // uncomment below and update the code to test the property signInterpretationId
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property shape (base name: "shape")', function() {
       // uncomment below and update the code to test the property shape
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property translate (base name: "translate")', function() {
       // uncomment below and update the code to test the property translate
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property stanceRotation (base name: "stanceRotation")', function() {
       // uncomment below and update the code to test the property stanceRotation
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property exceptional (base name: "exceptional")', function() {
       // uncomment below and update the code to test the property exceptional
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property valuesSet (base name: "valuesSet")', function() {
       // uncomment below and update the code to test the property valuesSet
-      //var instane = new SqeApi.SetInterpretationRoiDTO();
+      //var instane = new QumranicaApiConnector.SetInterpretationRoiDTO();
       //expect(instance).to.be();
     });
 

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditorInvitationListDTO();
+    instance = new QumranicaApiConnector.EditorInvitationListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('EditorInvitationListDTO', function() {
     it('should create an instance of EditorInvitationListDTO', function() {
       // uncomment below and update the code to test EditorInvitationListDTO
-      //var instane = new SqeApi.EditorInvitationListDTO();
-      //expect(instance).to.be.a(SqeApi.EditorInvitationListDTO);
+      //var instane = new QumranicaApiConnector.EditorInvitationListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditorInvitationListDTO);
     });
 
     it('should have the property editorInvitations (base name: "editorInvitations")', function() {
       // uncomment below and update the code to test the property editorInvitations
-      //var instane = new SqeApi.EditorInvitationListDTO();
+      //var instane = new QumranicaApiConnector.EditorInvitationListDTO();
       //expect(instance).to.be();
     });
 

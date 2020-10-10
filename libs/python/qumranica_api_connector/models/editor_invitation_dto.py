@@ -103,7 +103,7 @@ class EditorInvitationDTO(object):
 
 
         :param token: The token of this EditorInvitationDTO.  # noqa: E501
-        :type token: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and token is None:  # noqa: E501
             raise ValueError("Invalid value for `token`, must not be `None`")  # noqa: E501
@@ -126,7 +126,7 @@ class EditorInvitationDTO(object):
 
 
         :param requesting_admin_name: The requesting_admin_name of this EditorInvitationDTO.  # noqa: E501
-        :type requesting_admin_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and requesting_admin_name is None:  # noqa: E501
             raise ValueError("Invalid value for `requesting_admin_name`, must not be `None`")  # noqa: E501
@@ -149,7 +149,7 @@ class EditorInvitationDTO(object):
 
 
         :param requesting_admin_email: The requesting_admin_email of this EditorInvitationDTO.  # noqa: E501
-        :type requesting_admin_email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and requesting_admin_email is None:  # noqa: E501
             raise ValueError("Invalid value for `requesting_admin_email`, must not be `None`")  # noqa: E501
@@ -172,7 +172,7 @@ class EditorInvitationDTO(object):
 
 
         :param edition_id: The edition_id of this EditorInvitationDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -195,7 +195,7 @@ class EditorInvitationDTO(object):
 
 
         :param edition_name: The edition_name of this EditorInvitationDTO.  # noqa: E501
-        :type edition_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_name is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_name`, must not be `None`")  # noqa: E501
@@ -218,7 +218,7 @@ class EditorInvitationDTO(object):
 
 
         :param date: The date of this EditorInvitationDTO.  # noqa: E501
-        :type date: datetime
+        :type: datetime
         """
         if self.local_vars_configuration.client_side_validation and date is None:  # noqa: E501
             raise ValueError("Invalid value for `date`, must not be `None`")  # noqa: E501
@@ -241,7 +241,7 @@ class EditorInvitationDTO(object):
 
 
         :param may_lock: The may_lock of this EditorInvitationDTO.  # noqa: E501
-        :type may_lock: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_lock is None:  # noqa: E501
             raise ValueError("Invalid value for `may_lock`, must not be `None`")  # noqa: E501
@@ -264,7 +264,7 @@ class EditorInvitationDTO(object):
 
 
         :param may_read: The may_read of this EditorInvitationDTO.  # noqa: E501
-        :type may_read: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_read is None:  # noqa: E501
             raise ValueError("Invalid value for `may_read`, must not be `None`")  # noqa: E501
@@ -287,7 +287,7 @@ class EditorInvitationDTO(object):
 
 
         :param may_write: The may_write of this EditorInvitationDTO.  # noqa: E501
-        :type may_write: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_write is None:  # noqa: E501
             raise ValueError("Invalid value for `may_write`, must not be `None`")  # noqa: E501
@@ -310,7 +310,7 @@ class EditorInvitationDTO(object):
 
 
         :param is_admin: The is_admin of this EditorInvitationDTO.  # noqa: E501
-        :type is_admin: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_admin is None:  # noqa: E501
             raise ValueError("Invalid value for `is_admin`, must not be `None`")  # noqa: E501

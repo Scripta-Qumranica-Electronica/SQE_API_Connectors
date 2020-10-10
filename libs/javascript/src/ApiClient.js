@@ -17,7 +17,7 @@ import querystring from "querystring";
 
 /**
 * @module ApiClient
-* @version v1
+* @version 0.7.0
 */
 
 /**
@@ -105,28 +105,9 @@ class ApiClient {
         if (param instanceof Date) {
             return param.toJSON();
         }
-        if (ApiClient.canBeJsonified(param)) {
-            return JSON.stringify(param);
-        }
 
         return param.toString();
     }
-
-    /**
-    * Returns a boolean indicating if the parameter could be JSON.stringified
-    * @param param The actual parameter
-    * @returns {Boolean} Flag indicating if <code>param</code> can be JSON.stringified
-    */
-    static canBeJsonified(str) {
-        if (typeof str !== 'string' && typeof str !== 'object') return false;
-        try {
-            const type = str.toString();
-            return type === '[object Object]'
-                || type === '[object Array]';
-        } catch (err) {
-            return false;
-        }
-    };
 
    /**
     * Builds full URL by appending the given path to the base URL and replacing path parameter place-holders with parameter values.
@@ -298,10 +279,7 @@ class ApiClient {
                     break;
                 case 'bearer':
                     if (auth.accessToken) {
-                        var localVarBearerToken = typeof auth.accessToken === 'function'
-                          ? auth.accessToken()
-                          : auth.accessToken
-                        request.set({'Authorization': 'Bearer ' + localVarBearerToken});
+                        request.set({'Authorization': 'Bearer ' + auth.accessToken});
                     }
 
                     break;
@@ -359,13 +337,6 @@ class ApiClient {
         return ApiClient.convertToType(data, returnType);
     }
 
-   /**
-    * Callback function to receive the result of the operation.
-    * @callback module:ApiClient~callApiCallback
-    * @param {String} error Error message, if any.
-    * @param data The data returned by the service call.
-    * @param {String} response The complete HTTP response.
-    */
 
    /**
     * Invokes the REST service using the supplied settings and parameters.
@@ -382,12 +353,11 @@ class ApiClient {
     * @param {(String|Array|ObjectFunction)} returnType The required type to return; can be a string for simple types or the
     * constructor for a complex type.
     * @param {String} apiBasePath base path defined in the operation/path level to override the default one
-    * @param {module:ApiClient~callApiCallback} callback The callback function.
-    * @returns {Object} The SuperAgent request object.
+    * @returns {Promise} A {@link https://www.promisejs.org/|Promise} object.
     */
     callApi(path, httpMethod, pathParams,
         queryParams, headerParams, formParams, bodyParam, authNames, contentTypes, accepts,
-        returnType, apiBasePath, callback) {
+        returnType, apiBasePath) {
 
         var url = this.buildUrl(path, pathParams, apiBasePath);
         var request = superagent(httpMethod, url);
@@ -471,37 +441,43 @@ class ApiClient {
             }
         }
 
-        request.end((error, response) => {
-            if (callback) {
-                var data = null;
-                if (!error) {
+        return new Promise((resolve, reject) => {
+            request.end((error, response) => {
+                if (error) {
+                    var err = {};
+                    if (response) {
+                        err.status = response.status;
+                        err.statusText = response.statusText;
+                        err.body = response.body;
+                        err.response = response;
+                    }
+                    err.error = error;
+
+                    reject(err);
+                } else {
                     try {
-                        data = this.deserialize(response, returnType);
+                        var data = this.deserialize(response, returnType);
                         if (this.enableCookies && typeof window === 'undefined'){
                             this.agent._saveCookies(response);
                         }
+
+                        resolve({data, response});
                     } catch (err) {
-                        error = err;
+                        reject(err);
                     }
                 }
-
-                callback(error, data, response);
-            }
+            });
         });
 
-        return request;
     }
 
     /**
-    * Parses an ISO-8601 string representation or epoch representation of a date value.
+    * Parses an ISO-8601 string representation of a date value.
     * @param {String} str The date value as a string.
     * @returns {Date} The parsed date object.
     */
     static parseDate(str) {
-        if (isNaN(str)) {
-            return new Date(str);
-        }
-        return new Date(+str);
+        return new Date(str);
     }
 
     /**

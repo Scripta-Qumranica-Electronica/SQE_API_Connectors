@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title BatchEditRoiResponseDTO
-#'
 #' @description BatchEditRoiResponseDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field createRois  list( \link{InterpretationRoiDTO} ) 
 #'
 #' @field updateRois  list( \link{UpdatedInterpretationRoiDTO} ) 
 #'
 #' @field deleteRois  list( integer ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ BatchEditRoiResponseDTO <- R6::R6Class(
     `createRois` = NULL,
     `updateRois` = NULL,
     `deleteRois` = NULL,
-    initialize = function(
-        `createRois`, `updateRois`, `deleteRois`, ...
-    ) {
+    initialize = function(`createRois`, `updateRois`, `deleteRois`, ...){
       local.optional.var <- list(...)
       if (!missing(`createRois`)) {
         stopifnot(is.vector(`createRois`), length(`createRois`) != 0)
@@ -68,15 +64,14 @@ BatchEditRoiResponseDTO <- R6::R6Class(
     fromJSON = function(BatchEditRoiResponseDTOJson) {
       BatchEditRoiResponseDTOObject <- jsonlite::fromJSON(BatchEditRoiResponseDTOJson)
       if (!is.null(BatchEditRoiResponseDTOObject$`createRois`)) {
-        self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`createRois`, "array[InterpretationRoiDTO]", loadNamespace("openapi"))
+        self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`createRois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(BatchEditRoiResponseDTOObject$`updateRois`)) {
-        self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`updateRois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("openapi"))
+        self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`updateRois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(BatchEditRoiResponseDTOObject$`deleteRois`)) {
-        self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`deleteRois`, "array[integer]", loadNamespace("openapi"))
+        self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -107,11 +102,10 @@ BatchEditRoiResponseDTO <- R6::R6Class(
     },
     fromJSONString = function(BatchEditRoiResponseDTOJson) {
       BatchEditRoiResponseDTOObject <- jsonlite::fromJSON(BatchEditRoiResponseDTOJson)
-      self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`createRois`, "array[InterpretationRoiDTO]", loadNamespace("openapi"))
-      self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`updateRois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("openapi"))
-      self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`deleteRois`, "array[integer]", loadNamespace("openapi"))
+      self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`createRois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+      self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`updateRois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+      self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiResponseDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

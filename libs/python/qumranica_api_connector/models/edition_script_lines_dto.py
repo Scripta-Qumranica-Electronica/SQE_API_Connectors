@@ -67,7 +67,7 @@ class EditionScriptLinesDTO(object):
 
 
         :param text_fragments: The text_fragments of this EditionScriptLinesDTO.  # noqa: E501
-        :type text_fragments: list[ScriptTextFragmentDTO]
+        :type: list[ScriptTextFragmentDTO]
         """
         if self.local_vars_configuration.client_side_validation and text_fragments is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragments`, must not be `None`")  # noqa: E501

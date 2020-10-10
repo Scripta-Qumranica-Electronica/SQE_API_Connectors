@@ -87,7 +87,7 @@ class DetailedUserDTO(object):
 
 
         :param forename: The forename of this DetailedUserDTO.  # noqa: E501
-        :type forename: str
+        :type: str
         """
 
         self._forename = forename
@@ -108,7 +108,7 @@ class DetailedUserDTO(object):
 
 
         :param surname: The surname of this DetailedUserDTO.  # noqa: E501
-        :type surname: str
+        :type: str
         """
 
         self._surname = surname
@@ -129,7 +129,7 @@ class DetailedUserDTO(object):
 
 
         :param organization: The organization of this DetailedUserDTO.  # noqa: E501
-        :type organization: str
+        :type: str
         """
 
         self._organization = organization
@@ -150,7 +150,7 @@ class DetailedUserDTO(object):
 
 
         :param activated: The activated of this DetailedUserDTO.  # noqa: E501
-        :type activated: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and activated is None:  # noqa: E501
             raise ValueError("Invalid value for `activated`, must not be `None`")  # noqa: E501
@@ -173,7 +173,7 @@ class DetailedUserDTO(object):
 
 
         :param user_id: The user_id of this DetailedUserDTO.  # noqa: E501
-        :type user_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and user_id is None:  # noqa: E501
             raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
@@ -196,7 +196,7 @@ class DetailedUserDTO(object):
 
 
         :param email: The email of this DetailedUserDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501

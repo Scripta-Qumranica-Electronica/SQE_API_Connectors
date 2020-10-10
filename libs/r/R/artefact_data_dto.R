@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title ArtefactDataDTO
-#'
 #' @description ArtefactDataDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field id  integer 
 #'
 #' @field name  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ ArtefactDataDTO <- R6::R6Class(
   public = list(
     `id` = NULL,
     `name` = NULL,
-    initialize = function(
-        `id`, `name`, ...
-    ) {
+    initialize = function(`id`, `name`, ...){
       local.optional.var <- list(...)
       if (!missing(`id`)) {
         stopifnot(is.numeric(`id`), length(`id`) == 1)
@@ -59,7 +55,6 @@ ArtefactDataDTO <- R6::R6Class(
       if (!is.null(ArtefactDataDTOObject$`name`)) {
         self$`name` <- ArtefactDataDTOObject$`name`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ ArtefactDataDTO <- R6::R6Class(
     }
   )
 )
-

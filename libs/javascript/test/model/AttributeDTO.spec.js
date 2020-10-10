@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.AttributeDTO();
+    instance = new QumranicaApiConnector.AttributeDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,67 +50,67 @@
   describe('AttributeDTO', function() {
     it('should create an instance of AttributeDTO', function() {
       // uncomment below and update the code to test AttributeDTO
-      //var instane = new SqeApi.AttributeDTO();
-      //expect(instance).to.be.a(SqeApi.AttributeDTO);
+      //var instane = new QumranicaApiConnector.AttributeDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.AttributeDTO);
     });
 
     it('should have the property attributeId (base name: "attributeId")', function() {
       // uncomment below and update the code to test the property attributeId
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property attributeName (base name: "attributeName")', function() {
       // uncomment below and update the code to test the property attributeName
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property values (base name: "values")', function() {
       // uncomment below and update the code to test the property values
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property creatorId (base name: "creatorId")', function() {
       // uncomment below and update the code to test the property creatorId
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editable (base name: "editable")', function() {
       // uncomment below and update the code to test the property editable
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property removable (base name: "removable")', function() {
       // uncomment below and update the code to test the property removable
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property repeatable (base name: "repeatable")', function() {
       // uncomment below and update the code to test the property repeatable
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property batchEditable (base name: "batchEditable")', function() {
       // uncomment below and update the code to test the property batchEditable
-      //var instane = new SqeApi.AttributeDTO();
+      //var instane = new QumranicaApiConnector.AttributeDTO();
       //expect(instance).to.be();
     });
 

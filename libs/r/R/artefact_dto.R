@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title ArtefactDTO
-#'
 #' @description ArtefactDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editionId  integer 
 #'
 #' @field imagedObjectId  character 
@@ -39,6 +36,7 @@
 #'
 #' @field name  character 
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -58,9 +56,7 @@ ArtefactDTO <- R6::R6Class(
     `statusMessage` = NULL,
     `id` = NULL,
     `name` = NULL,
-    initialize = function(
-        `editionId`, `imagedObjectId`, `imageId`, `artefactDataEditorId`, `mask`, `artefactMaskEditorId`, `isPlaced`, `placement`, `side`, `id`, `name`, `artefactPlacementEditorId`=NULL, `statusMessage`=NULL, ...
-    ) {
+    initialize = function(`editionId`, `imagedObjectId`, `imageId`, `artefactDataEditorId`, `mask`, `artefactMaskEditorId`, `isPlaced`, `placement`, `side`, `id`, `name`, `artefactPlacementEditorId`=NULL, `statusMessage`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`editionId`)) {
         stopifnot(is.numeric(`editionId`), length(`editionId`) == 1)
@@ -216,7 +212,6 @@ ArtefactDTO <- R6::R6Class(
       if (!is.null(ArtefactDTOObject$`name`)) {
         self$`name` <- ArtefactDTOObject$`name`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -334,4 +329,3 @@ ArtefactDTO <- R6::R6Class(
     }
   )
 )
-

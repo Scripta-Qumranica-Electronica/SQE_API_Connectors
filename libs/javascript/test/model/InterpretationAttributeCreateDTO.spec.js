@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.InterpretationAttributeCreateDTO();
+    instance = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('InterpretationAttributeCreateDTO', function() {
     it('should create an instance of InterpretationAttributeCreateDTO', function() {
       // uncomment below and update the code to test InterpretationAttributeCreateDTO
-      //var instane = new SqeApi.InterpretationAttributeCreateDTO();
-      //expect(instance).to.be.a(SqeApi.InterpretationAttributeCreateDTO);
+      //var instane = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.InterpretationAttributeCreateDTO);
     });
 
     it('should have the property commentary (base name: "commentary")', function() {
       // uncomment below and update the code to test the property commentary
-      //var instane = new SqeApi.InterpretationAttributeCreateDTO();
+      //var instane = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property sequence (base name: "sequence")', function() {
       // uncomment below and update the code to test the property sequence
-      //var instane = new SqeApi.InterpretationAttributeCreateDTO();
+      //var instane = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property attributeId (base name: "attributeId")', function() {
       // uncomment below and update the code to test the property attributeId
-      //var instane = new SqeApi.InterpretationAttributeCreateDTO();
+      //var instane = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property attributeValueId (base name: "attributeValueId")', function() {
       // uncomment below and update the code to test the property attributeValueId
-      //var instane = new SqeApi.InterpretationAttributeCreateDTO();
+      //var instane = new QumranicaApiConnector.InterpretationAttributeCreateDTO();
       //expect(instance).to.be();
     });
 

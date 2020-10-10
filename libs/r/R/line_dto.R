@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title LineDTO
-#'
 #' @description LineDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field lineId  integer 
 #'
 #' @field lineName  character 
@@ -20,6 +17,7 @@
 #' @field editorId  integer 
 #'
 #' @field signs  list( \link{SignDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ LineDTO <- R6::R6Class(
     `lineName` = NULL,
     `editorId` = NULL,
     `signs` = NULL,
-    initialize = function(
-        `lineId`, `lineName`, `editorId`, `signs`, ...
-    ) {
+    initialize = function(`lineId`, `lineName`, `editorId`, `signs`, ...){
       local.optional.var <- list(...)
       if (!missing(`lineId`)) {
         stopifnot(is.numeric(`lineId`), length(`lineId`) == 1)
@@ -86,9 +82,8 @@ LineDTO <- R6::R6Class(
         self$`editorId` <- LineDTOObject$`editorId`
       }
       if (!is.null(LineDTOObject$`signs`)) {
-        self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("openapi"))
+        self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -129,9 +124,8 @@ LineDTO <- R6::R6Class(
       self$`lineId` <- LineDTOObject$`lineId`
       self$`lineName` <- LineDTOObject$`lineName`
       self$`editorId` <- LineDTOObject$`editorId`
-      self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("openapi"))
+      self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

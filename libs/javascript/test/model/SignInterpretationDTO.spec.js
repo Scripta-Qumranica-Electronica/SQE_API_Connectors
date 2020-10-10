@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.SignInterpretationDTO();
+    instance = new QumranicaApiConnector.SignInterpretationDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,49 +50,49 @@
   describe('SignInterpretationDTO', function() {
     it('should create an instance of SignInterpretationDTO', function() {
       // uncomment below and update the code to test SignInterpretationDTO
-      //var instane = new SqeApi.SignInterpretationDTO();
-      //expect(instance).to.be.a(SqeApi.SignInterpretationDTO);
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.SignInterpretationDTO);
     });
 
     it('should have the property signInterpretationId (base name: "signInterpretationId")', function() {
       // uncomment below and update the code to test the property signInterpretationId
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property nextSignInterpretations (base name: "nextSignInterpretations")', function() {
       // uncomment below and update the code to test the property nextSignInterpretations
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property rois (base name: "rois")', function() {
       // uncomment below and update the code to test the property rois
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property commentary (base name: "commentary")', function() {
       // uncomment below and update the code to test the property commentary
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property character (base name: "character")', function() {
       // uncomment below and update the code to test the property character
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isVariant (base name: "isVariant")', function() {
       // uncomment below and update the code to test the property isVariant
-      //var instane = new SqeApi.SignInterpretationDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationDTO();
       //expect(instance).to.be();
     });
 

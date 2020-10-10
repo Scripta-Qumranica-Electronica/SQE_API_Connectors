@@ -1,4 +1,4 @@
-# SqeApi.CharacterShapeDTO
+# QumranicaApiConnector.CharacterShapeDTO
 
 ## Properties
 

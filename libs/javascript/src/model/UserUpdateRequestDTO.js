@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserUpdateRequestDTO model module.
  * @module model/UserUpdateRequestDTO
- * @version v1
+ * @version 0.7.0
  */
 class UserUpdateRequestDTO {
     /**

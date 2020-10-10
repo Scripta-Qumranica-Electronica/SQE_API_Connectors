@@ -41,28 +41,22 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_delete(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Unique Id of the artefact group to be deleted (required)
-        :type artefact_group_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Unique Id of the artefact group to be deleted (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: DeleteDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: DeleteDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefact_groups_artefact_group_id_delete_with_http_info(edition_id, artefact_group_id, **kwargs)  # noqa: E501
@@ -72,35 +66,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_delete_with_http_info(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Unique Id of the artefact group to be deleted (required)
-        :type artefact_group_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Unique Id of the artefact group to be deleted (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(DeleteDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(DeleteDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -114,8 +97,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -158,10 +140,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "DeleteDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'DELETE',
@@ -171,42 +149,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='DeleteDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefact_groups_artefact_group_id_get(self, edition_id, artefact_group_id, **kwargs):  # noqa: E501
         """Gets the details of a specific artefact group in the edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_get(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Id of the desired artefact group (required)
-        :type artefact_group_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Id of the desired artefact group (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactGroupDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactGroupDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefact_groups_artefact_group_id_get_with_http_info(edition_id, artefact_group_id, **kwargs)  # noqa: E501
@@ -216,35 +187,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_get_with_http_info(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Id of the desired artefact group (required)
-        :type artefact_group_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Id of the desired artefact group (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -258,8 +218,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -302,10 +261,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactGroupDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'GET',
@@ -315,44 +270,36 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactGroupDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefact_groups_artefact_group_id_put(self, edition_id, artefact_group_id, **kwargs):  # noqa: E501
         """Updates the details of an artefact group.  The artefact group will now only contain the artefacts listed in the JSON payload.  If the name is null, no change will be made, otherwise the name will also be updated.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_put(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Id of the artefact group to be updated (required)
-        :type artefact_group_id: int
-        :param update_artefact_group_dto: Parameters that the artefact group should be changed to
-        :type update_artefact_group_dto: UpdateArtefactGroupDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Id of the artefact group to be updated (required)
+        :param UpdateArtefactGroupDTO update_artefact_group_dto: Parameters that the artefact group should be changed to
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactGroupDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactGroupDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefact_groups_artefact_group_id_put_with_http_info(edition_id, artefact_group_id, **kwargs)  # noqa: E501
@@ -362,37 +309,25 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_artefact_group_id_put_with_http_info(edition_id, artefact_group_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_group_id: Id of the artefact group to be updated (required)
-        :type artefact_group_id: int
-        :param update_artefact_group_dto: Parameters that the artefact group should be changed to
-        :type update_artefact_group_dto: UpdateArtefactGroupDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_group_id: Id of the artefact group to be updated (required)
+        :param UpdateArtefactGroupDTO update_artefact_group_dto: Parameters that the artefact group should be changed to
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -407,8 +342,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -457,10 +391,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactGroupDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'PUT',
@@ -470,40 +400,34 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactGroupDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefact_groups_get(self, edition_id, **kwargs):  # noqa: E501
         """Gets a listing of all artefact groups in the edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactGroupListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactGroupListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefact_groups_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -513,33 +437,23 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactGroupListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactGroupListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -552,8 +466,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -590,10 +503,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactGroupListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefact-groups', 'GET',
@@ -603,42 +512,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactGroupListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefact_groups_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates a new artefact group with the submitted data.  The new artefact must have a list of artefacts that belong to the group.  It is not necessary to give the group a name.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param create_artefact_group_dto: Parameters of the new artefact group
-        :type create_artefact_group_dto: CreateArtefactGroupDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param CreateArtefactGroupDTO create_artefact_group_dto: Parameters of the new artefact group
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactGroupDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactGroupDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefact_groups_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -648,35 +550,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefact_groups_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param create_artefact_group_dto: Parameters of the new artefact group
-        :type create_artefact_group_dto: CreateArtefactGroupDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param CreateArtefactGroupDTO create_artefact_group_dto: Parameters of the new artefact group
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactGroupDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -690,8 +581,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -734,10 +624,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactGroupDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefact-groups', 'POST',
@@ -747,42 +633,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactGroupDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_artefact_id_delete(self, edition_id, artefact_id, **kwargs):  # noqa: E501
         """Deletes the specified artefact  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_delete(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_artefact_id_delete_with_http_info(edition_id, artefact_id, **kwargs)  # noqa: E501
@@ -792,35 +671,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_delete_with_http_info(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -834,8 +702,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -874,8 +741,6 @@ class ArtefactApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/{artefactId}', 'DELETE',
@@ -885,44 +750,36 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_artefact_id_get(self, edition_id, artefact_id, **kwargs):  # noqa: E501
         """Provides a listing of all artefacts that are part of the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_get(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param list[str] optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_artefact_id_get_with_http_info(edition_id, artefact_id, **kwargs)  # noqa: E501
@@ -932,37 +789,25 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_get_with_http_info(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param list[str] optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -977,8 +822,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1024,10 +868,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/{artefactId}', 'GET',
@@ -1037,44 +877,36 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_artefact_id_put(self, edition_id, artefact_id, **kwargs):  # noqa: E501
         """Updates the specified artefact.  There are many possible attributes that can be changed for  an artefact.  The caller should only input only those that  should be changed. Attributes with a null value will be ignored.  For instance, setting the mask to null or \"\" will result in  no changes to the current mask, and no value for the mask will  be returned (or broadcast). Likewise, the transformation, name,  or status message may be set to null and no change will be made  to those entities (though any unchanged values will be returned  along with the changed values and also broadcast to co-editors).  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_put(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param update_artefact_dto: An UpdateArtefactDTO with the desired alterations to the artefact
-        :type update_artefact_dto: UpdateArtefactDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param UpdateArtefactDTO update_artefact_dto: An UpdateArtefactDTO with the desired alterations to the artefact
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_artefact_id_put_with_http_info(edition_id, artefact_id, **kwargs)  # noqa: E501
@@ -1084,37 +916,25 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_put_with_http_info(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param update_artefact_dto: An UpdateArtefactDTO with the desired alterations to the artefact
-        :type update_artefact_dto: UpdateArtefactDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param UpdateArtefactDTO update_artefact_dto: An UpdateArtefactDTO with the desired alterations to the artefact
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1129,8 +949,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1179,10 +998,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/{artefactId}', 'PUT',
@@ -1192,42 +1007,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_artefact_id_rois_get(self, edition_id, artefact_id, **kwargs):  # noqa: E501
         """Provides a listing of all rois belonging to an artefact in the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_rois_get(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: InterpretationRoiDTOList
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InterpretationRoiDTOList
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_artefact_id_rois_get_with_http_info(edition_id, artefact_id, **kwargs)  # noqa: E501
@@ -1237,35 +1045,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_rois_get_with_http_info(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(InterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(InterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1279,8 +1076,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1323,10 +1119,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "InterpretationRoiDTOList",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/{artefactId}/rois', 'GET',
@@ -1336,44 +1128,36 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='InterpretationRoiDTOList',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_artefact_id_text_fragments_get(self, edition_id, artefact_id, **kwargs):  # noqa: E501
         """Provides a listing of text fragments that have text in the specified artefact.  With the optional query parameter \"suggested\", this endpoint will also return  any text fragment that the system suggests might have text in the artefact.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_text_fragments_get(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param optional: Add \"suggested\" to include possible matches suggested by the system
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param list[str] optional: Add \"suggested\" to include possible matches suggested by the system
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactTextFragmentMatchListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactTextFragmentMatchListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_artefact_id_text_fragments_get_with_http_info(edition_id, artefact_id, **kwargs)  # noqa: E501
@@ -1383,37 +1167,25 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_artefact_id_text_fragments_get_with_http_info(edition_id, artefact_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param artefact_id: Unique Id of the desired artefact (required)
-        :type artefact_id: int
-        :param optional: Add \"suggested\" to include possible matches suggested by the system
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param int artefact_id: Unique Id of the desired artefact (required)
+        :param list[str] optional: Add \"suggested\" to include possible matches suggested by the system
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactTextFragmentMatchListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactTextFragmentMatchListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1428,8 +1200,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1475,10 +1246,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactTextFragmentMatchListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/{artefactId}/text-fragments', 'GET',
@@ -1488,42 +1255,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactTextFragmentMatchListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_batch_transformation_post(self, edition_id, **kwargs):  # noqa: E501
         """Updates the positional data for a batch of artefacts  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_batch_transformation_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param batch_update_artefact_placement_dto: A BatchUpdateArtefactTransformDTO with a list of the desired updates
-        :type batch_update_artefact_placement_dto: BatchUpdateArtefactPlacementDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param BatchUpdateArtefactPlacementDTO batch_update_artefact_placement_dto: A BatchUpdateArtefactTransformDTO with a list of the desired updates
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: BatchUpdatedArtefactTransformDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: BatchUpdatedArtefactTransformDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_batch_transformation_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1533,35 +1293,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_batch_transformation_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param batch_update_artefact_placement_dto: A BatchUpdateArtefactTransformDTO with a list of the desired updates
-        :type batch_update_artefact_placement_dto: BatchUpdateArtefactPlacementDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param BatchUpdateArtefactPlacementDTO batch_update_artefact_placement_dto: A BatchUpdateArtefactTransformDTO with a list of the desired updates
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(BatchUpdatedArtefactTransformDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(BatchUpdatedArtefactTransformDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1575,8 +1324,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1619,10 +1367,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "BatchUpdatedArtefactTransformDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts/batch-transformation', 'POST',
@@ -1632,42 +1376,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='BatchUpdatedArtefactTransformDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_get(self, edition_id, **kwargs):  # noqa: E501
         """Provides a listing of all artefacts that are part of the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param list[str] optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1677,35 +1414,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
-        :type optional: list[str]
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param list[str] optional: Add \"masks\" to include artefact polygons and \"images\" to include image data
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1719,8 +1445,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1760,10 +1485,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts', 'GET',
@@ -1773,42 +1494,35 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_artefacts_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates a new artefact with the provided data.  If no mask is provided, a placeholder mask will be created with the values:  \"POLYGON((0 0,1 1,1 0,0 0))\" (the system requires a valid WKT polygon mask for  every artefact). It is not recommended to leave the mask, name, or work status  blank or null. It will often be advantageous to leave the transformation null  when first creating a new artefact.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param create_artefact_dto: A CreateArtefactDTO with the data for the new artefact
-        :type create_artefact_dto: CreateArtefactDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param CreateArtefactDTO create_artefact_dto: A CreateArtefactDTO with the data for the new artefact
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: ArtefactDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: ArtefactDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_artefacts_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1818,35 +1532,24 @@ class ArtefactApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_artefacts_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param create_artefact_dto: A CreateArtefactDTO with the data for the new artefact
-        :type create_artefact_dto: CreateArtefactDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param CreateArtefactDTO create_artefact_dto: A CreateArtefactDTO with the data for the new artefact
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ArtefactDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1860,8 +1563,7 @@ class ArtefactApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1904,10 +1606,6 @@ class ArtefactApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "ArtefactDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/artefacts', 'POST',
@@ -1917,11 +1615,10 @@ class ArtefactApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='ArtefactDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

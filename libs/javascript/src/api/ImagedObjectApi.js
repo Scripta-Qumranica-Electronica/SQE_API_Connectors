@@ -23,7 +23,7 @@ import SimpleImageListDTO from '../model/SimpleImageListDTO';
 /**
 * ImagedObject service.
 * @module api/ImagedObjectApi
-* @version v1
+* @version 0.7.0
 */
 export default class ImagedObjectApi {
 
@@ -39,23 +39,15 @@ export default class ImagedObjectApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1EditionsEditionIdImagedObjectsGet operation.
-     * @callback module:api/ImagedObjectApi~v1EditionsEditionIdImagedObjectsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ImagedObjectListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Provides a listing of imaged objects related to the specified edition, can include images and also their masks with  optional.
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.optional Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
-     * @param {module:api/ImagedObjectApi~v1EditionsEditionIdImagedObjectsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ImagedObjectListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImagedObjectListDTO} and HTTP response
      */
-    v1EditionsEditionIdImagedObjectsGet(editionId, opts, callback) {
+    v1EditionsEditionIdImagedObjectsGetWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'editionId' is set
@@ -81,17 +73,24 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/imaged-objects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdImagedObjectsImagedObjectIdGet operation.
-     * @callback module:api/ImagedObjectApi~v1EditionsEditionIdImagedObjectsImagedObjectIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ImagedObjectDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a listing of imaged objects related to the specified edition, can include images and also their masks with  optional.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.optional Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImagedObjectListDTO}
      */
+    v1EditionsEditionIdImagedObjectsGet(editionId, opts) {
+      return this.v1EditionsEditionIdImagedObjectsGetWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides information for the specified imaged object related to the specified edition, can include images and also  their masks with optional.
@@ -99,10 +98,9 @@ export default class ImagedObjectApi {
      * @param {String} imagedObjectId Unique Id of the desired object from the imaging Institution
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.optional Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
-     * @param {module:api/ImagedObjectApi~v1EditionsEditionIdImagedObjectsImagedObjectIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ImagedObjectDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImagedObjectDTO} and HTTP response
      */
-    v1EditionsEditionIdImagedObjectsImagedObjectIdGet(editionId, imagedObjectId, opts, callback) {
+    v1EditionsEditionIdImagedObjectsImagedObjectIdGetWithHttpInfo(editionId, imagedObjectId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'editionId' is set
@@ -133,25 +131,32 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/imaged-objects/{imagedObjectId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1ImagedObjectsImagedObjectIdGet operation.
-     * @callback module:api/ImagedObjectApi~v1ImagedObjectsImagedObjectIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/SimpleImageListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides information for the specified imaged object related to the specified edition, can include images and also  their masks with optional.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {String} imagedObjectId Unique Id of the desired object from the imaging Institution
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.optional Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImagedObjectDTO}
      */
+    v1EditionsEditionIdImagedObjectsImagedObjectIdGet(editionId, imagedObjectId, opts) {
+      return this.v1EditionsEditionIdImagedObjectsImagedObjectIdGetWithHttpInfo(editionId, imagedObjectId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides information for the specified imaged object.
      * @param {String} imagedObjectId Unique Id of the desired object from the imaging Institution
-     * @param {module:api/ImagedObjectApi~v1ImagedObjectsImagedObjectIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/SimpleImageListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/SimpleImageListDTO} and HTTP response
      */
-    v1ImagedObjectsImagedObjectIdGet(imagedObjectId, callback) {
+    v1ImagedObjectsImagedObjectIdGetWithHttpInfo(imagedObjectId) {
       let postBody = null;
       // verify the required parameter 'imagedObjectId' is set
       if (imagedObjectId === undefined || imagedObjectId === null) {
@@ -175,25 +180,29 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/imaged-objects/{imagedObjectId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1ImagedObjectsImagedObjectIdTextFragmentsGet operation.
-     * @callback module:api/ImagedObjectApi~v1ImagedObjectsImagedObjectIdTextFragmentsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ImagedObjectTextFragmentMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides information for the specified imaged object.
+     * @param {String} imagedObjectId Unique Id of the desired object from the imaging Institution
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SimpleImageListDTO}
      */
+    v1ImagedObjectsImagedObjectIdGet(imagedObjectId) {
+      return this.v1ImagedObjectsImagedObjectIdGetWithHttpInfo(imagedObjectId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a list of all text fragments that should correspond to the imaged object.
      * @param {String} imagedObjectId Id of the imaged object
-     * @param {module:api/ImagedObjectApi~v1ImagedObjectsImagedObjectIdTextFragmentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ImagedObjectTextFragmentMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImagedObjectTextFragmentMatchListDTO} and HTTP response
      */
-    v1ImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId, callback) {
+    v1ImagedObjectsImagedObjectIdTextFragmentsGetWithHttpInfo(imagedObjectId) {
       let postBody = null;
       // verify the required parameter 'imagedObjectId' is set
       if (imagedObjectId === undefined || imagedObjectId === null) {
@@ -217,24 +226,28 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/imaged-objects/{imagedObjectId}/text-fragments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1ImagedObjectsInstitutionsGet operation.
-     * @callback module:api/ImagedObjectApi~v1ImagedObjectsInstitutionsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ImageInstitutionListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a list of all text fragments that should correspond to the imaged object.
+     * @param {String} imagedObjectId Id of the imaged object
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImagedObjectTextFragmentMatchListDTO}
      */
+    v1ImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId) {
+      return this.v1ImagedObjectsImagedObjectIdTextFragmentsGetWithHttpInfo(imagedObjectId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a list of all institutional image providers.
-     * @param {module:api/ImagedObjectApi~v1ImagedObjectsInstitutionsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ImageInstitutionListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ImageInstitutionListDTO} and HTTP response
      */
-    v1ImagedObjectsInstitutionsGet(callback) {
+    v1ImagedObjectsInstitutionsGetWithHttpInfo() {
       let postBody = null;
 
       let pathParams = {
@@ -253,25 +266,28 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/imaged-objects/institutions', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1ImagedObjectsInstitutionsInstitutionNameGet operation.
-     * @callback module:api/ImagedObjectApi~v1ImagedObjectsInstitutionsInstitutionNameGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InstitutionalImageListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a list of all institutional image providers.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ImageInstitutionListDTO}
      */
+    v1ImagedObjectsInstitutionsGet() {
+      return this.v1ImagedObjectsInstitutionsGetWithHttpInfo()
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a list of all institutional image providers.
      * @param {String} institutionName 
-     * @param {module:api/ImagedObjectApi~v1ImagedObjectsInstitutionsInstitutionNameGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InstitutionalImageListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InstitutionalImageListDTO} and HTTP response
      */
-    v1ImagedObjectsInstitutionsInstitutionNameGet(institutionName, callback) {
+    v1ImagedObjectsInstitutionsInstitutionNameGetWithHttpInfo(institutionName) {
       let postBody = null;
       // verify the required parameter 'institutionName' is set
       if (institutionName === undefined || institutionName === null) {
@@ -295,8 +311,20 @@ export default class ImagedObjectApi {
       return this.apiClient.callApi(
         '/v1/imaged-objects/institutions/{institutionName}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Provides a list of all institutional image providers.
+     * @param {String} institutionName 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InstitutionalImageListDTO}
+     */
+    v1ImagedObjectsInstitutionsInstitutionNameGet(institutionName) {
+      return this.v1ImagedObjectsInstitutionsInstitutionNameGetWithHttpInfo(institutionName)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

@@ -1,4 +1,4 @@
-# SqeApi.CommentaryDTO
+# QumranicaApiConnector.CommentaryDTO
 
 ## Properties
 

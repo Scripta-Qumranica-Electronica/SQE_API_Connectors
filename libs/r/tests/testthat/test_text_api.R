@@ -9,8 +9,8 @@ test_that("V1EditionsEditionIdLinesLineIdGet", {
   # tests for V1EditionsEditionIdLinesLineIdGet
   # base path: http://localhost
   # Retrieves all signs and their data from the given line
-  # @param edition.id integer Id of the edition
-  # @param line.id integer Id of the line
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  line.id  Id of the line 
   # @return [LineTextDTO]
 
   # uncomment below to test the operation
@@ -21,7 +21,7 @@ test_that("V1EditionsEditionIdTextFragmentsGet", {
   # tests for V1EditionsEditionIdTextFragmentsGet
   # base path: http://localhost
   # Retrieves the ids of all Fragments of all fragments in the given edition of a scroll
-  # @param edition.id integer Id of the edition
+  # @param integer  edition.id  Id of the edition 
   # @return [TextFragmentDataListDTO]
 
   # uncomment below to test the operation
@@ -32,8 +32,8 @@ test_that("V1EditionsEditionIdTextFragmentsPost", {
   # tests for V1EditionsEditionIdTextFragmentsPost
   # base path: http://localhost
   # Creates a new text fragment in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param create.text.fragment.dto CreateTextFragmentDTO A JSON object with the details of the new text fragment to be created (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param CreateTextFragmentDTO  create.text.fragment.dto  A JSON object with the details of the new text fragment to be created  (optional)
   # @return [TextFragmentDataDTO]
 
   # uncomment below to test the operation
@@ -44,8 +44,8 @@ test_that("V1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet", {
   # tests for V1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet
   # base path: http://localhost
   # Retrieves the ids of all Artefacts in the given textFragmentName
-  # @param edition.id integer Id of the edition
-  # @param text.fragment.id integer Id of the text fragment
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  text.fragment.id  Id of the text fragment 
   # @return [ArtefactDataListDTO]
 
   # uncomment below to test the operation
@@ -56,8 +56,8 @@ test_that("V1EditionsEditionIdTextFragmentsTextFragmentIdGet", {
   # tests for V1EditionsEditionIdTextFragmentsTextFragmentIdGet
   # base path: http://localhost
   # Retrieves all signs and their data from the given textFragmentName
-  # @param edition.id integer Id of the edition
-  # @param text.fragment.id integer Id of the text fragment
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  text.fragment.id  Id of the text fragment 
   # @return [TextEditionDTO]
 
   # uncomment below to test the operation
@@ -68,8 +68,8 @@ test_that("V1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet", {
   # tests for V1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet
   # base path: http://localhost
   # Retrieves the ids of all lines in the given textFragmentName
-  # @param edition.id integer Id of the edition
-  # @param text.fragment.id integer Id of the text fragment
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  text.fragment.id  Id of the text fragment 
   # @return [LineDataListDTO]
 
   # uncomment below to test the operation
@@ -80,9 +80,9 @@ test_that("V1EditionsEditionIdTextFragmentsTextFragmentIdPut", {
   # tests for V1EditionsEditionIdTextFragmentsTextFragmentIdPut
   # base path: http://localhost
   # Updates the specified text fragment with the submitted properties
-  # @param edition.id integer Edition of the text fragment being updates
-  # @param text.fragment.id integer Id of the text fragment being updates
-  # @param update.text.fragment.dto UpdateTextFragmentDTO Details of the updated text fragment (optional)
+  # @param integer  edition.id  Edition of the text fragment being updates 
+  # @param integer  text.fragment.id  Id of the text fragment being updates 
+  # @param UpdateTextFragmentDTO  update.text.fragment.dto  Details of the updated text fragment  (optional)
   # @return [TextFragmentDataDTO]
 
   # uncomment below to test the operation

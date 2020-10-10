@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title SetInterpretationRoiDTO
-#'
 #' @description SetInterpretationRoiDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field artefactId  integer 
 #'
 #' @field signInterpretationId  integer 
@@ -27,6 +24,7 @@
 #'
 #' @field valuesSet  character 
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -40,9 +38,7 @@ SetInterpretationRoiDTO <- R6::R6Class(
     `stanceRotation` = NULL,
     `exceptional` = NULL,
     `valuesSet` = NULL,
-    initialize = function(
-        `artefactId`, `signInterpretationId`, `shape`, `translate`, `exceptional`, `valuesSet`, `stanceRotation`=NULL, ...
-    ) {
+    initialize = function(`artefactId`, `signInterpretationId`, `shape`, `translate`, `exceptional`, `valuesSet`, `stanceRotation`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`artefactId`)) {
         stopifnot(is.numeric(`artefactId`), length(`artefactId`) == 1)
@@ -129,7 +125,6 @@ SetInterpretationRoiDTO <- R6::R6Class(
       if (!is.null(SetInterpretationRoiDTOObject$`valuesSet`)) {
         self$`valuesSet` <- SetInterpretationRoiDTOObject$`valuesSet`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -199,4 +194,3 @@ SetInterpretationRoiDTO <- R6::R6Class(
     }
   )
 )
-

@@ -67,7 +67,7 @@ class BatchUpdateArtefactPlacementDTO(object):
 
 
         :param artefact_placements: The artefact_placements of this BatchUpdateArtefactPlacementDTO.  # noqa: E501
-        :type artefact_placements: list[UpdateArtefactPlacementDTO]
+        :type: list[UpdateArtefactPlacementDTO]
         """
         if self.local_vars_configuration.client_side_validation and artefact_placements is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_placements`, must not be `None`")  # noqa: E501

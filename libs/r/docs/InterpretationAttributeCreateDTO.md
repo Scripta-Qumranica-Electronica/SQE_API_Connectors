@@ -1,4 +1,4 @@
-# openapi::InterpretationAttributeCreateDTO
+# qumranica_api_connector::InterpretationAttributeCreateDTO
 
 ## Properties
 Name | Type | Description | Notes

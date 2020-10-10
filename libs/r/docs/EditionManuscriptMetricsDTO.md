@@ -1,4 +1,4 @@
-# openapi::EditionManuscriptMetricsDTO
+# qumranica_api_connector::EditionManuscriptMetricsDTO
 
 ## Properties
 Name | Type | Description | Notes

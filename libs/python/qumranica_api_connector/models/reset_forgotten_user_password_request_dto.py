@@ -71,7 +71,7 @@ class ResetForgottenUserPasswordRequestDTO(object):
 
 
         :param password: The password of this ResetForgottenUserPasswordRequestDTO.  # noqa: E501
-        :type password: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and password is None:  # noqa: E501
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
@@ -100,7 +100,7 @@ class ResetForgottenUserPasswordRequestDTO(object):
 
 
         :param token: The token of this ResetForgottenUserPasswordRequestDTO.  # noqa: E501
-        :type token: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and token is None:  # noqa: E501
             raise ValueError("Invalid value for `token`, must not be `None`")  # noqa: E501

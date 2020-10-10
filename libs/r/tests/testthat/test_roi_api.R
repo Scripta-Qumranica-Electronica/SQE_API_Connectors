@@ -9,8 +9,8 @@ test_that("V1EditionsEditionIdRoisBatchEditPost", {
   # tests for V1EditionsEditionIdRoisBatchEditPost
   # base path: http://localhost
   # Processes a series of create/update/delete ROI requests in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param batch.edit.roi.dto BatchEditRoiDTO A JSON object with all the roi edits to be performed (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param BatchEditRoiDTO  batch.edit.roi.dto  A JSON object with all the roi edits to be performed  (optional)
   # @return [BatchEditRoiResponseDTO]
 
   # uncomment below to test the operation
@@ -21,8 +21,8 @@ test_that("V1EditionsEditionIdRoisBatchPost", {
   # tests for V1EditionsEditionIdRoisBatchPost
   # base path: http://localhost
   # Creates new sign ROI&#39;s in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param set.interpretation.roi.dto.list SetInterpretationRoiDTOList A JSON object with an array of the new ROI's to be created (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param SetInterpretationRoiDTOList  set.interpretation.roi.dto.list  A JSON object with an array of the new ROI's to be created  (optional)
   # @return [InterpretationRoiDTOList]
 
   # uncomment below to test the operation
@@ -33,8 +33,8 @@ test_that("V1EditionsEditionIdRoisBatchPut", {
   # tests for V1EditionsEditionIdRoisBatchPut
   # base path: http://localhost
   # Update existing sign ROI&#39;s in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param update.interpretation.roi.dto.list UpdateInterpretationRoiDTOList A JSON object with an array of the updated ROI details (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param UpdateInterpretationRoiDTOList  update.interpretation.roi.dto.list  A JSON object with an array of the updated ROI details  (optional)
   # @return [UpdatedInterpretationRoiDTOList]
 
   # uncomment below to test the operation
@@ -45,8 +45,8 @@ test_that("V1EditionsEditionIdRoisPost", {
   # tests for V1EditionsEditionIdRoisPost
   # base path: http://localhost
   # Creates new sign ROI in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param set.interpretation.roi.dto SetInterpretationRoiDTO A JSON object with the new ROI to be created (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param SetInterpretationRoiDTO  set.interpretation.roi.dto  A JSON object with the new ROI to be created  (optional)
   # @return [InterpretationRoiDTO]
 
   # uncomment below to test the operation
@@ -57,8 +57,8 @@ test_that("V1EditionsEditionIdRoisRoiIdDelete", {
   # tests for V1EditionsEditionIdRoisRoiIdDelete
   # base path: http://localhost
   # Deletes a sign ROI from the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param roi.id integer Id of the ROI to be deleted
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  roi.id  Id of the ROI to be deleted 
   # @return [Void]
 
   # uncomment below to test the operation
@@ -69,8 +69,8 @@ test_that("V1EditionsEditionIdRoisRoiIdGet", {
   # tests for V1EditionsEditionIdRoisRoiIdGet
   # base path: http://localhost
   # Get the details for a ROI in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param roi.id integer A JSON object with the new ROI to be created
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  roi.id  A JSON object with the new ROI to be created 
   # @return [InterpretationRoiDTO]
 
   # uncomment below to test the operation
@@ -81,9 +81,9 @@ test_that("V1EditionsEditionIdRoisRoiIdPut", {
   # tests for V1EditionsEditionIdRoisRoiIdPut
   # base path: http://localhost
   # Update an existing sign ROI in the given edition of a scroll
-  # @param edition.id integer Id of the edition
-  # @param roi.id integer Id of the ROI to be updated
-  # @param set.interpretation.roi.dto SetInterpretationRoiDTO A JSON object with the updated ROI details (optional)
+  # @param integer  edition.id  Id of the edition 
+  # @param integer  roi.id  Id of the ROI to be updated 
+  # @param SetInterpretationRoiDTO  set.interpretation.roi.dto  A JSON object with the updated ROI details  (optional)
   # @return [UpdatedInterpretationRoiDTO]
 
   # uncomment below to test the operation

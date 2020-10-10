@@ -91,7 +91,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param token: The token of this DetailedUserTokenDTO.  # noqa: E501
-        :type token: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and token is None:  # noqa: E501
             raise ValueError("Invalid value for `token`, must not be `None`")  # noqa: E501
@@ -114,7 +114,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param forename: The forename of this DetailedUserTokenDTO.  # noqa: E501
-        :type forename: str
+        :type: str
         """
 
         self._forename = forename
@@ -135,7 +135,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param surname: The surname of this DetailedUserTokenDTO.  # noqa: E501
-        :type surname: str
+        :type: str
         """
 
         self._surname = surname
@@ -156,7 +156,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param organization: The organization of this DetailedUserTokenDTO.  # noqa: E501
-        :type organization: str
+        :type: str
         """
 
         self._organization = organization
@@ -177,7 +177,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param activated: The activated of this DetailedUserTokenDTO.  # noqa: E501
-        :type activated: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and activated is None:  # noqa: E501
             raise ValueError("Invalid value for `activated`, must not be `None`")  # noqa: E501
@@ -200,7 +200,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param user_id: The user_id of this DetailedUserTokenDTO.  # noqa: E501
-        :type user_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and user_id is None:  # noqa: E501
             raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
@@ -223,7 +223,7 @@ class DetailedUserTokenDTO(object):
 
 
         :param email: The email of this DetailedUserTokenDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501

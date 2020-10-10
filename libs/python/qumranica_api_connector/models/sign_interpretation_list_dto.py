@@ -67,7 +67,7 @@ class SignInterpretationListDTO(object):
 
 
         :param sign_interpretations: The sign_interpretations of this SignInterpretationListDTO.  # noqa: E501
-        :type sign_interpretations: list[SignInterpretationDTO]
+        :type: list[SignInterpretationDTO]
         """
 
         self._sign_interpretations = sign_interpretations

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ArtefactDataDTO model module.
  * @module model/ArtefactDataDTO
- * @version v1
+ * @version 0.7.0
  */
 class ArtefactDataDTO {
     /**

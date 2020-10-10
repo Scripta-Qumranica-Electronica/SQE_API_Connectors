@@ -18,7 +18,7 @@ import SideDesignation from './SideDesignation';
 /**
  * The ArtefactDTO model module.
  * @module model/ArtefactDTO
- * @version v1
+ * @version 0.7.0
  */
 class ArtefactDTO {
     /**

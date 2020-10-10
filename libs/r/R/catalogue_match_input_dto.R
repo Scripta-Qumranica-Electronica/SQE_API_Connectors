@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title CatalogueMatchInputDTO
-#'
 #' @description CatalogueMatchInputDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field catalogSide  \link{SideDesignation} [optional]
 #'
 #' @field imagedObjectId  character 
@@ -37,6 +34,7 @@
 #'
 #' @field confirmed  character [optional]
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -55,9 +53,7 @@ CatalogueMatchInputDTO <- R6::R6Class(
     `textFragmentId` = NULL,
     `editionId` = NULL,
     `confirmed` = NULL,
-    initialize = function(
-        `imagedObjectId`, `manuscriptId`, `editionName`, `editionVolume`, `editionLocation1`, `editionLocation2`, `editionSide`, `textFragmentId`, `editionId`, `catalogSide`=NULL, `comment`=NULL, `confirmed`=NULL, ...
-    ) {
+    initialize = function(`imagedObjectId`, `manuscriptId`, `editionName`, `editionVolume`, `editionLocation1`, `editionLocation2`, `editionSide`, `textFragmentId`, `editionId`, `catalogSide`=NULL, `comment`=NULL, `confirmed`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`imagedObjectId`)) {
         stopifnot(is.character(`imagedObjectId`), length(`imagedObjectId`) == 1)
@@ -202,7 +198,6 @@ CatalogueMatchInputDTO <- R6::R6Class(
       if (!is.null(CatalogueMatchInputDTOObject$`confirmed`)) {
         self$`confirmed` <- CatalogueMatchInputDTOObject$`confirmed`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -312,4 +307,3 @@ CatalogueMatchInputDTO <- R6::R6Class(
     }
   )
 )
-

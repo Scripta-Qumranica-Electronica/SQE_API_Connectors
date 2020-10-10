@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LineDataDTO model module.
  * @module model/LineDataDTO
- * @version v1
+ * @version 0.7.0
  */
 class LineDataDTO {
     /**

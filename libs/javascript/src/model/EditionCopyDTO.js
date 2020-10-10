@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EditionCopyDTO model module.
  * @module model/EditionCopyDTO
- * @version v1
+ * @version 0.7.0
  */
 class EditionCopyDTO {
     /**

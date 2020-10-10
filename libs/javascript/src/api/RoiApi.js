@@ -26,7 +26,7 @@ import UpdatedInterpretationRoiDTOList from '../model/UpdatedInterpretationRoiDT
 /**
 * Roi service.
 * @module api/RoiApi
-* @version v1
+* @version 0.7.0
 */
 export default class RoiApi {
 
@@ -42,23 +42,15 @@ export default class RoiApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisBatchEditPost operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisBatchEditPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BatchEditRoiResponseDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Processes a series of create/update/delete ROI requests in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Object} opts Optional parameters
      * @param {module:model/BatchEditRoiDTO} opts.batchEditRoiDTO A JSON object with all the roi edits to be performed
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisBatchEditPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BatchEditRoiResponseDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BatchEditRoiResponseDTO} and HTTP response
      */
-    v1EditionsEditionIdRoisBatchEditPost(editionId, opts, callback) {
+    v1EditionsEditionIdRoisBatchEditPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['batchEditRoiDTO'];
       // verify the required parameter 'editionId' is set
@@ -83,27 +75,33 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/batch-edit', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisBatchPost operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisBatchPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InterpretationRoiDTOList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Processes a series of create/update/delete ROI requests in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BatchEditRoiDTO} opts.batchEditRoiDTO A JSON object with all the roi edits to be performed
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BatchEditRoiResponseDTO}
      */
+    v1EditionsEditionIdRoisBatchEditPost(editionId, opts) {
+      return this.v1EditionsEditionIdRoisBatchEditPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates new sign ROI's in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Object} opts Optional parameters
      * @param {module:model/SetInterpretationRoiDTOList} opts.setInterpretationRoiDTOList A JSON object with an array of the new ROI's to be created
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisBatchPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InterpretationRoiDTOList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InterpretationRoiDTOList} and HTTP response
      */
-    v1EditionsEditionIdRoisBatchPost(editionId, opts, callback) {
+    v1EditionsEditionIdRoisBatchPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['setInterpretationRoiDTOList'];
       // verify the required parameter 'editionId' is set
@@ -128,27 +126,33 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/batch', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisBatchPut operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisBatchPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UpdatedInterpretationRoiDTOList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Creates new sign ROI's in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetInterpretationRoiDTOList} opts.setInterpretationRoiDTOList A JSON object with an array of the new ROI's to be created
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InterpretationRoiDTOList}
      */
+    v1EditionsEditionIdRoisBatchPost(editionId, opts) {
+      return this.v1EditionsEditionIdRoisBatchPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update existing sign ROI's in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateInterpretationRoiDTOList} opts.updateInterpretationRoiDTOList A JSON object with an array of the updated ROI details
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisBatchPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UpdatedInterpretationRoiDTOList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatedInterpretationRoiDTOList} and HTTP response
      */
-    v1EditionsEditionIdRoisBatchPut(editionId, opts, callback) {
+    v1EditionsEditionIdRoisBatchPutWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['updateInterpretationRoiDTOList'];
       // verify the required parameter 'editionId' is set
@@ -173,27 +177,33 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/batch', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisPost operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InterpretationRoiDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update existing sign ROI's in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateInterpretationRoiDTOList} opts.updateInterpretationRoiDTOList A JSON object with an array of the updated ROI details
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatedInterpretationRoiDTOList}
      */
+    v1EditionsEditionIdRoisBatchPut(editionId, opts) {
+      return this.v1EditionsEditionIdRoisBatchPutWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates new sign ROI in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Object} opts Optional parameters
      * @param {module:model/SetInterpretationRoiDTO} opts.setInterpretationRoiDTO A JSON object with the new ROI to be created
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InterpretationRoiDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InterpretationRoiDTO} and HTTP response
      */
-    v1EditionsEditionIdRoisPost(editionId, opts, callback) {
+    v1EditionsEditionIdRoisPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['setInterpretationRoiDTO'];
       // verify the required parameter 'editionId' is set
@@ -218,25 +228,32 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisRoiIdDelete operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisRoiIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Creates new sign ROI in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetInterpretationRoiDTO} opts.setInterpretationRoiDTO A JSON object with the new ROI to be created
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InterpretationRoiDTO}
      */
+    v1EditionsEditionIdRoisPost(editionId, opts) {
+      return this.v1EditionsEditionIdRoisPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Deletes a sign ROI from the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Number} roiId Id of the ROI to be deleted
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisRoiIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1EditionsEditionIdRoisRoiIdDelete(editionId, roiId, callback) {
+    v1EditionsEditionIdRoisRoiIdDeleteWithHttpInfo(editionId, roiId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -265,26 +282,31 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/{roiId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisRoiIdGet operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisRoiIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InterpretationRoiDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Deletes a sign ROI from the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Number} roiId Id of the ROI to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1EditionsEditionIdRoisRoiIdDelete(editionId, roiId) {
+      return this.v1EditionsEditionIdRoisRoiIdDeleteWithHttpInfo(editionId, roiId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get the details for a ROI in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Number} roiId A JSON object with the new ROI to be created
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisRoiIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InterpretationRoiDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InterpretationRoiDTO} and HTTP response
      */
-    v1EditionsEditionIdRoisRoiIdGet(editionId, roiId, callback) {
+    v1EditionsEditionIdRoisRoiIdGetWithHttpInfo(editionId, roiId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -313,17 +335,23 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/{roiId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdRoisRoiIdPut operation.
-     * @callback module:api/RoiApi~v1EditionsEditionIdRoisRoiIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UpdatedInterpretationRoiDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get the details for a ROI in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Number} roiId A JSON object with the new ROI to be created
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InterpretationRoiDTO}
      */
+    v1EditionsEditionIdRoisRoiIdGet(editionId, roiId) {
+      return this.v1EditionsEditionIdRoisRoiIdGetWithHttpInfo(editionId, roiId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update an existing sign ROI in the given edition of a scroll
@@ -331,10 +359,9 @@ export default class RoiApi {
      * @param {Number} roiId Id of the ROI to be updated
      * @param {Object} opts Optional parameters
      * @param {module:model/SetInterpretationRoiDTO} opts.setInterpretationRoiDTO A JSON object with the updated ROI details
-     * @param {module:api/RoiApi~v1EditionsEditionIdRoisRoiIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UpdatedInterpretationRoiDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UpdatedInterpretationRoiDTO} and HTTP response
      */
-    v1EditionsEditionIdRoisRoiIdPut(editionId, roiId, opts, callback) {
+    v1EditionsEditionIdRoisRoiIdPutWithHttpInfo(editionId, roiId, opts) {
       opts = opts || {};
       let postBody = opts['setInterpretationRoiDTO'];
       // verify the required parameter 'editionId' is set
@@ -364,8 +391,23 @@ export default class RoiApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/rois/{roiId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Update an existing sign ROI in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Number} roiId Id of the ROI to be updated
+     * @param {Object} opts Optional parameters
+     * @param {module:model/SetInterpretationRoiDTO} opts.setInterpretationRoiDTO A JSON object with the updated ROI details
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UpdatedInterpretationRoiDTO}
+     */
+    v1EditionsEditionIdRoisRoiIdPut(editionId, roiId, opts) {
+      return this.v1EditionsEditionIdRoisRoiIdPutWithHttpInfo(editionId, roiId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

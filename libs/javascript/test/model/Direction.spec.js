@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('Direction', function() {
     it('should create an instance of Direction', function() {
       // uncomment below and update the code to test Direction
-      //var instane = new SqeApi.Direction();
-      //expect(instance).to.be.a(SqeApi.Direction);
+      //var instane = new QumranicaApiConnector.Direction();
+      //expect(instance).to.be.a(QumranicaApiConnector.Direction);
     });
 
   });

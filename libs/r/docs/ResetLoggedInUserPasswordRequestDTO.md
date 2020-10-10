@@ -1,4 +1,4 @@
-# openapi::ResetLoggedInUserPasswordRequestDTO
+# qumranica_api_connector::ResetLoggedInUserPasswordRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

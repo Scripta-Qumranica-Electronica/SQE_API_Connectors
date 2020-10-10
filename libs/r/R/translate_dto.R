@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title TranslateDTO
-#'
 #' @description TranslateDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field x  integer 
 #'
 #' @field y  integer 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ TranslateDTO <- R6::R6Class(
   public = list(
     `x` = NULL,
     `y` = NULL,
-    initialize = function(
-        `x`, `y`, ...
-    ) {
+    initialize = function(`x`, `y`, ...){
       local.optional.var <- list(...)
       if (!missing(`x`)) {
         stopifnot(is.numeric(`x`), length(`x`) == 1)
@@ -59,7 +55,6 @@ TranslateDTO <- R6::R6Class(
       if (!is.null(TranslateDTOObject$`y`)) {
         self$`y` <- TranslateDTOObject$`y`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ TranslateDTO <- R6::R6Class(
     }
   )
 )
-

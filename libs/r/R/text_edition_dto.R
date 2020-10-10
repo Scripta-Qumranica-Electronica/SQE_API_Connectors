@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title TextEditionDTO
-#'
 #' @description TextEditionDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field manuscriptId  integer 
 #'
 #' @field editionName  character 
@@ -24,6 +21,7 @@
 #' @field editors  named list( \link{EditorDTO} ) 
 #'
 #' @field textFragments  list( \link{TextFragmentDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,9 +35,7 @@ TextEditionDTO <- R6::R6Class(
     `licence` = NULL,
     `editors` = NULL,
     `textFragments` = NULL,
-    initialize = function(
-        `manuscriptId`, `editionName`, `editorId`, `licence`, `editors`, `textFragments`, ...
-    ) {
+    initialize = function(`manuscriptId`, `editionName`, `editorId`, `licence`, `editors`, `textFragments`, ...){
       local.optional.var <- list(...)
       if (!missing(`manuscriptId`)) {
         stopifnot(is.numeric(`manuscriptId`), length(`manuscriptId`) == 1)
@@ -112,12 +108,11 @@ TextEditionDTO <- R6::R6Class(
         self$`licence` <- TextEditionDTOObject$`licence`
       }
       if (!is.null(TextEditionDTOObject$`editors`)) {
-        self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("openapi"))
+        self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(TextEditionDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("openapi"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -173,10 +168,9 @@ TextEditionDTO <- R6::R6Class(
       self$`editionName` <- TextEditionDTOObject$`editionName`
       self$`editorId` <- TextEditionDTOObject$`editorId`
       self$`licence` <- TextEditionDTOObject$`licence`
-      self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("openapi"))
-      self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("openapi"))
+      self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

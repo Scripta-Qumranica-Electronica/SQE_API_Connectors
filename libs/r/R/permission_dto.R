@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title PermissionDTO
-#'
 #' @description PermissionDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field mayRead  character 
 #'
 #' @field mayWrite  character 
 #'
 #' @field isAdmin  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ PermissionDTO <- R6::R6Class(
     `mayRead` = NULL,
     `mayWrite` = NULL,
     `isAdmin` = NULL,
-    initialize = function(
-        `mayRead`, `mayWrite`, `isAdmin`, ...
-    ) {
+    initialize = function(`mayRead`, `mayWrite`, `isAdmin`, ...){
       local.optional.var <- list(...)
       if (!missing(`mayRead`)) {
         self$`mayRead` <- `mayRead`
@@ -70,7 +66,6 @@ PermissionDTO <- R6::R6Class(
       if (!is.null(PermissionDTOObject$`isAdmin`)) {
         self$`isAdmin` <- PermissionDTOObject$`isAdmin`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -108,4 +103,3 @@ PermissionDTO <- R6::R6Class(
     }
   )
 )
-

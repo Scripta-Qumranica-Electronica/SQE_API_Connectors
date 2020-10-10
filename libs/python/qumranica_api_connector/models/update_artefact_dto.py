@@ -79,7 +79,7 @@ class UpdateArtefactDTO(object):
 
 
         :param mask: The mask of this UpdateArtefactDTO.  # noqa: E501
-        :type mask: str
+        :type: str
         """
 
         self._mask = mask
@@ -100,7 +100,7 @@ class UpdateArtefactDTO(object):
 
 
         :param placement: The placement of this UpdateArtefactDTO.  # noqa: E501
-        :type placement: PlacementDTO
+        :type: PlacementDTO
         """
 
         self._placement = placement
@@ -121,7 +121,7 @@ class UpdateArtefactDTO(object):
 
 
         :param name: The name of this UpdateArtefactDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) > 255):
@@ -148,7 +148,7 @@ class UpdateArtefactDTO(object):
 
 
         :param status_message: The status_message of this UpdateArtefactDTO.  # noqa: E501
-        :type status_message: str
+        :type: str
         """
 
         self._status_message = status_message

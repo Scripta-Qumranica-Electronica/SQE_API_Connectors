@@ -79,7 +79,7 @@ class EditionUpdateRequestDTO(object):
 
 
         :param metrics: The metrics of this EditionUpdateRequestDTO.  # noqa: E501
-        :type metrics: UpdateEditionManuscriptMetricsDTO
+        :type: UpdateEditionManuscriptMetricsDTO
         """
 
         self._metrics = metrics
@@ -100,7 +100,7 @@ class EditionUpdateRequestDTO(object):
 
 
         :param name: The name of this EditionUpdateRequestDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) > 255):
@@ -127,7 +127,7 @@ class EditionUpdateRequestDTO(object):
 
 
         :param copyright_holder: The copyright_holder of this EditionUpdateRequestDTO.  # noqa: E501
-        :type copyright_holder: str
+        :type: str
         """
 
         self._copyright_holder = copyright_holder
@@ -148,7 +148,7 @@ class EditionUpdateRequestDTO(object):
 
 
         :param collaborators: The collaborators of this EditionUpdateRequestDTO.  # noqa: E501
-        :type collaborators: str
+        :type: str
         """
 
         self._collaborators = collaborators

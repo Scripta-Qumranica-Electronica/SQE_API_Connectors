@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title AdminEditorRequestDTO
-#'
 #' @description AdminEditorRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editorName  character [optional]
 #'
 #' @field editorEmail  character 
@@ -31,6 +28,7 @@
 #'
 #' @field isAdmin  character 
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -46,9 +44,7 @@ AdminEditorRequestDTO <- R6::R6Class(
     `mayRead` = NULL,
     `mayWrite` = NULL,
     `isAdmin` = NULL,
-    initialize = function(
-        `editorEmail`, `editionId`, `editionName`, `date`, `mayLock`, `mayRead`, `mayWrite`, `isAdmin`, `editorName`=NULL, ...
-    ) {
+    initialize = function(`editorEmail`, `editionId`, `editionName`, `date`, `mayLock`, `mayRead`, `mayWrite`, `isAdmin`, `editorName`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`editorEmail`)) {
         stopifnot(is.character(`editorEmail`), length(`editorEmail`) == 1)
@@ -153,7 +149,6 @@ AdminEditorRequestDTO <- R6::R6Class(
       if (!is.null(AdminEditorRequestDTOObject$`isAdmin`)) {
         self$`isAdmin` <- AdminEditorRequestDTOObject$`isAdmin`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -239,4 +234,3 @@ AdminEditorRequestDTO <- R6::R6Class(
     }
   )
 )
-

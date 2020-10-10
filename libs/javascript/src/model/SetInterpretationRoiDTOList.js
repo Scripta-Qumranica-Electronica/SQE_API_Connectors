@@ -17,7 +17,7 @@ import SetInterpretationRoiDTO from './SetInterpretationRoiDTO';
 /**
  * The SetInterpretationRoiDTOList model module.
  * @module model/SetInterpretationRoiDTOList
- * @version v1
+ * @version 0.7.0
  */
 class SetInterpretationRoiDTOList {
     /**

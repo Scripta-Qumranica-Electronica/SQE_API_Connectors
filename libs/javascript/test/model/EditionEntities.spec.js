@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('EditionEntities', function() {
     it('should create an instance of EditionEntities', function() {
       // uncomment below and update the code to test EditionEntities
-      //var instane = new SqeApi.EditionEntities();
-      //expect(instance).to.be.a(SqeApi.EditionEntities);
+      //var instane = new QumranicaApiConnector.EditionEntities();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionEntities);
     });
 
   });

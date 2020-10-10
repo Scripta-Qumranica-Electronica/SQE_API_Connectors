@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UnactivatedEmailUpdateRequestDTO();
+    instance = new QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('UnactivatedEmailUpdateRequestDTO', function() {
     it('should create an instance of UnactivatedEmailUpdateRequestDTO', function() {
       // uncomment below and update the code to test UnactivatedEmailUpdateRequestDTO
-      //var instane = new SqeApi.UnactivatedEmailUpdateRequestDTO();
-      //expect(instance).to.be.a(SqeApi.UnactivatedEmailUpdateRequestDTO);
+      //var instane = new QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO);
     });
 
     it('should have the property newEmail (base name: "newEmail")', function() {
       // uncomment below and update the code to test the property newEmail
-      //var instane = new SqeApi.UnactivatedEmailUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.UnactivatedEmailUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO();
       //expect(instance).to.be();
     });
 

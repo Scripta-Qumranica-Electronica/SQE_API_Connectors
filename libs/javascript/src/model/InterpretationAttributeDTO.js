@@ -17,7 +17,7 @@ import CommentaryDTO from './CommentaryDTO';
 /**
  * The InterpretationAttributeDTO model module.
  * @module model/InterpretationAttributeDTO
- * @version v1
+ * @version 0.7.0
  */
 class InterpretationAttributeDTO {
     /**

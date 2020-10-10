@@ -83,7 +83,7 @@ class ImagedObjectTextFragmentMatchDTO(object):
 
 
         :param edition_id: The edition_id of this ImagedObjectTextFragmentMatchDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -106,7 +106,7 @@ class ImagedObjectTextFragmentMatchDTO(object):
 
 
         :param manuscript_name: The manuscript_name of this ImagedObjectTextFragmentMatchDTO.  # noqa: E501
-        :type manuscript_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and manuscript_name is None:  # noqa: E501
             raise ValueError("Invalid value for `manuscript_name`, must not be `None`")  # noqa: E501
@@ -129,7 +129,7 @@ class ImagedObjectTextFragmentMatchDTO(object):
 
 
         :param text_fragment_id: The text_fragment_id of this ImagedObjectTextFragmentMatchDTO.  # noqa: E501
-        :type text_fragment_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_id is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_id`, must not be `None`")  # noqa: E501
@@ -152,7 +152,7 @@ class ImagedObjectTextFragmentMatchDTO(object):
 
 
         :param text_fragment_name: The text_fragment_name of this ImagedObjectTextFragmentMatchDTO.  # noqa: E501
-        :type text_fragment_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_name is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_name`, must not be `None`")  # noqa: E501
@@ -175,7 +175,7 @@ class ImagedObjectTextFragmentMatchDTO(object):
 
 
         :param side: The side of this ImagedObjectTextFragmentMatchDTO.  # noqa: E501
-        :type side: SideDesignation
+        :type: SideDesignation
         """
         if self.local_vars_configuration.client_side_validation and side is None:  # noqa: E501
             raise ValueError("Invalid value for `side`, must not be `None`")  # noqa: E501

@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ArtefactTextFragmentMatchListDTO
-#'
 #' @description ArtefactTextFragmentMatchListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field textFragments  list( \link{ArtefactTextFragmentMatchDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ArtefactTextFragmentMatchListDTO <- R6::R6Class(
   'ArtefactTextFragmentMatchListDTO',
   public = list(
     `textFragments` = NULL,
-    initialize = function(
-        `textFragments`, ...
-    ) {
+    initialize = function(`textFragments`, ...){
       local.optional.var <- list(...)
       if (!missing(`textFragments`)) {
         stopifnot(is.vector(`textFragments`), length(`textFragments`) != 0)
@@ -44,9 +40,8 @@ ArtefactTextFragmentMatchListDTO <- R6::R6Class(
     fromJSON = function(ArtefactTextFragmentMatchListDTOJson) {
       ArtefactTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ArtefactTextFragmentMatchListDTOJson)
       if (!is.null(ArtefactTextFragmentMatchListDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("openapi"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ ArtefactTextFragmentMatchListDTO <- R6::R6Class(
     },
     fromJSONString = function(ArtefactTextFragmentMatchListDTOJson) {
       ArtefactTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ArtefactTextFragmentMatchListDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("openapi"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

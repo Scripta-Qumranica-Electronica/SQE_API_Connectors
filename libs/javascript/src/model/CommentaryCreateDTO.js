@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CommentaryCreateDTO model module.
  * @module model/CommentaryCreateDTO
- * @version v1
+ * @version 0.7.0
  */
 class CommentaryCreateDTO {
     /**

@@ -1,4 +1,4 @@
-# openapi::ImageStackDTO
+# qumranica_api_connector::ImageStackDTO
 
 ## Properties
 Name | Type | Description | Notes

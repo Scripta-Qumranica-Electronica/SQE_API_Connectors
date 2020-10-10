@@ -71,7 +71,7 @@ class UserDTO(object):
 
 
         :param user_id: The user_id of this UserDTO.  # noqa: E501
-        :type user_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and user_id is None:  # noqa: E501
             raise ValueError("Invalid value for `user_id`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class UserDTO(object):
 
 
         :param email: The email of this UserDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501

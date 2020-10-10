@@ -17,7 +17,7 @@ import ArtefactGroupDTO from './ArtefactGroupDTO';
 /**
  * The ArtefactGroupListDTO model module.
  * @module model/ArtefactGroupListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ArtefactGroupListDTO {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The WktPolygonDTO model module.
  * @module model/WktPolygonDTO
- * @version v1
+ * @version 0.7.0
  */
 class WktPolygonDTO {
     /**

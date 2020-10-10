@@ -1,4 +1,4 @@
-# openapi::SetInterpretationRoiDTO
+# qumranica_api_connector::SetInterpretationRoiDTO
 
 ## Properties
 Name | Type | Description | Notes

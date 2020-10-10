@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ScriptTextFragmentDTO();
+    instance = new QumranicaApiConnector.ScriptTextFragmentDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ScriptTextFragmentDTO', function() {
     it('should create an instance of ScriptTextFragmentDTO', function() {
       // uncomment below and update the code to test ScriptTextFragmentDTO
-      //var instane = new SqeApi.ScriptTextFragmentDTO();
-      //expect(instance).to.be.a(SqeApi.ScriptTextFragmentDTO);
+      //var instane = new QumranicaApiConnector.ScriptTextFragmentDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ScriptTextFragmentDTO);
     });
 
     it('should have the property textFragmentName (base name: "textFragmentName")', function() {
       // uncomment below and update the code to test the property textFragmentName
-      //var instane = new SqeApi.ScriptTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.ScriptTextFragmentDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property textFragmentId (base name: "textFragmentId")', function() {
       // uncomment below and update the code to test the property textFragmentId
-      //var instane = new SqeApi.ScriptTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.ScriptTextFragmentDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lines (base name: "lines")', function() {
       // uncomment below and update the code to test the property lines
-      //var instane = new SqeApi.ScriptTextFragmentDTO();
+      //var instane = new QumranicaApiConnector.ScriptTextFragmentDTO();
       //expect(instance).to.be();
     });
 

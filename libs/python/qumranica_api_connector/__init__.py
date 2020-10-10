@@ -34,7 +34,6 @@ from qumranica_api_connector.exceptions import OpenApiException
 from qumranica_api_connector.exceptions import ApiTypeError
 from qumranica_api_connector.exceptions import ApiValueError
 from qumranica_api_connector.exceptions import ApiKeyError
-from qumranica_api_connector.exceptions import ApiAttributeError
 from qumranica_api_connector.exceptions import ApiException
 # import models into sdk package
 from qumranica_api_connector.models.account_activation_request_dto import AccountActivationRequestDTO

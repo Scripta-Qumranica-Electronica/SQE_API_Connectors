@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditionUpdateRequestDTO();
+    instance = new QumranicaApiConnector.EditionUpdateRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('EditionUpdateRequestDTO', function() {
     it('should create an instance of EditionUpdateRequestDTO', function() {
       // uncomment below and update the code to test EditionUpdateRequestDTO
-      //var instane = new SqeApi.EditionUpdateRequestDTO();
-      //expect(instance).to.be.a(SqeApi.EditionUpdateRequestDTO);
+      //var instane = new QumranicaApiConnector.EditionUpdateRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionUpdateRequestDTO);
     });
 
     it('should have the property metrics (base name: "metrics")', function() {
       // uncomment below and update the code to test the property metrics
-      //var instane = new SqeApi.EditionUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.EditionUpdateRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.EditionUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.EditionUpdateRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property copyrightHolder (base name: "copyrightHolder")', function() {
       // uncomment below and update the code to test the property copyrightHolder
-      //var instane = new SqeApi.EditionUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.EditionUpdateRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property collaborators (base name: "collaborators")', function() {
       // uncomment below and update the code to test the property collaborators
-      //var instane = new SqeApi.EditionUpdateRequestDTO();
+      //var instane = new QumranicaApiConnector.EditionUpdateRequestDTO();
       //expect(instance).to.be();
     });
 

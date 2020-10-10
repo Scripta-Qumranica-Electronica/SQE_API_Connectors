@@ -87,7 +87,7 @@ class TextEditionDTO(object):
 
 
         :param manuscript_id: The manuscript_id of this TextEditionDTO.  # noqa: E501
-        :type manuscript_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and manuscript_id is None:  # noqa: E501
             raise ValueError("Invalid value for `manuscript_id`, must not be `None`")  # noqa: E501
@@ -110,7 +110,7 @@ class TextEditionDTO(object):
 
 
         :param edition_name: The edition_name of this TextEditionDTO.  # noqa: E501
-        :type edition_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_name is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_name`, must not be `None`")  # noqa: E501
@@ -133,7 +133,7 @@ class TextEditionDTO(object):
 
 
         :param editor_id: The editor_id of this TextEditionDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -156,7 +156,7 @@ class TextEditionDTO(object):
 
 
         :param licence: The licence of this TextEditionDTO.  # noqa: E501
-        :type licence: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and licence is None:  # noqa: E501
             raise ValueError("Invalid value for `licence`, must not be `None`")  # noqa: E501
@@ -179,7 +179,7 @@ class TextEditionDTO(object):
 
 
         :param editors: The editors of this TextEditionDTO.  # noqa: E501
-        :type editors: dict(str, EditorDTO)
+        :type: dict(str, EditorDTO)
         """
         if self.local_vars_configuration.client_side_validation and editors is None:  # noqa: E501
             raise ValueError("Invalid value for `editors`, must not be `None`")  # noqa: E501
@@ -202,7 +202,7 @@ class TextEditionDTO(object):
 
 
         :param text_fragments: The text_fragments of this TextEditionDTO.  # noqa: E501
-        :type text_fragments: list[TextFragmentDTO]
+        :type: list[TextFragmentDTO]
         """
         if self.local_vars_configuration.client_side_validation and text_fragments is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragments`, must not be `None`")  # noqa: E501

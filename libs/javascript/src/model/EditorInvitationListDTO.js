@@ -17,7 +17,7 @@ import EditorInvitationDTO from './EditorInvitationDTO';
 /**
  * The EditorInvitationListDTO model module.
  * @module model/EditorInvitationListDTO
- * @version v1
+ * @version 0.7.0
  */
 class EditorInvitationListDTO {
     /**

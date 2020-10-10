@@ -41,24 +41,20 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_admin_share_requests_get(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: AdminEditorRequestListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: AdminEditorRequestListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_admin_share_requests_get_with_http_info(**kwargs)  # noqa: E501
@@ -68,31 +64,22 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_admin_share_requests_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(AdminEditorRequestListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(AdminEditorRequestListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -104,8 +91,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -136,10 +122,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "AdminEditorRequestListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/admin-share-requests', 'GET',
@@ -149,40 +131,34 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='AdminEditorRequestListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_confirm_editorship_token_post(self, token, **kwargs):  # noqa: E501
         """Confirm addition of an editor to the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_confirm_editorship_token_post(token, async_req=True)
         >>> result = thread.get()
 
-        :param token: JWT for verifying the request confirmation (required)
-        :type token: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str token: JWT for verifying the request confirmation (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: DetailedEditorRightsDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: DetailedEditorRightsDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_confirm_editorship_token_post_with_http_info(token, **kwargs)  # noqa: E501
@@ -192,33 +168,23 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_confirm_editorship_token_post_with_http_info(token, async_req=True)
         >>> result = thread.get()
 
-        :param token: JWT for verifying the request confirmation (required)
-        :type token: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param str token: JWT for verifying the request confirmation (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(DetailedEditorRightsDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(DetailedEditorRightsDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -231,8 +197,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -269,10 +234,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "DetailedEditorRightsDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/confirm-editorship/{token}', 'POST',
@@ -282,42 +243,35 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='DetailedEditorRightsDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_add_editor_request_post(self, edition_id, **kwargs):  # noqa: E501
         """Adds an editor to the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_add_editor_request_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param invite_editor_dto: JSON object with the attributes of the new editor
-        :type invite_editor_dto: InviteEditorDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param InviteEditorDTO invite_editor_dto: JSON object with the attributes of the new editor
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_add_editor_request_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -327,35 +281,24 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_add_editor_request_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param invite_editor_dto: JSON object with the attributes of the new editor
-        :type invite_editor_dto: InviteEditorDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param InviteEditorDTO invite_editor_dto: JSON object with the attributes of the new editor
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -369,8 +312,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -409,8 +351,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/add-editor-request', 'POST',
@@ -420,44 +360,36 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_delete(self, edition_id, **kwargs):  # noqa: E501
         """Provides details about the specified edition and all accessible alternate editions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_delete(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param optional: Optional parameters: 'deleteForAllEditors'
-        :type optional: list[str]
-        :param token: token required when using optional 'deleteForAllEditors'
-        :type token: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param list[str] optional: Optional parameters: 'deleteForAllEditors'
+        :param str token: token required when using optional 'deleteForAllEditors'
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: DeleteTokenDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: DeleteTokenDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_delete_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -467,37 +399,25 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_delete_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param optional: Optional parameters: 'deleteForAllEditors'
-        :type optional: list[str]
-        :param token: token required when using optional 'deleteForAllEditors'
-        :type token: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param list[str] optional: Optional parameters: 'deleteForAllEditors'
+        :param str token: token required when using optional 'deleteForAllEditors'
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(DeleteTokenDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(DeleteTokenDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -512,8 +432,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -555,10 +474,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "DeleteTokenDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}', 'DELETE',
@@ -568,44 +483,36 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='DeleteTokenDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_editors_editor_email_id_put(self, edition_id, editor_email_id, **kwargs):  # noqa: E501
         """Changes the rights for an editor of the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_editors_editor_email_id_put(edition_id, editor_email_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param editor_email_id: Email address of the editor whose permissions are being changed (required)
-        :type editor_email_id: str
-        :param update_editor_rights_dto: JSON object with the attributes of the new editor
-        :type update_editor_rights_dto: UpdateEditorRightsDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param str editor_email_id: Email address of the editor whose permissions are being changed (required)
+        :param UpdateEditorRightsDTO update_editor_rights_dto: JSON object with the attributes of the new editor
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: DetailedEditorRightsDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: DetailedEditorRightsDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_editors_editor_email_id_put_with_http_info(edition_id, editor_email_id, **kwargs)  # noqa: E501
@@ -615,37 +522,25 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_editors_editor_email_id_put_with_http_info(edition_id, editor_email_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param editor_email_id: Email address of the editor whose permissions are being changed (required)
-        :type editor_email_id: str
-        :param update_editor_rights_dto: JSON object with the attributes of the new editor
-        :type update_editor_rights_dto: UpdateEditorRightsDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param str editor_email_id: Email address of the editor whose permissions are being changed (required)
+        :param UpdateEditorRightsDTO update_editor_rights_dto: JSON object with the attributes of the new editor
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(DetailedEditorRightsDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(DetailedEditorRightsDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -660,8 +555,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -710,10 +604,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "DetailedEditorRightsDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/editors/{editorEmailId}', 'PUT',
@@ -723,40 +613,34 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='DetailedEditorRightsDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_get(self, edition_id, **kwargs):  # noqa: E501
         """Provides details about the specified edition and all accessible alternate editions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionGroupDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionGroupDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -766,33 +650,23 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionGroupDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionGroupDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -805,8 +679,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -843,10 +716,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionGroupDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}', 'GET',
@@ -856,42 +725,35 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionGroupDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates a copy of the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param edition_copy_dto: JSON object with the attributes to be changed in the copied edition
-        :type edition_copy_dto: EditionCopyDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param EditionCopyDTO edition_copy_dto: JSON object with the attributes to be changed in the copied edition
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -901,35 +763,24 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param edition_copy_dto: JSON object with the attributes to be changed in the copied edition
-        :type edition_copy_dto: EditionCopyDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param EditionCopyDTO edition_copy_dto: JSON object with the attributes to be changed in the copied edition
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -943,8 +794,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -987,10 +837,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}', 'POST',
@@ -1000,42 +846,35 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_put(self, edition_id, **kwargs):  # noqa: E501
         """Updates data for the specified edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_put(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param edition_update_request_dto: JSON object with the attributes to be updated
-        :type edition_update_request_dto: EditionUpdateRequestDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param EditionUpdateRequestDTO edition_update_request_dto: JSON object with the attributes to be updated
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_put_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1045,35 +884,24 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_put_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param edition_update_request_dto: JSON object with the attributes to be updated
-        :type edition_update_request_dto: EditionUpdateRequestDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
+        :param EditionUpdateRequestDTO edition_update_request_dto: JSON object with the attributes to be updated
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1087,8 +915,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1131,10 +958,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}', 'PUT',
@@ -1144,40 +967,34 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_script_collection_get(self, edition_id, **kwargs):  # noqa: E501
         """Provides spatial data for all letters in the edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_script_collection_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionScriptCollectionDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionScriptCollectionDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_script_collection_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1187,33 +1004,23 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_script_collection_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionScriptCollectionDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionScriptCollectionDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1226,8 +1033,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1264,10 +1070,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionScriptCollectionDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/script-collection', 'GET',
@@ -1277,40 +1079,34 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionScriptCollectionDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_script_lines_get(self, edition_id, **kwargs):  # noqa: E501
         """Provides spatial data for all letters in the edition organized and oriented  by lines.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_script_lines_get(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionScriptLinesDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionScriptLinesDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_script_lines_get_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -1320,33 +1116,23 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_script_lines_get_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Unique Id of the desired edition (required)
-        :type edition_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Unique Id of the desired edition (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionScriptLinesDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionScriptLinesDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1359,8 +1145,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1397,10 +1182,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionScriptLinesDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/script-lines', 'GET',
@@ -1410,38 +1191,33 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionScriptLinesDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_editor_invitations_get(self, **kwargs):  # noqa: E501
         """Get a list of invitations issued to the current user to become an editor of a shared edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_editor_invitations_get(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditorInvitationListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditorInvitationListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_editor_invitations_get_with_http_info(**kwargs)  # noqa: E501
@@ -1451,31 +1227,22 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_editor_invitations_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditorInvitationListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditorInvitationListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1487,8 +1254,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1519,10 +1285,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditorInvitationListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/editor-invitations', 'GET',
@@ -1532,38 +1294,33 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditorInvitationListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_get(self, **kwargs):  # noqa: E501
         """Provides a listing of all editions accessible to the current user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_get(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: EditionListDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: EditionListDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_get_with_http_info(**kwargs)  # noqa: E501
@@ -1573,31 +1330,22 @@ class EditionApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(EditionListDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(EditionListDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1609,8 +1357,7 @@ class EditionApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1641,10 +1388,6 @@ class EditionApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "EditionListDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions', 'GET',
@@ -1654,11 +1397,10 @@ class EditionApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='EditionListDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

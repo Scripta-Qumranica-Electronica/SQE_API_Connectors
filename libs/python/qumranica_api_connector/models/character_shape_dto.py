@@ -88,7 +88,7 @@ class CharacterShapeDTO(object):
 
 
         :param id: The id of this CharacterShapeDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -111,7 +111,7 @@ class CharacterShapeDTO(object):
 
 
         :param character: The character of this CharacterShapeDTO.  # noqa: E501
-        :type character: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and character is None:  # noqa: E501
             raise ValueError("Invalid value for `character`, must not be `None`")  # noqa: E501
@@ -134,7 +134,7 @@ class CharacterShapeDTO(object):
 
 
         :param polygon: The polygon of this CharacterShapeDTO.  # noqa: E501
-        :type polygon: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and polygon is None:  # noqa: E501
             raise ValueError("Invalid value for `polygon`, must not be `None`")  # noqa: E501
@@ -157,7 +157,7 @@ class CharacterShapeDTO(object):
 
 
         :param image_url: The image_url of this CharacterShapeDTO.  # noqa: E501
-        :type image_url: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and image_url is None:  # noqa: E501
             raise ValueError("Invalid value for `image_url`, must not be `None`")  # noqa: E501
@@ -180,7 +180,7 @@ class CharacterShapeDTO(object):
 
 
         :param rotation: The rotation of this CharacterShapeDTO.  # noqa: E501
-        :type rotation: float
+        :type: float
         """
 
         self._rotation = rotation
@@ -201,7 +201,7 @@ class CharacterShapeDTO(object):
 
 
         :param attributes: The attributes of this CharacterShapeDTO.  # noqa: E501
-        :type attributes: list[str]
+        :type: list[str]
         """
         if self.local_vars_configuration.client_side_validation and attributes is None:  # noqa: E501
             raise ValueError("Invalid value for `attributes`, must not be `None`")  # noqa: E501

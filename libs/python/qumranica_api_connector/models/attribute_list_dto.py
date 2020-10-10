@@ -67,7 +67,7 @@ class AttributeListDTO(object):
 
 
         :param attributes: The attributes of this AttributeListDTO.  # noqa: E501
-        :type attributes: list[AttributeDTO]
+        :type: list[AttributeDTO]
         """
         if self.local_vars_configuration.client_side_validation and attributes is None:  # noqa: E501
             raise ValueError("Invalid value for `attributes`, must not be `None`")  # noqa: E501

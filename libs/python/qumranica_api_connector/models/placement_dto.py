@@ -79,7 +79,7 @@ class PlacementDTO(object):
 
 
         :param scale: The scale of this PlacementDTO.  # noqa: E501
-        :type scale: float
+        :type: float
         """
         if self.local_vars_configuration.client_side_validation and scale is None:  # noqa: E501
             raise ValueError("Invalid value for `scale`, must not be `None`")  # noqa: E501
@@ -108,7 +108,7 @@ class PlacementDTO(object):
 
 
         :param rotate: The rotate of this PlacementDTO.  # noqa: E501
-        :type rotate: float
+        :type: float
         """
         if self.local_vars_configuration.client_side_validation and rotate is None:  # noqa: E501
             raise ValueError("Invalid value for `rotate`, must not be `None`")  # noqa: E501
@@ -137,7 +137,7 @@ class PlacementDTO(object):
 
 
         :param z_index: The z_index of this PlacementDTO.  # noqa: E501
-        :type z_index: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and z_index is None:  # noqa: E501
             raise ValueError("Invalid value for `z_index`, must not be `None`")  # noqa: E501
@@ -160,7 +160,7 @@ class PlacementDTO(object):
 
 
         :param translate: The translate of this PlacementDTO.  # noqa: E501
-        :type translate: TranslateDTO
+        :type: TranslateDTO
         """
 
         self._translate = translate

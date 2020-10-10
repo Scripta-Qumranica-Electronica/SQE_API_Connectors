@@ -79,7 +79,7 @@ class ImagedObjectDTO(object):
 
 
         :param id: The id of this ImagedObjectDTO.  # noqa: E501
-        :type id: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class ImagedObjectDTO(object):
 
 
         :param recto: The recto of this ImagedObjectDTO.  # noqa: E501
-        :type recto: ImageStackDTO
+        :type: ImageStackDTO
         """
         if self.local_vars_configuration.client_side_validation and recto is None:  # noqa: E501
             raise ValueError("Invalid value for `recto`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class ImagedObjectDTO(object):
 
 
         :param verso: The verso of this ImagedObjectDTO.  # noqa: E501
-        :type verso: ImageStackDTO
+        :type: ImageStackDTO
         """
         if self.local_vars_configuration.client_side_validation and verso is None:  # noqa: E501
             raise ValueError("Invalid value for `verso`, must not be `None`")  # noqa: E501
@@ -148,7 +148,7 @@ class ImagedObjectDTO(object):
 
 
         :param artefacts: The artefacts of this ImagedObjectDTO.  # noqa: E501
-        :type artefacts: list[ArtefactDTO]
+        :type: list[ArtefactDTO]
         """
         if self.local_vars_configuration.client_side_validation and artefacts is None:  # noqa: E501
             raise ValueError("Invalid value for `artefacts`, must not be `None`")  # noqa: E501

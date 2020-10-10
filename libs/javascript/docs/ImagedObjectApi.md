@@ -1,4 +1,4 @@
-# SqeApi.ImagedObjectApi
+# QumranicaApiConnector.ImagedObjectApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,26 +22,25 @@ Provides a listing of imaged objects related to the specified edition, can inclu
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let opts = {
   'optional': ["null"] // [String] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
 };
-apiInstance.v1EditionsEditionIdImagedObjectsGet(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdImagedObjectsGet(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -75,27 +74,26 @@ Provides information for the specified imaged object related to the specified ed
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
 let editionId = 56; // Number | Unique Id of the desired edition
 let imagedObjectId = "imagedObjectId_example"; // String | Unique Id of the desired object from the imaging Institution
 let opts = {
   'optional': ["null"] // [String] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
 };
-apiInstance.v1EditionsEditionIdImagedObjectsImagedObjectIdGet(editionId, imagedObjectId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdImagedObjectsImagedObjectIdGet(editionId, imagedObjectId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -130,23 +128,22 @@ Provides information for the specified imaged object.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
 let imagedObjectId = "imagedObjectId_example"; // String | Unique Id of the desired object from the imaging Institution
-apiInstance.v1ImagedObjectsImagedObjectIdGet(imagedObjectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1ImagedObjectsImagedObjectIdGet(imagedObjectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -179,23 +176,22 @@ Provides a list of all text fragments that should correspond to the imaged objec
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
 let imagedObjectId = "imagedObjectId_example"; // String | Id of the imaged object
-apiInstance.v1ImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1ImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -228,22 +224,21 @@ Provides a list of all institutional image providers.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
-apiInstance.v1ImagedObjectsInstitutionsGet((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
+apiInstance.v1ImagedObjectsInstitutionsGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -273,23 +268,22 @@ Provides a list of all institutional image providers.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.ImagedObjectApi();
+let apiInstance = new QumranicaApiConnector.ImagedObjectApi();
 let institutionName = "institutionName_example"; // String | 
-apiInstance.v1ImagedObjectsInstitutionsInstitutionNameGet(institutionName, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1ImagedObjectsInstitutionsInstitutionNameGet(institutionName).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

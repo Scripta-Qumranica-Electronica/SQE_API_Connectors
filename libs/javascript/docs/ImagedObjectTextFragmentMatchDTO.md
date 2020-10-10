@@ -1,4 +1,4 @@
-# SqeApi.ImagedObjectTextFragmentMatchDTO
+# QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO
 
 ## Properties
 

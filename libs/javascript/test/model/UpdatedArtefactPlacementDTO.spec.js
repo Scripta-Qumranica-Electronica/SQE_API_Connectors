@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdatedArtefactPlacementDTO();
+    instance = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('UpdatedArtefactPlacementDTO', function() {
     it('should create an instance of UpdatedArtefactPlacementDTO', function() {
       // uncomment below and update the code to test UpdatedArtefactPlacementDTO
-      //var instane = new SqeApi.UpdatedArtefactPlacementDTO();
-      //expect(instance).to.be.a(SqeApi.UpdatedArtefactPlacementDTO);
+      //var instane = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdatedArtefactPlacementDTO);
     });
 
     it('should have the property placementEditorId (base name: "placementEditorId")', function() {
       // uncomment below and update the code to test the property placementEditorId
-      //var instane = new SqeApi.UpdatedArtefactPlacementDTO();
+      //var instane = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property artefactId (base name: "artefactId")', function() {
       // uncomment below and update the code to test the property artefactId
-      //var instane = new SqeApi.UpdatedArtefactPlacementDTO();
+      //var instane = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isPlaced (base name: "isPlaced")', function() {
       // uncomment below and update the code to test the property isPlaced
-      //var instane = new SqeApi.UpdatedArtefactPlacementDTO();
+      //var instane = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property placement (base name: "placement")', function() {
       // uncomment below and update the code to test the property placement
-      //var instane = new SqeApi.UpdatedArtefactPlacementDTO();
+      //var instane = new QumranicaApiConnector.UpdatedArtefactPlacementDTO();
       //expect(instance).to.be();
     });
 

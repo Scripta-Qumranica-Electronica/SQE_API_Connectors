@@ -87,7 +87,7 @@ class AttributeValueDTO(object):
 
 
         :param creator_id: The creator_id of this AttributeValueDTO.  # noqa: E501
-        :type creator_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and creator_id is None:  # noqa: E501
             raise ValueError("Invalid value for `creator_id`, must not be `None`")  # noqa: E501
@@ -110,7 +110,7 @@ class AttributeValueDTO(object):
 
 
         :param editor_id: The editor_id of this AttributeValueDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -133,7 +133,7 @@ class AttributeValueDTO(object):
 
 
         :param id: The id of this AttributeValueDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -156,7 +156,7 @@ class AttributeValueDTO(object):
 
 
         :param value: The value of this AttributeValueDTO.  # noqa: E501
-        :type value: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and value is None:  # noqa: E501
             raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
@@ -179,7 +179,7 @@ class AttributeValueDTO(object):
 
 
         :param description: The description of this AttributeValueDTO.  # noqa: E501
-        :type description: str
+        :type: str
         """
 
         self._description = description
@@ -200,7 +200,7 @@ class AttributeValueDTO(object):
 
 
         :param css_directives: The css_directives of this AttributeValueDTO.  # noqa: E501
-        :type css_directives: str
+        :type: str
         """
 
         self._css_directives = css_directives

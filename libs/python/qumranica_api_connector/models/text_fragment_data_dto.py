@@ -75,7 +75,7 @@ class TextFragmentDataDTO(object):
 
 
         :param id: The id of this TextFragmentDataDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class TextFragmentDataDTO(object):
 
 
         :param name: The name of this TextFragmentDataDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class TextFragmentDataDTO(object):
 
 
         :param editor_id: The editor_id of this TextFragmentDataDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501

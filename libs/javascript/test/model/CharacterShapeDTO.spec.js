@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CharacterShapeDTO();
+    instance = new QumranicaApiConnector.CharacterShapeDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('CharacterShapeDTO', function() {
     it('should create an instance of CharacterShapeDTO', function() {
       // uncomment below and update the code to test CharacterShapeDTO
-      //var instane = new SqeApi.CharacterShapeDTO();
-      //expect(instance).to.be.a(SqeApi.CharacterShapeDTO);
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CharacterShapeDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property character (base name: "character")', function() {
       // uncomment below and update the code to test the property character
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property polygon (base name: "polygon")', function() {
       // uncomment below and update the code to test the property polygon
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property imageURL (base name: "imageURL")', function() {
       // uncomment below and update the code to test the property imageURL
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property rotation (base name: "rotation")', function() {
       // uncomment below and update the code to test the property rotation
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property attributes (base name: "attributes")', function() {
       // uncomment below and update the code to test the property attributes
-      //var instane = new SqeApi.CharacterShapeDTO();
+      //var instane = new QumranicaApiConnector.CharacterShapeDTO();
       //expect(instance).to.be();
     });
 

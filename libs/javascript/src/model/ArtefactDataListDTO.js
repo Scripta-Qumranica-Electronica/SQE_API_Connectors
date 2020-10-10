@@ -17,7 +17,7 @@ import ArtefactDataDTO from './ArtefactDataDTO';
 /**
  * The ArtefactDataListDTO model module.
  * @module model/ArtefactDataListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ArtefactDataListDTO {
     /**

@@ -1,4 +1,4 @@
-# SqeApi.TextApi
+# QumranicaApiConnector.TextApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,24 +23,23 @@ Retrieves all signs and their data from the given line
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
 let lineId = 56; // Number | Id of the line
-apiInstance.v1EditionsEditionIdLinesLineIdGet(editionId, lineId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdLinesLineIdGet(editionId, lineId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -74,23 +73,22 @@ Retrieves the ids of all Fragments of all fragments in the given edition of a sc
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
-apiInstance.v1EditionsEditionIdTextFragmentsGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -123,26 +121,25 @@ Creates a new text fragment in the given edition of a scroll
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
 let opts = {
-  'createTextFragmentDTO': new SqeApi.CreateTextFragmentDTO() // CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created
+  'createTextFragmentDTO': new QumranicaApiConnector.CreateTextFragmentDTO() // CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created
 };
-apiInstance.v1EditionsEditionIdTextFragmentsPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -176,24 +173,23 @@ Retrieves the ids of all Artefacts in the given textFragmentName
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
 let textFragmentId = 56; // Number | Id of the text fragment
-apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet(editionId, textFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet(editionId, textFragmentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -227,24 +223,23 @@ Retrieves all signs and their data from the given textFragmentName
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
 let textFragmentId = 56; // Number | Id of the text fragment
-apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdGet(editionId, textFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdGet(editionId, textFragmentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -278,24 +273,23 @@ Retrieves the ids of all lines in the given textFragmentName
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Id of the edition
 let textFragmentId = 56; // Number | Id of the text fragment
-apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet(editionId, textFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet(editionId, textFragmentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -329,27 +323,26 @@ Updates the specified text fragment with the submitted properties
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.TextApi();
+let apiInstance = new QumranicaApiConnector.TextApi();
 let editionId = 56; // Number | Edition of the text fragment being updates
 let textFragmentId = 56; // Number | Id of the text fragment being updates
 let opts = {
-  'updateTextFragmentDTO': new SqeApi.UpdateTextFragmentDTO() // UpdateTextFragmentDTO | Details of the updated text fragment
+  'updateTextFragmentDTO': new QumranicaApiConnector.UpdateTextFragmentDTO() // UpdateTextFragmentDTO | Details of the updated text fragment
 };
-apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdPut(editionId, textFragmentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdTextFragmentsTextFragmentIdPut(editionId, textFragmentId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

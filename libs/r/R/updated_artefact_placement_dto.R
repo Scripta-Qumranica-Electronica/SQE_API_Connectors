@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title UpdatedArtefactPlacementDTO
-#'
 #' @description UpdatedArtefactPlacementDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field placementEditorId  integer 
 #'
 #' @field artefactId  integer 
@@ -20,6 +17,7 @@
 #' @field isPlaced  character 
 #'
 #' @field placement  \link{PlacementDTO} [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ UpdatedArtefactPlacementDTO <- R6::R6Class(
     `artefactId` = NULL,
     `isPlaced` = NULL,
     `placement` = NULL,
-    initialize = function(
-        `placementEditorId`, `artefactId`, `isPlaced`, `placement`=NULL, ...
-    ) {
+    initialize = function(`placementEditorId`, `artefactId`, `isPlaced`, `placement`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`placementEditorId`)) {
         stopifnot(is.numeric(`placementEditorId`), length(`placementEditorId`) == 1)
@@ -88,7 +84,6 @@ UpdatedArtefactPlacementDTO <- R6::R6Class(
         placementObject$fromJSON(jsonlite::toJSON(UpdatedArtefactPlacementDTOObject$placement, auto_unbox = TRUE, digits = NA))
         self$`placement` <- placementObject
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -134,4 +129,3 @@ UpdatedArtefactPlacementDTO <- R6::R6Class(
     }
   )
 )
-

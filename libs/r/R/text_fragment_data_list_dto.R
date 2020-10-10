@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title TextFragmentDataListDTO
-#'
 #' @description TextFragmentDataListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field textFragments  list( \link{TextFragmentDataDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ TextFragmentDataListDTO <- R6::R6Class(
   'TextFragmentDataListDTO',
   public = list(
     `textFragments` = NULL,
-    initialize = function(
-        `textFragments`, ...
-    ) {
+    initialize = function(`textFragments`, ...){
       local.optional.var <- list(...)
       if (!missing(`textFragments`)) {
         stopifnot(is.vector(`textFragments`), length(`textFragments`) != 0)
@@ -44,9 +40,8 @@ TextFragmentDataListDTO <- R6::R6Class(
     fromJSON = function(TextFragmentDataListDTOJson) {
       TextFragmentDataListDTOObject <- jsonlite::fromJSON(TextFragmentDataListDTOJson)
       if (!is.null(TextFragmentDataListDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("openapi"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ TextFragmentDataListDTO <- R6::R6Class(
     },
     fromJSONString = function(TextFragmentDataListDTOJson) {
       TextFragmentDataListDTOObject <- jsonlite::fromJSON(TextFragmentDataListDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("openapi"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title TextFragmentDTO
-#'
 #' @description TextFragmentDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field textFragmentId  integer 
 #'
 #' @field textFragmentName  character 
@@ -20,6 +17,7 @@
 #' @field editorId  integer 
 #'
 #' @field lines  list( \link{LineDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ TextFragmentDTO <- R6::R6Class(
     `textFragmentName` = NULL,
     `editorId` = NULL,
     `lines` = NULL,
-    initialize = function(
-        `textFragmentId`, `textFragmentName`, `editorId`, `lines`, ...
-    ) {
+    initialize = function(`textFragmentId`, `textFragmentName`, `editorId`, `lines`, ...){
       local.optional.var <- list(...)
       if (!missing(`textFragmentId`)) {
         stopifnot(is.numeric(`textFragmentId`), length(`textFragmentId`) == 1)
@@ -86,9 +82,8 @@ TextFragmentDTO <- R6::R6Class(
         self$`editorId` <- TextFragmentDTOObject$`editorId`
       }
       if (!is.null(TextFragmentDTOObject$`lines`)) {
-        self$`lines` <- ApiClient$new()$deserializeObj(TextFragmentDTOObject$`lines`, "array[LineDTO]", loadNamespace("openapi"))
+        self$`lines` <- ApiClient$new()$deserializeObj(TextFragmentDTOObject$`lines`, "array[LineDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -129,9 +124,8 @@ TextFragmentDTO <- R6::R6Class(
       self$`textFragmentId` <- TextFragmentDTOObject$`textFragmentId`
       self$`textFragmentName` <- TextFragmentDTOObject$`textFragmentName`
       self$`editorId` <- TextFragmentDTOObject$`editorId`
-      self$`lines` <- ApiClient$new()$deserializeObj(TextFragmentDTOObject$`lines`, "array[LineDTO]", loadNamespace("openapi"))
+      self$`lines` <- ApiClient$new()$deserializeObj(TextFragmentDTOObject$`lines`, "array[LineDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

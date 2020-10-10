@@ -1,4 +1,4 @@
-# openapi::LoginRequestDTO
+# qumranica_api_connector::LoginRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

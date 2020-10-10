@@ -75,7 +75,7 @@ class ArtefactGroupDTO(object):
 
 
         :param id: The id of this ArtefactGroupDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class ArtefactGroupDTO(object):
 
 
         :param name: The name of this ArtefactGroupDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -124,7 +124,7 @@ class ArtefactGroupDTO(object):
 
 
         :param artefacts: The artefacts of this ArtefactGroupDTO.  # noqa: E501
-        :type artefacts: list[int]
+        :type: list[int]
         """
         if self.local_vars_configuration.client_side_validation and artefacts is None:  # noqa: E501
             raise ValueError("Invalid value for `artefacts`, must not be `None`")  # noqa: E501

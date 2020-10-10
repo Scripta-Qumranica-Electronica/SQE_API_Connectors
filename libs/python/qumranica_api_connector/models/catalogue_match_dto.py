@@ -184,7 +184,7 @@ class CatalogueMatchDTO(object):
 
 
         :param image_catalog_id: The image_catalog_id of this CatalogueMatchDTO.  # noqa: E501
-        :type image_catalog_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and image_catalog_id is None:  # noqa: E501
             raise ValueError("Invalid value for `image_catalog_id`, must not be `None`")  # noqa: E501
@@ -207,7 +207,7 @@ class CatalogueMatchDTO(object):
 
 
         :param institution: The institution of this CatalogueMatchDTO.  # noqa: E501
-        :type institution: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and institution is None:  # noqa: E501
             raise ValueError("Invalid value for `institution`, must not be `None`")  # noqa: E501
@@ -230,7 +230,7 @@ class CatalogueMatchDTO(object):
 
 
         :param catalogue_number1: The catalogue_number1 of this CatalogueMatchDTO.  # noqa: E501
-        :type catalogue_number1: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and catalogue_number1 is None:  # noqa: E501
             raise ValueError("Invalid value for `catalogue_number1`, must not be `None`")  # noqa: E501
@@ -253,7 +253,7 @@ class CatalogueMatchDTO(object):
 
 
         :param catalogue_number2: The catalogue_number2 of this CatalogueMatchDTO.  # noqa: E501
-        :type catalogue_number2: str
+        :type: str
         """
 
         self._catalogue_number2 = catalogue_number2
@@ -274,7 +274,7 @@ class CatalogueMatchDTO(object):
 
 
         :param proxy: The proxy of this CatalogueMatchDTO.  # noqa: E501
-        :type proxy: str
+        :type: str
         """
 
         self._proxy = proxy
@@ -295,7 +295,7 @@ class CatalogueMatchDTO(object):
 
 
         :param url: The url of this CatalogueMatchDTO.  # noqa: E501
-        :type url: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and url is None:  # noqa: E501
             raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
@@ -318,7 +318,7 @@ class CatalogueMatchDTO(object):
 
 
         :param filename: The filename of this CatalogueMatchDTO.  # noqa: E501
-        :type filename: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and filename is None:  # noqa: E501
             raise ValueError("Invalid value for `filename`, must not be `None`")  # noqa: E501
@@ -341,7 +341,7 @@ class CatalogueMatchDTO(object):
 
 
         :param suffix: The suffix of this CatalogueMatchDTO.  # noqa: E501
-        :type suffix: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and suffix is None:  # noqa: E501
             raise ValueError("Invalid value for `suffix`, must not be `None`")  # noqa: E501
@@ -364,7 +364,7 @@ class CatalogueMatchDTO(object):
 
 
         :param thumbnail: The thumbnail of this CatalogueMatchDTO.  # noqa: E501
-        :type thumbnail: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and thumbnail is None:  # noqa: E501
             raise ValueError("Invalid value for `thumbnail`, must not be `None`")  # noqa: E501
@@ -387,7 +387,7 @@ class CatalogueMatchDTO(object):
 
 
         :param license: The license of this CatalogueMatchDTO.  # noqa: E501
-        :type license: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and license is None:  # noqa: E501
             raise ValueError("Invalid value for `license`, must not be `None`")  # noqa: E501
@@ -410,7 +410,7 @@ class CatalogueMatchDTO(object):
 
 
         :param iaa_edition_catalogue_id: The iaa_edition_catalogue_id of this CatalogueMatchDTO.  # noqa: E501
-        :type iaa_edition_catalogue_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and iaa_edition_catalogue_id is None:  # noqa: E501
             raise ValueError("Invalid value for `iaa_edition_catalogue_id`, must not be `None`")  # noqa: E501
@@ -433,7 +433,7 @@ class CatalogueMatchDTO(object):
 
 
         :param manuscript_name: The manuscript_name of this CatalogueMatchDTO.  # noqa: E501
-        :type manuscript_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and manuscript_name is None:  # noqa: E501
             raise ValueError("Invalid value for `manuscript_name`, must not be `None`")  # noqa: E501
@@ -456,7 +456,7 @@ class CatalogueMatchDTO(object):
 
 
         :param name: The name of this CatalogueMatchDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -479,7 +479,7 @@ class CatalogueMatchDTO(object):
 
 
         :param match_author: The match_author of this CatalogueMatchDTO.  # noqa: E501
-        :type match_author: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and match_author is None:  # noqa: E501
             raise ValueError("Invalid value for `match_author`, must not be `None`")  # noqa: E501
@@ -502,7 +502,7 @@ class CatalogueMatchDTO(object):
 
 
         :param match_confirmation_author: The match_confirmation_author of this CatalogueMatchDTO.  # noqa: E501
-        :type match_confirmation_author: str
+        :type: str
         """
 
         self._match_confirmation_author = match_confirmation_author
@@ -523,7 +523,7 @@ class CatalogueMatchDTO(object):
 
 
         :param match_id: The match_id of this CatalogueMatchDTO.  # noqa: E501
-        :type match_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and match_id is None:  # noqa: E501
             raise ValueError("Invalid value for `match_id`, must not be `None`")  # noqa: E501
@@ -546,7 +546,7 @@ class CatalogueMatchDTO(object):
 
 
         :param date_of_match: The date_of_match of this CatalogueMatchDTO.  # noqa: E501
-        :type date_of_match: datetime
+        :type: datetime
         """
         if self.local_vars_configuration.client_side_validation and date_of_match is None:  # noqa: E501
             raise ValueError("Invalid value for `date_of_match`, must not be `None`")  # noqa: E501
@@ -569,7 +569,7 @@ class CatalogueMatchDTO(object):
 
 
         :param date_of_confirmation: The date_of_confirmation of this CatalogueMatchDTO.  # noqa: E501
-        :type date_of_confirmation: datetime
+        :type: datetime
         """
 
         self._date_of_confirmation = date_of_confirmation
@@ -590,7 +590,7 @@ class CatalogueMatchDTO(object):
 
 
         :param catalog_side: The catalog_side of this CatalogueMatchDTO.  # noqa: E501
-        :type catalog_side: SideDesignation
+        :type: SideDesignation
         """
 
         self._catalog_side = catalog_side
@@ -611,7 +611,7 @@ class CatalogueMatchDTO(object):
 
 
         :param imaged_object_id: The imaged_object_id of this CatalogueMatchDTO.  # noqa: E501
-        :type imaged_object_id: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and imaged_object_id is None:  # noqa: E501
             raise ValueError("Invalid value for `imaged_object_id`, must not be `None`")  # noqa: E501
@@ -634,7 +634,7 @@ class CatalogueMatchDTO(object):
 
 
         :param manuscript_id: The manuscript_id of this CatalogueMatchDTO.  # noqa: E501
-        :type manuscript_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and manuscript_id is None:  # noqa: E501
             raise ValueError("Invalid value for `manuscript_id`, must not be `None`")  # noqa: E501
@@ -657,7 +657,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_name: The edition_name of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_name is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_name`, must not be `None`")  # noqa: E501
@@ -680,7 +680,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_volume: The edition_volume of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_volume: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_volume is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_volume`, must not be `None`")  # noqa: E501
@@ -703,7 +703,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_location1: The edition_location1 of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_location1: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_location1 is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_location1`, must not be `None`")  # noqa: E501
@@ -726,7 +726,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_location2: The edition_location2 of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_location2: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and edition_location2 is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_location2`, must not be `None`")  # noqa: E501
@@ -749,7 +749,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_side: The edition_side of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_side: SideDesignation
+        :type: SideDesignation
         """
         if self.local_vars_configuration.client_side_validation and edition_side is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_side`, must not be `None`")  # noqa: E501
@@ -772,7 +772,7 @@ class CatalogueMatchDTO(object):
 
 
         :param comment: The comment of this CatalogueMatchDTO.  # noqa: E501
-        :type comment: str
+        :type: str
         """
 
         self._comment = comment
@@ -793,7 +793,7 @@ class CatalogueMatchDTO(object):
 
 
         :param text_fragment_id: The text_fragment_id of this CatalogueMatchDTO.  # noqa: E501
-        :type text_fragment_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_id is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_id`, must not be `None`")  # noqa: E501
@@ -816,7 +816,7 @@ class CatalogueMatchDTO(object):
 
 
         :param edition_id: The edition_id of this CatalogueMatchDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -839,7 +839,7 @@ class CatalogueMatchDTO(object):
 
 
         :param confirmed: The confirmed of this CatalogueMatchDTO.  # noqa: E501
-        :type confirmed: bool
+        :type: bool
         """
 
         self._confirmed = confirmed

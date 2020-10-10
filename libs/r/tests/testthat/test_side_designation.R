@@ -2,3 +2,6 @@
 # Please update as you see appropriate
 
 context("Test SideDesignation")
+
+model.instance <- SideDesignation$new()
+

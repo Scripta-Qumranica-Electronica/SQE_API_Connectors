@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title EditionScriptCollectionDTO
-#'
 #' @description EditionScriptCollectionDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field letters  list( \link{CharacterShapeDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ EditionScriptCollectionDTO <- R6::R6Class(
   'EditionScriptCollectionDTO',
   public = list(
     `letters` = NULL,
-    initialize = function(
-        `letters`, ...
-    ) {
+    initialize = function(`letters`, ...){
       local.optional.var <- list(...)
       if (!missing(`letters`)) {
         stopifnot(is.vector(`letters`), length(`letters`) != 0)
@@ -44,9 +40,8 @@ EditionScriptCollectionDTO <- R6::R6Class(
     fromJSON = function(EditionScriptCollectionDTOJson) {
       EditionScriptCollectionDTOObject <- jsonlite::fromJSON(EditionScriptCollectionDTOJson)
       if (!is.null(EditionScriptCollectionDTOObject$`letters`)) {
-        self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("openapi"))
+        self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ EditionScriptCollectionDTO <- R6::R6Class(
     },
     fromJSONString = function(EditionScriptCollectionDTOJson) {
       EditionScriptCollectionDTOObject <- jsonlite::fromJSON(EditionScriptCollectionDTOJson)
-      self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("openapi"))
+      self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

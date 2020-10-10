@@ -1,4 +1,4 @@
-# SqeApi.UtilApi
+# QumranicaApiConnector.UtilApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,25 +17,24 @@ Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.UtilApi();
+let apiInstance = new QumranicaApiConnector.UtilApi();
 let opts = {
-  'wktPolygonDTO': new SqeApi.WktPolygonDTO() // WktPolygonDTO | JSON object with the WKT polygon to validate
+  'wktPolygonDTO': new QumranicaApiConnector.WktPolygonDTO() // WktPolygonDTO | JSON object with the WKT polygon to validate
 };
-apiInstance.v1UtilsRepairWktPolygonPost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1UtilsRepairWktPolygonPost(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

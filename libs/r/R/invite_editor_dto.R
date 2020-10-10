@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title InviteEditorDTO
-#'
 #' @description InviteEditorDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field email  character 
 #'
 #' @field mayLock  character 
@@ -22,6 +19,7 @@
 #' @field mayWrite  character 
 #'
 #' @field isAdmin  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -34,9 +32,7 @@ InviteEditorDTO <- R6::R6Class(
     `mayRead` = NULL,
     `mayWrite` = NULL,
     `isAdmin` = NULL,
-    initialize = function(
-        `email`, `mayLock`, `mayRead`, `mayWrite`, `isAdmin`, ...
-    ) {
+    initialize = function(`email`, `mayLock`, `mayRead`, `mayWrite`, `isAdmin`, ...){
       local.optional.var <- list(...)
       if (!missing(`email`)) {
         stopifnot(is.character(`email`), length(`email`) == 1)
@@ -97,7 +93,6 @@ InviteEditorDTO <- R6::R6Class(
       if (!is.null(InviteEditorDTOObject$`isAdmin`)) {
         self$`isAdmin` <- InviteEditorDTOObject$`isAdmin`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -151,4 +146,3 @@ InviteEditorDTO <- R6::R6Class(
     }
   )
 )
-

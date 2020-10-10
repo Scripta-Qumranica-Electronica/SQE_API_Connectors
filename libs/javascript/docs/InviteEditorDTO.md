@@ -1,4 +1,4 @@
-# SqeApi.InviteEditorDTO
+# QumranicaApiConnector.InviteEditorDTO
 
 ## Properties
 

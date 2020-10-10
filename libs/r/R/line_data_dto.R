@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title LineDataDTO
-#'
 #' @description LineDataDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field lineId  integer 
 #'
 #' @field lineName  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ LineDataDTO <- R6::R6Class(
   public = list(
     `lineId` = NULL,
     `lineName` = NULL,
-    initialize = function(
-        `lineId`, `lineName`, ...
-    ) {
+    initialize = function(`lineId`, `lineName`, ...){
       local.optional.var <- list(...)
       if (!missing(`lineId`)) {
         stopifnot(is.numeric(`lineId`), length(`lineId`) == 1)
@@ -59,7 +55,6 @@ LineDataDTO <- R6::R6Class(
       if (!is.null(LineDataDTOObject$`lineName`)) {
         self$`lineName` <- LineDataDTOObject$`lineName`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ LineDataDTO <- R6::R6Class(
     }
   )
 )
-

@@ -75,7 +75,7 @@ class UpdateTextFragmentDTO(object):
 
 
         :param name: The name of this UpdateTextFragmentDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
 
         self._name = name
@@ -96,7 +96,7 @@ class UpdateTextFragmentDTO(object):
 
 
         :param previous_text_fragment_id: The previous_text_fragment_id of this UpdateTextFragmentDTO.  # noqa: E501
-        :type previous_text_fragment_id: int
+        :type: int
         """
 
         self._previous_text_fragment_id = previous_text_fragment_id
@@ -117,7 +117,7 @@ class UpdateTextFragmentDTO(object):
 
 
         :param next_text_fragment_id: The next_text_fragment_id of this UpdateTextFragmentDTO.  # noqa: E501
-        :type next_text_fragment_id: int
+        :type: int
         """
 
         self._next_text_fragment_id = next_text_fragment_id

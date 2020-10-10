@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title AttributeListDTO
-#'
 #' @description AttributeListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field attributes  list( \link{AttributeDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ AttributeListDTO <- R6::R6Class(
   'AttributeListDTO',
   public = list(
     `attributes` = NULL,
-    initialize = function(
-        `attributes`, ...
-    ) {
+    initialize = function(`attributes`, ...){
       local.optional.var <- list(...)
       if (!missing(`attributes`)) {
         stopifnot(is.vector(`attributes`), length(`attributes`) != 0)
@@ -44,9 +40,8 @@ AttributeListDTO <- R6::R6Class(
     fromJSON = function(AttributeListDTOJson) {
       AttributeListDTOObject <- jsonlite::fromJSON(AttributeListDTOJson)
       if (!is.null(AttributeListDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("openapi"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ AttributeListDTO <- R6::R6Class(
     },
     fromJSONString = function(AttributeListDTOJson) {
       AttributeListDTOObject <- jsonlite::fromJSON(AttributeListDTOJson)
-      self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("openapi"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InterpretationAttributeCreateDTO model module.
  * @module model/InterpretationAttributeCreateDTO
- * @version v1
+ * @version 0.7.0
  */
 class InterpretationAttributeCreateDTO {
     /**

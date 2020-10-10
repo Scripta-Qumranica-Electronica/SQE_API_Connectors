@@ -1,4 +1,4 @@
-# SqeApi.EditionDTO
+# QumranicaApiConnector.EditionDTO
 
 ## Properties
 

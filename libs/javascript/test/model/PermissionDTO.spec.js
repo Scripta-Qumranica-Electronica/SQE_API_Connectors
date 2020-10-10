@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.PermissionDTO();
+    instance = new QumranicaApiConnector.PermissionDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('PermissionDTO', function() {
     it('should create an instance of PermissionDTO', function() {
       // uncomment below and update the code to test PermissionDTO
-      //var instane = new SqeApi.PermissionDTO();
-      //expect(instance).to.be.a(SqeApi.PermissionDTO);
+      //var instane = new QumranicaApiConnector.PermissionDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.PermissionDTO);
     });
 
     it('should have the property mayRead (base name: "mayRead")', function() {
       // uncomment below and update the code to test the property mayRead
-      //var instane = new SqeApi.PermissionDTO();
+      //var instane = new QumranicaApiConnector.PermissionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayWrite (base name: "mayWrite")', function() {
       // uncomment below and update the code to test the property mayWrite
-      //var instane = new SqeApi.PermissionDTO();
+      //var instane = new QumranicaApiConnector.PermissionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isAdmin (base name: "isAdmin")', function() {
       // uncomment below and update the code to test the property isAdmin
-      //var instane = new SqeApi.PermissionDTO();
+      //var instane = new QumranicaApiConnector.PermissionDTO();
       //expect(instance).to.be();
     });
 

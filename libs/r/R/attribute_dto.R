@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title AttributeDTO
-#'
 #' @description AttributeDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field attributeId  integer 
 #'
 #' @field attributeName  character 
@@ -33,6 +30,7 @@
 #'
 #' @field batchEditable  character [optional]
 #'
+#'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
@@ -49,9 +47,7 @@ AttributeDTO <- R6::R6Class(
     `removable` = NULL,
     `repeatable` = NULL,
     `batchEditable` = NULL,
-    initialize = function(
-        `attributeId`, `attributeName`, `values`, `creatorId`, `editorId`, `description`=NULL, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...
-    ) {
+    initialize = function(`attributeId`, `attributeName`, `values`, `creatorId`, `editorId`, `description`=NULL, `editable`=NULL, `removable`=NULL, `repeatable`=NULL, `batchEditable`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`attributeId`)) {
         stopifnot(is.numeric(`attributeId`), length(`attributeId`) == 1)
@@ -145,7 +141,7 @@ AttributeDTO <- R6::R6Class(
         self$`attributeName` <- AttributeDTOObject$`attributeName`
       }
       if (!is.null(AttributeDTOObject$`values`)) {
-        self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("openapi"))
+        self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(AttributeDTOObject$`creatorId`)) {
         self$`creatorId` <- AttributeDTOObject$`creatorId`
@@ -168,7 +164,6 @@ AttributeDTO <- R6::R6Class(
       if (!is.null(AttributeDTOObject$`batchEditable`)) {
         self$`batchEditable` <- AttributeDTOObject$`batchEditable`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -250,7 +245,7 @@ AttributeDTO <- R6::R6Class(
       AttributeDTOObject <- jsonlite::fromJSON(AttributeDTOJson)
       self$`attributeId` <- AttributeDTOObject$`attributeId`
       self$`attributeName` <- AttributeDTOObject$`attributeName`
-      self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("openapi"))
+      self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranica_api_connector"))
       self$`creatorId` <- AttributeDTOObject$`creatorId`
       self$`editorId` <- AttributeDTOObject$`editorId`
       self$`description` <- AttributeDTOObject$`description`
@@ -262,4 +257,3 @@ AttributeDTO <- R6::R6Class(
     }
   )
 )
-

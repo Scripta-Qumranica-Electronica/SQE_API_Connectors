@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ArtefactListDTO();
+    instance = new QumranicaApiConnector.ArtefactListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ArtefactListDTO', function() {
     it('should create an instance of ArtefactListDTO', function() {
       // uncomment below and update the code to test ArtefactListDTO
-      //var instane = new SqeApi.ArtefactListDTO();
-      //expect(instance).to.be.a(SqeApi.ArtefactListDTO);
+      //var instane = new QumranicaApiConnector.ArtefactListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ArtefactListDTO);
     });
 
     it('should have the property artefacts (base name: "artefacts")', function() {
       // uncomment below and update the code to test the property artefacts
-      //var instane = new SqeApi.ArtefactListDTO();
+      //var instane = new QumranicaApiConnector.ArtefactListDTO();
       //expect(instance).to.be();
     });
 

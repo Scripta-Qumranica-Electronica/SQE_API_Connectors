@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title LineDataListDTO
-#'
 #' @description LineDataListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field lines  list( \link{LineDataDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ LineDataListDTO <- R6::R6Class(
   'LineDataListDTO',
   public = list(
     `lines` = NULL,
-    initialize = function(
-        `lines`, ...
-    ) {
+    initialize = function(`lines`, ...){
       local.optional.var <- list(...)
       if (!missing(`lines`)) {
         stopifnot(is.vector(`lines`), length(`lines`) != 0)
@@ -44,9 +40,8 @@ LineDataListDTO <- R6::R6Class(
     fromJSON = function(LineDataListDTOJson) {
       LineDataListDTOObject <- jsonlite::fromJSON(LineDataListDTOJson)
       if (!is.null(LineDataListDTOObject$`lines`)) {
-        self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("openapi"))
+        self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ LineDataListDTO <- R6::R6Class(
     },
     fromJSONString = function(LineDataListDTOJson) {
       LineDataListDTOObject <- jsonlite::fromJSON(LineDataListDTOJson)
-      self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("openapi"))
+      self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

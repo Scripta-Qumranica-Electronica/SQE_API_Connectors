@@ -1,4 +1,4 @@
-# SqeApi.SignInterpretationApi
+# QumranicaApiConnector.SignInterpretationApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,24 +29,23 @@ Delete an attribute from an edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | The ID of the edition being edited
 let attributeId = 56; // Number | The ID of the attribute to delete
-apiInstance.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete(editionId, attributeId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdDelete(editionId, attributeId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -80,27 +79,26 @@ Change the details of an attribute in an edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | The ID of the edition being edited
 let attributeId = 56; // Number | The ID of the attribute to update
 let opts = {
-  'updateAttributeDTO': new SqeApi.UpdateAttributeDTO() // UpdateAttributeDTO | The details of the updated attribute
+  'updateAttributeDTO': new QumranicaApiConnector.UpdateAttributeDTO() // UpdateAttributeDTO | The details of the updated attribute
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut(editionId, attributeId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsAttributesAttributeIdPut(editionId, attributeId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -135,23 +133,22 @@ Retrieve a list of all possible attributes for an edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | The ID of the edition being searched
-apiInstance.v1EditionsEditionIdSignInterpretationsAttributesGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsAttributesGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -184,26 +181,25 @@ Create a new attribute for an edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | The ID of the edition being edited
 let opts = {
-  'createAttributeDTO': new SqeApi.CreateAttributeDTO() // CreateAttributeDTO | The details of the new attribute
+  'createAttributeDTO': new QumranicaApiConnector.CreateAttributeDTO() // CreateAttributeDTO | The details of the new attribute
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsAttributesPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsAttributesPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -237,26 +233,25 @@ Creates a new sign interpretation
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let opts = {
-  'signInterpretationCreateDTO': new SqeApi.SignInterpretationCreateDTO() // SignInterpretationCreateDTO | New sign interpretation data to be added
+  'signInterpretationCreateDTO': new QumranicaApiConnector.SignInterpretationCreateDTO() // SignInterpretationCreateDTO | New sign interpretation data to be added
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsPost(editionId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsPost(editionId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -290,25 +285,24 @@ This deletes the specified attribute value from the specified sign interpretatio
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | ID of the sign interpretation being altered
 let attributeValueId = 56; // Number | Id of the attribute being removed
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete(editionId, signInterpretationId, attributeValueId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdDelete(editionId, signInterpretationId, attributeValueId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -343,28 +337,27 @@ This changes the values of the specified sign interpretation attribute,  mainly 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | ID of the sign interpretation being altered
 let attributeValueId = 56; // Number | Id of the attribute value to be altered
 let opts = {
-  'interpretationAttributeCreateDTO': new SqeApi.InterpretationAttributeCreateDTO() // InterpretationAttributeCreateDTO | New details of the attribute
+  'interpretationAttributeCreateDTO': new QumranicaApiConnector.InterpretationAttributeCreateDTO() // InterpretationAttributeCreateDTO | New details of the attribute
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut(editionId, signInterpretationId, attributeValueId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesAttributeValueIdPut(editionId, signInterpretationId, attributeValueId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -400,27 +393,26 @@ This adds a new attribute to the specified sign interpretation.
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | ID of the sign interpretation for adding a new attribute
 let opts = {
-  'interpretationAttributeCreateDTO': new SqeApi.InterpretationAttributeCreateDTO() // InterpretationAttributeCreateDTO | Details of the attribute to be added
+  'interpretationAttributeCreateDTO': new QumranicaApiConnector.InterpretationAttributeCreateDTO() // InterpretationAttributeCreateDTO | Details of the attribute to be added
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost(editionId, signInterpretationId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdAttributesPost(editionId, signInterpretationId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -455,27 +447,26 @@ Updates the commentary of a sign interpretation
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | ID of the sign interpretation whose commentary is being changed
 let opts = {
-  'commentaryCreateDTO': new SqeApi.CommentaryCreateDTO() // CommentaryCreateDTO | The new commentary for the sign interpretation
+  'commentaryCreateDTO': new QumranicaApiConnector.CommentaryCreateDTO() // CommentaryCreateDTO | The new commentary for the sign interpretation
 };
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut(editionId, signInterpretationId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdCommentaryPut(editionId, signInterpretationId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -510,24 +501,23 @@ Deletes the sign interpretation in the route. The endpoint automatically manages
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | ID of the sign interpretation being deleted
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete(editionId, signInterpretationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdDelete(editionId, signInterpretationId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -561,24 +551,23 @@ Retrieve the details of a sign interpretation in an edition
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | The ID of the edition being searched
 let signInterpretationId = 56; // Number | The desired sign interpretation id
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdGet(editionId, signInterpretationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdGet(editionId, signInterpretationId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -612,25 +601,24 @@ Links two sign interpretations in the edition&#39;s sign stream
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | The sign interpretation to be linked to the nextSignInterpretationId
 let nextSignInterpretationId = 56; // Number | The sign interpretation to become the new next sign interpretation
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdLinkToNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -665,25 +653,24 @@ Links two sign interpretations in the edition&#39;s sign stream
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.SignInterpretationApi();
+let apiInstance = new QumranicaApiConnector.SignInterpretationApi();
 let editionId = 56; // Number | ID of the edition being changed
 let signInterpretationId = 56; // Number | The sign interpretation to be unlinked from the nextSignInterpretationId
 let nextSignInterpretationId = 56; // Number | The sign interpretation to removed as next sign interpretation
-apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1EditionsEditionIdSignInterpretationsSignInterpretationIdUnlinkFromNextSignInterpretationIdPost(editionId, signInterpretationId, nextSignInterpretationId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

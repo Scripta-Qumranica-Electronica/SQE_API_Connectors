@@ -83,7 +83,7 @@ class UserUpdateRequestDTO(object):
 
 
         :param password: The password of this UserUpdateRequestDTO.  # noqa: E501
-        :type password: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and password is None:  # noqa: E501
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
@@ -106,7 +106,7 @@ class UserUpdateRequestDTO(object):
 
 
         :param email: The email of this UserUpdateRequestDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
 
         self._email = email
@@ -127,7 +127,7 @@ class UserUpdateRequestDTO(object):
 
 
         :param organization: The organization of this UserUpdateRequestDTO.  # noqa: E501
-        :type organization: str
+        :type: str
         """
 
         self._organization = organization
@@ -148,7 +148,7 @@ class UserUpdateRequestDTO(object):
 
 
         :param forename: The forename of this UserUpdateRequestDTO.  # noqa: E501
-        :type forename: str
+        :type: str
         """
 
         self._forename = forename
@@ -169,7 +169,7 @@ class UserUpdateRequestDTO(object):
 
 
         :param surname: The surname of this UserUpdateRequestDTO.  # noqa: E501
-        :type surname: str
+        :type: str
         """
 
         self._surname = surname

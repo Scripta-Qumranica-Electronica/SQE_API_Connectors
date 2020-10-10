@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.UpdateEditorRightsDTO();
+    instance = new QumranicaApiConnector.UpdateEditorRightsDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('UpdateEditorRightsDTO', function() {
     it('should create an instance of UpdateEditorRightsDTO', function() {
       // uncomment below and update the code to test UpdateEditorRightsDTO
-      //var instane = new SqeApi.UpdateEditorRightsDTO();
-      //expect(instance).to.be.a(SqeApi.UpdateEditorRightsDTO);
+      //var instane = new QumranicaApiConnector.UpdateEditorRightsDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.UpdateEditorRightsDTO);
     });
 
     it('should have the property mayLock (base name: "mayLock")', function() {
       // uncomment below and update the code to test the property mayLock
-      //var instane = new SqeApi.UpdateEditorRightsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditorRightsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayRead (base name: "mayRead")', function() {
       // uncomment below and update the code to test the property mayRead
-      //var instane = new SqeApi.UpdateEditorRightsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditorRightsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayWrite (base name: "mayWrite")', function() {
       // uncomment below and update the code to test the property mayWrite
-      //var instane = new SqeApi.UpdateEditorRightsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditorRightsDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isAdmin (base name: "isAdmin")', function() {
       // uncomment below and update the code to test the property isAdmin
-      //var instane = new SqeApi.UpdateEditorRightsDTO();
+      //var instane = new QumranicaApiConnector.UpdateEditorRightsDTO();
       //expect(instance).to.be();
     });
 

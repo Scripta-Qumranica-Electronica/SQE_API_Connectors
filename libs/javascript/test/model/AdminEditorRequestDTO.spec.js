@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.AdminEditorRequestDTO();
+    instance = new QumranicaApiConnector.AdminEditorRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,61 +50,61 @@
   describe('AdminEditorRequestDTO', function() {
     it('should create an instance of AdminEditorRequestDTO', function() {
       // uncomment below and update the code to test AdminEditorRequestDTO
-      //var instane = new SqeApi.AdminEditorRequestDTO();
-      //expect(instance).to.be.a(SqeApi.AdminEditorRequestDTO);
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.AdminEditorRequestDTO);
     });
 
     it('should have the property editorName (base name: "editorName")', function() {
       // uncomment below and update the code to test the property editorName
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorEmail (base name: "editorEmail")', function() {
       // uncomment below and update the code to test the property editorEmail
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionId (base name: "editionId")', function() {
       // uncomment below and update the code to test the property editionId
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionName (base name: "editionName")', function() {
       // uncomment below and update the code to test the property editionName
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayLock (base name: "mayLock")', function() {
       // uncomment below and update the code to test the property mayLock
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayRead (base name: "mayRead")', function() {
       // uncomment below and update the code to test the property mayRead
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property mayWrite (base name: "mayWrite")', function() {
       // uncomment below and update the code to test the property mayWrite
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isAdmin (base name: "isAdmin")', function() {
       // uncomment below and update the code to test the property isAdmin
-      //var instane = new SqeApi.AdminEditorRequestDTO();
+      //var instane = new QumranicaApiConnector.AdminEditorRequestDTO();
       //expect(instance).to.be();
     });
 

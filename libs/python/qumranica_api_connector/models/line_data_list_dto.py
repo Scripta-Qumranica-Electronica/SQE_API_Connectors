@@ -67,7 +67,7 @@ class LineDataListDTO(object):
 
 
         :param lines: The lines of this LineDataListDTO.  # noqa: E501
-        :type lines: list[LineDataDTO]
+        :type: list[LineDataDTO]
         """
         if self.local_vars_configuration.client_side_validation and lines is None:  # noqa: E501
             raise ValueError("Invalid value for `lines`, must not be `None`")  # noqa: E501

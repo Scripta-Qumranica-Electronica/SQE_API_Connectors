@@ -1,4 +1,4 @@
-# openapi::LineTextDTO
+# qumranica_api_connector::LineTextDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title DeleteDTO
-#'
 #' @description DeleteDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field entity  \link{EditionEntities} 
 #'
 #' @field ids  list( integer ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ DeleteDTO <- R6::R6Class(
   public = list(
     `entity` = NULL,
     `ids` = NULL,
-    initialize = function(
-        `entity`, `ids`, ...
-    ) {
+    initialize = function(`entity`, `ids`, ...){
       local.optional.var <- list(...)
       if (!missing(`entity`)) {
         stopifnot(R6::is.R6(`entity`))
@@ -60,9 +56,8 @@ DeleteDTO <- R6::R6Class(
         self$`entity` <- entityObject
       }
       if (!is.null(DeleteDTOObject$`ids`)) {
-        self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("openapi"))
+        self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -87,9 +82,8 @@ DeleteDTO <- R6::R6Class(
     fromJSONString = function(DeleteDTOJson) {
       DeleteDTOObject <- jsonlite::fromJSON(DeleteDTOJson)
       self$`entity` <- EditionEntities$new()$fromJSON(jsonlite::toJSON(DeleteDTOObject$entity, auto_unbox = TRUE, digits = NA))
-      self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("openapi"))
+      self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CommentaryCreateDTO();
+    instance = new QumranicaApiConnector.CommentaryCreateDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('CommentaryCreateDTO', function() {
     it('should create an instance of CommentaryCreateDTO', function() {
       // uncomment below and update the code to test CommentaryCreateDTO
-      //var instane = new SqeApi.CommentaryCreateDTO();
-      //expect(instance).to.be.a(SqeApi.CommentaryCreateDTO);
+      //var instane = new QumranicaApiConnector.CommentaryCreateDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CommentaryCreateDTO);
     });
 
     it('should have the property commentary (base name: "commentary")', function() {
       // uncomment below and update the code to test the property commentary
-      //var instane = new SqeApi.CommentaryCreateDTO();
+      //var instane = new QumranicaApiConnector.CommentaryCreateDTO();
       //expect(instance).to.be();
     });
 

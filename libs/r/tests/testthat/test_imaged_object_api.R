@@ -9,8 +9,8 @@ test_that("V1EditionsEditionIdImagedObjectsGet", {
   # tests for V1EditionsEditionIdImagedObjectsGet
   # base path: http://localhost
   # Provides a listing of imaged objects related to the specified edition, can include images and also their masks with  optional.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param optional array[character] Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param array[character]  optional  Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks  (optional)
   # @return [ImagedObjectListDTO]
 
   # uncomment below to test the operation
@@ -21,9 +21,9 @@ test_that("V1EditionsEditionIdImagedObjectsImagedObjectIdGet", {
   # tests for V1EditionsEditionIdImagedObjectsImagedObjectIdGet
   # base path: http://localhost
   # Provides information for the specified imaged object related to the specified edition, can include images and also  their masks with optional.
-  # @param edition.id integer Unique Id of the desired edition
-  # @param imaged.object.id character Unique Id of the desired object from the imaging Institution
-  # @param optional array[character] Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks (optional)
+  # @param integer  edition.id  Unique Id of the desired edition 
+  # @param character  imaged.object.id  Unique Id of the desired object from the imaging Institution 
+  # @param array[character]  optional  Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks  (optional)
   # @return [ImagedObjectDTO]
 
   # uncomment below to test the operation
@@ -34,7 +34,7 @@ test_that("V1ImagedObjectsImagedObjectIdGet", {
   # tests for V1ImagedObjectsImagedObjectIdGet
   # base path: http://localhost
   # Provides information for the specified imaged object.
-  # @param imaged.object.id character Unique Id of the desired object from the imaging Institution
+  # @param character  imaged.object.id  Unique Id of the desired object from the imaging Institution 
   # @return [SimpleImageListDTO]
 
   # uncomment below to test the operation
@@ -45,7 +45,7 @@ test_that("V1ImagedObjectsImagedObjectIdTextFragmentsGet", {
   # tests for V1ImagedObjectsImagedObjectIdTextFragmentsGet
   # base path: http://localhost
   # Provides a list of all text fragments that should correspond to the imaged object.
-  # @param imaged.object.id character Id of the imaged object
+  # @param character  imaged.object.id  Id of the imaged object 
   # @return [ImagedObjectTextFragmentMatchListDTO]
 
   # uncomment below to test the operation
@@ -66,7 +66,7 @@ test_that("V1ImagedObjectsInstitutionsInstitutionNameGet", {
   # tests for V1ImagedObjectsInstitutionsInstitutionNameGet
   # base path: http://localhost
   # Provides a list of all institutional image providers.
-  # @param institution.name character 
+  # @param character  institution.name   
   # @return [InstitutionalImageListDTO]
 
   # uncomment below to test the operation

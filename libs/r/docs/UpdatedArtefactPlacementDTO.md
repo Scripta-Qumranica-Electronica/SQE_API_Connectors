@@ -1,4 +1,4 @@
-# openapi::UpdatedArtefactPlacementDTO
+# qumranica_api_connector::UpdatedArtefactPlacementDTO
 
 ## Properties
 Name | Type | Description | Notes

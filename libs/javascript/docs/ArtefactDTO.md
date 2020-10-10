@@ -1,4 +1,4 @@
-# SqeApi.ArtefactDTO
+# QumranicaApiConnector.ArtefactDTO
 
 ## Properties
 

@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title CreateTextFragmentDTO
-#'
 #' @description CreateTextFragmentDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field name  character 
 #'
 #' @field previousTextFragmentId  integer [optional]
 #'
 #' @field nextTextFragmentId  integer [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ CreateTextFragmentDTO <- R6::R6Class(
     `name` = NULL,
     `previousTextFragmentId` = NULL,
     `nextTextFragmentId` = NULL,
-    initialize = function(
-        `name`, `previousTextFragmentId`=NULL, `nextTextFragmentId`=NULL, ...
-    ) {
+    initialize = function(`name`, `previousTextFragmentId`=NULL, `nextTextFragmentId`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`name`)) {
         stopifnot(is.character(`name`), length(`name`) == 1)
@@ -73,7 +69,6 @@ CreateTextFragmentDTO <- R6::R6Class(
       if (!is.null(CreateTextFragmentDTOObject$`nextTextFragmentId`)) {
         self$`nextTextFragmentId` <- CreateTextFragmentDTOObject$`nextTextFragmentId`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -111,4 +106,3 @@ CreateTextFragmentDTO <- R6::R6Class(
     }
   )
 )
-

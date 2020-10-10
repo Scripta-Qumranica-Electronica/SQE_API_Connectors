@@ -71,7 +71,7 @@ class EditionGroupDTO(object):
 
 
         :param primary: The primary of this EditionGroupDTO.  # noqa: E501
-        :type primary: EditionDTO
+        :type: EditionDTO
         """
         if self.local_vars_configuration.client_side_validation and primary is None:  # noqa: E501
             raise ValueError("Invalid value for `primary`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class EditionGroupDTO(object):
 
 
         :param others: The others of this EditionGroupDTO.  # noqa: E501
-        :type others: list[EditionDTO]
+        :type: list[EditionDTO]
         """
         if self.local_vars_configuration.client_side_validation and others is None:  # noqa: E501
             raise ValueError("Invalid value for `others`, must not be `None`")  # noqa: E501

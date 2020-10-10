@@ -41,28 +41,22 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_edit_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param batch_edit_roi_dto: A JSON object with all the roi edits to be performed
-        :type batch_edit_roi_dto: BatchEditRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param BatchEditRoiDTO batch_edit_roi_dto: A JSON object with all the roi edits to be performed
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: BatchEditRoiResponseDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: BatchEditRoiResponseDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_batch_edit_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -72,35 +66,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_edit_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param batch_edit_roi_dto: A JSON object with all the roi edits to be performed
-        :type batch_edit_roi_dto: BatchEditRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param BatchEditRoiDTO batch_edit_roi_dto: A JSON object with all the roi edits to be performed
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(BatchEditRoiResponseDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(BatchEditRoiResponseDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -114,8 +97,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -158,10 +140,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "BatchEditRoiResponseDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/batch-edit', 'POST',
@@ -171,42 +149,35 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='BatchEditRoiResponseDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_batch_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates new sign ROI's in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param set_interpretation_roi_dto_list: A JSON object with an array of the new ROI's to be created
-        :type set_interpretation_roi_dto_list: SetInterpretationRoiDTOList
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param SetInterpretationRoiDTOList set_interpretation_roi_dto_list: A JSON object with an array of the new ROI's to be created
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: InterpretationRoiDTOList
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InterpretationRoiDTOList
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_batch_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -216,35 +187,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param set_interpretation_roi_dto_list: A JSON object with an array of the new ROI's to be created
-        :type set_interpretation_roi_dto_list: SetInterpretationRoiDTOList
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param SetInterpretationRoiDTOList set_interpretation_roi_dto_list: A JSON object with an array of the new ROI's to be created
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(InterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(InterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -258,8 +218,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -302,10 +261,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "InterpretationRoiDTOList",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/batch', 'POST',
@@ -315,42 +270,35 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='InterpretationRoiDTOList',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_batch_put(self, edition_id, **kwargs):  # noqa: E501
         """Update existing sign ROI's in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_put(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param update_interpretation_roi_dto_list: A JSON object with an array of the updated ROI details
-        :type update_interpretation_roi_dto_list: UpdateInterpretationRoiDTOList
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param UpdateInterpretationRoiDTOList update_interpretation_roi_dto_list: A JSON object with an array of the updated ROI details
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: UpdatedInterpretationRoiDTOList
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: UpdatedInterpretationRoiDTOList
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_batch_put_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -360,35 +308,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_batch_put_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param update_interpretation_roi_dto_list: A JSON object with an array of the updated ROI details
-        :type update_interpretation_roi_dto_list: UpdateInterpretationRoiDTOList
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param UpdateInterpretationRoiDTOList update_interpretation_roi_dto_list: A JSON object with an array of the updated ROI details
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(UpdatedInterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(UpdatedInterpretationRoiDTOList, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -402,8 +339,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -446,10 +382,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "UpdatedInterpretationRoiDTOList",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/batch', 'PUT',
@@ -459,42 +391,35 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='UpdatedInterpretationRoiDTOList',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_post(self, edition_id, **kwargs):  # noqa: E501
         """Creates new sign ROI in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_post(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param set_interpretation_roi_dto: A JSON object with the new ROI to be created
-        :type set_interpretation_roi_dto: SetInterpretationRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param SetInterpretationRoiDTO set_interpretation_roi_dto: A JSON object with the new ROI to be created
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: InterpretationRoiDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InterpretationRoiDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_post_with_http_info(edition_id, **kwargs)  # noqa: E501
@@ -504,35 +429,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_post_with_http_info(edition_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param set_interpretation_roi_dto: A JSON object with the new ROI to be created
-        :type set_interpretation_roi_dto: SetInterpretationRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param SetInterpretationRoiDTO set_interpretation_roi_dto: A JSON object with the new ROI to be created
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(InterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(InterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -546,8 +460,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -590,10 +503,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "InterpretationRoiDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois', 'POST',
@@ -603,42 +512,35 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='InterpretationRoiDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_roi_id_delete(self, edition_id, roi_id, **kwargs):  # noqa: E501
         """Deletes a sign ROI from the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_delete(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: Id of the ROI to be deleted (required)
-        :type roi_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: Id of the ROI to be deleted (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_roi_id_delete_with_http_info(edition_id, roi_id, **kwargs)  # noqa: E501
@@ -648,35 +550,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_delete_with_http_info(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: Id of the ROI to be deleted (required)
-        :type roi_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: Id of the ROI to be deleted (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: None
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
         """
 
         local_var_params = locals()
@@ -690,8 +581,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -730,8 +620,6 @@ class RoiApi(object):
         body_params = None
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {}
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/{roiId}', 'DELETE',
@@ -741,42 +629,35 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type=None,  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_roi_id_get(self, edition_id, roi_id, **kwargs):  # noqa: E501
         """Get the details for a ROI in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_get(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: A JSON object with the new ROI to be created (required)
-        :type roi_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: A JSON object with the new ROI to be created (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: InterpretationRoiDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: InterpretationRoiDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_roi_id_get_with_http_info(edition_id, roi_id, **kwargs)  # noqa: E501
@@ -786,35 +667,24 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_get_with_http_info(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: A JSON object with the new ROI to be created (required)
-        :type roi_id: int
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: A JSON object with the new ROI to be created (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(InterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(InterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -828,8 +698,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -872,10 +741,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "InterpretationRoiDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/{roiId}', 'GET',
@@ -885,44 +750,36 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='InterpretationRoiDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)
 
     def v1_editions_edition_id_rois_roi_id_put(self, edition_id, roi_id, **kwargs):  # noqa: E501
         """Update an existing sign ROI in the given edition of a scroll  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_put(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: Id of the ROI to be updated (required)
-        :type roi_id: int
-        :param set_interpretation_roi_dto: A JSON object with the updated ROI details
-        :type set_interpretation_roi_dto: SetInterpretationRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: Id of the ROI to be updated (required)
+        :param SetInterpretationRoiDTO set_interpretation_roi_dto: A JSON object with the updated ROI details
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Returns the result object.
+        :return: UpdatedInterpretationRoiDTO
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: UpdatedInterpretationRoiDTO
         """
         kwargs['_return_http_data_only'] = True
         return self.v1_editions_edition_id_rois_roi_id_put_with_http_info(edition_id, roi_id, **kwargs)  # noqa: E501
@@ -932,37 +789,25 @@ class RoiApi(object):
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-
         >>> thread = api.v1_editions_edition_id_rois_roi_id_put_with_http_info(edition_id, roi_id, async_req=True)
         >>> result = thread.get()
 
-        :param edition_id: Id of the edition (required)
-        :type edition_id: int
-        :param roi_id: Id of the ROI to be updated (required)
-        :type roi_id: int
-        :param set_interpretation_roi_dto: A JSON object with the updated ROI details
-        :type set_interpretation_roi_dto: SetInterpretationRoiDTO
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
+        :param async_req bool: execute request asynchronously
+        :param int edition_id: Id of the edition (required)
+        :param int roi_id: Id of the ROI to be updated (required)
+        :param SetInterpretationRoiDTO set_interpretation_roi_dto: A JSON object with the updated ROI details
         :param _return_http_data_only: response data without head status code
                                        and headers
-        :type _return_http_data_only: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
-        :type _preload_content: bool, optional
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: tuple(UpdatedInterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(UpdatedInterpretationRoiDTO, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -977,8 +822,7 @@ class RoiApi(object):
                 'async_req',
                 '_return_http_data_only',
                 '_preload_content',
-                '_request_timeout',
-                '_request_auth'
+                '_request_timeout'
             ]
         )
 
@@ -1027,10 +871,6 @@ class RoiApi(object):
 
         # Authentication setting
         auth_settings = ['Bearer']  # noqa: E501
-        
-        response_types_map = {
-            200: "UpdatedInterpretationRoiDTO",
-        }
 
         return self.api_client.call_api(
             '/v1/editions/{editionId}/rois/{roiId}', 'PUT',
@@ -1040,11 +880,10 @@ class RoiApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_types_map=response_types_map,
+            response_type='UpdatedInterpretationRoiDTO',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
+            collection_formats=collection_formats)

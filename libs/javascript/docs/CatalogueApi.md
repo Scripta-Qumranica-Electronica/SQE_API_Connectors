@@ -1,4 +1,4 @@
-# SqeApi.CatalogueApi
+# QumranicaApiConnector.CatalogueApi
 
 All URIs are relative to *http://localhost*
 
@@ -23,23 +23,22 @@ Remove an existing imaged object and text fragment match, which is not correct
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let iaaEditionCatalogToTextFragmentId = 56; // Number | The unique id of the match to confirm
-apiInstance.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete(iaaEditionCatalogToTextFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete(iaaEditionCatalogToTextFragmentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -72,23 +71,22 @@ Confirm the correctness of an existing imaged object and text fragment match
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let iaaEditionCatalogToTextFragmentId = 56; // Number | The unique id of the match to confirm
-apiInstance.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost(iaaEditionCatalogToTextFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost(iaaEditionCatalogToTextFragmentId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -121,23 +119,22 @@ Get a listing of all corresponding imaged objects and transcribed text fragment 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let editionId = 56; // Number | Unique Id of the edition to search for imaged objects to text fragment matches
-apiInstance.v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet(editionId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet(editionId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -170,23 +167,22 @@ Get a listing of all text fragments matches that correspond to an imaged object
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let imagedObjectId = "imagedObjectId_example"; // String | Id of imaged object to search for transcription matches
-apiInstance.v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet(imagedObjectId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -219,23 +215,22 @@ Get a listing of all corresponding imaged objects and transcribed text fragment 
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let manuscriptId = 56; // Number | Unique Id of the manuscript to search for imaged objects to text fragment matches
-apiInstance.v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet(manuscriptId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet(manuscriptId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -268,25 +263,24 @@ Create a new matched pair for an imaged object and a text fragment along with th
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let opts = {
-  'catalogueMatchInputDTO': new SqeApi.CatalogueMatchInputDTO() // CatalogueMatchInputDTO | The details of the new match
+  'catalogueMatchInputDTO': new QumranicaApiConnector.CatalogueMatchInputDTO() // CatalogueMatchInputDTO | The details of the new match
 };
-apiInstance.v1CataloguePost(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.v1CataloguePost(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -319,23 +313,22 @@ Get a listing of all imaged objects that matches that correspond to a transcribe
 ### Example
 
 ```javascript
-import SqeApi from 'sqe_api';
-let defaultClient = SqeApi.ApiClient.instance;
+import QumranicaApiConnector from 'qumranica_api_connector';
+let defaultClient = QumranicaApiConnector.ApiClient.instance;
 // Configure API key authorization: Bearer
 let Bearer = defaultClient.authentications['Bearer'];
 Bearer.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //Bearer.apiKeyPrefix = 'Token';
 
-let apiInstance = new SqeApi.CatalogueApi();
+let apiInstance = new QumranicaApiConnector.CatalogueApi();
 let textFragmentId = 56; // Number | Unique Id of the text fragment to search for imaged object matches
-apiInstance.v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet(textFragmentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.v1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet(textFragmentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -1,4 +1,4 @@
-# SqeApi.SignDTO
+# QumranicaApiConnector.SignDTO
 
 ## Properties
 

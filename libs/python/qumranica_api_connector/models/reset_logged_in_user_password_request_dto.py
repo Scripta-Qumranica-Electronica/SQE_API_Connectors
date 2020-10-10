@@ -71,7 +71,7 @@ class ResetLoggedInUserPasswordRequestDTO(object):
 
 
         :param old_password: The old_password of this ResetLoggedInUserPasswordRequestDTO.  # noqa: E501
-        :type old_password: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and old_password is None:  # noqa: E501
             raise ValueError("Invalid value for `old_password`, must not be `None`")  # noqa: E501
@@ -94,7 +94,7 @@ class ResetLoggedInUserPasswordRequestDTO(object):
 
 
         :param new_password: The new_password of this ResetLoggedInUserPasswordRequestDTO.  # noqa: E501
-        :type new_password: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and new_password is None:  # noqa: E501
             raise ValueError("Invalid value for `new_password`, must not be `None`")  # noqa: E501

@@ -75,7 +75,7 @@ class EditionCopyDTO(object):
 
 
         :param name: The name of this EditionCopyDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) > 255):
@@ -102,7 +102,7 @@ class EditionCopyDTO(object):
 
 
         :param copyright_holder: The copyright_holder of this EditionCopyDTO.  # noqa: E501
-        :type copyright_holder: str
+        :type: str
         """
 
         self._copyright_holder = copyright_holder
@@ -123,7 +123,7 @@ class EditionCopyDTO(object):
 
 
         :param collaborators: The collaborators of this EditionCopyDTO.  # noqa: E501
-        :type collaborators: str
+        :type: str
         """
 
         self._collaborators = collaborators

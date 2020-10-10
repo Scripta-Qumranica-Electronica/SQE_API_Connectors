@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title BatchUpdatedArtefactTransformDTO
-#'
 #' @description BatchUpdatedArtefactTransformDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field artefactPlacements  list( \link{UpdatedArtefactPlacementDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ BatchUpdatedArtefactTransformDTO <- R6::R6Class(
   'BatchUpdatedArtefactTransformDTO',
   public = list(
     `artefactPlacements` = NULL,
-    initialize = function(
-        `artefactPlacements`, ...
-    ) {
+    initialize = function(`artefactPlacements`, ...){
       local.optional.var <- list(...)
       if (!missing(`artefactPlacements`)) {
         stopifnot(is.vector(`artefactPlacements`), length(`artefactPlacements`) != 0)
@@ -44,9 +40,8 @@ BatchUpdatedArtefactTransformDTO <- R6::R6Class(
     fromJSON = function(BatchUpdatedArtefactTransformDTOJson) {
       BatchUpdatedArtefactTransformDTOObject <- jsonlite::fromJSON(BatchUpdatedArtefactTransformDTOJson)
       if (!is.null(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`)) {
-        self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("openapi"))
+        self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ BatchUpdatedArtefactTransformDTO <- R6::R6Class(
     },
     fromJSONString = function(BatchUpdatedArtefactTransformDTOJson) {
       BatchUpdatedArtefactTransformDTOObject <- jsonlite::fromJSON(BatchUpdatedArtefactTransformDTOJson)
-      self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("openapi"))
+      self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -67,7 +67,7 @@ class EditorInvitationListDTO(object):
 
 
         :param editor_invitations: The editor_invitations of this EditorInvitationListDTO.  # noqa: E501
-        :type editor_invitations: list[EditorInvitationDTO]
+        :type: list[EditorInvitationDTO]
         """
         if self.local_vars_configuration.client_side_validation and editor_invitations is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_invitations`, must not be `None`")  # noqa: E501

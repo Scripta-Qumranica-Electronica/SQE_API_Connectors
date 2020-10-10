@@ -67,7 +67,7 @@ class ResetUserPasswordRequestDTO(object):
 
 
         :param email: The email of this ResetUserPasswordRequestDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501

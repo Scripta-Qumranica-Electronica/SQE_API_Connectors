@@ -95,7 +95,7 @@ class UpdateAttributeDTO(object):
 
 
         :param create_values: The create_values of this UpdateAttributeDTO.  # noqa: E501
-        :type create_values: list[CreateAttributeValueDTO]
+        :type: list[CreateAttributeValueDTO]
         """
         if self.local_vars_configuration.client_side_validation and create_values is None:  # noqa: E501
             raise ValueError("Invalid value for `create_values`, must not be `None`")  # noqa: E501
@@ -118,7 +118,7 @@ class UpdateAttributeDTO(object):
 
 
         :param update_values: The update_values of this UpdateAttributeDTO.  # noqa: E501
-        :type update_values: list[UpdateAttributeValueDTO]
+        :type: list[UpdateAttributeValueDTO]
         """
         if self.local_vars_configuration.client_side_validation and update_values is None:  # noqa: E501
             raise ValueError("Invalid value for `update_values`, must not be `None`")  # noqa: E501
@@ -141,7 +141,7 @@ class UpdateAttributeDTO(object):
 
 
         :param delete_values: The delete_values of this UpdateAttributeDTO.  # noqa: E501
-        :type delete_values: list[int]
+        :type: list[int]
         """
         if self.local_vars_configuration.client_side_validation and delete_values is None:  # noqa: E501
             raise ValueError("Invalid value for `delete_values`, must not be `None`")  # noqa: E501
@@ -164,7 +164,7 @@ class UpdateAttributeDTO(object):
 
 
         :param editable: The editable of this UpdateAttributeDTO.  # noqa: E501
-        :type editable: bool
+        :type: bool
         """
 
         self._editable = editable
@@ -185,7 +185,7 @@ class UpdateAttributeDTO(object):
 
 
         :param removable: The removable of this UpdateAttributeDTO.  # noqa: E501
-        :type removable: bool
+        :type: bool
         """
 
         self._removable = removable
@@ -206,7 +206,7 @@ class UpdateAttributeDTO(object):
 
 
         :param repeatable: The repeatable of this UpdateAttributeDTO.  # noqa: E501
-        :type repeatable: bool
+        :type: bool
         """
 
         self._repeatable = repeatable
@@ -227,7 +227,7 @@ class UpdateAttributeDTO(object):
 
 
         :param batch_editable: The batch_editable of this UpdateAttributeDTO.  # noqa: E501
-        :type batch_editable: bool
+        :type: bool
         """
 
         self._batch_editable = batch_editable

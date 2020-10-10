@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title EditionCopyDTO
-#'
 #' @description EditionCopyDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field name  character [optional]
 #'
 #' @field copyrightHolder  character [optional]
 #'
 #' @field collaborators  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ EditionCopyDTO <- R6::R6Class(
     `name` = NULL,
     `copyrightHolder` = NULL,
     `collaborators` = NULL,
-    initialize = function(
-        `name`=NULL, `copyrightHolder`=NULL, `collaborators`=NULL, ...
-    ) {
+    initialize = function(`name`=NULL, `copyrightHolder`=NULL, `collaborators`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`name`)) {
         stopifnot(is.character(`name`), length(`name`) == 1)
@@ -73,7 +69,6 @@ EditionCopyDTO <- R6::R6Class(
       if (!is.null(EditionCopyDTOObject$`collaborators`)) {
         self$`collaborators` <- EditionCopyDTOObject$`collaborators`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -111,4 +106,3 @@ EditionCopyDTO <- R6::R6Class(
     }
   )
 )
-

@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title InstitutionalImageListDTO
-#'
 #' @description InstitutionalImageListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field institutionalImages  list( \link{InstitutionalImageDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ InstitutionalImageListDTO <- R6::R6Class(
   'InstitutionalImageListDTO',
   public = list(
     `institutionalImages` = NULL,
-    initialize = function(
-        `institutionalImages`, ...
-    ) {
+    initialize = function(`institutionalImages`, ...){
       local.optional.var <- list(...)
       if (!missing(`institutionalImages`)) {
         stopifnot(is.vector(`institutionalImages`), length(`institutionalImages`) != 0)
@@ -44,9 +40,8 @@ InstitutionalImageListDTO <- R6::R6Class(
     fromJSON = function(InstitutionalImageListDTOJson) {
       InstitutionalImageListDTOObject <- jsonlite::fromJSON(InstitutionalImageListDTOJson)
       if (!is.null(InstitutionalImageListDTOObject$`institutionalImages`)) {
-        self$`institutionalImages` <- ApiClient$new()$deserializeObj(InstitutionalImageListDTOObject$`institutionalImages`, "array[InstitutionalImageDTO]", loadNamespace("openapi"))
+        self$`institutionalImages` <- ApiClient$new()$deserializeObj(InstitutionalImageListDTOObject$`institutionalImages`, "array[InstitutionalImageDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ InstitutionalImageListDTO <- R6::R6Class(
     },
     fromJSONString = function(InstitutionalImageListDTOJson) {
       InstitutionalImageListDTOObject <- jsonlite::fromJSON(InstitutionalImageListDTOJson)
-      self$`institutionalImages` <- ApiClient$new()$deserializeObj(InstitutionalImageListDTOObject$`institutionalImages`, "array[InstitutionalImageDTO]", loadNamespace("openapi"))
+      self$`institutionalImages` <- ApiClient$new()$deserializeObj(InstitutionalImageListDTOObject$`institutionalImages`, "array[InstitutionalImageDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title LineTextDTO
-#'
 #' @description LineTextDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field licence  character 
 #'
 #' @field editors  named list( \link{EditorDTO} ) 
@@ -24,6 +21,7 @@
 #' @field editorId  integer 
 #'
 #' @field signs  list( \link{SignDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -37,9 +35,7 @@ LineTextDTO <- R6::R6Class(
     `lineName` = NULL,
     `editorId` = NULL,
     `signs` = NULL,
-    initialize = function(
-        `licence`, `editors`, `lineId`, `lineName`, `editorId`, `signs`, ...
-    ) {
+    initialize = function(`licence`, `editors`, `lineId`, `lineName`, `editorId`, `signs`, ...){
       local.optional.var <- list(...)
       if (!missing(`licence`)) {
         stopifnot(is.character(`licence`), length(`licence`) == 1)
@@ -103,7 +99,7 @@ LineTextDTO <- R6::R6Class(
         self$`licence` <- LineTextDTOObject$`licence`
       }
       if (!is.null(LineTextDTOObject$`editors`)) {
-        self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("openapi"))
+        self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
       }
       if (!is.null(LineTextDTOObject$`lineId`)) {
         self$`lineId` <- LineTextDTOObject$`lineId`
@@ -115,9 +111,8 @@ LineTextDTO <- R6::R6Class(
         self$`editorId` <- LineTextDTOObject$`editorId`
       }
       if (!is.null(LineTextDTOObject$`signs`)) {
-        self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("openapi"))
+        self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -170,13 +165,12 @@ LineTextDTO <- R6::R6Class(
     fromJSONString = function(LineTextDTOJson) {
       LineTextDTOObject <- jsonlite::fromJSON(LineTextDTOJson)
       self$`licence` <- LineTextDTOObject$`licence`
-      self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("openapi"))
+      self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
       self$`lineId` <- LineTextDTOObject$`lineId`
       self$`lineName` <- LineTextDTOObject$`lineName`
       self$`editorId` <- LineTextDTOObject$`editorId`
-      self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("openapi"))
+      self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

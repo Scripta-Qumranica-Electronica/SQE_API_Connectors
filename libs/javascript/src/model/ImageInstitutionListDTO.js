@@ -17,7 +17,7 @@ import ImageInstitutionDTO from './ImageInstitutionDTO';
 /**
  * The ImageInstitutionListDTO model module.
  * @module model/ImageInstitutionListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ImageInstitutionListDTO {
     /**

@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title PlacementDTO
-#'
 #' @description PlacementDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field scale  numeric 
 #'
 #' @field rotate  numeric 
@@ -20,6 +17,7 @@
 #' @field zIndex  integer 
 #'
 #' @field translate  \link{TranslateDTO} [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ PlacementDTO <- R6::R6Class(
     `rotate` = NULL,
     `zIndex` = NULL,
     `translate` = NULL,
-    initialize = function(
-        `scale`, `rotate`, `zIndex`, `translate`=NULL, ...
-    ) {
+    initialize = function(`scale`, `rotate`, `zIndex`, `translate`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`scale`)) {
         stopifnot(is.numeric(`scale`), length(`scale`) == 1)
@@ -89,7 +85,6 @@ PlacementDTO <- R6::R6Class(
         translateObject$fromJSON(jsonlite::toJSON(PlacementDTOObject$translate, auto_unbox = TRUE, digits = NA))
         self$`translate` <- translateObject
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -135,4 +130,3 @@ PlacementDTO <- R6::R6Class(
     }
   )
 )
-

@@ -1,4 +1,4 @@
-# SqeApi.SignInterpretationCreateDTO
+# QumranicaApiConnector.SignInterpretationCreateDTO
 
 ## Properties
 

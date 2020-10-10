@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ArtefactTextFragmentMatchListDTO();
+    instance = new QumranicaApiConnector.ArtefactTextFragmentMatchListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ArtefactTextFragmentMatchListDTO', function() {
     it('should create an instance of ArtefactTextFragmentMatchListDTO', function() {
       // uncomment below and update the code to test ArtefactTextFragmentMatchListDTO
-      //var instane = new SqeApi.ArtefactTextFragmentMatchListDTO();
-      //expect(instance).to.be.a(SqeApi.ArtefactTextFragmentMatchListDTO);
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ArtefactTextFragmentMatchListDTO);
     });
 
     it('should have the property textFragments (base name: "textFragments")', function() {
       // uncomment below and update the code to test the property textFragments
-      //var instane = new SqeApi.ArtefactTextFragmentMatchListDTO();
+      //var instane = new QumranicaApiConnector.ArtefactTextFragmentMatchListDTO();
       //expect(instance).to.be();
     });
 

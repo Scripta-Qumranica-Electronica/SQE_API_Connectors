@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title EditionScriptLinesDTO
-#'
 #' @description EditionScriptLinesDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field textFragments  list( \link{ScriptTextFragmentDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ EditionScriptLinesDTO <- R6::R6Class(
   'EditionScriptLinesDTO',
   public = list(
     `textFragments` = NULL,
-    initialize = function(
-        `textFragments`, ...
-    ) {
+    initialize = function(`textFragments`, ...){
       local.optional.var <- list(...)
       if (!missing(`textFragments`)) {
         stopifnot(is.vector(`textFragments`), length(`textFragments`) != 0)
@@ -44,9 +40,8 @@ EditionScriptLinesDTO <- R6::R6Class(
     fromJSON = function(EditionScriptLinesDTOJson) {
       EditionScriptLinesDTOObject <- jsonlite::fromJSON(EditionScriptLinesDTOJson)
       if (!is.null(EditionScriptLinesDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("openapi"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ EditionScriptLinesDTO <- R6::R6Class(
     },
     fromJSONString = function(EditionScriptLinesDTOJson) {
       EditionScriptLinesDTOObject <- jsonlite::fromJSON(EditionScriptLinesDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("openapi"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

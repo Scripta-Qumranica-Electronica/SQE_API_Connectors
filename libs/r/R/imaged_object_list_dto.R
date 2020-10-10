@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ImagedObjectListDTO
-#'
 #' @description ImagedObjectListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field imagedObjects  list( \link{ImagedObjectDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ImagedObjectListDTO <- R6::R6Class(
   'ImagedObjectListDTO',
   public = list(
     `imagedObjects` = NULL,
-    initialize = function(
-        `imagedObjects`, ...
-    ) {
+    initialize = function(`imagedObjects`, ...){
       local.optional.var <- list(...)
       if (!missing(`imagedObjects`)) {
         stopifnot(is.vector(`imagedObjects`), length(`imagedObjects`) != 0)
@@ -44,9 +40,8 @@ ImagedObjectListDTO <- R6::R6Class(
     fromJSON = function(ImagedObjectListDTOJson) {
       ImagedObjectListDTOObject <- jsonlite::fromJSON(ImagedObjectListDTOJson)
       if (!is.null(ImagedObjectListDTOObject$`imagedObjects`)) {
-        self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("openapi"))
+        self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ ImagedObjectListDTO <- R6::R6Class(
     },
     fromJSONString = function(ImagedObjectListDTOJson) {
       ImagedObjectListDTOObject <- jsonlite::fromJSON(ImagedObjectListDTOJson)
-      self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("openapi"))
+      self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

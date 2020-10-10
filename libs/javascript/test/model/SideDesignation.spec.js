@@ -20,9 +20,9 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
@@ -49,8 +49,8 @@
   describe('SideDesignation', function() {
     it('should create an instance of SideDesignation', function() {
       // uncomment below and update the code to test SideDesignation
-      //var instane = new SqeApi.SideDesignation();
-      //expect(instance).to.be.a(SqeApi.SideDesignation);
+      //var instane = new QumranicaApiConnector.SideDesignation();
+      //expect(instance).to.be.a(QumranicaApiConnector.SideDesignation);
     });
 
   });

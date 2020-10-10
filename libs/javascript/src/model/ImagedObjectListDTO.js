@@ -17,7 +17,7 @@ import ImagedObjectDTO from './ImagedObjectDTO';
 /**
  * The ImagedObjectListDTO model module.
  * @module model/ImagedObjectListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ImagedObjectListDTO {
     /**

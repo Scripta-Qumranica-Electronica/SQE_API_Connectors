@@ -1,4 +1,4 @@
-# openapi::UpdatedInterpretationRoiDTOList
+# qumranica_api_connector::UpdatedInterpretationRoiDTOList
 
 ## Properties
 Name | Type | Description | Notes

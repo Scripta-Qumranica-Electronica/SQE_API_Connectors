@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title ImagedObjectDTO
-#'
 #' @description ImagedObjectDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field id  character 
 #'
 #' @field recto  \link{ImageStackDTO} 
@@ -20,6 +17,7 @@
 #' @field verso  \link{ImageStackDTO} 
 #'
 #' @field artefacts  list( \link{ArtefactDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ ImagedObjectDTO <- R6::R6Class(
     `recto` = NULL,
     `verso` = NULL,
     `artefacts` = NULL,
-    initialize = function(
-        `id`, `recto`, `verso`, `artefacts`, ...
-    ) {
+    initialize = function(`id`, `recto`, `verso`, `artefacts`, ...){
       local.optional.var <- list(...)
       if (!missing(`id`)) {
         stopifnot(is.character(`id`), length(`id`) == 1)
@@ -90,9 +86,8 @@ ImagedObjectDTO <- R6::R6Class(
         self$`verso` <- versoObject
       }
       if (!is.null(ImagedObjectDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("openapi"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -133,9 +128,8 @@ ImagedObjectDTO <- R6::R6Class(
       self$`id` <- ImagedObjectDTOObject$`id`
       self$`recto` <- ImageStackDTO$new()$fromJSON(jsonlite::toJSON(ImagedObjectDTOObject$recto, auto_unbox = TRUE, digits = NA))
       self$`verso` <- ImageStackDTO$new()$fromJSON(jsonlite::toJSON(ImagedObjectDTOObject$verso, auto_unbox = TRUE, digits = NA))
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("openapi"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

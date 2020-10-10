@@ -1,4 +1,4 @@
-# SqeApi.SideDesignation
+# QumranicaApiConnector.SideDesignation
 
 ## Enum
 

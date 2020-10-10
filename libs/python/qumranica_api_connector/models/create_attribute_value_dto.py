@@ -75,7 +75,7 @@ class CreateAttributeValueDTO(object):
 
 
         :param value: The value of this CreateAttributeValueDTO.  # noqa: E501
-        :type value: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and value is None:  # noqa: E501
             raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class CreateAttributeValueDTO(object):
 
 
         :param description: The description of this CreateAttributeValueDTO.  # noqa: E501
-        :type description: str
+        :type: str
         """
 
         self._description = description
@@ -119,7 +119,7 @@ class CreateAttributeValueDTO(object):
 
 
         :param css_directives: The css_directives of this CreateAttributeValueDTO.  # noqa: E501
-        :type css_directives: str
+        :type: str
         """
 
         self._css_directives = css_directives

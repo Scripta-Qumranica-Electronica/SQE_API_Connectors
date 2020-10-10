@@ -75,7 +75,7 @@ class CommentaryDTO(object):
 
 
         :param creator_id: The creator_id of this CommentaryDTO.  # noqa: E501
-        :type creator_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and creator_id is None:  # noqa: E501
             raise ValueError("Invalid value for `creator_id`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class CommentaryDTO(object):
 
 
         :param editor_id: The editor_id of this CommentaryDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class CommentaryDTO(object):
 
 
         :param commentary: The commentary of this CommentaryDTO.  # noqa: E501
-        :type commentary: str
+        :type: str
         """
 
         self._commentary = commentary

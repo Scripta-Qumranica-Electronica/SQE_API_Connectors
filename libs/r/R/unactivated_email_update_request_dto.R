@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title UnactivatedEmailUpdateRequestDTO
-#'
 #' @description UnactivatedEmailUpdateRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field newEmail  character 
 #'
 #' @field email  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ UnactivatedEmailUpdateRequestDTO <- R6::R6Class(
   public = list(
     `newEmail` = NULL,
     `email` = NULL,
-    initialize = function(
-        `newEmail`, `email`, ...
-    ) {
+    initialize = function(`newEmail`, `email`, ...){
       local.optional.var <- list(...)
       if (!missing(`newEmail`)) {
         stopifnot(is.character(`newEmail`), length(`newEmail`) == 1)
@@ -59,7 +55,6 @@ UnactivatedEmailUpdateRequestDTO <- R6::R6Class(
       if (!is.null(UnactivatedEmailUpdateRequestDTOObject$`email`)) {
         self$`email` <- UnactivatedEmailUpdateRequestDTOObject$`email`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ UnactivatedEmailUpdateRequestDTO <- R6::R6Class(
     }
   )
 )
-

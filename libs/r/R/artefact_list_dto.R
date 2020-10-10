@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title ArtefactListDTO
-#'
 #' @description ArtefactListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field artefacts  list( \link{ArtefactDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ ArtefactListDTO <- R6::R6Class(
   'ArtefactListDTO',
   public = list(
     `artefacts` = NULL,
-    initialize = function(
-        `artefacts`, ...
-    ) {
+    initialize = function(`artefacts`, ...){
       local.optional.var <- list(...)
       if (!missing(`artefacts`)) {
         stopifnot(is.vector(`artefacts`), length(`artefacts`) != 0)
@@ -44,9 +40,8 @@ ArtefactListDTO <- R6::R6Class(
     fromJSON = function(ArtefactListDTOJson) {
       ArtefactListDTOObject <- jsonlite::fromJSON(ArtefactListDTOJson)
       if (!is.null(ArtefactListDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("openapi"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ ArtefactListDTO <- R6::R6Class(
     },
     fromJSONString = function(ArtefactListDTOJson) {
       ArtefactListDTOObject <- jsonlite::fromJSON(ArtefactListDTOJson)
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("openapi"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

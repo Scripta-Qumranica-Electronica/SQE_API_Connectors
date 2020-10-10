@@ -83,7 +83,7 @@ class InviteEditorDTO(object):
 
 
         :param email: The email of this InviteEditorDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
@@ -109,7 +109,7 @@ class InviteEditorDTO(object):
 
 
         :param may_lock: The may_lock of this InviteEditorDTO.  # noqa: E501
-        :type may_lock: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_lock is None:  # noqa: E501
             raise ValueError("Invalid value for `may_lock`, must not be `None`")  # noqa: E501
@@ -132,7 +132,7 @@ class InviteEditorDTO(object):
 
 
         :param may_read: The may_read of this InviteEditorDTO.  # noqa: E501
-        :type may_read: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_read is None:  # noqa: E501
             raise ValueError("Invalid value for `may_read`, must not be `None`")  # noqa: E501
@@ -155,7 +155,7 @@ class InviteEditorDTO(object):
 
 
         :param may_write: The may_write of this InviteEditorDTO.  # noqa: E501
-        :type may_write: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_write is None:  # noqa: E501
             raise ValueError("Invalid value for `may_write`, must not be `None`")  # noqa: E501
@@ -178,7 +178,7 @@ class InviteEditorDTO(object):
 
 
         :param is_admin: The is_admin of this InviteEditorDTO.  # noqa: E501
-        :type is_admin: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_admin is None:  # noqa: E501
             raise ValueError("Invalid value for `is_admin`, must not be `None`")  # noqa: E501

@@ -83,7 +83,7 @@ class CreateArtefactDTO(object):
 
 
         :param master_image_id: The master_image_id of this CreateArtefactDTO.  # noqa: E501
-        :type master_image_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and master_image_id is None:  # noqa: E501
             raise ValueError("Invalid value for `master_image_id`, must not be `None`")  # noqa: E501
@@ -106,7 +106,7 @@ class CreateArtefactDTO(object):
 
 
         :param mask: The mask of this CreateArtefactDTO.  # noqa: E501
-        :type mask: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and mask is None:  # noqa: E501
             raise ValueError("Invalid value for `mask`, must not be `None`")  # noqa: E501
@@ -132,7 +132,7 @@ class CreateArtefactDTO(object):
 
 
         :param placement: The placement of this CreateArtefactDTO.  # noqa: E501
-        :type placement: PlacementDTO
+        :type: PlacementDTO
         """
 
         self._placement = placement
@@ -153,7 +153,7 @@ class CreateArtefactDTO(object):
 
 
         :param name: The name of this CreateArtefactDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) > 255):
@@ -180,7 +180,7 @@ class CreateArtefactDTO(object):
 
 
         :param status_message: The status_message of this CreateArtefactDTO.  # noqa: E501
-        :type status_message: str
+        :type: str
         """
 
         self._status_message = status_message

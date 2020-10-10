@@ -87,7 +87,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param email: The email of this DetailedEditorRightsDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
@@ -113,7 +113,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param edition_id: The edition_id of this DetailedEditorRightsDTO.  # noqa: E501
-        :type edition_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and edition_id is None:  # noqa: E501
             raise ValueError("Invalid value for `edition_id`, must not be `None`")  # noqa: E501
@@ -136,7 +136,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param may_lock: The may_lock of this DetailedEditorRightsDTO.  # noqa: E501
-        :type may_lock: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_lock is None:  # noqa: E501
             raise ValueError("Invalid value for `may_lock`, must not be `None`")  # noqa: E501
@@ -159,7 +159,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param may_read: The may_read of this DetailedEditorRightsDTO.  # noqa: E501
-        :type may_read: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_read is None:  # noqa: E501
             raise ValueError("Invalid value for `may_read`, must not be `None`")  # noqa: E501
@@ -182,7 +182,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param may_write: The may_write of this DetailedEditorRightsDTO.  # noqa: E501
-        :type may_write: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and may_write is None:  # noqa: E501
             raise ValueError("Invalid value for `may_write`, must not be `None`")  # noqa: E501
@@ -205,7 +205,7 @@ class DetailedEditorRightsDTO(object):
 
 
         :param is_admin: The is_admin of this DetailedEditorRightsDTO.  # noqa: E501
-        :type is_admin: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_admin is None:  # noqa: E501
             raise ValueError("Invalid value for `is_admin`, must not be `None`")  # noqa: E501

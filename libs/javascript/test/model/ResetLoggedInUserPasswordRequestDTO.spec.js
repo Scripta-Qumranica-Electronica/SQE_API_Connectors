@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ResetLoggedInUserPasswordRequestDTO();
+    instance = new QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,19 +50,19 @@
   describe('ResetLoggedInUserPasswordRequestDTO', function() {
     it('should create an instance of ResetLoggedInUserPasswordRequestDTO', function() {
       // uncomment below and update the code to test ResetLoggedInUserPasswordRequestDTO
-      //var instane = new SqeApi.ResetLoggedInUserPasswordRequestDTO();
-      //expect(instance).to.be.a(SqeApi.ResetLoggedInUserPasswordRequestDTO);
+      //var instane = new QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO);
     });
 
     it('should have the property oldPassword (base name: "oldPassword")', function() {
       // uncomment below and update the code to test the property oldPassword
-      //var instane = new SqeApi.ResetLoggedInUserPasswordRequestDTO();
+      //var instane = new QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property newPassword (base name: "newPassword")', function() {
       // uncomment below and update the code to test the property newPassword
-      //var instane = new SqeApi.ResetLoggedInUserPasswordRequestDTO();
+      //var instane = new QumranicaApiConnector.ResetLoggedInUserPasswordRequestDTO();
       //expect(instance).to.be();
     });
 

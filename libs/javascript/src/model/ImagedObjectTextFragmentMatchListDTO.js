@@ -17,7 +17,7 @@ import ImagedObjectTextFragmentMatchDTO from './ImagedObjectTextFragmentMatchDTO
 /**
  * The ImagedObjectTextFragmentMatchListDTO model module.
  * @module model/ImagedObjectTextFragmentMatchListDTO
- * @version v1
+ * @version 0.7.0
  */
 class ImagedObjectTextFragmentMatchListDTO {
     /**

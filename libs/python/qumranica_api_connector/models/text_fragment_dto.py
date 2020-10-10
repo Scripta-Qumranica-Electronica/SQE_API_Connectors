@@ -79,7 +79,7 @@ class TextFragmentDTO(object):
 
 
         :param text_fragment_id: The text_fragment_id of this TextFragmentDTO.  # noqa: E501
-        :type text_fragment_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_id is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_id`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class TextFragmentDTO(object):
 
 
         :param text_fragment_name: The text_fragment_name of this TextFragmentDTO.  # noqa: E501
-        :type text_fragment_name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and text_fragment_name is None:  # noqa: E501
             raise ValueError("Invalid value for `text_fragment_name`, must not be `None`")  # noqa: E501
@@ -125,7 +125,7 @@ class TextFragmentDTO(object):
 
 
         :param editor_id: The editor_id of this TextFragmentDTO.  # noqa: E501
-        :type editor_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and editor_id is None:  # noqa: E501
             raise ValueError("Invalid value for `editor_id`, must not be `None`")  # noqa: E501
@@ -148,7 +148,7 @@ class TextFragmentDTO(object):
 
 
         :param lines: The lines of this TextFragmentDTO.  # noqa: E501
-        :type lines: list[LineDTO]
+        :type: list[LineDTO]
         """
         if self.local_vars_configuration.client_side_validation and lines is None:  # noqa: E501
             raise ValueError("Invalid value for `lines`, must not be `None`")  # noqa: E501

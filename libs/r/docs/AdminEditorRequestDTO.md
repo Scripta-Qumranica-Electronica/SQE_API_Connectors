@@ -1,4 +1,4 @@
-# openapi::AdminEditorRequestDTO
+# qumranica_api_connector::AdminEditorRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

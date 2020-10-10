@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title ScriptArtefactCharactersDTO
-#'
 #' @description ScriptArtefactCharactersDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field artefactName  character 
 #'
 #' @field artefactId  integer 
@@ -20,6 +17,7 @@
 #' @field placement  \link{PlacementDTO} 
 #'
 #' @field characters  list( \link{SignInterpretationDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ ScriptArtefactCharactersDTO <- R6::R6Class(
     `artefactId` = NULL,
     `placement` = NULL,
     `characters` = NULL,
-    initialize = function(
-        `artefactName`, `artefactId`, `placement`, `characters`, ...
-    ) {
+    initialize = function(`artefactName`, `artefactId`, `placement`, `characters`, ...){
       local.optional.var <- list(...)
       if (!missing(`artefactName`)) {
         stopifnot(is.character(`artefactName`), length(`artefactName`) == 1)
@@ -88,9 +84,8 @@ ScriptArtefactCharactersDTO <- R6::R6Class(
         self$`placement` <- placementObject
       }
       if (!is.null(ScriptArtefactCharactersDTOObject$`characters`)) {
-        self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+        self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -131,9 +126,8 @@ ScriptArtefactCharactersDTO <- R6::R6Class(
       self$`artefactName` <- ScriptArtefactCharactersDTOObject$`artefactName`
       self$`artefactId` <- ScriptArtefactCharactersDTOObject$`artefactId`
       self$`placement` <- PlacementDTO$new()$fromJSON(jsonlite::toJSON(ScriptArtefactCharactersDTOObject$placement, auto_unbox = TRUE, digits = NA))
-      self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+      self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

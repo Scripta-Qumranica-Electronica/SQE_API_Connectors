@@ -1,4 +1,4 @@
-# openapi::SignInterpretationCreateDTO
+# qumranica_api_connector::SignInterpretationCreateDTO
 
 ## Properties
 Name | Type | Description | Notes

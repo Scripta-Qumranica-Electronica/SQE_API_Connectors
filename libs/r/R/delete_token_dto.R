@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title DeleteTokenDTO
-#'
 #' @description DeleteTokenDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editionId  integer 
 #'
 #' @field token  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ DeleteTokenDTO <- R6::R6Class(
   public = list(
     `editionId` = NULL,
     `token` = NULL,
-    initialize = function(
-        `editionId`, `token`, ...
-    ) {
+    initialize = function(`editionId`, `token`, ...){
       local.optional.var <- list(...)
       if (!missing(`editionId`)) {
         stopifnot(is.numeric(`editionId`), length(`editionId`) == 1)
@@ -59,7 +55,6 @@ DeleteTokenDTO <- R6::R6Class(
       if (!is.null(DeleteTokenDTOObject$`token`)) {
         self$`token` <- DeleteTokenDTOObject$`token`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ DeleteTokenDTO <- R6::R6Class(
     }
   )
 )
-

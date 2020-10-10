@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.CatalogueMatchDTO();
+    instance = new QumranicaApiConnector.CatalogueMatchDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,187 +50,187 @@
   describe('CatalogueMatchDTO', function() {
     it('should create an instance of CatalogueMatchDTO', function() {
       // uncomment below and update the code to test CatalogueMatchDTO
-      //var instane = new SqeApi.CatalogueMatchDTO();
-      //expect(instance).to.be.a(SqeApi.CatalogueMatchDTO);
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.CatalogueMatchDTO);
     });
 
     it('should have the property imageCatalogId (base name: "imageCatalogId")', function() {
       // uncomment below and update the code to test the property imageCatalogId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property institution (base name: "institution")', function() {
       // uncomment below and update the code to test the property institution
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property catalogueNumber1 (base name: "catalogueNumber1")', function() {
       // uncomment below and update the code to test the property catalogueNumber1
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property catalogueNumber2 (base name: "catalogueNumber2")', function() {
       // uncomment below and update the code to test the property catalogueNumber2
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property proxy (base name: "proxy")', function() {
       // uncomment below and update the code to test the property proxy
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property filename (base name: "filename")', function() {
       // uncomment below and update the code to test the property filename
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property suffix (base name: "suffix")', function() {
       // uncomment below and update the code to test the property suffix
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property thumbnail (base name: "thumbnail")', function() {
       // uncomment below and update the code to test the property thumbnail
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property license (base name: "license")', function() {
       // uncomment below and update the code to test the property license
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property iaaEditionCatalogueId (base name: "iaaEditionCatalogueId")', function() {
       // uncomment below and update the code to test the property iaaEditionCatalogueId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property manuscriptName (base name: "manuscriptName")', function() {
       // uncomment below and update the code to test the property manuscriptName
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property matchAuthor (base name: "matchAuthor")', function() {
       // uncomment below and update the code to test the property matchAuthor
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property matchConfirmationAuthor (base name: "matchConfirmationAuthor")', function() {
       // uncomment below and update the code to test the property matchConfirmationAuthor
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property matchId (base name: "matchId")', function() {
       // uncomment below and update the code to test the property matchId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property dateOfMatch (base name: "dateOfMatch")', function() {
       // uncomment below and update the code to test the property dateOfMatch
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property dateOfConfirmation (base name: "dateOfConfirmation")', function() {
       // uncomment below and update the code to test the property dateOfConfirmation
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property catalogSide (base name: "catalogSide")', function() {
       // uncomment below and update the code to test the property catalogSide
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property imagedObjectId (base name: "imagedObjectId")', function() {
       // uncomment below and update the code to test the property imagedObjectId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property manuscriptId (base name: "manuscriptId")', function() {
       // uncomment below and update the code to test the property manuscriptId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionName (base name: "editionName")', function() {
       // uncomment below and update the code to test the property editionName
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionVolume (base name: "editionVolume")', function() {
       // uncomment below and update the code to test the property editionVolume
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionLocation1 (base name: "editionLocation1")', function() {
       // uncomment below and update the code to test the property editionLocation1
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionLocation2 (base name: "editionLocation2")', function() {
       // uncomment below and update the code to test the property editionLocation2
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionSide (base name: "editionSide")', function() {
       // uncomment below and update the code to test the property editionSide
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property comment (base name: "comment")', function() {
       // uncomment below and update the code to test the property comment
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property textFragmentId (base name: "textFragmentId")', function() {
       // uncomment below and update the code to test the property textFragmentId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionId (base name: "editionId")', function() {
       // uncomment below and update the code to test the property editionId
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property confirmed (base name: "confirmed")', function() {
       // uncomment below and update the code to test the property confirmed
-      //var instane = new SqeApi.CatalogueMatchDTO();
+      //var instane = new QumranicaApiConnector.CatalogueMatchDTO();
       //expect(instance).to.be();
     });
 

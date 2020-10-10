@@ -18,7 +18,7 @@ import UpdateInterpretationRoiDTO from './UpdateInterpretationRoiDTO';
 /**
  * The BatchEditRoiDTO model module.
  * @module model/BatchEditRoiDTO
- * @version v1
+ * @version 0.7.0
  */
 class BatchEditRoiDTO {
     /**

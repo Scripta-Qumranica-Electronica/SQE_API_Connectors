@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title EditorInvitationListDTO
-#'
 #' @description EditorInvitationListDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field editorInvitations  list( \link{EditorInvitationDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ EditorInvitationListDTO <- R6::R6Class(
   'EditorInvitationListDTO',
   public = list(
     `editorInvitations` = NULL,
-    initialize = function(
-        `editorInvitations`, ...
-    ) {
+    initialize = function(`editorInvitations`, ...){
       local.optional.var <- list(...)
       if (!missing(`editorInvitations`)) {
         stopifnot(is.vector(`editorInvitations`), length(`editorInvitations`) != 0)
@@ -44,9 +40,8 @@ EditorInvitationListDTO <- R6::R6Class(
     fromJSON = function(EditorInvitationListDTOJson) {
       EditorInvitationListDTOObject <- jsonlite::fromJSON(EditorInvitationListDTOJson)
       if (!is.null(EditorInvitationListDTOObject$`editorInvitations`)) {
-        self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("openapi"))
+        self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ EditorInvitationListDTO <- R6::R6Class(
     },
     fromJSONString = function(EditorInvitationListDTOJson) {
       EditorInvitationListDTOObject <- jsonlite::fromJSON(EditorInvitationListDTOJson)
-      self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("openapi"))
+      self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

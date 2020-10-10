@@ -67,7 +67,7 @@ class ArtefactListDTO(object):
 
 
         :param artefacts: The artefacts of this ArtefactListDTO.  # noqa: E501
-        :type artefacts: list[ArtefactDTO]
+        :type: list[ArtefactDTO]
         """
         if self.local_vars_configuration.client_side_validation and artefacts is None:  # noqa: E501
             raise ValueError("Invalid value for `artefacts`, must not be `None`")  # noqa: E501

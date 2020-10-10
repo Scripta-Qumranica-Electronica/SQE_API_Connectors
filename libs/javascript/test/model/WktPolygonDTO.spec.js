@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.WktPolygonDTO();
+    instance = new QumranicaApiConnector.WktPolygonDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('WktPolygonDTO', function() {
     it('should create an instance of WktPolygonDTO', function() {
       // uncomment below and update the code to test WktPolygonDTO
-      //var instane = new SqeApi.WktPolygonDTO();
-      //expect(instance).to.be.a(SqeApi.WktPolygonDTO);
+      //var instane = new QumranicaApiConnector.WktPolygonDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.WktPolygonDTO);
     });
 
     it('should have the property wktPolygon (base name: "wktPolygon")', function() {
       // uncomment below and update the code to test the property wktPolygon
-      //var instane = new SqeApi.WktPolygonDTO();
+      //var instane = new QumranicaApiConnector.WktPolygonDTO();
       //expect(instance).to.be();
     });
 

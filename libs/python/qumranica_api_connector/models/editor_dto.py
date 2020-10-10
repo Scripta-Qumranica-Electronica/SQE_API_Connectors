@@ -79,7 +79,7 @@ class EditorDTO(object):
 
 
         :param email: The email of this EditorDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
@@ -102,7 +102,7 @@ class EditorDTO(object):
 
 
         :param forename: The forename of this EditorDTO.  # noqa: E501
-        :type forename: str
+        :type: str
         """
 
         self._forename = forename
@@ -123,7 +123,7 @@ class EditorDTO(object):
 
 
         :param surname: The surname of this EditorDTO.  # noqa: E501
-        :type surname: str
+        :type: str
         """
 
         self._surname = surname
@@ -144,7 +144,7 @@ class EditorDTO(object):
 
 
         :param organization: The organization of this EditorDTO.  # noqa: E501
-        :type organization: str
+        :type: str
         """
 
         self._organization = organization

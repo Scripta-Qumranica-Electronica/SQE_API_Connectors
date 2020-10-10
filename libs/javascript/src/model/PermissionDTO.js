@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PermissionDTO model module.
  * @module model/PermissionDTO
- * @version v1
+ * @version 0.7.0
  */
 class PermissionDTO {
     /**

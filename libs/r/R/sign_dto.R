@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title SignDTO
-#'
 #' @description SignDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field signInterpretations  list( \link{SignInterpretationDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ SignDTO <- R6::R6Class(
   'SignDTO',
   public = list(
     `signInterpretations` = NULL,
-    initialize = function(
-        `signInterpretations`, ...
-    ) {
+    initialize = function(`signInterpretations`, ...){
       local.optional.var <- list(...)
       if (!missing(`signInterpretations`)) {
         stopifnot(is.vector(`signInterpretations`), length(`signInterpretations`) != 0)
@@ -44,9 +40,8 @@ SignDTO <- R6::R6Class(
     fromJSON = function(SignDTOJson) {
       SignDTOObject <- jsonlite::fromJSON(SignDTOJson)
       if (!is.null(SignDTOObject$`signInterpretations`)) {
-        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ SignDTO <- R6::R6Class(
     },
     fromJSONString = function(SignDTOJson) {
       SignDTOObject <- jsonlite::fromJSON(SignDTOJson)
-      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("openapi"))
+      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

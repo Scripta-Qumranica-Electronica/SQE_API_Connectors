@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title SetInterpretationRoiDTOList
-#'
 #' @description SetInterpretationRoiDTOList Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field rois  list( \link{SetInterpretationRoiDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ SetInterpretationRoiDTOList <- R6::R6Class(
   'SetInterpretationRoiDTOList',
   public = list(
     `rois` = NULL,
-    initialize = function(
-        `rois`, ...
-    ) {
+    initialize = function(`rois`, ...){
       local.optional.var <- list(...)
       if (!missing(`rois`)) {
         stopifnot(is.vector(`rois`), length(`rois`) != 0)
@@ -44,9 +40,8 @@ SetInterpretationRoiDTOList <- R6::R6Class(
     fromJSON = function(SetInterpretationRoiDTOListJson) {
       SetInterpretationRoiDTOListObject <- jsonlite::fromJSON(SetInterpretationRoiDTOListJson)
       if (!is.null(SetInterpretationRoiDTOListObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(SetInterpretationRoiDTOListObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("openapi"))
+        self$`rois` <- ApiClient$new()$deserializeObj(SetInterpretationRoiDTOListObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ SetInterpretationRoiDTOList <- R6::R6Class(
     },
     fromJSONString = function(SetInterpretationRoiDTOListJson) {
       SetInterpretationRoiDTOListObject <- jsonlite::fromJSON(SetInterpretationRoiDTOListJson)
-      self$`rois` <- ApiClient$new()$deserializeObj(SetInterpretationRoiDTOListObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("openapi"))
+      self$`rois` <- ApiClient$new()$deserializeObj(SetInterpretationRoiDTOListObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

@@ -25,7 +25,7 @@ import UpdateTextFragmentDTO from '../model/UpdateTextFragmentDTO';
 /**
 * Text service.
 * @module api/TextApi
-* @version v1
+* @version 0.7.0
 */
 export default class TextApi {
 
@@ -41,22 +41,14 @@ export default class TextApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1EditionsEditionIdLinesLineIdGet operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdLinesLineIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LineTextDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Retrieves all signs and their data from the given line
      * @param {Number} editionId Id of the edition
      * @param {Number} lineId Id of the line
-     * @param {module:api/TextApi~v1EditionsEditionIdLinesLineIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LineTextDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LineTextDTO} and HTTP response
      */
-    v1EditionsEditionIdLinesLineIdGet(editionId, lineId, callback) {
+    v1EditionsEditionIdLinesLineIdGetWithHttpInfo(editionId, lineId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -85,25 +77,30 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/lines/{lineId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsGet operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TextFragmentDataListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieves all signs and their data from the given line
+     * @param {Number} editionId Id of the edition
+     * @param {Number} lineId Id of the line
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LineTextDTO}
      */
+    v1EditionsEditionIdLinesLineIdGet(editionId, lineId) {
+      return this.v1EditionsEditionIdLinesLineIdGetWithHttpInfo(editionId, lineId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieves the ids of all Fragments of all fragments in the given edition of a scroll
      * @param {Number} editionId Id of the edition
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TextFragmentDataListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TextFragmentDataListDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsGet(editionId, callback) {
+    v1EditionsEditionIdTextFragmentsGetWithHttpInfo(editionId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -127,27 +124,31 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsPost operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TextFragmentDataDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieves the ids of all Fragments of all fragments in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TextFragmentDataListDTO}
      */
+    v1EditionsEditionIdTextFragmentsGet(editionId) {
+      return this.v1EditionsEditionIdTextFragmentsGetWithHttpInfo(editionId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a new text fragment in the given edition of a scroll
      * @param {Number} editionId Id of the edition
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateTextFragmentDTO} opts.createTextFragmentDTO A JSON object with the details of the new text fragment to be created
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TextFragmentDataDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TextFragmentDataDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsPost(editionId, opts, callback) {
+    v1EditionsEditionIdTextFragmentsPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['createTextFragmentDTO'];
       // verify the required parameter 'editionId' is set
@@ -172,26 +173,32 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactDataListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Creates a new text fragment in the given edition of a scroll
+     * @param {Number} editionId Id of the edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateTextFragmentDTO} opts.createTextFragmentDTO A JSON object with the details of the new text fragment to be created
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TextFragmentDataDTO}
      */
+    v1EditionsEditionIdTextFragmentsPost(editionId, opts) {
+      return this.v1EditionsEditionIdTextFragmentsPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieves the ids of all Artefacts in the given textFragmentName
      * @param {Number} editionId Id of the edition
      * @param {Number} textFragmentId Id of the text fragment
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactDataListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactDataListDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet(editionId, textFragmentId, callback) {
+    v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGetWithHttpInfo(editionId, textFragmentId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -220,26 +227,31 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments/{textFragmentId}/artefacts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsTextFragmentIdGet operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TextEditionDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieves the ids of all Artefacts in the given textFragmentName
+     * @param {Number} editionId Id of the edition
+     * @param {Number} textFragmentId Id of the text fragment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactDataListDTO}
      */
+    v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet(editionId, textFragmentId) {
+      return this.v1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGetWithHttpInfo(editionId, textFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieves all signs and their data from the given textFragmentName
      * @param {Number} editionId Id of the edition
      * @param {Number} textFragmentId Id of the text fragment
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TextEditionDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TextEditionDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsTextFragmentIdGet(editionId, textFragmentId, callback) {
+    v1EditionsEditionIdTextFragmentsTextFragmentIdGetWithHttpInfo(editionId, textFragmentId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -268,26 +280,31 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments/{textFragmentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LineDataListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieves all signs and their data from the given textFragmentName
+     * @param {Number} editionId Id of the edition
+     * @param {Number} textFragmentId Id of the text fragment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TextEditionDTO}
      */
+    v1EditionsEditionIdTextFragmentsTextFragmentIdGet(editionId, textFragmentId) {
+      return this.v1EditionsEditionIdTextFragmentsTextFragmentIdGetWithHttpInfo(editionId, textFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Retrieves the ids of all lines in the given textFragmentName
      * @param {Number} editionId Id of the edition
      * @param {Number} textFragmentId Id of the text fragment
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LineDataListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LineDataListDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet(editionId, textFragmentId, callback) {
+    v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGetWithHttpInfo(editionId, textFragmentId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -316,17 +333,23 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments/{textFragmentId}/lines', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdTextFragmentsTextFragmentIdPut operation.
-     * @callback module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/TextFragmentDataDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Retrieves the ids of all lines in the given textFragmentName
+     * @param {Number} editionId Id of the edition
+     * @param {Number} textFragmentId Id of the text fragment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LineDataListDTO}
      */
+    v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet(editionId, textFragmentId) {
+      return this.v1EditionsEditionIdTextFragmentsTextFragmentIdLinesGetWithHttpInfo(editionId, textFragmentId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates the specified text fragment with the submitted properties
@@ -334,10 +357,9 @@ export default class TextApi {
      * @param {Number} textFragmentId Id of the text fragment being updates
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateTextFragmentDTO} opts.updateTextFragmentDTO Details of the updated text fragment
-     * @param {module:api/TextApi~v1EditionsEditionIdTextFragmentsTextFragmentIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/TextFragmentDataDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TextFragmentDataDTO} and HTTP response
      */
-    v1EditionsEditionIdTextFragmentsTextFragmentIdPut(editionId, textFragmentId, opts, callback) {
+    v1EditionsEditionIdTextFragmentsTextFragmentIdPutWithHttpInfo(editionId, textFragmentId, opts) {
       opts = opts || {};
       let postBody = opts['updateTextFragmentDTO'];
       // verify the required parameter 'editionId' is set
@@ -367,8 +389,23 @@ export default class TextApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/text-fragments/{textFragmentId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Updates the specified text fragment with the submitted properties
+     * @param {Number} editionId Edition of the text fragment being updates
+     * @param {Number} textFragmentId Id of the text fragment being updates
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateTextFragmentDTO} opts.updateTextFragmentDTO Details of the updated text fragment
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TextFragmentDataDTO}
+     */
+    v1EditionsEditionIdTextFragmentsTextFragmentIdPut(editionId, textFragmentId, opts) {
+      return this.v1EditionsEditionIdTextFragmentsTextFragmentIdPutWithHttpInfo(editionId, textFragmentId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

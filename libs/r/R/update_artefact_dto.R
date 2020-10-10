@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title UpdateArtefactDTO
-#'
 #' @description UpdateArtefactDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field mask  character [optional]
 #'
 #' @field placement  \link{PlacementDTO} [optional]
@@ -20,6 +17,7 @@
 #' @field name  character [optional]
 #'
 #' @field statusMessage  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ UpdateArtefactDTO <- R6::R6Class(
     `placement` = NULL,
     `name` = NULL,
     `statusMessage` = NULL,
-    initialize = function(
-        `mask`=NULL, `placement`=NULL, `name`=NULL, `statusMessage`=NULL, ...
-    ) {
+    initialize = function(`mask`=NULL, `placement`=NULL, `name`=NULL, `statusMessage`=NULL, ...){
       local.optional.var <- list(...)
       if (!is.null(`mask`)) {
         stopifnot(is.character(`mask`), length(`mask`) == 1)
@@ -89,7 +85,6 @@ UpdateArtefactDTO <- R6::R6Class(
       if (!is.null(UpdateArtefactDTOObject$`statusMessage`)) {
         self$`statusMessage` <- UpdateArtefactDTOObject$`statusMessage`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -135,4 +130,3 @@ UpdateArtefactDTO <- R6::R6Class(
     }
   )
 )
-

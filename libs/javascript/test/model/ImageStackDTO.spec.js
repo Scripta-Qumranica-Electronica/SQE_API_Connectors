@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImageStackDTO();
+    instance = new QumranicaApiConnector.ImageStackDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('ImageStackDTO', function() {
     it('should create an instance of ImageStackDTO', function() {
       // uncomment below and update the code to test ImageStackDTO
-      //var instane = new SqeApi.ImageStackDTO();
-      //expect(instance).to.be.a(SqeApi.ImageStackDTO);
+      //var instane = new QumranicaApiConnector.ImageStackDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImageStackDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.ImageStackDTO();
+      //var instane = new QumranicaApiConnector.ImageStackDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property images (base name: "images")', function() {
       // uncomment below and update the code to test the property images
-      //var instane = new SqeApi.ImageStackDTO();
+      //var instane = new QumranicaApiConnector.ImageStackDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property masterIndex (base name: "masterIndex")', function() {
       // uncomment below and update the code to test the property masterIndex
-      //var instane = new SqeApi.ImageStackDTO();
+      //var instane = new QumranicaApiConnector.ImageStackDTO();
       //expect(instance).to.be();
     });
 

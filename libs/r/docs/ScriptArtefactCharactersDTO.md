@@ -1,4 +1,4 @@
-# openapi::ScriptArtefactCharactersDTO
+# qumranica_api_connector::ScriptArtefactCharactersDTO
 
 ## Properties
 Name | Type | Description | Notes

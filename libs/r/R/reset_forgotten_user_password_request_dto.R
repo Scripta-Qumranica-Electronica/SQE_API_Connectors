@@ -8,14 +8,12 @@
 
 #' @docType class
 #' @title ResetForgottenUserPasswordRequestDTO
-#'
 #' @description ResetForgottenUserPasswordRequestDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field password  character 
 #'
 #' @field token  character 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -25,9 +23,7 @@ ResetForgottenUserPasswordRequestDTO <- R6::R6Class(
   public = list(
     `password` = NULL,
     `token` = NULL,
-    initialize = function(
-        `password`, `token`, ...
-    ) {
+    initialize = function(`password`, `token`, ...){
       local.optional.var <- list(...)
       if (!missing(`password`)) {
         stopifnot(is.character(`password`), length(`password`) == 1)
@@ -59,7 +55,6 @@ ResetForgottenUserPasswordRequestDTO <- R6::R6Class(
       if (!is.null(ResetForgottenUserPasswordRequestDTOObject$`token`)) {
         self$`token` <- ResetForgottenUserPasswordRequestDTOObject$`token`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -89,4 +84,3 @@ ResetForgottenUserPasswordRequestDTO <- R6::R6Class(
     }
   )
 )
-

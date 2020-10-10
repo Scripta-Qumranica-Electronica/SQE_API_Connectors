@@ -30,7 +30,7 @@ import UpdateArtefactGroupDTO from '../model/UpdateArtefactGroupDTO';
 /**
 * Artefact service.
 * @module api/ArtefactApi
-* @version v1
+* @version 0.7.0
 */
 export default class ArtefactApi {
 
@@ -46,22 +46,14 @@ export default class ArtefactApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/DeleteDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Deletes the specified artefact group.
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Number} artefactGroupId Unique Id of the artefact group to be deleted
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/DeleteDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DeleteDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete(editionId, artefactGroupId, callback) {
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdDeleteWithHttpInfo(editionId, artefactGroupId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -90,26 +82,31 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactGroupsArtefactGroupIdGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactGroupDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Deletes the specified artefact group.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactGroupId Unique Id of the artefact group to be deleted
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DeleteDTO}
      */
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdDelete(editionId, artefactGroupId) {
+      return this.v1EditionsEditionIdArtefactGroupsArtefactGroupIdDeleteWithHttpInfo(editionId, artefactGroupId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Gets the details of a specific artefact group in the edition
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Number} artefactGroupId Id of the desired artefact group
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactGroupDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactGroupDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactGroupsArtefactGroupIdGet(editionId, artefactGroupId, callback) {
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdGetWithHttpInfo(editionId, artefactGroupId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -138,17 +135,23 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactGroupsArtefactGroupIdPut operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactGroupDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Gets the details of a specific artefact group in the edition
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactGroupId Id of the desired artefact group
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactGroupDTO}
      */
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdGet(editionId, artefactGroupId) {
+      return this.v1EditionsEditionIdArtefactGroupsArtefactGroupIdGetWithHttpInfo(editionId, artefactGroupId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates the details of an artefact group.  The artefact group will now only contain the artefacts listed in the JSON payload.  If the name is null, no change will be made, otherwise the name will also be updated.
@@ -156,10 +159,9 @@ export default class ArtefactApi {
      * @param {Number} artefactGroupId Id of the artefact group to be updated
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateArtefactGroupDTO} opts.updateArtefactGroupDTO Parameters that the artefact group should be changed to
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsArtefactGroupIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactGroupDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactGroupDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactGroupsArtefactGroupIdPut(editionId, artefactGroupId, opts, callback) {
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdPutWithHttpInfo(editionId, artefactGroupId, opts) {
       opts = opts || {};
       let postBody = opts['updateArtefactGroupDTO'];
       // verify the required parameter 'editionId' is set
@@ -189,25 +191,32 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefact-groups/{artefactGroupId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactGroupsGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactGroupListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Updates the details of an artefact group.  The artefact group will now only contain the artefacts listed in the JSON payload.  If the name is null, no change will be made, otherwise the name will also be updated.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactGroupId Id of the artefact group to be updated
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateArtefactGroupDTO} opts.updateArtefactGroupDTO Parameters that the artefact group should be changed to
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactGroupDTO}
      */
+    v1EditionsEditionIdArtefactGroupsArtefactGroupIdPut(editionId, artefactGroupId, opts) {
+      return this.v1EditionsEditionIdArtefactGroupsArtefactGroupIdPutWithHttpInfo(editionId, artefactGroupId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Gets a listing of all artefact groups in the edition
      * @param {Number} editionId Unique Id of the desired edition
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactGroupListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactGroupListDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactGroupsGet(editionId, callback) {
+    v1EditionsEditionIdArtefactGroupsGetWithHttpInfo(editionId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -231,27 +240,31 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefact-groups', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactGroupsPost operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactGroupDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Gets a listing of all artefact groups in the edition
+     * @param {Number} editionId Unique Id of the desired edition
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactGroupListDTO}
      */
+    v1EditionsEditionIdArtefactGroupsGet(editionId) {
+      return this.v1EditionsEditionIdArtefactGroupsGetWithHttpInfo(editionId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a new artefact group with the submitted data.  The new artefact must have a list of artefacts that belong to the group.  It is not necessary to give the group a name.
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateArtefactGroupDTO} opts.createArtefactGroupDTO Parameters of the new artefact group
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactGroupsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactGroupDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactGroupDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactGroupsPost(editionId, opts, callback) {
+    v1EditionsEditionIdArtefactGroupsPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['createArtefactGroupDTO'];
       // verify the required parameter 'editionId' is set
@@ -276,25 +289,32 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefact-groups', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsArtefactIdDelete operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Creates a new artefact group with the submitted data.  The new artefact must have a list of artefacts that belong to the group.  It is not necessary to give the group a name.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateArtefactGroupDTO} opts.createArtefactGroupDTO Parameters of the new artefact group
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactGroupDTO}
      */
+    v1EditionsEditionIdArtefactGroupsPost(editionId, opts) {
+      return this.v1EditionsEditionIdArtefactGroupsPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Deletes the specified artefact
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Number} artefactId Unique Id of the desired artefact
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    v1EditionsEditionIdArtefactsArtefactIdDelete(editionId, artefactId, callback) {
+    v1EditionsEditionIdArtefactsArtefactIdDeleteWithHttpInfo(editionId, artefactId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -323,17 +343,23 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/{artefactId}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsArtefactIdGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Deletes the specified artefact
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactId Unique Id of the desired artefact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    v1EditionsEditionIdArtefactsArtefactIdDelete(editionId, artefactId) {
+      return this.v1EditionsEditionIdArtefactsArtefactIdDeleteWithHttpInfo(editionId, artefactId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a listing of all artefacts that are part of the specified edition
@@ -341,10 +367,9 @@ export default class ArtefactApi {
      * @param {Number} artefactId Unique Id of the desired artefact
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.optional Add \"masks\" to include artefact polygons and \"images\" to include image data
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsArtefactIdGet(editionId, artefactId, opts, callback) {
+    v1EditionsEditionIdArtefactsArtefactIdGetWithHttpInfo(editionId, artefactId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'editionId' is set
@@ -375,17 +400,25 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/{artefactId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsArtefactIdPut operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdPutCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a listing of all artefacts that are part of the specified edition
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactId Unique Id of the desired artefact
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.optional Add \"masks\" to include artefact polygons and \"images\" to include image data
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactDTO}
      */
+    v1EditionsEditionIdArtefactsArtefactIdGet(editionId, artefactId, opts) {
+      return this.v1EditionsEditionIdArtefactsArtefactIdGetWithHttpInfo(editionId, artefactId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates the specified artefact.  There are many possible attributes that can be changed for  an artefact.  The caller should only input only those that  should be changed. Attributes with a null value will be ignored.  For instance, setting the mask to null or \"\" will result in  no changes to the current mask, and no value for the mask will  be returned (or broadcast). Likewise, the transformation, name,  or status message may be set to null and no change will be made  to those entities (though any unchanged values will be returned  along with the changed values and also broadcast to co-editors).
@@ -393,10 +426,9 @@ export default class ArtefactApi {
      * @param {Number} artefactId Unique Id of the desired artefact
      * @param {Object} opts Optional parameters
      * @param {module:model/UpdateArtefactDTO} opts.updateArtefactDTO An UpdateArtefactDTO with the desired alterations to the artefact
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsArtefactIdPut(editionId, artefactId, opts, callback) {
+    v1EditionsEditionIdArtefactsArtefactIdPutWithHttpInfo(editionId, artefactId, opts) {
       opts = opts || {};
       let postBody = opts['updateArtefactDTO'];
       // verify the required parameter 'editionId' is set
@@ -426,26 +458,33 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/{artefactId}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsArtefactIdRoisGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdRoisGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InterpretationRoiDTOList} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Updates the specified artefact.  There are many possible attributes that can be changed for  an artefact.  The caller should only input only those that  should be changed. Attributes with a null value will be ignored.  For instance, setting the mask to null or \"\" will result in  no changes to the current mask, and no value for the mask will  be returned (or broadcast). Likewise, the transformation, name,  or status message may be set to null and no change will be made  to those entities (though any unchanged values will be returned  along with the changed values and also broadcast to co-editors).
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactId Unique Id of the desired artefact
+     * @param {Object} opts Optional parameters
+     * @param {module:model/UpdateArtefactDTO} opts.updateArtefactDTO An UpdateArtefactDTO with the desired alterations to the artefact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactDTO}
      */
+    v1EditionsEditionIdArtefactsArtefactIdPut(editionId, artefactId, opts) {
+      return this.v1EditionsEditionIdArtefactsArtefactIdPutWithHttpInfo(editionId, artefactId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a listing of all rois belonging to an artefact in the specified edition
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Number} artefactId Unique Id of the desired artefact
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdRoisGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InterpretationRoiDTOList}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InterpretationRoiDTOList} and HTTP response
      */
-    v1EditionsEditionIdArtefactsArtefactIdRoisGet(editionId, artefactId, callback) {
+    v1EditionsEditionIdArtefactsArtefactIdRoisGetWithHttpInfo(editionId, artefactId) {
       let postBody = null;
       // verify the required parameter 'editionId' is set
       if (editionId === undefined || editionId === null) {
@@ -474,17 +513,23 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/{artefactId}/rois', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactTextFragmentMatchListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a listing of all rois belonging to an artefact in the specified edition
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactId Unique Id of the desired artefact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InterpretationRoiDTOList}
      */
+    v1EditionsEditionIdArtefactsArtefactIdRoisGet(editionId, artefactId) {
+      return this.v1EditionsEditionIdArtefactsArtefactIdRoisGetWithHttpInfo(editionId, artefactId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a listing of text fragments that have text in the specified artefact.  With the optional query parameter \"suggested\", this endpoint will also return  any text fragment that the system suggests might have text in the artefact.
@@ -492,10 +537,9 @@ export default class ArtefactApi {
      * @param {Number} artefactId Unique Id of the desired artefact
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.optional Add \"suggested\" to include possible matches suggested by the system
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactTextFragmentMatchListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactTextFragmentMatchListDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet(editionId, artefactId, opts, callback) {
+    v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGetWithHttpInfo(editionId, artefactId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'editionId' is set
@@ -526,27 +570,34 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/{artefactId}/text-fragments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsBatchTransformationPost operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsBatchTransformationPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/BatchUpdatedArtefactTransformDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a listing of text fragments that have text in the specified artefact.  With the optional query parameter \"suggested\", this endpoint will also return  any text fragment that the system suggests might have text in the artefact.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Number} artefactId Unique Id of the desired artefact
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.optional Add \"suggested\" to include possible matches suggested by the system
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactTextFragmentMatchListDTO}
      */
+    v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGet(editionId, artefactId, opts) {
+      return this.v1EditionsEditionIdArtefactsArtefactIdTextFragmentsGetWithHttpInfo(editionId, artefactId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Updates the positional data for a batch of artefacts
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Object} opts Optional parameters
      * @param {module:model/BatchUpdateArtefactPlacementDTO} opts.batchUpdateArtefactPlacementDTO A BatchUpdateArtefactTransformDTO with a list of the desired updates
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsBatchTransformationPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/BatchUpdatedArtefactTransformDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/BatchUpdatedArtefactTransformDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsBatchTransformationPost(editionId, opts, callback) {
+    v1EditionsEditionIdArtefactsBatchTransformationPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['batchUpdateArtefactPlacementDTO'];
       // verify the required parameter 'editionId' is set
@@ -571,27 +622,33 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts/batch-transformation', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsGet operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactListDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Updates the positional data for a batch of artefacts
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/BatchUpdateArtefactPlacementDTO} opts.batchUpdateArtefactPlacementDTO A BatchUpdateArtefactTransformDTO with a list of the desired updates
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/BatchUpdatedArtefactTransformDTO}
      */
+    v1EditionsEditionIdArtefactsBatchTransformationPost(editionId, opts) {
+      return this.v1EditionsEditionIdArtefactsBatchTransformationPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Provides a listing of all artefacts that are part of the specified edition
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Object} opts Optional parameters
      * @param {Array.<String>} opts.optional Add \"masks\" to include artefact polygons and \"images\" to include image data
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactListDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactListDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsGet(editionId, opts, callback) {
+    v1EditionsEditionIdArtefactsGetWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = null;
       // verify the required parameter 'editionId' is set
@@ -617,27 +674,33 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the v1EditionsEditionIdArtefactsPost operation.
-     * @callback module:api/ArtefactApi~v1EditionsEditionIdArtefactsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ArtefactDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Provides a listing of all artefacts that are part of the specified edition
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Object} opts Optional parameters
+     * @param {Array.<String>} opts.optional Add \"masks\" to include artefact polygons and \"images\" to include image data
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactListDTO}
      */
+    v1EditionsEditionIdArtefactsGet(editionId, opts) {
+      return this.v1EditionsEditionIdArtefactsGetWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Creates a new artefact with the provided data.  If no mask is provided, a placeholder mask will be created with the values:  \"POLYGON((0 0,1 1,1 0,0 0))\" (the system requires a valid WKT polygon mask for  every artefact). It is not recommended to leave the mask, name, or work status  blank or null. It will often be advantageous to leave the transformation null  when first creating a new artefact.
      * @param {Number} editionId Unique Id of the desired edition
      * @param {Object} opts Optional parameters
      * @param {module:model/CreateArtefactDTO} opts.createArtefactDTO A CreateArtefactDTO with the data for the new artefact
-     * @param {module:api/ArtefactApi~v1EditionsEditionIdArtefactsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ArtefactDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ArtefactDTO} and HTTP response
      */
-    v1EditionsEditionIdArtefactsPost(editionId, opts, callback) {
+    v1EditionsEditionIdArtefactsPostWithHttpInfo(editionId, opts) {
       opts = opts || {};
       let postBody = opts['createArtefactDTO'];
       // verify the required parameter 'editionId' is set
@@ -662,8 +725,22 @@ export default class ArtefactApi {
       return this.apiClient.callApi(
         '/v1/editions/{editionId}/artefacts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Creates a new artefact with the provided data.  If no mask is provided, a placeholder mask will be created with the values:  \"POLYGON((0 0,1 1,1 0,0 0))\" (the system requires a valid WKT polygon mask for  every artefact). It is not recommended to leave the mask, name, or work status  blank or null. It will often be advantageous to leave the transformation null  when first creating a new artefact.
+     * @param {Number} editionId Unique Id of the desired edition
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CreateArtefactDTO} opts.createArtefactDTO A CreateArtefactDTO with the data for the new artefact
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ArtefactDTO}
+     */
+    v1EditionsEditionIdArtefactsPost(editionId, opts) {
+      return this.v1EditionsEditionIdArtefactsPostWithHttpInfo(editionId, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

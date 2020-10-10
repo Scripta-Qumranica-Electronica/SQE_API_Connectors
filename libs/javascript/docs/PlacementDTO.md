@@ -1,4 +1,4 @@
-# SqeApi.PlacementDTO
+# QumranicaApiConnector.PlacementDTO
 
 ## Properties
 

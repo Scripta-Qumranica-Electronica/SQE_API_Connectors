@@ -17,7 +17,7 @@ import SideDesignation from './SideDesignation';
 /**
  * The ImagedObjectTextFragmentMatchDTO model module.
  * @module model/ImagedObjectTextFragmentMatchDTO
- * @version v1
+ * @version 0.7.0
  */
 class ImagedObjectTextFragmentMatchDTO {
     /**

@@ -67,7 +67,7 @@ class InterpretationRoiDTOList(object):
 
 
         :param rois: The rois of this InterpretationRoiDTOList.  # noqa: E501
-        :type rois: list[InterpretationRoiDTO]
+        :type: list[InterpretationRoiDTO]
         """
         if self.local_vars_configuration.client_side_validation and rois is None:  # noqa: E501
             raise ValueError("Invalid value for `rois`, must not be `None`")  # noqa: E501

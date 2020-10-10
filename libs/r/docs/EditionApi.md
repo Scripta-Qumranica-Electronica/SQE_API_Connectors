@@ -25,7 +25,7 @@ Get a list of requests issued by the current user for other users  to become edi
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 
 #Get a list of requests issued by the current user for other users  to become editors of a shared edition
@@ -64,7 +64,7 @@ Confirm addition of an editor to the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.token <- 'token_example' # character | JWT for verifying the request confirmation
 
@@ -107,7 +107,7 @@ Adds an editor to the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.invite.editor.dto <- InviteEditorDTO$new("email_example", "mayLock_example", "mayRead_example", "mayWrite_example", "isAdmin_example") # InviteEditorDTO | JSON object with the attributes of the new editor
@@ -151,7 +151,7 @@ Provides details about the specified edition and all accessible alternate editio
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.optional <- list("inner_example") # array[character] | Optional parameters: 'deleteForAllEditors'
@@ -198,7 +198,7 @@ Changes the rights for an editor of the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.editor.email.id <- 'editor.email.id_example' # character | Email address of the editor whose permissions are being changed
@@ -245,7 +245,7 @@ Provides details about the specified edition and all accessible alternate editio
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 
@@ -288,7 +288,7 @@ Creates a copy of the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.edition.copy.dto <- EditionCopyDTO$new("name_example", "copyrightHolder_example", "collaborators_example") # EditionCopyDTO | JSON object with the attributes to be changed in the copied edition
@@ -333,7 +333,7 @@ Updates data for the specified edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.edition.update.request.dto <- EditionUpdateRequestDTO$new(UpdateEditionManuscriptMetricsDTO$new(123, 123, 123, 123), "name_example", "copyrightHolder_example", "collaborators_example") # EditionUpdateRequestDTO | JSON object with the attributes to be updated
@@ -378,7 +378,7 @@ Provides spatial data for all letters in the edition
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 
@@ -421,7 +421,7 @@ Provides spatial data for all letters in the edition organized and oriented  by 
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 
@@ -464,7 +464,7 @@ Get a list of invitations issued to the current user to become an editor of a sh
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 
 #Get a list of invitations issued to the current user to become an editor of a shared edition
@@ -503,7 +503,7 @@ Provides a listing of all editions accessible to the current user
 
 ### Example
 ```R
-library(openapi)
+library(qumranica_api_connector)
 
 
 #Provides a listing of all editions accessible to the current user

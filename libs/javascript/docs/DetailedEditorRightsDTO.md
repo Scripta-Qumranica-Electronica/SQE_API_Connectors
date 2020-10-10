@@ -1,4 +1,4 @@
-# SqeApi.DetailedEditorRightsDTO
+# QumranicaApiConnector.DetailedEditorRightsDTO
 
 ## Properties
 

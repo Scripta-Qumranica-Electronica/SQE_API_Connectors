@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateTextFragmentDTO model module.
  * @module model/CreateTextFragmentDTO
- * @version v1
+ * @version 0.7.0
  */
 class CreateTextFragmentDTO {
     /**

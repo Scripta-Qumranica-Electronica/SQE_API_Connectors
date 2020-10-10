@@ -8,12 +8,10 @@
 
 #' @docType class
 #' @title UpdatedInterpretationRoiDTOList
-#'
 #' @description UpdatedInterpretationRoiDTOList Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field rois  list( \link{UpdatedInterpretationRoiDTO} ) 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -22,9 +20,7 @@ UpdatedInterpretationRoiDTOList <- R6::R6Class(
   'UpdatedInterpretationRoiDTOList',
   public = list(
     `rois` = NULL,
-    initialize = function(
-        `rois`, ...
-    ) {
+    initialize = function(`rois`, ...){
       local.optional.var <- list(...)
       if (!missing(`rois`)) {
         stopifnot(is.vector(`rois`), length(`rois`) != 0)
@@ -44,9 +40,8 @@ UpdatedInterpretationRoiDTOList <- R6::R6Class(
     fromJSON = function(UpdatedInterpretationRoiDTOListJson) {
       UpdatedInterpretationRoiDTOListObject <- jsonlite::fromJSON(UpdatedInterpretationRoiDTOListJson)
       if (!is.null(UpdatedInterpretationRoiDTOListObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(UpdatedInterpretationRoiDTOListObject$`rois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("openapi"))
+        self$`rois` <- ApiClient$new()$deserializeObj(UpdatedInterpretationRoiDTOListObject$`rois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -63,9 +58,8 @@ UpdatedInterpretationRoiDTOList <- R6::R6Class(
     },
     fromJSONString = function(UpdatedInterpretationRoiDTOListJson) {
       UpdatedInterpretationRoiDTOListObject <- jsonlite::fromJSON(UpdatedInterpretationRoiDTOListJson)
-      self$`rois` <- ApiClient$new()$deserializeObj(UpdatedInterpretationRoiDTOListObject$`rois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("openapi"))
+      self$`rois` <- ApiClient$new()$deserializeObj(UpdatedInterpretationRoiDTOListObject$`rois`, "array[UpdatedInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
       self
     }
   )
 )
-

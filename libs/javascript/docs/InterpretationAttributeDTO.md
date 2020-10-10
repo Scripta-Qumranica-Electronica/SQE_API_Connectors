@@ -1,4 +1,4 @@
-# SqeApi.InterpretationAttributeDTO
+# QumranicaApiConnector.InterpretationAttributeDTO
 
 ## Properties
 

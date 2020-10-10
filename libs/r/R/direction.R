@@ -8,58 +8,35 @@
 
 #' @docType class
 #' @title Direction
-#'
 #' @description Direction Class
-#'
 #' @format An \code{R6Class} generator object
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
 #' @export
 Direction <- R6::R6Class(
-    "Direction",
-    public = list(
-        initialize = function(...) {
-            local.optional.var <- list(...)
-            val <- unlist(local.optional.var)
-            enumvec <- .parse_Direction()
+  'Direction',
+  public = list(
+    initialize = function(, ...){
+      local.optional.var <- list(...)
+    },
+    toJSON = function() {
+      DirectionObject <- list()
 
-            stopifnot(length(val) == 1L)
-
-            if (!val %in% enumvec)
-                stop("Use one of the valid values: ",
-                    paste0(enumvec, collapse = ", "))
-            private$value <- val
-        },
-        toJSON = function() {
-            jsonlite::toJSON(private$value, auto_unbox = TRUE)
-        },
-        fromJSON = function(DirectionJson) {
-            private$value <- jsonlite::fromJSON(DirectionJson,
-                simplifyVector = FALSE)
-            self
-        },
-        toJSONString = function() {
-            as.character(jsonlite::toJSON(private$value,
-                auto_unbox = TRUE))
-        },
-        fromJSONString = function(DirectionJson) {
-            private$value <- jsonlite::fromJSON(DirectionJson,
-                simplifyVector = FALSE)
-            self
-        }
-    ),
-    private = list(
-        value = NULL
-    )
+      DirectionObject
+    },
+    fromJSON = function(DirectionJson) {
+      DirectionObject <- jsonlite::fromJSON(DirectionJson)
+    },
+    toJSONString = function() {
+      jsoncontent <- c(
+      )
+      jsoncontent <- paste(jsoncontent, collapse = ",")
+      paste('{', jsoncontent, '}', sep = "")
+    },
+    fromJSONString = function(DirectionJson) {
+      DirectionObject <- jsonlite::fromJSON(DirectionJson)
+      self
+    }
+  )
 )
-
-# add to utils.R
-.parse_Direction <- function(vals) {
-    res <- gsub("^\\[|\\]$", "",
-        "[0, 1, 2]"
-    )
-    unlist(strsplit(res, ", "))
-}
-
-

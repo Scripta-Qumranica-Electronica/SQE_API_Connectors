@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.LineDataListDTO();
+    instance = new QumranicaApiConnector.LineDataListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('LineDataListDTO', function() {
     it('should create an instance of LineDataListDTO', function() {
       // uncomment below and update the code to test LineDataListDTO
-      //var instane = new SqeApi.LineDataListDTO();
-      //expect(instance).to.be.a(SqeApi.LineDataListDTO);
+      //var instane = new QumranicaApiConnector.LineDataListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.LineDataListDTO);
     });
 
     it('should have the property lines (base name: "lines")', function() {
       // uncomment below and update the code to test the property lines
-      //var instane = new SqeApi.LineDataListDTO();
+      //var instane = new QumranicaApiConnector.LineDataListDTO();
       //expect(instance).to.be();
     });
 

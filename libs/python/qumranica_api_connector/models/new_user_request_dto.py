@@ -83,7 +83,7 @@ class NewUserRequestDTO(object):
 
 
         :param email: The email of this NewUserRequestDTO.  # noqa: E501
-        :type email: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and email is None:  # noqa: E501
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
@@ -109,7 +109,7 @@ class NewUserRequestDTO(object):
 
 
         :param password: The password of this NewUserRequestDTO.  # noqa: E501
-        :type password: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and password is None:  # noqa: E501
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
@@ -138,7 +138,7 @@ class NewUserRequestDTO(object):
 
 
         :param organization: The organization of this NewUserRequestDTO.  # noqa: E501
-        :type organization: str
+        :type: str
         """
 
         self._organization = organization
@@ -159,7 +159,7 @@ class NewUserRequestDTO(object):
 
 
         :param forename: The forename of this NewUserRequestDTO.  # noqa: E501
-        :type forename: str
+        :type: str
         """
 
         self._forename = forename
@@ -180,7 +180,7 @@ class NewUserRequestDTO(object):
 
 
         :param surname: The surname of this NewUserRequestDTO.  # noqa: E501
-        :type surname: str
+        :type: str
         """
 
         self._surname = surname

@@ -103,7 +103,7 @@ class SimpleImageDTO(object):
 
 
         :param id: The id of this SimpleImageDTO.  # noqa: E501
-        :type id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -126,7 +126,7 @@ class SimpleImageDTO(object):
 
 
         :param url: The url of this SimpleImageDTO.  # noqa: E501
-        :type url: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and url is None:  # noqa: E501
             raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
@@ -149,7 +149,7 @@ class SimpleImageDTO(object):
 
 
         :param lighting_type: The lighting_type of this SimpleImageDTO.  # noqa: E501
-        :type lighting_type: Lighting
+        :type: Lighting
         """
         if self.local_vars_configuration.client_side_validation and lighting_type is None:  # noqa: E501
             raise ValueError("Invalid value for `lighting_type`, must not be `None`")  # noqa: E501
@@ -172,7 +172,7 @@ class SimpleImageDTO(object):
 
 
         :param lighting_direction: The lighting_direction of this SimpleImageDTO.  # noqa: E501
-        :type lighting_direction: Direction
+        :type: Direction
         """
         if self.local_vars_configuration.client_side_validation and lighting_direction is None:  # noqa: E501
             raise ValueError("Invalid value for `lighting_direction`, must not be `None`")  # noqa: E501
@@ -195,7 +195,7 @@ class SimpleImageDTO(object):
 
 
         :param wave_length: The wave_length of this SimpleImageDTO.  # noqa: E501
-        :type wave_length: list[str]
+        :type: list[str]
         """
         if self.local_vars_configuration.client_side_validation and wave_length is None:  # noqa: E501
             raise ValueError("Invalid value for `wave_length`, must not be `None`")  # noqa: E501
@@ -218,7 +218,7 @@ class SimpleImageDTO(object):
 
 
         :param type: The type of this SimpleImageDTO.  # noqa: E501
-        :type type: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
@@ -241,7 +241,7 @@ class SimpleImageDTO(object):
 
 
         :param side: The side of this SimpleImageDTO.  # noqa: E501
-        :type side: SideDesignation
+        :type: SideDesignation
         """
         if self.local_vars_configuration.client_side_validation and side is None:  # noqa: E501
             raise ValueError("Invalid value for `side`, must not be `None`")  # noqa: E501
@@ -264,7 +264,7 @@ class SimpleImageDTO(object):
 
 
         :param ppi: The ppi of this SimpleImageDTO.  # noqa: E501
-        :type ppi: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and ppi is None:  # noqa: E501
             raise ValueError("Invalid value for `ppi`, must not be `None`")  # noqa: E501
@@ -287,7 +287,7 @@ class SimpleImageDTO(object):
 
 
         :param master: The master of this SimpleImageDTO.  # noqa: E501
-        :type master: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and master is None:  # noqa: E501
             raise ValueError("Invalid value for `master`, must not be `None`")  # noqa: E501
@@ -310,7 +310,7 @@ class SimpleImageDTO(object):
 
 
         :param catalog_number: The catalog_number of this SimpleImageDTO.  # noqa: E501
-        :type catalog_number: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and catalog_number is None:  # noqa: E501
             raise ValueError("Invalid value for `catalog_number`, must not be `None`")  # noqa: E501

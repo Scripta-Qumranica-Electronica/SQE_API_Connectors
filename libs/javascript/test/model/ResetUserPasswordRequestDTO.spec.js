@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ResetUserPasswordRequestDTO();
+    instance = new QumranicaApiConnector.ResetUserPasswordRequestDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('ResetUserPasswordRequestDTO', function() {
     it('should create an instance of ResetUserPasswordRequestDTO', function() {
       // uncomment below and update the code to test ResetUserPasswordRequestDTO
-      //var instane = new SqeApi.ResetUserPasswordRequestDTO();
-      //expect(instance).to.be.a(SqeApi.ResetUserPasswordRequestDTO);
+      //var instane = new QumranicaApiConnector.ResetUserPasswordRequestDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ResetUserPasswordRequestDTO);
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.ResetUserPasswordRequestDTO();
+      //var instane = new QumranicaApiConnector.ResetUserPasswordRequestDTO();
       //expect(instance).to.be();
     });
 

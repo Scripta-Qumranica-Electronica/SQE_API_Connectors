@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.AttributeValueDTO();
+    instance = new QumranicaApiConnector.AttributeValueDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('AttributeValueDTO', function() {
     it('should create an instance of AttributeValueDTO', function() {
       // uncomment below and update the code to test AttributeValueDTO
-      //var instane = new SqeApi.AttributeValueDTO();
-      //expect(instance).to.be.a(SqeApi.AttributeValueDTO);
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.AttributeValueDTO);
     });
 
     it('should have the property creatorId (base name: "creatorId")', function() {
       // uncomment below and update the code to test the property creatorId
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editorId (base name: "editorId")', function() {
       // uncomment below and update the code to test the property editorId
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property cssDirectives (base name: "cssDirectives")', function() {
       // uncomment below and update the code to test the property cssDirectives
-      //var instane = new SqeApi.AttributeValueDTO();
+      //var instane = new QumranicaApiConnector.AttributeValueDTO();
       //expect(instance).to.be();
     });
 

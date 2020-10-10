@@ -1,4 +1,4 @@
-# openapi::TextEditionDTO
+# qumranica_api_connector::TextEditionDTO
 
 ## Properties
 Name | Type | Description | Notes

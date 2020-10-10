@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImagedObjectDTO();
+    instance = new QumranicaApiConnector.ImagedObjectDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,31 +50,31 @@
   describe('ImagedObjectDTO', function() {
     it('should create an instance of ImagedObjectDTO', function() {
       // uncomment below and update the code to test ImagedObjectDTO
-      //var instane = new SqeApi.ImagedObjectDTO();
-      //expect(instance).to.be.a(SqeApi.ImagedObjectDTO);
+      //var instane = new QumranicaApiConnector.ImagedObjectDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImagedObjectDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.ImagedObjectDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property recto (base name: "recto")', function() {
       // uncomment below and update the code to test the property recto
-      //var instane = new SqeApi.ImagedObjectDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property verso (base name: "verso")', function() {
       // uncomment below and update the code to test the property verso
-      //var instane = new SqeApi.ImagedObjectDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property artefacts (base name: "artefacts")', function() {
       // uncomment below and update the code to test the property artefacts
-      //var instane = new SqeApi.ImagedObjectDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectDTO();
       //expect(instance).to.be();
     });
 

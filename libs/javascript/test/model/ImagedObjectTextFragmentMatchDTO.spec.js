@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+    instance = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,37 +50,37 @@
   describe('ImagedObjectTextFragmentMatchDTO', function() {
     it('should create an instance of ImagedObjectTextFragmentMatchDTO', function() {
       // uncomment below and update the code to test ImagedObjectTextFragmentMatchDTO
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
-      //expect(instance).to.be.a(SqeApi.ImagedObjectTextFragmentMatchDTO);
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO);
     });
 
     it('should have the property editionId (base name: "editionId")', function() {
       // uncomment below and update the code to test the property editionId
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property manuscriptName (base name: "manuscriptName")', function() {
       // uncomment below and update the code to test the property manuscriptName
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property textFragmentId (base name: "textFragmentId")', function() {
       // uncomment below and update the code to test the property textFragmentId
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property textFragmentName (base name: "textFragmentName")', function() {
       // uncomment below and update the code to test the property textFragmentName
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property side (base name: "side")', function() {
       // uncomment below and update the code to test the property side
-      //var instane = new SqeApi.ImagedObjectTextFragmentMatchDTO();
+      //var instane = new QumranicaApiConnector.ImagedObjectTextFragmentMatchDTO();
       //expect(instance).to.be();
     });
 

@@ -75,7 +75,7 @@ class InstitutionalImageDTO(object):
 
 
         :param id: The id of this InstitutionalImageDTO.  # noqa: E501
-        :type id: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class InstitutionalImageDTO(object):
 
 
         :param thumbnail_url: The thumbnail_url of this InstitutionalImageDTO.  # noqa: E501
-        :type thumbnail_url: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and thumbnail_url is None:  # noqa: E501
             raise ValueError("Invalid value for `thumbnail_url`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class InstitutionalImageDTO(object):
 
 
         :param license: The license of this InstitutionalImageDTO.  # noqa: E501
-        :type license: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and license is None:  # noqa: E501
             raise ValueError("Invalid value for `license`, must not be `None`")  # noqa: E501

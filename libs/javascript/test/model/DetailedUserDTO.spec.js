@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.DetailedUserDTO();
+    instance = new QumranicaApiConnector.DetailedUserDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,43 +50,43 @@
   describe('DetailedUserDTO', function() {
     it('should create an instance of DetailedUserDTO', function() {
       // uncomment below and update the code to test DetailedUserDTO
-      //var instane = new SqeApi.DetailedUserDTO();
-      //expect(instance).to.be.a(SqeApi.DetailedUserDTO);
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.DetailedUserDTO);
     });
 
     it('should have the property forename (base name: "forename")', function() {
       // uncomment below and update the code to test the property forename
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property surname (base name: "surname")', function() {
       // uncomment below and update the code to test the property surname
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property organization (base name: "organization")', function() {
       // uncomment below and update the code to test the property organization
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property activated (base name: "activated")', function() {
       // uncomment below and update the code to test the property activated
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property userId (base name: "userId")', function() {
       // uncomment below and update the code to test the property userId
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new SqeApi.DetailedUserDTO();
+      //var instane = new QumranicaApiConnector.DetailedUserDTO();
       //expect(instance).to.be();
     });
 

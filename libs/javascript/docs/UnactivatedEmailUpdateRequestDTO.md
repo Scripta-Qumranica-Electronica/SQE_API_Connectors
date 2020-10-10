@@ -1,4 +1,4 @@
-# SqeApi.UnactivatedEmailUpdateRequestDTO
+# QumranicaApiConnector.UnactivatedEmailUpdateRequestDTO
 
 ## Properties
 

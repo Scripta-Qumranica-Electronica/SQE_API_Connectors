@@ -75,7 +75,7 @@ class CreateTextFragmentDTO(object):
 
 
         :param name: The name of this CreateTextFragmentDTO.  # noqa: E501
-        :type name: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
@@ -104,7 +104,7 @@ class CreateTextFragmentDTO(object):
 
 
         :param previous_text_fragment_id: The previous_text_fragment_id of this CreateTextFragmentDTO.  # noqa: E501
-        :type previous_text_fragment_id: int
+        :type: int
         """
 
         self._previous_text_fragment_id = previous_text_fragment_id
@@ -125,7 +125,7 @@ class CreateTextFragmentDTO(object):
 
 
         :param next_text_fragment_id: The next_text_fragment_id of this CreateTextFragmentDTO.  # noqa: E501
-        :type next_text_fragment_id: int
+        :type: int
         """
 
         self._next_text_fragment_id = next_text_fragment_id

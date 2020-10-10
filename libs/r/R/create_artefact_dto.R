@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title CreateArtefactDTO
-#'
 #' @description CreateArtefactDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field masterImageId  integer 
 #'
 #' @field mask  character 
@@ -22,6 +19,7 @@
 #' @field name  character [optional]
 #'
 #' @field statusMessage  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -34,9 +32,7 @@ CreateArtefactDTO <- R6::R6Class(
     `placement` = NULL,
     `name` = NULL,
     `statusMessage` = NULL,
-    initialize = function(
-        `masterImageId`, `mask`, `placement`=NULL, `name`=NULL, `statusMessage`=NULL, ...
-    ) {
+    initialize = function(`masterImageId`, `mask`, `placement`=NULL, `name`=NULL, `statusMessage`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`masterImageId`)) {
         stopifnot(is.numeric(`masterImageId`), length(`masterImageId`) == 1)
@@ -103,7 +99,6 @@ CreateArtefactDTO <- R6::R6Class(
       if (!is.null(CreateArtefactDTOObject$`statusMessage`)) {
         self$`statusMessage` <- CreateArtefactDTOObject$`statusMessage`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -157,4 +152,3 @@ CreateArtefactDTO <- R6::R6Class(
     }
   )
 )
-

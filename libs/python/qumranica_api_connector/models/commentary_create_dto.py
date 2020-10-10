@@ -67,7 +67,7 @@ class CommentaryCreateDTO(object):
 
 
         :param commentary: The commentary of this CommentaryCreateDTO.  # noqa: E501
-        :type commentary: str
+        :type: str
         """
 
         self._commentary = commentary

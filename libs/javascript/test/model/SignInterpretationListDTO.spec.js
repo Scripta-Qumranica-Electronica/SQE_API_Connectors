@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.SignInterpretationListDTO();
+    instance = new QumranicaApiConnector.SignInterpretationListDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,13 +50,13 @@
   describe('SignInterpretationListDTO', function() {
     it('should create an instance of SignInterpretationListDTO', function() {
       // uncomment below and update the code to test SignInterpretationListDTO
-      //var instane = new SqeApi.SignInterpretationListDTO();
-      //expect(instance).to.be.a(SqeApi.SignInterpretationListDTO);
+      //var instane = new QumranicaApiConnector.SignInterpretationListDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.SignInterpretationListDTO);
     });
 
     it('should have the property signInterpretations (base name: "signInterpretations")', function() {
       // uncomment below and update the code to test the property signInterpretations
-      //var instane = new SqeApi.SignInterpretationListDTO();
+      //var instane = new QumranicaApiConnector.SignInterpretationListDTO();
       //expect(instance).to.be();
     });
 

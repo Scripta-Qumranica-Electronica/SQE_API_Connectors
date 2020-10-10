@@ -1,4 +1,4 @@
-# SqeApi.EditionEntities
+# QumranicaApiConnector.EditionEntities
 
 ## Enum
 

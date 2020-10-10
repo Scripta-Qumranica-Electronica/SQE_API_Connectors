@@ -67,7 +67,7 @@ class WktPolygonDTO(object):
 
 
         :param wkt_polygon: The wkt_polygon of this WktPolygonDTO.  # noqa: E501
-        :type wkt_polygon: str
+        :type: str
         """
         if self.local_vars_configuration.client_side_validation and wkt_polygon is None:  # noqa: E501
             raise ValueError("Invalid value for `wkt_polygon`, must not be `None`")  # noqa: E501

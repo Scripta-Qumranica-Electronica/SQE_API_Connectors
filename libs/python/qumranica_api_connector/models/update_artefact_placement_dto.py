@@ -75,7 +75,7 @@ class UpdateArtefactPlacementDTO(object):
 
 
         :param artefact_id: The artefact_id of this UpdateArtefactPlacementDTO.  # noqa: E501
-        :type artefact_id: int
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and artefact_id is None:  # noqa: E501
             raise ValueError("Invalid value for `artefact_id`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class UpdateArtefactPlacementDTO(object):
 
 
         :param is_placed: The is_placed of this UpdateArtefactPlacementDTO.  # noqa: E501
-        :type is_placed: bool
+        :type: bool
         """
         if self.local_vars_configuration.client_side_validation and is_placed is None:  # noqa: E501
             raise ValueError("Invalid value for `is_placed`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class UpdateArtefactPlacementDTO(object):
 
 
         :param placement: The placement of this UpdateArtefactPlacementDTO.  # noqa: E501
-        :type placement: PlacementDTO
+        :type: PlacementDTO
         """
 
         self._placement = placement

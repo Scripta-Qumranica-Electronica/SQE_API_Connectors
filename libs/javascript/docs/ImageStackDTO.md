@@ -1,4 +1,4 @@
-# SqeApi.ImageStackDTO
+# QumranicaApiConnector.ImageStackDTO
 
 ## Properties
 

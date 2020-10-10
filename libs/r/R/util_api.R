@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Util operations
-#' @description openapi.Util
+#' @description qumranica_api_connector.Util
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -38,7 +38,7 @@
 #' \dontrun{
 #' ####################  V1UtilsRepairWktPolygonPost  ####################
 #'
-#' library(openapi)
+#' library(qumranica_api_connector)
 #' var.wkt.polygon.dto <- WktPolygonDTO$new() # WktPolygonDTO | JSON object with the WKT polygon to validate
 #'
 #' #Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.
@@ -52,7 +52,7 @@
 #'
 #' }
 #' @importFrom R6 R6Class
-#' @importFrom base64enc base64encode
+#' @importFrom caTools base64encode
 #' @export
 UtilApi <- R6::R6Class(
   'UtilApi',
@@ -106,7 +106,7 @@ UtilApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "WktPolygonDTO", loadNamespace("openapi")),
+          self$apiClient$deserialize(resp, "WktPolygonDTO", loadNamespace("qumranica_api_connector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

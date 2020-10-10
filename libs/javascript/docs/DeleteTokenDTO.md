@@ -1,4 +1,4 @@
-# SqeApi.DeleteTokenDTO
+# QumranicaApiConnector.DeleteTokenDTO
 
 ## Properties
 

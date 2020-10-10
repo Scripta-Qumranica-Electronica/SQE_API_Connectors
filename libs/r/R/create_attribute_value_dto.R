@@ -8,16 +8,14 @@
 
 #' @docType class
 #' @title CreateAttributeValueDTO
-#'
 #' @description CreateAttributeValueDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field value  character 
 #'
 #' @field description  character [optional]
 #'
 #' @field cssDirectives  character [optional]
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -28,9 +26,7 @@ CreateAttributeValueDTO <- R6::R6Class(
     `value` = NULL,
     `description` = NULL,
     `cssDirectives` = NULL,
-    initialize = function(
-        `value`, `description`=NULL, `cssDirectives`=NULL, ...
-    ) {
+    initialize = function(`value`, `description`=NULL, `cssDirectives`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`value`)) {
         stopifnot(is.character(`value`), length(`value`) == 1)
@@ -73,7 +69,6 @@ CreateAttributeValueDTO <- R6::R6Class(
       if (!is.null(CreateAttributeValueDTOObject$`cssDirectives`)) {
         self$`cssDirectives` <- CreateAttributeValueDTOObject$`cssDirectives`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -111,4 +106,3 @@ CreateAttributeValueDTO <- R6::R6Class(
     }
   )
 )
-

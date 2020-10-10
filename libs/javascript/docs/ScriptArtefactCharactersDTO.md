@@ -1,4 +1,4 @@
-# SqeApi.ScriptArtefactCharactersDTO
+# QumranicaApiConnector.ScriptArtefactCharactersDTO
 
 ## Properties
 

@@ -10,53 +10,30 @@ Method | HTTP request | Description
 
 ## V1UtilsRepairWktPolygonPost
 
-> WktPolygonDTO V1UtilsRepairWktPolygonPost(ctx).WktPolygonDTO(wktPolygonDTO).Execute()
+> WktPolygonDto V1UtilsRepairWktPolygonPost(ctx, optional)
 
 Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.
 
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    wktPolygonDTO := openapiclient.WktPolygonDTO{WktPolygon: "WktPolygon_example"} // WktPolygonDTO | JSON object with the WKT polygon to validate (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.UtilApi.V1UtilsRepairWktPolygonPost(context.Background()).WktPolygonDTO(wktPolygonDTO).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `UtilApi.V1UtilsRepairWktPolygonPost``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `V1UtilsRepairWktPolygonPost`: WktPolygonDTO
-    fmt.Fprintf(os.Stdout, "Response from `UtilApi.V1UtilsRepairWktPolygonPost`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiV1UtilsRepairWktPolygonPostRequest struct via the builder pattern
+### Required Parameters
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **wktPolygonDTO** | [**WktPolygonDTO**](WktPolygonDTO.md) | JSON object with the WKT polygon to validate | 
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***V1UtilsRepairWktPolygonPostOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a V1UtilsRepairWktPolygonPostOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **wktPolygonDto** | [**optional.Interface of WktPolygonDto**](WktPolygonDto.md)| JSON object with the WKT polygon to validate | 
 
 ### Return type
 
-[**WktPolygonDTO**](WktPolygonDTO.md)
+[**WktPolygonDto**](WktPolygonDTO.md)
 
 ### Authorization
 

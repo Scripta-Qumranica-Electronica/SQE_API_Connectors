@@ -20,15 +20,15 @@
     factory(require('expect.js'), require(process.cwd()+'/src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SqeApi);
+    factory(root.expect, root.QumranicaApiConnector);
   }
-}(this, function(expect, SqeApi) {
+}(this, function(expect, QumranicaApiConnector) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SqeApi.EditionDTO();
+    instance = new QumranicaApiConnector.EditionDTO();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,79 +50,79 @@
   describe('EditionDTO', function() {
     it('should create an instance of EditionDTO', function() {
       // uncomment below and update the code to test EditionDTO
-      //var instane = new SqeApi.EditionDTO();
-      //expect(instance).to.be.a(SqeApi.EditionDTO);
+      //var instane = new QumranicaApiConnector.EditionDTO();
+      //expect(instance).to.be.a(QumranicaApiConnector.EditionDTO);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property editionDataEditorId (base name: "editionDataEditorId")', function() {
       // uncomment below and update the code to test the property editionDataEditorId
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property permission (base name: "permission")', function() {
       // uncomment below and update the code to test the property permission
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property owner (base name: "owner")', function() {
       // uncomment below and update the code to test the property owner
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property thumbnailUrl (base name: "thumbnailUrl")', function() {
       // uncomment below and update the code to test the property thumbnailUrl
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property shares (base name: "shares")', function() {
       // uncomment below and update the code to test the property shares
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property metrics (base name: "metrics")', function() {
       // uncomment below and update the code to test the property metrics
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property locked (base name: "locked")', function() {
       // uncomment below and update the code to test the property locked
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property isPublic (base name: "isPublic")', function() {
       // uncomment below and update the code to test the property isPublic
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property lastEdit (base name: "lastEdit")', function() {
       // uncomment below and update the code to test the property lastEdit
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 
     it('should have the property copyright (base name: "copyright")', function() {
       // uncomment below and update the code to test the property copyright
-      //var instane = new SqeApi.EditionDTO();
+      //var instane = new QumranicaApiConnector.EditionDTO();
       //expect(instance).to.be();
     });
 

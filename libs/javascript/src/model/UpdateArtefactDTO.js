@@ -17,7 +17,7 @@ import PlacementDTO from './PlacementDTO';
 /**
  * The UpdateArtefactDTO model module.
  * @module model/UpdateArtefactDTO
- * @version v1
+ * @version 0.7.0
  */
 class UpdateArtefactDTO {
     /**

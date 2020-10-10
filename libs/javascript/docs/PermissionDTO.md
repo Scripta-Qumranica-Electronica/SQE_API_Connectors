@@ -1,4 +1,4 @@
-# SqeApi.PermissionDTO
+# QumranicaApiConnector.PermissionDTO
 
 ## Properties
 

@@ -1,4 +1,4 @@
-# openapi::DeleteDTO
+# qumranica_api_connector::DeleteDTO
 
 ## Properties
 Name | Type | Description | Notes

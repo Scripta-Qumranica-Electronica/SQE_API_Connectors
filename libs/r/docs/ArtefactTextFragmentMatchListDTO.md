@@ -1,4 +1,4 @@
-# openapi::ArtefactTextFragmentMatchListDTO
+# qumranica_api_connector::ArtefactTextFragmentMatchListDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,0 +1,14 @@
+# InterpretationAttributeCreateDto
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Commentary** | Pointer to **string** |  | [optional] 
+**Sequence** | Pointer to **int32** |  | [optional] 
+**AttributeId** | **int32** |  | 
+**AttributeValueId** | **int32** |  | 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

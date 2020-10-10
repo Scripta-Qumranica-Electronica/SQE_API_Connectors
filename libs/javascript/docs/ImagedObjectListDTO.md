@@ -1,4 +1,4 @@
-# SqeApi.ImagedObjectListDTO
+# QumranicaApiConnector.ImagedObjectListDTO
 
 ## Properties
 

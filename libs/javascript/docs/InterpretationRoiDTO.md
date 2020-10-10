@@ -1,4 +1,4 @@
-# SqeApi.InterpretationRoiDTO
+# QumranicaApiConnector.InterpretationRoiDTO
 
 ## Properties
 

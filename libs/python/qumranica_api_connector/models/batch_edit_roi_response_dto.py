@@ -75,7 +75,7 @@ class BatchEditRoiResponseDTO(object):
 
 
         :param create_rois: The create_rois of this BatchEditRoiResponseDTO.  # noqa: E501
-        :type create_rois: list[InterpretationRoiDTO]
+        :type: list[InterpretationRoiDTO]
         """
         if self.local_vars_configuration.client_side_validation and create_rois is None:  # noqa: E501
             raise ValueError("Invalid value for `create_rois`, must not be `None`")  # noqa: E501
@@ -98,7 +98,7 @@ class BatchEditRoiResponseDTO(object):
 
 
         :param update_rois: The update_rois of this BatchEditRoiResponseDTO.  # noqa: E501
-        :type update_rois: list[UpdatedInterpretationRoiDTO]
+        :type: list[UpdatedInterpretationRoiDTO]
         """
         if self.local_vars_configuration.client_side_validation and update_rois is None:  # noqa: E501
             raise ValueError("Invalid value for `update_rois`, must not be `None`")  # noqa: E501
@@ -121,7 +121,7 @@ class BatchEditRoiResponseDTO(object):
 
 
         :param delete_rois: The delete_rois of this BatchEditRoiResponseDTO.  # noqa: E501
-        :type delete_rois: list[int]
+        :type: list[int]
         """
         if self.local_vars_configuration.client_side_validation and delete_rois is None:  # noqa: E501
             raise ValueError("Invalid value for `delete_rois`, must not be `None`")  # noqa: E501

@@ -39,10 +39,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -112,10 +116,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -183,10 +191,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -256,10 +268,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -329,10 +345,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -402,10 +422,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:
@@ -475,10 +499,14 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration.api_key['Bearer'] = 'YOUR_API_KEY'
-
+configuration = qumranica_api_connector.Configuration(
+    host = "http://localhost",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Bearer'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with qumranica_api_connector.ApiClient(configuration) as api_client:

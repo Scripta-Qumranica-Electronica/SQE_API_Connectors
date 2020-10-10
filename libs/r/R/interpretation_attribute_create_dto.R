@@ -8,11 +8,8 @@
 
 #' @docType class
 #' @title InterpretationAttributeCreateDTO
-#'
 #' @description InterpretationAttributeCreateDTO Class
-#'
 #' @format An \code{R6Class} generator object
-#'
 #' @field commentary  character [optional]
 #'
 #' @field sequence  integer [optional]
@@ -20,6 +17,7 @@
 #' @field attributeId  integer 
 #'
 #' @field attributeValueId  integer 
+#'
 #'
 #' @importFrom R6 R6Class
 #' @importFrom jsonlite fromJSON toJSON
@@ -31,9 +29,7 @@ InterpretationAttributeCreateDTO <- R6::R6Class(
     `sequence` = NULL,
     `attributeId` = NULL,
     `attributeValueId` = NULL,
-    initialize = function(
-        `attributeId`, `attributeValueId`, `commentary`=NULL, `sequence`=NULL, ...
-    ) {
+    initialize = function(`attributeId`, `attributeValueId`, `commentary`=NULL, `sequence`=NULL, ...){
       local.optional.var <- list(...)
       if (!missing(`attributeId`)) {
         stopifnot(is.numeric(`attributeId`), length(`attributeId`) == 1)
@@ -87,7 +83,6 @@ InterpretationAttributeCreateDTO <- R6::R6Class(
       if (!is.null(InterpretationAttributeCreateDTOObject$`attributeValueId`)) {
         self$`attributeValueId` <- InterpretationAttributeCreateDTOObject$`attributeValueId`
       }
-      self
     },
     toJSONString = function() {
       jsoncontent <- c(
@@ -133,4 +128,3 @@ InterpretationAttributeCreateDTO <- R6::R6Class(
     }
   )
 )
-
