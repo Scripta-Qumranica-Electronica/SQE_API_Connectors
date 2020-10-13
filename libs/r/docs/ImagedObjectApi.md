@@ -19,7 +19,7 @@ Provides a listing of imaged objects related to the specified edition, can inclu
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.optional <- list("inner_example") # array[character] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
@@ -64,7 +64,7 @@ Provides information for the specified imaged object related to the specified ed
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Unique Id of the desired edition
 var.imaged.object.id <- 'imaged.object.id_example' # character | Unique Id of the desired object from the imaging Institution
@@ -111,7 +111,7 @@ Provides information for the specified imaged object.
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.imaged.object.id <- 'imaged.object.id_example' # character | Unique Id of the desired object from the imaging Institution
 
@@ -154,7 +154,7 @@ Provides a list of all text fragments that should correspond to the imaged objec
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.imaged.object.id <- 'imaged.object.id_example' # character | Id of the imaged object
 
@@ -197,7 +197,7 @@ Provides a list of all institutional image providers.
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 
 #Provides a list of all institutional image providers.
@@ -236,7 +236,7 @@ Provides a list of all institutional image providers.
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.institution.name <- 'institution.name_example' # character | 
 

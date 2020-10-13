@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Catalogue operations
-#' @description qumranica_api_connector.Catalogue
+#' @description qumranicaApiConnector.Catalogue
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -137,7 +137,7 @@
 #' \dontrun{
 #' ####################  V1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdDelete  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.iaa.edition.catalog.to.text.fragment.id <- 56 # integer | The unique id of the match to confirm
 #'
 #' #Remove an existing imaged object and text fragment match, which is not correct
@@ -151,7 +151,7 @@
 #'
 #' ####################  V1CatalogueConfirmMatchIaaEditionCatalogToTextFragmentIdPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.iaa.edition.catalog.to.text.fragment.id <- 56 # integer | The unique id of the match to confirm
 #'
 #' #Confirm the correctness of an existing imaged object and text fragment match
@@ -165,7 +165,7 @@
 #'
 #' ####################  V1CatalogueEditionsEditionIdImagedObjectTextFragmentMatchesGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Unique Id of the edition to search for imaged objects to text fragment matches
 #'
 #' #Get a listing of all corresponding imaged objects and transcribed text fragment in a specified edition
@@ -179,7 +179,7 @@
 #'
 #' ####################  V1CatalogueImagedObjectsImagedObjectIdTextFragmentsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.imaged.object.id <- 'imaged.object.id_example' # character | Id of imaged object to search for transcription matches
 #'
 #' #Get a listing of all text fragments matches that correspond to an imaged object
@@ -193,7 +193,7 @@
 #'
 #' ####################  V1CatalogueManuscriptsManuscriptIdImagedObjectTextFragmentMatchesGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.manuscript.id <- 56 # integer | Unique Id of the manuscript to search for imaged objects to text fragment matches
 #'
 #' #Get a listing of all corresponding imaged objects and transcribed text fragment in a specified manuscript
@@ -207,7 +207,7 @@
 #'
 #' ####################  V1CataloguePost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.catalogue.match.input.dto <- CatalogueMatchInputDTO$new() # CatalogueMatchInputDTO | The details of the new match
 #'
 #' #Create a new matched pair for an imaged object and a text fragment along with the edition princeps information
@@ -221,7 +221,7 @@
 #'
 #' ####################  V1CatalogueTextFragmentsTextFragmentIdImagedObjectsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.text.fragment.id <- 56 # integer | Unique Id of the text fragment to search for imaged object matches
 #'
 #' #Get a listing of all imaged objects that matches that correspond to a transcribed text fragment
@@ -391,7 +391,7 @@ CatalogueApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -447,7 +447,7 @@ CatalogueApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -503,7 +503,7 @@ CatalogueApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -607,7 +607,7 @@ CatalogueApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "CatalogueMatchListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

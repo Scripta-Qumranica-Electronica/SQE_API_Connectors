@@ -64,13 +64,13 @@ BatchEditRoiDTO <- R6::R6Class(
     fromJSON = function(BatchEditRoiDTOJson) {
       BatchEditRoiDTOObject <- jsonlite::fromJSON(BatchEditRoiDTOJson)
       if (!is.null(BatchEditRoiDTOObject$`createRois`)) {
-        self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`createRois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+        self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`createRois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(BatchEditRoiDTOObject$`updateRois`)) {
-        self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`updateRois`, "array[UpdateInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+        self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`updateRois`, "array[UpdateInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(BatchEditRoiDTOObject$`deleteRois`)) {
-        self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranica_api_connector"))
+        self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -102,9 +102,9 @@ BatchEditRoiDTO <- R6::R6Class(
     },
     fromJSONString = function(BatchEditRoiDTOJson) {
       BatchEditRoiDTOObject <- jsonlite::fromJSON(BatchEditRoiDTOJson)
-      self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`createRois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
-      self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`updateRois`, "array[UpdateInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
-      self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranica_api_connector"))
+      self$`createRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`createRois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
+      self$`updateRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`updateRois`, "array[UpdateInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
+      self$`deleteRois` <- ApiClient$new()$deserializeObj(BatchEditRoiDTOObject$`deleteRois`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

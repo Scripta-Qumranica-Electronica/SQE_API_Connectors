@@ -1,4 +1,4 @@
-# qumranica_api_connector::AccountActivationRequestDTO
+# qumranicaApiConnector::AccountActivationRequestDTO
 
 ## Properties
 Name | Type | Description | Notes

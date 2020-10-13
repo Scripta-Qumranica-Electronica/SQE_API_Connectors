@@ -210,7 +210,7 @@ ImageDTO <- R6::R6Class(
         self$`lightingDirection` <- lightingDirectionObject
       }
       if (!is.null(ImageDTOObject$`waveLength`)) {
-        self$`waveLength` <- ApiClient$new()$deserializeObj(ImageDTOObject$`waveLength`, "array[character]", loadNamespace("qumranica_api_connector"))
+        self$`waveLength` <- ApiClient$new()$deserializeObj(ImageDTOObject$`waveLength`, "array[character]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(ImageDTOObject$`type`)) {
         self$`type` <- ImageDTOObject$`type`
@@ -344,7 +344,7 @@ ImageDTO <- R6::R6Class(
       self$`url` <- ImageDTOObject$`url`
       self$`lightingType` <- Lighting$new()$fromJSON(jsonlite::toJSON(ImageDTOObject$lightingType, auto_unbox = TRUE, digits = NA))
       self$`lightingDirection` <- Direction$new()$fromJSON(jsonlite::toJSON(ImageDTOObject$lightingDirection, auto_unbox = TRUE, digits = NA))
-      self$`waveLength` <- ApiClient$new()$deserializeObj(ImageDTOObject$`waveLength`, "array[character]", loadNamespace("qumranica_api_connector"))
+      self$`waveLength` <- ApiClient$new()$deserializeObj(ImageDTOObject$`waveLength`, "array[character]", loadNamespace("qumranicaApiConnector"))
       self$`type` <- ImageDTOObject$`type`
       self$`side` <- SideDesignation$new()$fromJSON(jsonlite::toJSON(ImageDTOObject$side, auto_unbox = TRUE, digits = NA))
       self$`ppi` <- ImageDTOObject$`ppi`

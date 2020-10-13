@@ -86,7 +86,7 @@ ImagedObjectDTO <- R6::R6Class(
         self$`verso` <- versoObject
       }
       if (!is.null(ImagedObjectDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -128,7 +128,7 @@ ImagedObjectDTO <- R6::R6Class(
       self$`id` <- ImagedObjectDTOObject$`id`
       self$`recto` <- ImageStackDTO$new()$fromJSON(jsonlite::toJSON(ImagedObjectDTOObject$recto, auto_unbox = TRUE, digits = NA))
       self$`verso` <- ImageStackDTO$new()$fromJSON(jsonlite::toJSON(ImagedObjectDTOObject$verso, auto_unbox = TRUE, digits = NA))
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ImagedObjectDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

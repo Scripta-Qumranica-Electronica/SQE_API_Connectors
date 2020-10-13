@@ -40,7 +40,7 @@ EditionScriptLinesDTO <- R6::R6Class(
     fromJSON = function(EditionScriptLinesDTOJson) {
       EditionScriptLinesDTOObject <- jsonlite::fromJSON(EditionScriptLinesDTOJson)
       if (!is.null(EditionScriptLinesDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranica_api_connector"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ EditionScriptLinesDTO <- R6::R6Class(
     },
     fromJSONString = function(EditionScriptLinesDTOJson) {
       EditionScriptLinesDTOObject <- jsonlite::fromJSON(EditionScriptLinesDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranica_api_connector"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(EditionScriptLinesDTOObject$`textFragments`, "array[ScriptTextFragmentDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

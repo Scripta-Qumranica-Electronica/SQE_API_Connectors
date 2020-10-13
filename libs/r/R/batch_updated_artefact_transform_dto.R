@@ -40,7 +40,7 @@ BatchUpdatedArtefactTransformDTO <- R6::R6Class(
     fromJSON = function(BatchUpdatedArtefactTransformDTOJson) {
       BatchUpdatedArtefactTransformDTOObject <- jsonlite::fromJSON(BatchUpdatedArtefactTransformDTOJson)
       if (!is.null(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`)) {
-        self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranica_api_connector"))
+        self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ BatchUpdatedArtefactTransformDTO <- R6::R6Class(
     },
     fromJSONString = function(BatchUpdatedArtefactTransformDTOJson) {
       BatchUpdatedArtefactTransformDTOObject <- jsonlite::fromJSON(BatchUpdatedArtefactTransformDTOJson)
-      self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranica_api_connector"))
+      self$`artefactPlacements` <- ApiClient$new()$deserializeObj(BatchUpdatedArtefactTransformDTOObject$`artefactPlacements`, "array[UpdatedArtefactPlacementDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

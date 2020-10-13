@@ -1,4 +1,4 @@
-# qumranica_api_connector::WktPolygonDTO
+# qumranicaApiConnector::WktPolygonDTO
 
 ## Properties
 Name | Type | Description | Notes

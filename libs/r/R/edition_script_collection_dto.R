@@ -40,7 +40,7 @@ EditionScriptCollectionDTO <- R6::R6Class(
     fromJSON = function(EditionScriptCollectionDTOJson) {
       EditionScriptCollectionDTOObject <- jsonlite::fromJSON(EditionScriptCollectionDTOJson)
       if (!is.null(EditionScriptCollectionDTOObject$`letters`)) {
-        self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranica_api_connector"))
+        self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ EditionScriptCollectionDTO <- R6::R6Class(
     },
     fromJSONString = function(EditionScriptCollectionDTOJson) {
       EditionScriptCollectionDTOObject <- jsonlite::fromJSON(EditionScriptCollectionDTOJson)
-      self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranica_api_connector"))
+      self$`letters` <- ApiClient$new()$deserializeObj(EditionScriptCollectionDTOObject$`letters`, "array[CharacterShapeDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

@@ -68,7 +68,7 @@ ArtefactGroupDTO <- R6::R6Class(
         self$`name` <- ArtefactGroupDTOObject$`name`
       }
       if (!is.null(ArtefactGroupDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactGroupDTOObject$`artefacts`, "array[integer]", loadNamespace("qumranica_api_connector"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactGroupDTOObject$`artefacts`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -102,7 +102,7 @@ ArtefactGroupDTO <- R6::R6Class(
       ArtefactGroupDTOObject <- jsonlite::fromJSON(ArtefactGroupDTOJson)
       self$`id` <- ArtefactGroupDTOObject$`id`
       self$`name` <- ArtefactGroupDTOObject$`name`
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactGroupDTOObject$`artefacts`, "array[integer]", loadNamespace("qumranica_api_connector"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactGroupDTOObject$`artefacts`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

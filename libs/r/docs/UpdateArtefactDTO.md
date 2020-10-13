@@ -1,4 +1,4 @@
-# qumranica_api_connector::UpdateArtefactDTO
+# qumranicaApiConnector::UpdateArtefactDTO
 
 ## Properties
 Name | Type | Description | Notes

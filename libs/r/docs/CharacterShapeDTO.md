@@ -1,4 +1,4 @@
-# qumranica_api_connector::CharacterShapeDTO
+# qumranicaApiConnector::CharacterShapeDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -68,7 +68,7 @@ ScriptTextFragmentDTO <- R6::R6Class(
         self$`textFragmentId` <- ScriptTextFragmentDTOObject$`textFragmentId`
       }
       if (!is.null(ScriptTextFragmentDTOObject$`lines`)) {
-        self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranica_api_connector"))
+        self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -102,7 +102,7 @@ ScriptTextFragmentDTO <- R6::R6Class(
       ScriptTextFragmentDTOObject <- jsonlite::fromJSON(ScriptTextFragmentDTOJson)
       self$`textFragmentName` <- ScriptTextFragmentDTOObject$`textFragmentName`
       self$`textFragmentId` <- ScriptTextFragmentDTOObject$`textFragmentId`
-      self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranica_api_connector"))
+      self$`lines` <- ApiClient$new()$deserializeObj(ScriptTextFragmentDTOObject$`lines`, "array[ScriptLineDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

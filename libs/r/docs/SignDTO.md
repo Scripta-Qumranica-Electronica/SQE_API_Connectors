@@ -1,4 +1,4 @@
-# qumranica_api_connector::SignDTO
+# qumranicaApiConnector::SignDTO
 
 ## Properties
 Name | Type | Description | Notes

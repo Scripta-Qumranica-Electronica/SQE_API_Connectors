@@ -108,10 +108,10 @@ TextEditionDTO <- R6::R6Class(
         self$`licence` <- TextEditionDTOObject$`licence`
       }
       if (!is.null(TextEditionDTOObject$`editors`)) {
-        self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
+        self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(TextEditionDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranica_api_connector"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -168,8 +168,8 @@ TextEditionDTO <- R6::R6Class(
       self$`editionName` <- TextEditionDTOObject$`editionName`
       self$`editorId` <- TextEditionDTOObject$`editorId`
       self$`licence` <- TextEditionDTOObject$`licence`
-      self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
-      self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranica_api_connector"))
+      self$`editors` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranicaApiConnector"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(TextEditionDTOObject$`textFragments`, "array[TextFragmentDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

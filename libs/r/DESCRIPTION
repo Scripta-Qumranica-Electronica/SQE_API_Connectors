@@ -1,4 +1,4 @@
-Package: qumranica_api_connector
+Package: qumranicaApiConnector
 Title: R Package Client for SQE API
 Version: 0.7.0
 Authors@R: person("OpenAPI Generator community", email = "team@openapitools.org", role = c("aut", "cre"))

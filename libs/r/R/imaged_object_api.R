@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title ImagedObject operations
-#' @description qumranica_api_connector.ImagedObject
+#' @description qumranicaApiConnector.ImagedObject
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -125,7 +125,7 @@
 #' \dontrun{
 #' ####################  V1EditionsEditionIdImagedObjectsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.optional <- ['optional_example'] # array[character] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
 #'
@@ -140,7 +140,7 @@
 #'
 #' ####################  V1EditionsEditionIdImagedObjectsImagedObjectIdGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Unique Id of the desired edition
 #' var.imaged.object.id <- 'imaged.object.id_example' # character | Unique Id of the desired object from the imaging Institution
 #' var.optional <- ['optional_example'] # array[character] | Set 'artefacts' to receive related artefact data and 'masks' to include the artefact masks
@@ -156,7 +156,7 @@
 #'
 #' ####################  V1ImagedObjectsImagedObjectIdGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.imaged.object.id <- 'imaged.object.id_example' # character | Unique Id of the desired object from the imaging Institution
 #'
 #' #Provides information for the specified imaged object.
@@ -170,7 +170,7 @@
 #'
 #' ####################  V1ImagedObjectsImagedObjectIdTextFragmentsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.imaged.object.id <- 'imaged.object.id_example' # character | Id of the imaged object
 #'
 #' #Provides a list of all text fragments that should correspond to the imaged object.
@@ -184,7 +184,7 @@
 #'
 #' ####################  V1ImagedObjectsInstitutionsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #'
 #' #Provides a list of all institutional image providers.
 #' api.instance <- ImagedObjectApi$new()
@@ -197,7 +197,7 @@
 #'
 #' ####################  V1ImagedObjectsInstitutionsInstitutionNameGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.institution.name <- 'institution.name_example' # character | 
 #'
 #' #Provides a list of all institutional image providers.
@@ -269,7 +269,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ImagedObjectListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "ImagedObjectListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -335,7 +335,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ImagedObjectDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "ImagedObjectDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -391,7 +391,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "SimpleImageListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "SimpleImageListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -447,7 +447,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ImagedObjectTextFragmentMatchListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "ImagedObjectTextFragmentMatchListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -495,7 +495,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ImageInstitutionListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "ImageInstitutionListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -551,7 +551,7 @@ ImagedObjectApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InstitutionalImageListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "InstitutionalImageListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

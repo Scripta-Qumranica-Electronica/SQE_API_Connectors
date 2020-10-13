@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Text operations
-#' @description qumranica_api_connector.Text
+#' @description qumranicaApiConnector.Text
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -147,7 +147,7 @@
 #' \dontrun{
 #' ####################  V1EditionsEditionIdLinesLineIdGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.line.id <- 56 # integer | Id of the line
 #'
@@ -162,7 +162,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #'
 #' #Retrieves the ids of all Fragments of all fragments in the given edition of a scroll
@@ -176,7 +176,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.create.text.fragment.dto <- CreateTextFragmentDTO$new() # CreateTextFragmentDTO | A JSON object with the details of the new text fragment to be created
 #'
@@ -191,7 +191,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsTextFragmentIdArtefactsGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.text.fragment.id <- 56 # integer | Id of the text fragment
 #'
@@ -206,7 +206,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsTextFragmentIdGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.text.fragment.id <- 56 # integer | Id of the text fragment
 #'
@@ -221,7 +221,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsTextFragmentIdLinesGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.text.fragment.id <- 56 # integer | Id of the text fragment
 #'
@@ -236,7 +236,7 @@
 #'
 #' ####################  V1EditionsEditionIdTextFragmentsTextFragmentIdPut  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Edition of the text fragment being updates
 #' var.text.fragment.id <- 56 # integer | Id of the text fragment being updates
 #' var.update.text.fragment.dto <- UpdateTextFragmentDTO$new() # UpdateTextFragmentDTO | Details of the updated text fragment
@@ -316,7 +316,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "LineTextDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "LineTextDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -372,7 +372,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "TextFragmentDataListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "TextFragmentDataListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -434,7 +434,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "TextFragmentDataDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "TextFragmentDataDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -498,7 +498,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "ArtefactDataListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "ArtefactDataListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -562,7 +562,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "TextEditionDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "TextEditionDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -626,7 +626,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "LineDataListDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "LineDataListDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -696,7 +696,7 @@ TextApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "TextFragmentDataDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "TextFragmentDataDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

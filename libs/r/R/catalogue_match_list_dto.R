@@ -40,7 +40,7 @@ CatalogueMatchListDTO <- R6::R6Class(
     fromJSON = function(CatalogueMatchListDTOJson) {
       CatalogueMatchListDTOObject <- jsonlite::fromJSON(CatalogueMatchListDTOJson)
       if (!is.null(CatalogueMatchListDTOObject$`matches`)) {
-        self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranica_api_connector"))
+        self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ CatalogueMatchListDTO <- R6::R6Class(
     },
     fromJSONString = function(CatalogueMatchListDTOJson) {
       CatalogueMatchListDTOObject <- jsonlite::fromJSON(CatalogueMatchListDTOJson)
-      self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranica_api_connector"))
+      self$`matches` <- ApiClient$new()$deserializeObj(CatalogueMatchListDTOObject$`matches`, "array[CatalogueMatchDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

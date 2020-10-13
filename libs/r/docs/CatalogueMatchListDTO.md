@@ -1,4 +1,4 @@
-# qumranica_api_connector::CatalogueMatchListDTO
+# qumranicaApiConnector::CatalogueMatchListDTO
 
 ## Properties
 Name | Type | Description | Notes

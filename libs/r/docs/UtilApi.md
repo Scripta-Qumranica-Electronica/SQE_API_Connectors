@@ -14,7 +14,7 @@ Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.wkt.polygon.dto <- WktPolygonDTO$new("wktPolygon_example") # WktPolygonDTO | JSON object with the WKT polygon to validate
 

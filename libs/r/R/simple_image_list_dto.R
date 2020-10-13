@@ -40,7 +40,7 @@ SimpleImageListDTO <- R6::R6Class(
     fromJSON = function(SimpleImageListDTOJson) {
       SimpleImageListDTOObject <- jsonlite::fromJSON(SimpleImageListDTOJson)
       if (!is.null(SimpleImageListDTOObject$`images`)) {
-        self$`images` <- ApiClient$new()$deserializeObj(SimpleImageListDTOObject$`images`, "array[SimpleImageDTO]", loadNamespace("qumranica_api_connector"))
+        self$`images` <- ApiClient$new()$deserializeObj(SimpleImageListDTOObject$`images`, "array[SimpleImageDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ SimpleImageListDTO <- R6::R6Class(
     },
     fromJSONString = function(SimpleImageListDTOJson) {
       SimpleImageListDTOObject <- jsonlite::fromJSON(SimpleImageListDTOJson)
-      self$`images` <- ApiClient$new()$deserializeObj(SimpleImageListDTOObject$`images`, "array[SimpleImageDTO]", loadNamespace("qumranica_api_connector"))
+      self$`images` <- ApiClient$new()$deserializeObj(SimpleImageListDTOObject$`images`, "array[SimpleImageDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

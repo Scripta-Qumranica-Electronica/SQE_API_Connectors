@@ -40,7 +40,7 @@ LineDataListDTO <- R6::R6Class(
     fromJSON = function(LineDataListDTOJson) {
       LineDataListDTOObject <- jsonlite::fromJSON(LineDataListDTOJson)
       if (!is.null(LineDataListDTOObject$`lines`)) {
-        self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranica_api_connector"))
+        self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ LineDataListDTO <- R6::R6Class(
     },
     fromJSONString = function(LineDataListDTOJson) {
       LineDataListDTOObject <- jsonlite::fromJSON(LineDataListDTOJson)
-      self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranica_api_connector"))
+      self$`lines` <- ApiClient$new()$deserializeObj(LineDataListDTOObject$`lines`, "array[LineDataDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

@@ -82,7 +82,7 @@ LineDTO <- R6::R6Class(
         self$`editorId` <- LineDTOObject$`editorId`
       }
       if (!is.null(LineDTOObject$`signs`)) {
-        self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
+        self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -124,7 +124,7 @@ LineDTO <- R6::R6Class(
       self$`lineId` <- LineDTOObject$`lineId`
       self$`lineName` <- LineDTOObject$`lineName`
       self$`editorId` <- LineDTOObject$`editorId`
-      self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
+      self$`signs` <- ApiClient$new()$deserializeObj(LineDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

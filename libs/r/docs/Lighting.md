@@ -1,4 +1,4 @@
-# qumranica_api_connector::Lighting
+# qumranicaApiConnector::Lighting
 
 ## Properties
 Name | Type | Description | Notes

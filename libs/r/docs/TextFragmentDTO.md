@@ -1,4 +1,4 @@
-# qumranica_api_connector::TextFragmentDTO
+# qumranicaApiConnector::TextFragmentDTO
 
 ## Properties
 Name | Type | Description | Notes

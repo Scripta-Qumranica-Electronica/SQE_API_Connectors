@@ -40,7 +40,7 @@ AdminEditorRequestListDTO <- R6::R6Class(
     fromJSON = function(AdminEditorRequestListDTOJson) {
       AdminEditorRequestListDTOObject <- jsonlite::fromJSON(AdminEditorRequestListDTOJson)
       if (!is.null(AdminEditorRequestListDTOObject$`editorRequests`)) {
-        self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranica_api_connector"))
+        self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ AdminEditorRequestListDTO <- R6::R6Class(
     },
     fromJSONString = function(AdminEditorRequestListDTOJson) {
       AdminEditorRequestListDTOObject <- jsonlite::fromJSON(AdminEditorRequestListDTOJson)
-      self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranica_api_connector"))
+      self$`editorRequests` <- ApiClient$new()$deserializeObj(AdminEditorRequestListDTOObject$`editorRequests`, "array[AdminEditorRequestDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

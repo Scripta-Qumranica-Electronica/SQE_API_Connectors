@@ -40,7 +40,7 @@ SignDTO <- R6::R6Class(
     fromJSON = function(SignDTOJson) {
       SignDTOObject <- jsonlite::fromJSON(SignDTOJson)
       if (!is.null(SignDTOObject$`signInterpretations`)) {
-        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
+        self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ SignDTO <- R6::R6Class(
     },
     fromJSONString = function(SignDTOJson) {
       SignDTOObject <- jsonlite::fromJSON(SignDTOJson)
-      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
+      self$`signInterpretations` <- ApiClient$new()$deserializeObj(SignDTOObject$`signInterpretations`, "array[SignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

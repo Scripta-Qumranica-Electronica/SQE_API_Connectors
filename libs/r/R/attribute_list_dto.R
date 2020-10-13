@@ -40,7 +40,7 @@ AttributeListDTO <- R6::R6Class(
     fromJSON = function(AttributeListDTOJson) {
       AttributeListDTOObject <- jsonlite::fromJSON(AttributeListDTOJson)
       if (!is.null(AttributeListDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranica_api_connector"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ AttributeListDTO <- R6::R6Class(
     },
     fromJSONString = function(AttributeListDTOJson) {
       AttributeListDTOObject <- jsonlite::fromJSON(AttributeListDTOJson)
-      self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranica_api_connector"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(AttributeListDTOObject$`attributes`, "array[AttributeDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

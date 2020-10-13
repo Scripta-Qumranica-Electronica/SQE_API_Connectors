@@ -56,7 +56,7 @@ EditionGroupDTO <- R6::R6Class(
         self$`primary` <- primaryObject
       }
       if (!is.null(EditionGroupDTOObject$`others`)) {
-        self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranica_api_connector"))
+        self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -82,7 +82,7 @@ EditionGroupDTO <- R6::R6Class(
     fromJSONString = function(EditionGroupDTOJson) {
       EditionGroupDTOObject <- jsonlite::fromJSON(EditionGroupDTOJson)
       self$`primary` <- EditionDTO$new()$fromJSON(jsonlite::toJSON(EditionGroupDTOObject$primary, auto_unbox = TRUE, digits = NA))
-      self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranica_api_connector"))
+      self$`others` <- ApiClient$new()$deserializeObj(EditionGroupDTOObject$`others`, "array[EditionDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

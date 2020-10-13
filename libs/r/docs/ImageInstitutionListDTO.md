@@ -1,4 +1,4 @@
-# qumranica_api_connector::ImageInstitutionListDTO
+# qumranicaApiConnector::ImageInstitutionListDTO
 
 ## Properties
 Name | Type | Description | Notes

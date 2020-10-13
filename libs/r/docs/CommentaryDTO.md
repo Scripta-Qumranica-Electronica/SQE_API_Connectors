@@ -1,4 +1,4 @@
-# qumranica_api_connector::CommentaryDTO
+# qumranicaApiConnector::CommentaryDTO
 
 ## Properties
 Name | Type | Description | Notes

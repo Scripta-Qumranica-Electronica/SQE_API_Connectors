@@ -40,7 +40,7 @@ InterpretationRoiDTOList <- R6::R6Class(
     fromJSON = function(InterpretationRoiDTOListJson) {
       InterpretationRoiDTOListObject <- jsonlite::fromJSON(InterpretationRoiDTOListJson)
       if (!is.null(InterpretationRoiDTOListObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(InterpretationRoiDTOListObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+        self$`rois` <- ApiClient$new()$deserializeObj(InterpretationRoiDTOListObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ InterpretationRoiDTOList <- R6::R6Class(
     },
     fromJSONString = function(InterpretationRoiDTOListJson) {
       InterpretationRoiDTOListObject <- jsonlite::fromJSON(InterpretationRoiDTOListJson)
-      self$`rois` <- ApiClient$new()$deserializeObj(InterpretationRoiDTOListObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+      self$`rois` <- ApiClient$new()$deserializeObj(InterpretationRoiDTOListObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

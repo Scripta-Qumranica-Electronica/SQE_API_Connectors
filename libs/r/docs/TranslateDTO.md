@@ -1,4 +1,4 @@
-# qumranica_api_connector::TranslateDTO
+# qumranicaApiConnector::TranslateDTO
 
 ## Properties
 Name | Type | Description | Notes

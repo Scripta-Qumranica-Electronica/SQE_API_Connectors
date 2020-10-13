@@ -1,4 +1,4 @@
-# qumranica_api_connector::DeleteTokenDTO
+# qumranicaApiConnector::DeleteTokenDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -141,7 +141,7 @@ AttributeDTO <- R6::R6Class(
         self$`attributeName` <- AttributeDTOObject$`attributeName`
       }
       if (!is.null(AttributeDTOObject$`values`)) {
-        self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+        self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(AttributeDTOObject$`creatorId`)) {
         self$`creatorId` <- AttributeDTOObject$`creatorId`
@@ -245,7 +245,7 @@ AttributeDTO <- R6::R6Class(
       AttributeDTOObject <- jsonlite::fromJSON(AttributeDTOJson)
       self$`attributeId` <- AttributeDTOObject$`attributeId`
       self$`attributeName` <- AttributeDTOObject$`attributeName`
-      self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+      self$`values` <- ApiClient$new()$deserializeObj(AttributeDTOObject$`values`, "array[AttributeValueDTO]", loadNamespace("qumranicaApiConnector"))
       self$`creatorId` <- AttributeDTOObject$`creatorId`
       self$`editorId` <- AttributeDTOObject$`editorId`
       self$`description` <- AttributeDTOObject$`description`

@@ -1,4 +1,4 @@
-# qumranica_api_connector::PermissionDTO
+# qumranicaApiConnector::PermissionDTO
 
 ## Properties
 Name | Type | Description | Notes

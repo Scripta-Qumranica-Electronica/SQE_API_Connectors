@@ -40,7 +40,7 @@ EditorInvitationListDTO <- R6::R6Class(
     fromJSON = function(EditorInvitationListDTOJson) {
       EditorInvitationListDTOObject <- jsonlite::fromJSON(EditorInvitationListDTOJson)
       if (!is.null(EditorInvitationListDTOObject$`editorInvitations`)) {
-        self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranica_api_connector"))
+        self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ EditorInvitationListDTO <- R6::R6Class(
     },
     fromJSONString = function(EditorInvitationListDTOJson) {
       EditorInvitationListDTOObject <- jsonlite::fromJSON(EditorInvitationListDTOJson)
-      self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranica_api_connector"))
+      self$`editorInvitations` <- ApiClient$new()$deserializeObj(EditorInvitationListDTOObject$`editorInvitations`, "array[EditorInvitationDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

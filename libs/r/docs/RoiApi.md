@@ -20,7 +20,7 @@ Processes a series of create/update/delete ROI requests in the given edition of 
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.batch.edit.roi.dto <- BatchEditRoiDTO$new(list(SetInterpretationRoiDTO$new(123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example")), list(UpdateInterpretationRoiDTO$new(123, 123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example")), list(123)) # BatchEditRoiDTO | A JSON object with all the roi edits to be performed
@@ -65,7 +65,7 @@ Creates new sign ROI's in the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.set.interpretation.roi.dto.list <- SetInterpretationRoiDTOList$new(list(SetInterpretationRoiDTO$new(123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example"))) # SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created
@@ -110,7 +110,7 @@ Update existing sign ROI's in the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.update.interpretation.roi.dto.list <- UpdateInterpretationRoiDTOList$new(list(UpdateInterpretationRoiDTO$new(123, 123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example"))) # UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details
@@ -155,7 +155,7 @@ Creates new sign ROI in the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.set.interpretation.roi.dto <- SetInterpretationRoiDTO$new(123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example") # SetInterpretationRoiDTO | A JSON object with the new ROI to be created
@@ -200,7 +200,7 @@ Deletes a sign ROI from the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.roi.id <- 56 # integer | Id of the ROI to be deleted
@@ -244,7 +244,7 @@ Get the details for a ROI in the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.roi.id <- 56 # integer | A JSON object with the new ROI to be created
@@ -289,7 +289,7 @@ Update an existing sign ROI in the given edition of a scroll
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Id of the edition
 var.roi.id <- 56 # integer | Id of the ROI to be updated

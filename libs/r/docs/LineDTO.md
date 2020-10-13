@@ -1,4 +1,4 @@
-# qumranica_api_connector::LineDTO
+# qumranicaApiConnector::LineDTO
 
 ## Properties
 Name | Type | Description | Notes

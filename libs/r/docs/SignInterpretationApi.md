@@ -26,7 +26,7 @@ Delete an attribute from an edition
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | The ID of the edition being edited
 var.attribute.id <- 56 # integer | The ID of the attribute to delete
@@ -70,7 +70,7 @@ Change the details of an attribute in an edition
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | The ID of the edition being edited
 var.attribute.id <- 56 # integer | The ID of the attribute to update
@@ -117,7 +117,7 @@ Retrieve a list of all possible attributes for an edition
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | The ID of the edition being searched
 
@@ -160,7 +160,7 @@ Create a new attribute for an edition
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | The ID of the edition being edited
 var.create.attribute.dto <- CreateAttributeDTO$new("attributeName_example", list(CreateAttributeValueDTO$new("value_example", "description_example", "cssDirectives_example")), "description_example", "editable_example", "removable_example", "repeatable_example", "batchEditable_example") # CreateAttributeDTO | The details of the new attribute
@@ -205,7 +205,7 @@ Creates a new sign interpretation
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.create.dto <- SignInterpretationCreateDTO$new(123, list(123), list(123), list(InterpretationAttributeCreateDTO$new("commentary_example", 123, 123, 123)), list(SetInterpretationRoiDTO$new(123, 123, "shape_example", TranslateDTO$new(123, 123), 123, "exceptional_example", "valuesSet_example")), CommentaryCreateDTO$new("commentary_example"), "breakPreviousAndNextSignInterpretations_example", "character_example", "isVariant_example") # SignInterpretationCreateDTO | New sign interpretation data to be added
@@ -250,7 +250,7 @@ This deletes the specified attribute value from the specified sign interpretatio
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being altered
@@ -296,7 +296,7 @@ This changes the values of the specified sign interpretation attribute,  mainly 
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being altered
@@ -345,7 +345,7 @@ This adds a new attribute to the specified sign interpretation.
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation for adding a new attribute
@@ -392,7 +392,7 @@ Updates the commentary of a sign interpretation
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation whose commentary is being changed
@@ -439,7 +439,7 @@ Deletes the sign interpretation in the route. The endpoint automatically manages
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | ID of the sign interpretation being deleted
@@ -483,7 +483,7 @@ Retrieve the details of a sign interpretation in an edition
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | The ID of the edition being searched
 var.sign.interpretation.id <- 56 # integer | The desired sign interpretation id
@@ -528,7 +528,7 @@ Links two sign interpretations in the edition's sign stream
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | The sign interpretation to be linked to the nextSignInterpretationId
@@ -575,7 +575,7 @@ Links two sign interpretations in the edition's sign stream
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | ID of the edition being changed
 var.sign.interpretation.id <- 56 # integer | The sign interpretation to be unlinked from the nextSignInterpretationId

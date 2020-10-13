@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title User operations
-#' @description qumranica_api_connector.User
+#' @description qumranicaApiConnector.User
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -184,7 +184,7 @@
 #' \dontrun{
 #' ####################  V1UsersChangeForgottenPasswordPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.reset.forgotten.user.password.request.dto <- ResetForgottenUserPasswordRequestDTO$new() # ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password
 #'
 #' #Uses the secret token from /users/forgot-password to validate a reset of the user's password
@@ -198,7 +198,7 @@
 #'
 #' ####################  V1UsersChangePasswordPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.reset.logged.in.user.password.request.dto <- ResetLoggedInUserPasswordRequestDTO$new() # ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password
 #'
 #' #Changes the password for the currently logged in user
@@ -212,7 +212,7 @@
 #'
 #' ####################  V1UsersChangeUnactivatedEmailPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.unactivated.email.update.request.dto <- UnactivatedEmailUpdateRequestDTO$new() # UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address
 #'
 #' #Allows a user who has not yet activated their account to change their email address. This will not work if the user  account associated with the email address has already been activated
@@ -226,7 +226,7 @@
 #'
 #' ####################  V1UsersConfirmRegistrationPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.account.activation.request.dto <- AccountActivationRequestDTO$new() # AccountActivationRequestDTO | JSON object with token from user registration email
 #'
 #' #Confirms registration of new user account.
@@ -240,7 +240,7 @@
 #'
 #' ####################  V1UsersForgotPasswordPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.reset.user.password.request.dto <- ResetUserPasswordRequestDTO$new() # ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password
 #'
 #' #Sends a secret token to the user's email to allow password reset.
@@ -254,7 +254,7 @@
 #'
 #' ####################  V1UsersGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #'
 #' #Provides the user details for a user with valid JWT in the Authorize header
 #' api.instance <- UserApi$new()
@@ -267,7 +267,7 @@
 #'
 #' ####################  V1UsersLoginPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.login.request.dto <- LoginRequestDTO$new() # LoginRequestDTO | JSON object with an email and password parameter
 #'
 #' #Provides a JWT bearer token for valid email and password
@@ -281,7 +281,7 @@
 #'
 #' ####################  V1UsersPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.new.user.request.dto <- NewUserRequestDTO$new() # NewUserRequestDTO | A JSON object with all data necessary to create a new user account
 #'
 #' #Creates a new user with the submitted data.
@@ -295,7 +295,7 @@
 #'
 #' ####################  V1UsersPut  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.user.update.request.dto <- UserUpdateRequestDTO$new() # UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data
 #'
 #' #Updates a user's registration details.  Note that the if the email address has changed, the account will be set to  inactive until the account is activated with the secret token.
@@ -309,7 +309,7 @@
 #'
 #' ####################  V1UsersResendActivationEmailPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.resend.user.account.activation.request.dto <- ResendUserAccountActivationRequestDTO$new() # ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address
 #'
 #' #Sends a new activation email for the user's account. This will not work if the user account associated with the  email address has already been activated.
@@ -611,7 +611,7 @@ UserApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "UserDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "UserDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -665,7 +665,7 @@ UserApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DetailedUserTokenDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "DetailedUserTokenDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -719,7 +719,7 @@ UserApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "UserDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "UserDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -773,7 +773,7 @@ UserApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "DetailedUserDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "DetailedUserDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

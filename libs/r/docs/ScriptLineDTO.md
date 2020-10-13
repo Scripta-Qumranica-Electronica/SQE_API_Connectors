@@ -1,4 +1,4 @@
-# qumranica_api_connector::ScriptLineDTO
+# qumranicaApiConnector::ScriptLineDTO
 
 ## Properties
 Name | Type | Description | Notes

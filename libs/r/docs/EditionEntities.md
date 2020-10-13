@@ -1,4 +1,4 @@
-# qumranica_api_connector::EditionEntities
+# qumranicaApiConnector::EditionEntities
 
 ## Properties
 Name | Type | Description | Notes

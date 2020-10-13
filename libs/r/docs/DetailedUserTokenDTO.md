@@ -1,4 +1,4 @@
-# qumranica_api_connector::DetailedUserTokenDTO
+# qumranicaApiConnector::DetailedUserTokenDTO
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# qumranica_api_connector::SideDesignation
+# qumranicaApiConnector::SideDesignation
 
 ## Properties
 Name | Type | Description | Notes

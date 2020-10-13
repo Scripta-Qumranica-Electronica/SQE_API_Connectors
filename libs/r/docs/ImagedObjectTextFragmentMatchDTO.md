@@ -1,4 +1,4 @@
-# qumranica_api_connector::ImagedObjectTextFragmentMatchDTO
+# qumranicaApiConnector::ImagedObjectTextFragmentMatchDTO
 
 ## Properties
 Name | Type | Description | Notes

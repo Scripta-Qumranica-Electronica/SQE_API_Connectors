@@ -56,7 +56,7 @@ DeleteDTO <- R6::R6Class(
         self$`entity` <- entityObject
       }
       if (!is.null(DeleteDTOObject$`ids`)) {
-        self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranica_api_connector"))
+        self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -82,7 +82,7 @@ DeleteDTO <- R6::R6Class(
     fromJSONString = function(DeleteDTOJson) {
       DeleteDTOObject <- jsonlite::fromJSON(DeleteDTOJson)
       self$`entity` <- EditionEntities$new()$fromJSON(jsonlite::toJSON(DeleteDTOObject$entity, auto_unbox = TRUE, digits = NA))
-      self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranica_api_connector"))
+      self$`ids` <- ApiClient$new()$deserializeObj(DeleteDTOObject$`ids`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

@@ -1,4 +1,4 @@
-# qumranica_api_connector::Direction
+# qumranicaApiConnector::Direction
 
 ## Properties
 Name | Type | Description | Notes

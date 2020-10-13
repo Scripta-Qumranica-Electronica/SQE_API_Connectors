@@ -40,7 +40,7 @@ ArtefactTextFragmentMatchListDTO <- R6::R6Class(
     fromJSON = function(ArtefactTextFragmentMatchListDTOJson) {
       ArtefactTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ArtefactTextFragmentMatchListDTOJson)
       if (!is.null(ArtefactTextFragmentMatchListDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ ArtefactTextFragmentMatchListDTO <- R6::R6Class(
     },
     fromJSONString = function(ArtefactTextFragmentMatchListDTOJson) {
       ArtefactTextFragmentMatchListDTOObject <- jsonlite::fromJSON(ArtefactTextFragmentMatchListDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranica_api_connector"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(ArtefactTextFragmentMatchListDTOObject$`textFragments`, "array[ArtefactTextFragmentMatchDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

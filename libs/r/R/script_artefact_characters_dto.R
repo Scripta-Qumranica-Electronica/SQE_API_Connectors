@@ -84,7 +84,7 @@ ScriptArtefactCharactersDTO <- R6::R6Class(
         self$`placement` <- placementObject
       }
       if (!is.null(ScriptArtefactCharactersDTOObject$`characters`)) {
-        self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
+        self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -126,7 +126,7 @@ ScriptArtefactCharactersDTO <- R6::R6Class(
       self$`artefactName` <- ScriptArtefactCharactersDTOObject$`artefactName`
       self$`artefactId` <- ScriptArtefactCharactersDTOObject$`artefactId`
       self$`placement` <- PlacementDTO$new()$fromJSON(jsonlite::toJSON(ScriptArtefactCharactersDTOObject$placement, auto_unbox = TRUE, digits = NA))
-      self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
+      self$`characters` <- ApiClient$new()$deserializeObj(ScriptArtefactCharactersDTOObject$`characters`, "array[SignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

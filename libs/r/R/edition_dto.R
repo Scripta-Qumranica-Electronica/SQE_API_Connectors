@@ -181,7 +181,7 @@ EditionDTO <- R6::R6Class(
         self$`thumbnailUrl` <- EditionDTOObject$`thumbnailUrl`
       }
       if (!is.null(EditionDTOObject$`shares`)) {
-        self$`shares` <- ApiClient$new()$deserializeObj(EditionDTOObject$`shares`, "array[DetailedEditorRightsDTO]", loadNamespace("qumranica_api_connector"))
+        self$`shares` <- ApiClient$new()$deserializeObj(EditionDTOObject$`shares`, "array[DetailedEditorRightsDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(EditionDTOObject$`metrics`)) {
         metricsObject <- EditionManuscriptMetricsDTO$new()
@@ -299,7 +299,7 @@ EditionDTO <- R6::R6Class(
       self$`permission` <- PermissionDTO$new()$fromJSON(jsonlite::toJSON(EditionDTOObject$permission, auto_unbox = TRUE, digits = NA))
       self$`owner` <- UserDTO$new()$fromJSON(jsonlite::toJSON(EditionDTOObject$owner, auto_unbox = TRUE, digits = NA))
       self$`thumbnailUrl` <- EditionDTOObject$`thumbnailUrl`
-      self$`shares` <- ApiClient$new()$deserializeObj(EditionDTOObject$`shares`, "array[DetailedEditorRightsDTO]", loadNamespace("qumranica_api_connector"))
+      self$`shares` <- ApiClient$new()$deserializeObj(EditionDTOObject$`shares`, "array[DetailedEditorRightsDTO]", loadNamespace("qumranicaApiConnector"))
       self$`metrics` <- EditionManuscriptMetricsDTO$new()$fromJSON(jsonlite::toJSON(EditionDTOObject$metrics, auto_unbox = TRUE, digits = NA))
       self$`locked` <- EditionDTOObject$`locked`
       self$`isPublic` <- EditionDTOObject$`isPublic`

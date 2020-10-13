@@ -105,7 +105,7 @@ CreateAttributeDTO <- R6::R6Class(
         self$`attributeName` <- CreateAttributeDTOObject$`attributeName`
       }
       if (!is.null(CreateAttributeDTOObject$`values`)) {
-        self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+        self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(CreateAttributeDTOObject$`description`)) {
         self$`description` <- CreateAttributeDTOObject$`description`
@@ -181,7 +181,7 @@ CreateAttributeDTO <- R6::R6Class(
     fromJSONString = function(CreateAttributeDTOJson) {
       CreateAttributeDTOObject <- jsonlite::fromJSON(CreateAttributeDTOJson)
       self$`attributeName` <- CreateAttributeDTOObject$`attributeName`
-      self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranica_api_connector"))
+      self$`values` <- ApiClient$new()$deserializeObj(CreateAttributeDTOObject$`values`, "array[CreateAttributeValueDTO]", loadNamespace("qumranicaApiConnector"))
       self$`description` <- CreateAttributeDTOObject$`description`
       self$`editable` <- CreateAttributeDTOObject$`editable`
       self$`removable` <- CreateAttributeDTOObject$`removable`

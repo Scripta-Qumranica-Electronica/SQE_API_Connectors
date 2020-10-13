@@ -40,7 +40,7 @@ TextFragmentDataListDTO <- R6::R6Class(
     fromJSON = function(TextFragmentDataListDTOJson) {
       TextFragmentDataListDTOObject <- jsonlite::fromJSON(TextFragmentDataListDTOJson)
       if (!is.null(TextFragmentDataListDTOObject$`textFragments`)) {
-        self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranica_api_connector"))
+        self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ TextFragmentDataListDTO <- R6::R6Class(
     },
     fromJSONString = function(TextFragmentDataListDTOJson) {
       TextFragmentDataListDTOObject <- jsonlite::fromJSON(TextFragmentDataListDTOJson)
-      self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranica_api_connector"))
+      self$`textFragments` <- ApiClient$new()$deserializeObj(TextFragmentDataListDTOObject$`textFragments`, "array[TextFragmentDataDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

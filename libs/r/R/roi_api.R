@@ -8,7 +8,7 @@
 
 #' @docType class
 #' @title Roi operations
-#' @description qumranica_api_connector.Roi
+#' @description qumranicaApiConnector.Roi
 #' @format An \code{R6Class} generator object
 #' @field apiClient Handles the client-server communication.
 #'
@@ -147,7 +147,7 @@
 #' \dontrun{
 #' ####################  V1EditionsEditionIdRoisBatchEditPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.batch.edit.roi.dto <- BatchEditRoiDTO$new() # BatchEditRoiDTO | A JSON object with all the roi edits to be performed
 #'
@@ -162,7 +162,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisBatchPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.set.interpretation.roi.dto.list <- SetInterpretationRoiDTOList$new() # SetInterpretationRoiDTOList | A JSON object with an array of the new ROI's to be created
 #'
@@ -177,7 +177,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisBatchPut  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.update.interpretation.roi.dto.list <- UpdateInterpretationRoiDTOList$new() # UpdateInterpretationRoiDTOList | A JSON object with an array of the updated ROI details
 #'
@@ -192,7 +192,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisPost  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.set.interpretation.roi.dto <- SetInterpretationRoiDTO$new() # SetInterpretationRoiDTO | A JSON object with the new ROI to be created
 #'
@@ -207,7 +207,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisRoiIdDelete  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.roi.id <- 56 # integer | Id of the ROI to be deleted
 #'
@@ -222,7 +222,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisRoiIdGet  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.roi.id <- 56 # integer | A JSON object with the new ROI to be created
 #'
@@ -237,7 +237,7 @@
 #'
 #' ####################  V1EditionsEditionIdRoisRoiIdPut  ####################
 #'
-#' library(qumranica_api_connector)
+#' library(qumranicaApiConnector)
 #' var.edition.id <- 56 # integer | Id of the edition
 #' var.roi.id <- 56 # integer | Id of the ROI to be updated
 #' var.set.interpretation.roi.dto <- SetInterpretationRoiDTO$new() # SetInterpretationRoiDTO | A JSON object with the updated ROI details
@@ -315,7 +315,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "BatchEditRoiResponseDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "BatchEditRoiResponseDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -377,7 +377,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InterpretationRoiDTOList", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "InterpretationRoiDTOList", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -439,7 +439,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "UpdatedInterpretationRoiDTOList", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "UpdatedInterpretationRoiDTOList", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -501,7 +501,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InterpretationRoiDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "InterpretationRoiDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -623,7 +623,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "InterpretationRoiDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "InterpretationRoiDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }
@@ -693,7 +693,7 @@ RoiApi <- R6::R6Class(
 
       if (httr::status_code(resp) >= 200 && httr::status_code(resp) <= 299) {
         deserializedRespObj <- tryCatch(
-          self$apiClient$deserialize(resp, "UpdatedInterpretationRoiDTO", loadNamespace("qumranica_api_connector")),
+          self$apiClient$deserialize(resp, "UpdatedInterpretationRoiDTO", loadNamespace("qumranicaApiConnector")),
           error = function(e){
              stop("Failed to deserialize response")
           }

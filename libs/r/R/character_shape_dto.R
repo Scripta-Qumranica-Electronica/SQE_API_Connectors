@@ -110,7 +110,7 @@ CharacterShapeDTO <- R6::R6Class(
         self$`rotation` <- CharacterShapeDTOObject$`rotation`
       }
       if (!is.null(CharacterShapeDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranica_api_connector"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -168,7 +168,7 @@ CharacterShapeDTO <- R6::R6Class(
       self$`polygon` <- CharacterShapeDTOObject$`polygon`
       self$`imageURL` <- CharacterShapeDTOObject$`imageURL`
       self$`rotation` <- CharacterShapeDTOObject$`rotation`
-      self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranica_api_connector"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(CharacterShapeDTOObject$`attributes`, "array[character]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

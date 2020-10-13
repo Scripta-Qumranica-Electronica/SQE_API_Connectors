@@ -68,7 +68,7 @@ ScriptLineDTO <- R6::R6Class(
         self$`lineId` <- ScriptLineDTOObject$`lineId`
       }
       if (!is.null(ScriptLineDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranica_api_connector"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -102,7 +102,7 @@ ScriptLineDTO <- R6::R6Class(
       ScriptLineDTOObject <- jsonlite::fromJSON(ScriptLineDTOJson)
       self$`lineName` <- ScriptLineDTOObject$`lineName`
       self$`lineId` <- ScriptLineDTOObject$`lineId`
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranica_api_connector"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ScriptLineDTOObject$`artefacts`, "array[ScriptArtefactCharactersDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

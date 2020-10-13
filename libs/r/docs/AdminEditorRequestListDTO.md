@@ -1,4 +1,4 @@
-# qumranica_api_connector::AdminEditorRequestListDTO
+# qumranicaApiConnector::AdminEditorRequestListDTO
 
 ## Properties
 Name | Type | Description | Notes

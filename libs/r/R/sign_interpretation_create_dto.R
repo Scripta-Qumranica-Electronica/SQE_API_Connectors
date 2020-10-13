@@ -132,16 +132,16 @@ SignInterpretationCreateDTO <- R6::R6Class(
         self$`lineId` <- SignInterpretationCreateDTOObject$`lineId`
       }
       if (!is.null(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`)) {
-        self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
+        self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`)) {
-        self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
+        self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranica_api_connector"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationCreateDTOObject$`commentary`)) {
         commentaryObject <- CommentaryCreateDTO$new()
@@ -230,10 +230,10 @@ SignInterpretationCreateDTO <- R6::R6Class(
     fromJSONString = function(SignInterpretationCreateDTOJson) {
       SignInterpretationCreateDTOObject <- jsonlite::fromJSON(SignInterpretationCreateDTOJson)
       self$`lineId` <- SignInterpretationCreateDTOObject$`lineId`
-      self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
-      self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranica_api_connector"))
-      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranica_api_connector"))
-      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+      self$`previousSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`previousSignInterpretationIds`, "array[integer]", loadNamespace("qumranicaApiConnector"))
+      self$`nextSignInterpretationIds` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`nextSignInterpretationIds`, "array[integer]", loadNamespace("qumranicaApiConnector"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`attributes`, "array[InterpretationAttributeCreateDTO]", loadNamespace("qumranicaApiConnector"))
+      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationCreateDTOObject$`rois`, "array[SetInterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       self$`commentary` <- CommentaryCreateDTO$new()$fromJSON(jsonlite::toJSON(SignInterpretationCreateDTOObject$commentary, auto_unbox = TRUE, digits = NA))
       self$`breakPreviousAndNextSignInterpretations` <- SignInterpretationCreateDTOObject$`breakPreviousAndNextSignInterpretations`
       self$`character` <- SignInterpretationCreateDTOObject$`character`

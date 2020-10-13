@@ -12,7 +12,7 @@
     "generate-javascript-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g javascript -o libs/javascript --additional-properties=projectName=qumranica_api_connector,projectVersion=$npm_package_version,usePromises=true",
     "generate-go-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g go -o libs/go --additional-properties=packageName=qumranica_api_connector,packageVersion=$npm_package_version",
     "generate-python-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g python -o libs/python --additional-properties=library=asyncio,projectName=qumranica,packageName=qumranica_api_connector,packageVersion=$npm_package_version",
-    "generate-r-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g r -o libs/r --additional-properties=packageName=qumranica_api_connector,packageVersion=$npm_package_version",
+    "generate-r-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g r -o libs/r --additional-properties=packageName=qumranicaApiConnector,packageVersion=$npm_package_version",
     "generate-typescript-api": "openapi-generator-cli generate -i https://api.qumranica.org/swagger/v1/swagger.json -g typescript-fetch -o libs/typescript --additional-properties=npmName=qumranica_api_connector,npmVersion=$npm_package_version",
     "generate-all": "yarn generate-javascript-api && yarn generate-go-api && yarn generate-python-api && yarn generate-r-api && yarn generate-typescript-api"
   },

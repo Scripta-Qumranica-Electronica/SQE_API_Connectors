@@ -110,13 +110,13 @@ SignInterpretationDTO <- R6::R6Class(
         self$`signInterpretationId` <- SignInterpretationDTOObject$`signInterpretationId`
       }
       if (!is.null(SignInterpretationDTOObject$`nextSignInterpretations`)) {
-        self$`nextSignInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`nextSignInterpretations`, "array[NextSignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
+        self$`nextSignInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`nextSignInterpretations`, "array[NextSignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationDTOObject$`attributes`)) {
-        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`attributes`, "array[InterpretationAttributeDTO]", loadNamespace("qumranica_api_connector"))
+        self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`attributes`, "array[InterpretationAttributeDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationDTOObject$`rois`)) {
-        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+        self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(SignInterpretationDTOObject$`commentary`)) {
         commentaryObject <- CommentaryDTO$new()
@@ -188,9 +188,9 @@ SignInterpretationDTO <- R6::R6Class(
     fromJSONString = function(SignInterpretationDTOJson) {
       SignInterpretationDTOObject <- jsonlite::fromJSON(SignInterpretationDTOJson)
       self$`signInterpretationId` <- SignInterpretationDTOObject$`signInterpretationId`
-      self$`nextSignInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`nextSignInterpretations`, "array[NextSignInterpretationDTO]", loadNamespace("qumranica_api_connector"))
-      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`attributes`, "array[InterpretationAttributeDTO]", loadNamespace("qumranica_api_connector"))
-      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranica_api_connector"))
+      self$`nextSignInterpretations` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`nextSignInterpretations`, "array[NextSignInterpretationDTO]", loadNamespace("qumranicaApiConnector"))
+      self$`attributes` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`attributes`, "array[InterpretationAttributeDTO]", loadNamespace("qumranicaApiConnector"))
+      self$`rois` <- ApiClient$new()$deserializeObj(SignInterpretationDTOObject$`rois`, "array[InterpretationRoiDTO]", loadNamespace("qumranicaApiConnector"))
       self$`commentary` <- CommentaryDTO$new()$fromJSON(jsonlite::toJSON(SignInterpretationDTOObject$commentary, auto_unbox = TRUE, digits = NA))
       self$`character` <- SignInterpretationDTOObject$`character`
       self$`isVariant` <- SignInterpretationDTOObject$`isVariant`

@@ -65,7 +65,7 @@ ImageStackDTO <- R6::R6Class(
         self$`id` <- ImageStackDTOObject$`id`
       }
       if (!is.null(ImageStackDTOObject$`images`)) {
-        self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranica_api_connector"))
+        self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(ImageStackDTOObject$`masterIndex`)) {
         self$`masterIndex` <- ImageStackDTOObject$`masterIndex`
@@ -101,7 +101,7 @@ ImageStackDTO <- R6::R6Class(
     fromJSONString = function(ImageStackDTOJson) {
       ImageStackDTOObject <- jsonlite::fromJSON(ImageStackDTOJson)
       self$`id` <- ImageStackDTOObject$`id`
-      self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranica_api_connector"))
+      self$`images` <- ApiClient$new()$deserializeObj(ImageStackDTOObject$`images`, "array[ImageDTO]", loadNamespace("qumranicaApiConnector"))
       self$`masterIndex` <- ImageStackDTOObject$`masterIndex`
       self
     }

@@ -40,7 +40,7 @@ ArtefactListDTO <- R6::R6Class(
     fromJSON = function(ArtefactListDTOJson) {
       ArtefactListDTOObject <- jsonlite::fromJSON(ArtefactListDTOJson)
       if (!is.null(ArtefactListDTOObject$`artefacts`)) {
-        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
+        self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ ArtefactListDTO <- R6::R6Class(
     },
     fromJSONString = function(ArtefactListDTOJson) {
       ArtefactListDTOObject <- jsonlite::fromJSON(ArtefactListDTOJson)
-      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranica_api_connector"))
+      self$`artefacts` <- ApiClient$new()$deserializeObj(ArtefactListDTOObject$`artefacts`, "array[ArtefactDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

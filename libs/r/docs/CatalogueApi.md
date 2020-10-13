@@ -20,7 +20,7 @@ Remove an existing imaged object and text fragment match, which is not correct
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.iaa.edition.catalog.to.text.fragment.id <- 56 # integer | The unique id of the match to confirm
 
@@ -62,7 +62,7 @@ Confirm the correctness of an existing imaged object and text fragment match
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.iaa.edition.catalog.to.text.fragment.id <- 56 # integer | The unique id of the match to confirm
 
@@ -104,7 +104,7 @@ Get a listing of all corresponding imaged objects and transcribed text fragment 
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.edition.id <- 56 # integer | Unique Id of the edition to search for imaged objects to text fragment matches
 
@@ -147,7 +147,7 @@ Get a listing of all text fragments matches that correspond to an imaged object
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.imaged.object.id <- 'imaged.object.id_example' # character | Id of imaged object to search for transcription matches
 
@@ -190,7 +190,7 @@ Get a listing of all corresponding imaged objects and transcribed text fragment 
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.manuscript.id <- 56 # integer | Unique Id of the manuscript to search for imaged objects to text fragment matches
 
@@ -233,7 +233,7 @@ Create a new matched pair for an imaged object and a text fragment along with th
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.catalogue.match.input.dto <- CatalogueMatchInputDTO$new(SideDesignation$new(), "imagedObjectId_example", 123, "editionName_example", "editionVolume_example", "editionLocation1_example", "editionLocation2_example", SideDesignation$new(), "comment_example", 123, 123, "confirmed_example") # CatalogueMatchInputDTO | The details of the new match
 
@@ -275,7 +275,7 @@ Get a listing of all imaged objects that matches that correspond to a transcribe
 
 ### Example
 ```R
-library(qumranica_api_connector)
+library(qumranicaApiConnector)
 
 var.text.fragment.id <- 56 # integer | Unique Id of the text fragment to search for imaged object matches
 

@@ -1,4 +1,4 @@
-# qumranica_api_connector::NextSignInterpretationDTO
+# qumranicaApiConnector::NextSignInterpretationDTO
 
 ## Properties
 Name | Type | Description | Notes

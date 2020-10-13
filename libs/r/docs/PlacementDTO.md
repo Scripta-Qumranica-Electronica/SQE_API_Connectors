@@ -1,4 +1,4 @@
-# qumranica_api_connector::PlacementDTO
+# qumranicaApiConnector::PlacementDTO
 
 ## Properties
 Name | Type | Description | Notes

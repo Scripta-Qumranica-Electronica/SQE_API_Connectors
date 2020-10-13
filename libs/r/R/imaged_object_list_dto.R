@@ -40,7 +40,7 @@ ImagedObjectListDTO <- R6::R6Class(
     fromJSON = function(ImagedObjectListDTOJson) {
       ImagedObjectListDTOObject <- jsonlite::fromJSON(ImagedObjectListDTOJson)
       if (!is.null(ImagedObjectListDTOObject$`imagedObjects`)) {
-        self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranica_api_connector"))
+        self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -58,7 +58,7 @@ ImagedObjectListDTO <- R6::R6Class(
     },
     fromJSONString = function(ImagedObjectListDTOJson) {
       ImagedObjectListDTOObject <- jsonlite::fromJSON(ImagedObjectListDTOJson)
-      self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranica_api_connector"))
+      self$`imagedObjects` <- ApiClient$new()$deserializeObj(ImagedObjectListDTOObject$`imagedObjects`, "array[ImagedObjectDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )

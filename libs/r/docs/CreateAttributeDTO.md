@@ -1,4 +1,4 @@
-# qumranica_api_connector::CreateAttributeDTO
+# qumranicaApiConnector::CreateAttributeDTO
 
 ## Properties
 Name | Type | Description | Notes

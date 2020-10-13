@@ -99,7 +99,7 @@ LineTextDTO <- R6::R6Class(
         self$`licence` <- LineTextDTOObject$`licence`
       }
       if (!is.null(LineTextDTOObject$`editors`)) {
-        self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
+        self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranicaApiConnector"))
       }
       if (!is.null(LineTextDTOObject$`lineId`)) {
         self$`lineId` <- LineTextDTOObject$`lineId`
@@ -111,7 +111,7 @@ LineTextDTO <- R6::R6Class(
         self$`editorId` <- LineTextDTOObject$`editorId`
       }
       if (!is.null(LineTextDTOObject$`signs`)) {
-        self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
+        self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranicaApiConnector"))
       }
     },
     toJSONString = function() {
@@ -165,11 +165,11 @@ LineTextDTO <- R6::R6Class(
     fromJSONString = function(LineTextDTOJson) {
       LineTextDTOObject <- jsonlite::fromJSON(LineTextDTOJson)
       self$`licence` <- LineTextDTOObject$`licence`
-      self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranica_api_connector"))
+      self$`editors` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`editors`, "map(EditorDTO)", loadNamespace("qumranicaApiConnector"))
       self$`lineId` <- LineTextDTOObject$`lineId`
       self$`lineName` <- LineTextDTOObject$`lineName`
       self$`editorId` <- LineTextDTOObject$`editorId`
-      self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranica_api_connector"))
+      self$`signs` <- ApiClient$new()$deserializeObj(LineTextDTOObject$`signs`, "array[SignDTO]", loadNamespace("qumranicaApiConnector"))
       self
     }
   )
