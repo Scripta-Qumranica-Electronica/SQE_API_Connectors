@@ -25,6 +25,6 @@ echo `sed -i 's!    long_description=".*!!g' "$LIBPATH/../setup.py"`
 echo `sed -i 's!    No description provided .*!!g' "$LIBPATH/../setup.py"`
 echo `sed -i 's!    """!    long_description=long_description,\n    long_description_content_type="text/markdown"!g' "$LIBPATH/../setup.py"`
 echo `sed -i 's!SQE API!Qumranica API!g' "$LIBPATH/../setup.py"`
-echo `sed -i 's!url=""!url="https://qumranica.org"!g' "$LIBPATH/../setup.py"`
+echo `sed -i 's!url=""!url="https://github.com/Scripta-Qumranica-Electronica/SQE_API_Connectors/tree/main/libs/python"!g' "$LIBPATH/../setup.py"`
 
 exit 0
