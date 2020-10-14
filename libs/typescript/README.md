@@ -1,4 +1,4 @@
-## qumranica_api_connector@0.7.0
+## qumranica_api_connector@0.7.2
 
 This generator creates TypeScript/JavaScript client that utilizes [Fetch API](https://fetch.spec.whatwg.org/). The generated Node module can be used in the following environments:
 
@@ -36,7 +36,7 @@ navigate to the folder of your consuming project and run one of the following co
 _published:_
 
 ```
-npm install qumranica_api_connector@0.7.0 --save
+npm install qumranica_api_connector@0.7.2 --save
 ```
 
 _unPublished (not recommended):_

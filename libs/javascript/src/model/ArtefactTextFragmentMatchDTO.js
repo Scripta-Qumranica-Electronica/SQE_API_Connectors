@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ArtefactTextFragmentMatchDTO model module.
  * @module model/ArtefactTextFragmentMatchDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ArtefactTextFragmentMatchDTO {
     /**

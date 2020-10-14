@@ -1,0 +1,12 @@
+Metadata-Version: 1.0
+Name: qumranica
+Version: 0.7.0
+Summary: Qumranica API Python connector
+Home-page: UNKNOWN
+Author: Bronson Brown-deVost
+Author-email: bronsonbdevost@gmail.com
+License: UNKNOWN
+Description:     This library provides well-documented methods for access to all functionality of the Qumranica project API.
+            
+Keywords: OpenAPI,OpenAPI-Generator,Qumranica API
+Platform: UNKNOWN

@@ -19,7 +19,7 @@ import SetInterpretationRoiDTO from './SetInterpretationRoiDTO';
 /**
  * The SignInterpretationCreateDTO model module.
  * @module model/SignInterpretationCreateDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class SignInterpretationCreateDTO {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UnactivatedEmailUpdateRequestDTO model module.
  * @module model/UnactivatedEmailUpdateRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class UnactivatedEmailUpdateRequestDTO {
     /**

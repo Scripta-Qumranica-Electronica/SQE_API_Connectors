@@ -1,4 +1,4 @@
-# qumranica_api_connector.UtilApi
+# qumranica.UtilApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,12 +18,12 @@ Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -33,7 +33,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -43,10 +43,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UtilApi(api_client)
-    wkt_polygon_dto = qumranica_api_connector.WktPolygonDTO() # WktPolygonDTO | JSON object with the WKT polygon to validate (optional)
+    api_instance = qumranica.UtilApi(api_client)
+    wkt_polygon_dto = qumranica.WktPolygonDTO() # WktPolygonDTO | JSON object with the WKT polygon to validate (optional)
 
     try:
         # Checks a WKT polygon to ensure validity. If the polygon is invalid,  it attempts to construct a valid polygon that matches the original  as closely as possible.

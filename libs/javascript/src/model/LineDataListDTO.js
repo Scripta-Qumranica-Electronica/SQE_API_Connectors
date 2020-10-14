@@ -17,7 +17,7 @@ import LineDataDTO from './LineDataDTO';
 /**
  * The LineDataListDTO model module.
  * @module model/LineDataListDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class LineDataListDTO {
     /**

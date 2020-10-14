@@ -17,7 +17,7 @@ import SimpleImageDTO from './SimpleImageDTO';
 /**
  * The SimpleImageListDTO model module.
  * @module model/SimpleImageListDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class SimpleImageListDTO {
     /**

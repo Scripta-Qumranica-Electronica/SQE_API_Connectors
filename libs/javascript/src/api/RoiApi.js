@@ -26,7 +26,7 @@ import UpdatedInterpretationRoiDTOList from '../model/UpdatedInterpretationRoiDT
 /**
 * Roi service.
 * @module api/RoiApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class RoiApi {
 

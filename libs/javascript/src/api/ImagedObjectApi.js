@@ -23,7 +23,7 @@ import SimpleImageListDTO from '../model/SimpleImageListDTO';
 /**
 * ImagedObject service.
 * @module api/ImagedObjectApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class ImagedObjectApi {
 

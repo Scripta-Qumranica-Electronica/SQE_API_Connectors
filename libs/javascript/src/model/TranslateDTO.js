@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The TranslateDTO model module.
  * @module model/TranslateDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class TranslateDTO {
     /**

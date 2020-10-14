@@ -17,7 +17,7 @@ import UpdatedArtefactPlacementDTO from './UpdatedArtefactPlacementDTO';
 /**
  * The BatchUpdatedArtefactTransformDTO model module.
  * @module model/BatchUpdatedArtefactTransformDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class BatchUpdatedArtefactTransformDTO {
     /**

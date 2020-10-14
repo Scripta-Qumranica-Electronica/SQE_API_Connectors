@@ -42,4 +42,12 @@ yarn generate-all
 echo "Patching the libraries"
 customizations/python/update-api.sh
 
+echo "Uploading to PYPI"
+echo `(cd libs/python/ \
+	&& python3 setup.py sdist bdist_wheel \
+	&& twine check dist/* \
+	&& echo "Input your Pypi username:" \
+	&& twine upload dist/* \
+	&& rm -rf dist)`
+
 exit 0

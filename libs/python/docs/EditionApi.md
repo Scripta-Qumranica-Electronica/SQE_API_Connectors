@@ -1,4 +1,4 @@
-# qumranica_api_connector.EditionApi
+# qumranica.EditionApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,12 +29,12 @@ Get a list of requests issued by the current user for other users  to become edi
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -44,7 +44,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -54,9 +54,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     
     try:
         # Get a list of requests issued by the current user for other users  to become editors of a shared edition
@@ -100,12 +100,12 @@ Confirm addition of an editor to the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -115,7 +115,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -125,9 +125,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     token = 'token_example' # str | JWT for verifying the request confirmation
 
     try:
@@ -175,12 +175,12 @@ Adds an editor to the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -190,7 +190,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -200,11 +200,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-invite_editor_dto = qumranica_api_connector.InviteEditorDTO() # InviteEditorDTO | JSON object with the attributes of the new editor (optional)
+invite_editor_dto = qumranica.InviteEditorDTO() # InviteEditorDTO | JSON object with the attributes of the new editor (optional)
 
     try:
         # Adds an editor to the specified edition
@@ -251,12 +251,12 @@ Provides details about the specified edition and all accessible alternate editio
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -266,7 +266,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -276,9 +276,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 optional = ['optional_example'] # list[str] | Optional parameters: 'deleteForAllEditors' (optional)
 token = 'token_example' # str | token required when using optional 'deleteForAllEditors' (optional)
@@ -330,12 +330,12 @@ Changes the rights for an editor of the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -345,7 +345,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -355,12 +355,12 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 editor_email_id = 'editor_email_id_example' # str | Email address of the editor whose permissions are being changed
-update_editor_rights_dto = qumranica_api_connector.UpdateEditorRightsDTO() # UpdateEditorRightsDTO | JSON object with the attributes of the new editor (optional)
+update_editor_rights_dto = qumranica.UpdateEditorRightsDTO() # UpdateEditorRightsDTO | JSON object with the attributes of the new editor (optional)
 
     try:
         # Changes the rights for an editor of the specified edition
@@ -409,12 +409,12 @@ Provides details about the specified edition and all accessible alternate editio
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -424,7 +424,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -434,9 +434,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 
     try:
@@ -484,12 +484,12 @@ Creates a copy of the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -499,7 +499,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -509,11 +509,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-edition_copy_dto = qumranica_api_connector.EditionCopyDTO() # EditionCopyDTO | JSON object with the attributes to be changed in the copied edition (optional)
+edition_copy_dto = qumranica.EditionCopyDTO() # EditionCopyDTO | JSON object with the attributes to be changed in the copied edition (optional)
 
     try:
         # Creates a copy of the specified edition
@@ -561,12 +561,12 @@ Updates data for the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -576,7 +576,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -586,11 +586,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-edition_update_request_dto = qumranica_api_connector.EditionUpdateRequestDTO() # EditionUpdateRequestDTO | JSON object with the attributes to be updated (optional)
+edition_update_request_dto = qumranica.EditionUpdateRequestDTO() # EditionUpdateRequestDTO | JSON object with the attributes to be updated (optional)
 
     try:
         # Updates data for the specified edition
@@ -638,12 +638,12 @@ Provides spatial data for all letters in the edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -653,7 +653,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -663,9 +663,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 
     try:
@@ -713,12 +713,12 @@ Provides spatial data for all letters in the edition organized and oriented  by 
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -728,7 +728,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -738,9 +738,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 
     try:
@@ -788,12 +788,12 @@ Get a list of invitations issued to the current user to become an editor of a sh
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -803,7 +803,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -813,9 +813,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     
     try:
         # Get a list of invitations issued to the current user to become an editor of a shared edition
@@ -859,12 +859,12 @@ Provides a listing of all editions accessible to the current user
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -874,7 +874,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -884,9 +884,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.EditionApi(api_client)
+    api_instance = qumranica.EditionApi(api_client)
     
     try:
         # Provides a listing of all editions accessible to the current user

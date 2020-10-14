@@ -17,7 +17,7 @@ import UpdateEditionManuscriptMetricsDTO from './UpdateEditionManuscriptMetricsD
 /**
  * The EditionUpdateRequestDTO model module.
  * @module model/EditionUpdateRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class EditionUpdateRequestDTO {
     /**

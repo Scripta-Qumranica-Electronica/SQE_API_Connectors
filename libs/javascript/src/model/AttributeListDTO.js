@@ -17,7 +17,7 @@ import AttributeDTO from './AttributeDTO';
 /**
  * The AttributeListDTO model module.
  * @module model/AttributeListDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class AttributeListDTO {
     /**

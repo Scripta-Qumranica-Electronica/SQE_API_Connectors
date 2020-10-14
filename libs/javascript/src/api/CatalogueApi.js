@@ -19,7 +19,7 @@ import CatalogueMatchListDTO from '../model/CatalogueMatchListDTO';
 /**
 * Catalogue service.
 * @module api/CatalogueApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class CatalogueApi {
 

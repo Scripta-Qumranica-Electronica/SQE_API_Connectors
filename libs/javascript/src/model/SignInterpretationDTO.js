@@ -20,7 +20,7 @@ import NextSignInterpretationDTO from './NextSignInterpretationDTO';
 /**
  * The SignInterpretationDTO model module.
  * @module model/SignInterpretationDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class SignInterpretationDTO {
     /**

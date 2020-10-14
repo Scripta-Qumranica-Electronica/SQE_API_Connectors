@@ -1,4 +1,4 @@
-# qumranica_api_connector.UserApi
+# qumranica.UserApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,12 +27,12 @@ Uses the secret token from /users/forgot-password to validate a reset of the use
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -42,7 +42,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -52,10 +52,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    reset_forgotten_user_password_request_dto = qumranica_api_connector.ResetForgottenUserPasswordRequestDTO() # ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password (optional)
+    api_instance = qumranica.UserApi(api_client)
+    reset_forgotten_user_password_request_dto = qumranica.ResetForgottenUserPasswordRequestDTO() # ResetForgottenUserPasswordRequestDTO | A JSON object with the secret token and the new password (optional)
 
     try:
         # Uses the secret token from /users/forgot-password to validate a reset of the user's password
@@ -101,12 +101,12 @@ Changes the password for the currently logged in user
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -116,7 +116,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -126,10 +126,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    reset_logged_in_user_password_request_dto = qumranica_api_connector.ResetLoggedInUserPasswordRequestDTO() # ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password (optional)
+    api_instance = qumranica.UserApi(api_client)
+    reset_logged_in_user_password_request_dto = qumranica.ResetLoggedInUserPasswordRequestDTO() # ResetLoggedInUserPasswordRequestDTO | A JSON object with the old password and the new password (optional)
 
     try:
         # Changes the password for the currently logged in user
@@ -175,12 +175,12 @@ Allows a user who has not yet activated their account to change their email addr
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -190,7 +190,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -200,10 +200,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    unactivated_email_update_request_dto = qumranica_api_connector.UnactivatedEmailUpdateRequestDTO() # UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address (optional)
+    api_instance = qumranica.UserApi(api_client)
+    unactivated_email_update_request_dto = qumranica.UnactivatedEmailUpdateRequestDTO() # UnactivatedEmailUpdateRequestDTO | JSON object with the current email address and the new desired email address (optional)
 
     try:
         # Allows a user who has not yet activated their account to change their email address. This will not work if the user  account associated with the email address has already been activated
@@ -249,12 +249,12 @@ Confirms registration of new user account.
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -264,7 +264,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -274,10 +274,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    account_activation_request_dto = qumranica_api_connector.AccountActivationRequestDTO() # AccountActivationRequestDTO | JSON object with token from user registration email (optional)
+    api_instance = qumranica.UserApi(api_client)
+    account_activation_request_dto = qumranica.AccountActivationRequestDTO() # AccountActivationRequestDTO | JSON object with token from user registration email (optional)
 
     try:
         # Confirms registration of new user account.
@@ -323,12 +323,12 @@ Sends a secret token to the user's email to allow password reset.
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -338,7 +338,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -348,10 +348,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    reset_user_password_request_dto = qumranica_api_connector.ResetUserPasswordRequestDTO() # ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password (optional)
+    api_instance = qumranica.UserApi(api_client)
+    reset_user_password_request_dto = qumranica.ResetUserPasswordRequestDTO() # ResetUserPasswordRequestDTO | JSON object with the email address for the user who wants to reset a lost password (optional)
 
     try:
         # Sends a secret token to the user's email to allow password reset.
@@ -397,12 +397,12 @@ Provides the user details for a user with valid JWT in the Authorize header
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -412,7 +412,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -422,9 +422,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
+    api_instance = qumranica.UserApi(api_client)
     
     try:
         # Provides the user details for a user with valid JWT in the Authorize header
@@ -468,12 +468,12 @@ Provides a JWT bearer token for valid email and password
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -483,7 +483,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -493,10 +493,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    login_request_dto = qumranica_api_connector.LoginRequestDTO() # LoginRequestDTO | JSON object with an email and password parameter (optional)
+    api_instance = qumranica.UserApi(api_client)
+    login_request_dto = qumranica.LoginRequestDTO() # LoginRequestDTO | JSON object with an email and password parameter (optional)
 
     try:
         # Provides a JWT bearer token for valid email and password
@@ -543,12 +543,12 @@ Creates a new user with the submitted data.
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -558,7 +558,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -568,10 +568,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    new_user_request_dto = qumranica_api_connector.NewUserRequestDTO() # NewUserRequestDTO | A JSON object with all data necessary to create a new user account (optional)
+    api_instance = qumranica.UserApi(api_client)
+    new_user_request_dto = qumranica.NewUserRequestDTO() # NewUserRequestDTO | A JSON object with all data necessary to create a new user account (optional)
 
     try:
         # Creates a new user with the submitted data.
@@ -618,12 +618,12 @@ Updates a user's registration details.  Note that the if the email address has c
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -633,7 +633,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -643,10 +643,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    user_update_request_dto = qumranica_api_connector.UserUpdateRequestDTO() # UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data (optional)
+    api_instance = qumranica.UserApi(api_client)
+    user_update_request_dto = qumranica.UserUpdateRequestDTO() # UserUpdateRequestDTO | A JSON object with all data necessary to update a user account.  Null fields (but not empty  strings!) will be populated with existing user data (optional)
 
     try:
         # Updates a user's registration details.  Note that the if the email address has changed, the account will be set to  inactive until the account is activated with the secret token.
@@ -693,12 +693,12 @@ Sends a new activation email for the user's account. This will not work if the u
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -708,7 +708,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -718,10 +718,10 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.UserApi(api_client)
-    resend_user_account_activation_request_dto = qumranica_api_connector.ResendUserAccountActivationRequestDTO() # ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address (optional)
+    api_instance = qumranica.UserApi(api_client)
+    resend_user_account_activation_request_dto = qumranica.ResendUserAccountActivationRequestDTO() # ResendUserAccountActivationRequestDTO | JSON object with the current email address and the new desired email address (optional)
 
     try:
         # Sends a new activation email for the user's account. This will not work if the user account associated with the  email address has already been activated.

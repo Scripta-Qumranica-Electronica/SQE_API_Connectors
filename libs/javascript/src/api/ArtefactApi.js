@@ -30,7 +30,7 @@ import UpdateArtefactGroupDTO from '../model/UpdateArtefactGroupDTO';
 /**
 * Artefact service.
 * @module api/ArtefactApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class ArtefactApi {
 

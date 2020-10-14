@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateEditorRightsDTO model module.
  * @module model/UpdateEditorRightsDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class UpdateEditorRightsDTO {
     /**

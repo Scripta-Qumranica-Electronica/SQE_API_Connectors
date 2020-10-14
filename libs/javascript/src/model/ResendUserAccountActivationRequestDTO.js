@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResendUserAccountActivationRequestDTO model module.
  * @module model/ResendUserAccountActivationRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ResendUserAccountActivationRequestDTO {
     /**

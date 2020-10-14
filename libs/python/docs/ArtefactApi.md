@@ -1,4 +1,4 @@
-# qumranica_api_connector.ArtefactApi
+# qumranica.ArtefactApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,12 +30,12 @@ Deletes the specified artefact group.
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -45,7 +45,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -55,9 +55,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_group_id = 56 # int | Unique Id of the artefact group to be deleted
 
@@ -107,12 +107,12 @@ Gets the details of a specific artefact group in the edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -122,7 +122,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -132,9 +132,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_group_id = 56 # int | Id of the desired artefact group
 
@@ -184,12 +184,12 @@ Updates the details of an artefact group.  The artefact group will now only cont
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -199,7 +199,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -209,12 +209,12 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_group_id = 56 # int | Id of the artefact group to be updated
-update_artefact_group_dto = qumranica_api_connector.UpdateArtefactGroupDTO() # UpdateArtefactGroupDTO | Parameters that the artefact group should be changed to (optional)
+update_artefact_group_dto = qumranica.UpdateArtefactGroupDTO() # UpdateArtefactGroupDTO | Parameters that the artefact group should be changed to (optional)
 
     try:
         # Updates the details of an artefact group.  The artefact group will now only contain the artefacts listed in the JSON payload.  If the name is null, no change will be made, otherwise the name will also be updated.
@@ -263,12 +263,12 @@ Gets a listing of all artefact groups in the edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -278,7 +278,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -288,9 +288,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 
     try:
@@ -338,12 +338,12 @@ Creates a new artefact group with the submitted data.  The new artefact must hav
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -353,7 +353,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -363,11 +363,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-create_artefact_group_dto = qumranica_api_connector.CreateArtefactGroupDTO() # CreateArtefactGroupDTO | Parameters of the new artefact group (optional)
+create_artefact_group_dto = qumranica.CreateArtefactGroupDTO() # CreateArtefactGroupDTO | Parameters of the new artefact group (optional)
 
     try:
         # Creates a new artefact group with the submitted data.  The new artefact must have a list of artefacts that belong to the group.  It is not necessary to give the group a name.
@@ -415,12 +415,12 @@ Deletes the specified artefact
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -430,7 +430,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -440,9 +440,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_id = 56 # int | Unique Id of the desired artefact
 
@@ -491,12 +491,12 @@ Provides a listing of all artefacts that are part of the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -506,7 +506,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -516,9 +516,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_id = 56 # int | Unique Id of the desired artefact
 optional = ['optional_example'] # list[str] | Add \"masks\" to include artefact polygons and \"images\" to include image data (optional)
@@ -570,12 +570,12 @@ Updates the specified artefact.  There are many possible attributes that can be 
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -585,7 +585,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -595,12 +595,12 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_id = 56 # int | Unique Id of the desired artefact
-update_artefact_dto = qumranica_api_connector.UpdateArtefactDTO() # UpdateArtefactDTO | An UpdateArtefactDTO with the desired alterations to the artefact (optional)
+update_artefact_dto = qumranica.UpdateArtefactDTO() # UpdateArtefactDTO | An UpdateArtefactDTO with the desired alterations to the artefact (optional)
 
     try:
         # Updates the specified artefact.  There are many possible attributes that can be changed for  an artefact.  The caller should only input only those that  should be changed. Attributes with a null value will be ignored.  For instance, setting the mask to null or \"\" will result in  no changes to the current mask, and no value for the mask will  be returned (or broadcast). Likewise, the transformation, name,  or status message may be set to null and no change will be made  to those entities (though any unchanged values will be returned  along with the changed values and also broadcast to co-editors).
@@ -649,12 +649,12 @@ Provides a listing of all rois belonging to an artefact in the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -664,7 +664,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -674,9 +674,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_id = 56 # int | Unique Id of the desired artefact
 
@@ -726,12 +726,12 @@ Provides a listing of text fragments that have text in the specified artefact.  
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -741,7 +741,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -751,9 +751,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 artefact_id = 56 # int | Unique Id of the desired artefact
 optional = ['optional_example'] # list[str] | Add \"suggested\" to include possible matches suggested by the system (optional)
@@ -805,12 +805,12 @@ Updates the positional data for a batch of artefacts
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -820,7 +820,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -830,11 +830,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-batch_update_artefact_placement_dto = qumranica_api_connector.BatchUpdateArtefactPlacementDTO() # BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates (optional)
+batch_update_artefact_placement_dto = qumranica.BatchUpdateArtefactPlacementDTO() # BatchUpdateArtefactPlacementDTO | A BatchUpdateArtefactTransformDTO with a list of the desired updates (optional)
 
     try:
         # Updates the positional data for a batch of artefacts
@@ -882,12 +882,12 @@ Provides a listing of all artefacts that are part of the specified edition
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -897,7 +897,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -907,9 +907,9 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
 optional = ['optional_example'] # list[str] | Add \"masks\" to include artefact polygons and \"images\" to include image data (optional)
 
@@ -959,12 +959,12 @@ Creates a new artefact with the provided data.  If no mask is provided, a placeh
 ```python
 from __future__ import print_function
 import time
-import qumranica_api_connector
-from qumranica_api_connector.rest import ApiException
+import qumranica
+from qumranica.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost"
 )
 
@@ -974,7 +974,7 @@ configuration = qumranica_api_connector.Configuration(
 # satisfies your auth use case.
 
 # Configure API key authorization: Bearer
-configuration = qumranica_api_connector.Configuration(
+configuration = qumranica.Configuration(
     host = "http://localhost",
     api_key = {
         'Authorization': 'YOUR_API_KEY'
@@ -984,11 +984,11 @@ configuration = qumranica_api_connector.Configuration(
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with qumranica_api_connector.ApiClient(configuration) as api_client:
+with qumranica.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = qumranica_api_connector.ArtefactApi(api_client)
+    api_instance = qumranica.ArtefactApi(api_client)
     edition_id = 56 # int | Unique Id of the desired edition
-create_artefact_dto = qumranica_api_connector.CreateArtefactDTO() # CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact (optional)
+create_artefact_dto = qumranica.CreateArtefactDTO() # CreateArtefactDTO | A CreateArtefactDTO with the data for the new artefact (optional)
 
     try:
         # Creates a new artefact with the provided data.  If no mask is provided, a placeholder mask will be created with the values:  \"POLYGON((0 0,1 1,1 0,0 0))\" (the system requires a valid WKT polygon mask for  every artefact). It is not recommended to leave the mask, name, or work status  blank or null. It will often be advantageous to leave the transformation null  when first creating a new artefact.

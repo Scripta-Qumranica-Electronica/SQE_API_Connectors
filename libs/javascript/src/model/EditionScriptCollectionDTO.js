@@ -17,7 +17,7 @@ import CharacterShapeDTO from './CharacterShapeDTO';
 /**
  * The EditionScriptCollectionDTO model module.
  * @module model/EditionScriptCollectionDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class EditionScriptCollectionDTO {
     /**

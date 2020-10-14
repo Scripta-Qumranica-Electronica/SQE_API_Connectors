@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CharacterShapeDTO model module.
  * @module model/CharacterShapeDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class CharacterShapeDTO {
     /**

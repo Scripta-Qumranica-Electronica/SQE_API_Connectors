@@ -1,6 +1,6 @@
 {
   "name": "qumranica_api_connector",
-  "version": "0.7.0",
+  "version": "0.7.2",
   "description": "OpenAPI client for qumranica_api_connector",
   "author": "OpenAPI-Generator",
   "main": "./dist/index.js",

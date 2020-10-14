@@ -26,7 +26,7 @@ import UpdateAttributeDTO from '../model/UpdateAttributeDTO';
 /**
 * SignInterpretation service.
 * @module api/SignInterpretationApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class SignInterpretationApi {
 

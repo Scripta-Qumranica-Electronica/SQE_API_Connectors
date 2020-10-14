@@ -163,7 +163,7 @@ import UtilApi from './api/UtilApi';
 * </pre>
 * </p>
 * @module index
-* @version 0.7.0
+* @version 0.7.2
 */
 export {
     /**

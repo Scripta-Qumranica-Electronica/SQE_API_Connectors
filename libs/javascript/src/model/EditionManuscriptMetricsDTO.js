@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EditionManuscriptMetricsDTO model module.
  * @module model/EditionManuscriptMetricsDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class EditionManuscriptMetricsDTO {
     /**

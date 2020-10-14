@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ResetForgottenUserPasswordRequestDTO model module.
  * @module model/ResetForgottenUserPasswordRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ResetForgottenUserPasswordRequestDTO {
     /**

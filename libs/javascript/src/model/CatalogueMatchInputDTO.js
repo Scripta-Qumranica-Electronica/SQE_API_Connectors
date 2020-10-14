@@ -17,7 +17,7 @@ import SideDesignation from './SideDesignation';
 /**
  * The CatalogueMatchInputDTO model module.
  * @module model/CatalogueMatchInputDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class CatalogueMatchInputDTO {
     /**

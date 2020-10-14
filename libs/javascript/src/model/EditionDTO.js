@@ -20,7 +20,7 @@ import UserDTO from './UserDTO';
 /**
  * The EditionDTO model module.
  * @module model/EditionDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class EditionDTO {
     /**

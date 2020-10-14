@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ArtefactGroupDTO model module.
  * @module model/ArtefactGroupDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ArtefactGroupDTO {
     /**

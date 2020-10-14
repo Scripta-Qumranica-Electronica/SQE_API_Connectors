@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AdminEditorRequestDTO model module.
  * @module model/AdminEditorRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class AdminEditorRequestDTO {
     /**

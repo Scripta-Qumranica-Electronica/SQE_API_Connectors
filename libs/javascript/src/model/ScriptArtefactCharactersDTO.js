@@ -18,7 +18,7 @@ import SignInterpretationDTO from './SignInterpretationDTO';
 /**
  * The ScriptArtefactCharactersDTO model module.
  * @module model/ScriptArtefactCharactersDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ScriptArtefactCharactersDTO {
     /**

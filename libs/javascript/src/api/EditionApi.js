@@ -30,7 +30,7 @@ import UpdateEditorRightsDTO from '../model/UpdateEditorRightsDTO';
 /**
 * Edition service.
 * @module api/EditionApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class EditionApi {
 

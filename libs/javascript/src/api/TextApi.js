@@ -25,7 +25,7 @@ import UpdateTextFragmentDTO from '../model/UpdateTextFragmentDTO';
 /**
 * Text service.
 * @module api/TextApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class TextApi {
 

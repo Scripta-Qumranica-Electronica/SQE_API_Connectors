@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteTokenDTO model module.
  * @module model/DeleteTokenDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class DeleteTokenDTO {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DetailedEditorRightsDTO model module.
  * @module model/DetailedEditorRightsDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class DetailedEditorRightsDTO {
     /**

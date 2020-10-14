@@ -17,7 +17,7 @@ import ImageDTO from './ImageDTO';
 /**
  * The ImageStackDTO model module.
  * @module model/ImageStackDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ImageStackDTO {
     /**

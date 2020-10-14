@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LoginRequestDTO model module.
  * @module model/LoginRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class LoginRequestDTO {
     /**

@@ -1,0 +1,6 @@
+README.md
+qumranica.egg-info/PKG-INFO
+qumranica.egg-info/SOURCES.txt
+qumranica.egg-info/dependency_links.txt
+qumranica.egg-info/requires.txt
+qumranica.egg-info/top_level.txt

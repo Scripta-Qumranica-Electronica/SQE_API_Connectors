@@ -17,7 +17,7 @@ import CatalogueMatchDTO from './CatalogueMatchDTO';
 /**
  * The CatalogueMatchListDTO model module.
  * @module model/CatalogueMatchListDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class CatalogueMatchListDTO {
     /**

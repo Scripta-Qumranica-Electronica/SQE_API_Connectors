@@ -18,7 +18,7 @@ import SignDTO from './SignDTO';
 /**
  * The LineTextDTO model module.
  * @module model/LineTextDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class LineTextDTO {
     /**

@@ -17,7 +17,7 @@ import TranslateDTO from './TranslateDTO';
 /**
  * The UpdateInterpretationRoiDTO model module.
  * @module model/UpdateInterpretationRoiDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class UpdateInterpretationRoiDTO {
     /**

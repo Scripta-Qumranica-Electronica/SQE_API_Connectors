@@ -17,7 +17,7 @@ import ScriptArtefactCharactersDTO from './ScriptArtefactCharactersDTO';
 /**
  * The ScriptLineDTO model module.
  * @module model/ScriptLineDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class ScriptLineDTO {
     /**

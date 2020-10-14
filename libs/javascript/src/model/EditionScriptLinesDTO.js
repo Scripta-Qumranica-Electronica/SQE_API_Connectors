@@ -17,7 +17,7 @@ import ScriptTextFragmentDTO from './ScriptTextFragmentDTO';
 /**
  * The EditionScriptLinesDTO model module.
  * @module model/EditionScriptLinesDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class EditionScriptLinesDTO {
     /**

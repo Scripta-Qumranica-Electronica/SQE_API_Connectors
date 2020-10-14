@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AccountActivationRequestDTO model module.
  * @module model/AccountActivationRequestDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class AccountActivationRequestDTO {
     /**

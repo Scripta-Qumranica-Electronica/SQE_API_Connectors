@@ -17,7 +17,7 @@ import CreateAttributeValueDTO from './CreateAttributeValueDTO';
 /**
  * The CreateAttributeDTO model module.
  * @module model/CreateAttributeDTO
- * @version 0.7.0
+ * @version 0.7.2
  */
 class CreateAttributeDTO {
     /**

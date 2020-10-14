@@ -29,7 +29,7 @@ import UserUpdateRequestDTO from '../model/UserUpdateRequestDTO';
 /**
 * User service.
 * @module api/UserApi
-* @version 0.7.0
+* @version 0.7.2
 */
 export default class UserApi {
 
